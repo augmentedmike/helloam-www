@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { usePersonalization, PRONOUN_SETS } from "@/context/personalization-context";
+import { useWebHaptics } from "web-haptics/react";
 
 type PronounCase = "subject" | "object" | "possessive" | "reflexive";
 
@@ -9,6 +10,7 @@ export function PronounTag({ case: pronounCase }: { case: PronounCase }) {
   const { pronouns, setPronouns } = usePersonalization();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
+  const { trigger } = useWebHaptics();
 
   // Current display word — capitalized when it comes from context (e.g. "She")
   const word = pronouns[pronounCase];
@@ -25,7 +27,7 @@ export function PronounTag({ case: pronounCase }: { case: PronounCase }) {
   return (
     <span ref={ref} className="relative inline-block">
       <button
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => { trigger("nudge"); setOpen((o) => !o); }}
         title="Click to change pronouns"
         style={{
           font: "inherit",
@@ -63,7 +65,7 @@ export function PronounTag({ case: pronounCase }: { case: PronounCase }) {
             return (
               <button
                 key={set.label}
-                onClick={() => { setPronouns(set); setOpen(false); }}
+                onClick={() => { trigger("success"); setPronouns(set); setOpen(false); }}
                 className="flex items-center gap-2.5 w-full px-3 py-2 text-sm text-left transition-colors"
                 style={{
                   color: active ? "#00E5FF" : "#888888",

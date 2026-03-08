@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { usePersonalization } from "@/context/personalization-context";
+import { useWebHaptics } from "web-haptics/react";
 
 interface NameTagProps {
   className?: string;
@@ -10,6 +11,7 @@ interface NameTagProps {
 
 export function NameTag({ className, style }: NameTagProps) {
   const { name, setName } = usePersonalization();
+  const { trigger } = useWebHaptics();
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(name);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -28,7 +30,7 @@ export function NameTag({ className, style }: NameTagProps) {
 
   function commit() {
     const trimmed = draft.trim();
-    if (trimmed) setName(trimmed);
+    if (trimmed) { trigger("success"); setName(trimmed); }
     else setDraft(name);
     setEditing(false);
   }
@@ -68,7 +70,7 @@ export function NameTag({ className, style }: NameTagProps) {
 
   return (
     <button
-      onClick={() => { setDraft(name); setEditing(true); }}
+      onClick={() => { trigger("nudge"); setDraft(name); setEditing(true); }}
       title="Click to rename"
       className={className}
       style={{
