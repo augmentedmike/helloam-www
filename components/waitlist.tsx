@@ -31,7 +31,7 @@ export default function Waitlist() {
             Shipping July 2026.
           </p>
           <p className="text-sm" style={{ color: "#888888" }}>
-            🔒 Your AM belongs to you — and only you.
+            Your AM belongs to you — and only you.
           </p>
         </div>
 

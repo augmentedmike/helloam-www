@@ -5,6 +5,7 @@ import Device from "@/components/device";
 import Plans from "@/components/plans";
 import Manifesto from "@/components/manifesto";
 import Waitlist from "@/components/waitlist";
+import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Plans />
       <Manifesto />
       <Waitlist />
+      <FAQ />
       <Footer />
     </main>
   );

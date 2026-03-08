@@ -42,7 +42,11 @@ export default function WaitlistForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl p-10 text-center" style={{ background: "rgba(0,229,255,0.06)", border: "1px solid rgba(0,229,255,0.20)" }}>
-        <div className="text-4xl mb-4">✓</div>
+        <div className="flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-4" style={{ background: "rgba(0,229,255,0.15)", border: "1px solid rgba(0,229,255,0.3)" }}>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M4 11L9 16L18 6" stroke="#00E5FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
         {mode === "preorder" && preorderNumber ? (
           <>
             <h3 className="text-3xl font-bold mb-2" style={{ color: "#00E5FF", fontFamily: "var(--font-space-grotesk)" }}>

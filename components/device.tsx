@@ -167,7 +167,9 @@ export default function Device() {
           <ul className="mb-10 space-y-2.5">
             {INCLUDES.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <span className="mt-0.5 text-xs" style={{ color: "#00E5FF" }}>✓</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
+                  <path d="M2 7L5.5 10.5L12 4" stroke="#00E5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
                 <span className="text-sm" style={{ color: "#888888" }}>{item}</span>
               </li>
             ))}
