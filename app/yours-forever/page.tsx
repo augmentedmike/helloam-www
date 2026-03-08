@@ -438,7 +438,7 @@ export default function YoursForever() {
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.3)" }}
           >
-            Reserve Your AM
+            Reserve Your AGI Companion
           </a>
         </div>
       </section>

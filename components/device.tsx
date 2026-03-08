@@ -366,7 +366,7 @@ export default function Device() {
             className="flex items-center justify-center w-full px-8 py-5 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.25)" }}
           >
-            Pre-Order Your AM — Reserve Your Number
+            Pre-Order Your AGI Companion — Reserve Your Number
           </a>
           <p className="mt-3 text-center text-xs" style={{ color: "#444444" }}>
             ${PREORDER_DEPOSIT.toLocaleString()} to hold your number. Fully refundable until your unit ships.

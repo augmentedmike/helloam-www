@@ -1,13 +1,36 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { PronounTag } from "@/components/ui/pronoun-tag";
 import { NameTag } from "@/components/ui/name-tag";
-import { usePersonalization, PRONOUN_SETS } from "@/context/personalization-context";
+import { usePersonalization } from "@/context/personalization-context";
+
+const HERO_IMAGES = [
+  { src: "/am/am-room.jpg",    alt: "AM in your home — always on, always watching over things",     scene: "Home"   },
+  { src: "/am/am-desk.jpg",    alt: "AM at your desk — running while you work",                     scene: "Office" },
+  { src: "/am/am-student.jpg", alt: "AM in your dorm — never lets you fall behind",                 scene: "Dorm"   },
+];
 
 export default function Hero() {
-  const { pronouns, setPronouns } = usePersonalization();
+  const { pronouns } = usePersonalization();
   const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+  const [imgIdx, setImgIdx] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setImgIdx((i) => (i + 1) % HERO_IMAGES.length);
+        setVisible(true);
+      }, 400);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
+  const current = HERO_IMAGES[imgIdx];
 
   return (
     <section className="relative flex flex-col lg:flex-row min-h-dvh lg:items-stretch overflow-hidden">
@@ -23,10 +46,10 @@ export default function Hero() {
           style={{ objectPosition: "left center" }}
           sizes="100vw"
         />
-        {/* Mobile scrim — dark gradient so copy is legible over image */}
+        {/* Mobile scrim */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 lg:hidden"
+          className="absolute inset-0"
           style={{ background: "linear-gradient(to top, #0a0a0a 55%, rgba(10,10,10,0.5) 80%, rgba(10,10,10,0.2) 100%)" }}
         />
       </div>
@@ -35,54 +58,11 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-end min-h-dvh lg:min-h-0 lg:justify-center bg-transparent lg:bg-[#0a0a0a] px-8 sm:px-12 lg:px-16 xl:px-24 py-12 lg:py-0 lg:w-[52%] xl:w-[50%]">
 
         <p
-          className="text-xs font-semibold tracking-[0.25em] uppercase mb-4 lg:mb-5"
+          className="text-xs font-semibold tracking-[0.25em] uppercase mb-6 lg:mb-8"
           style={{ color: "#00E5FF" }}
         >
-          Meet AM
+          Meet <NameTag style={{ fontSize: "inherit", color: "#00E5FF", borderBottomColor: "rgba(0,229,255,0.5)" }} />!
         </p>
-
-        {/* ── PERSONALIZATION CONTROLS ── */}
-        <div
-          className="flex flex-wrap items-center gap-3 mb-6 lg:mb-8 px-3 py-2.5 rounded-xl w-fit"
-          style={{
-            background: "rgba(0,229,255,0.05)",
-            border: "1px solid rgba(0,229,255,0.15)",
-          }}
-        >
-          <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#00E5FF" }}>
-            Pronouns
-          </span>
-          <div className="flex gap-1.5">
-            {PRONOUN_SETS.map((set) => {
-              const active = pronouns.label === set.label;
-              return (
-                <button
-                  key={set.label}
-                  onClick={() => setPronouns(set)}
-                  className="text-[11px] px-2.5 py-1 rounded-full font-medium transition-all duration-150"
-                  style={{
-                    background: active ? "rgba(0,229,255,0.18)" : "rgba(255,255,255,0.04)",
-                    color: active ? "#00E5FF" : "#555555",
-                    border: `1px solid ${active ? "rgba(0,229,255,0.4)" : "rgba(255,255,255,0.08)"}`,
-                  }}
-                >
-                  {set.label}
-                </button>
-              );
-            })}
-          </div>
-          <span style={{ color: "#333" }}>|</span>
-          <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#00E5FF" }}>
-            Name
-          </span>
-          <NameTag
-            style={{
-              fontSize: "11px",
-              color: "#aaaaaa",
-              borderBottomColor: "rgba(0,229,255,0.4)",
-            }}
-          />
-        </div>
 
         <h1
           className="text-4xl sm:text-5xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-5"
@@ -137,7 +117,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center px-7 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.3)" }}
           >
-            Reserve Your <NameTag style={{ color: "#0a0a0a", borderBottomColor: "rgba(0,0,0,0.3)" }} />
+            Reserve Your AGI Companion
           </a>
           <a
             href="#features"
@@ -157,7 +137,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── DESKTOP IMAGE — right column, only rendered on lg+ ── */}
+      {/* ── DESKTOP IMAGE — rotating Home / Office / Dorm, only on lg+ ── */}
       <div className="relative hidden lg:block lg:w-[48%] xl:w-[50%]">
         <div
           aria-hidden="true"
@@ -168,20 +148,46 @@ export default function Hero() {
           }}
         />
         <Image
-          src="/am/am-student.jpg"
-          alt="AM in your dorm — never lets you fall behind"
+          key={current.src}
+          src={current.src}
+          alt={current.alt}
           fill
           priority
-          className="object-cover"
-          style={{ objectPosition: "left center" }}
+          className="object-cover transition-opacity duration-400"
+          style={{
+            objectPosition: "left center",
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.4s ease",
+          }}
           sizes="50vw"
         />
-        <div
-          className="absolute bottom-10 left-8 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl backdrop-blur-sm"
-          style={{ background: "rgba(10,10,10,0.75)", border: "1px solid rgba(0,229,255,0.25)" }}
-        >
-          <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#00E5FF" }} />
-          <span className="text-sm font-medium text-white"><NameTag /> is always on</span>
+
+        {/* Scene label + dots */}
+        <div className="absolute bottom-10 left-8 z-20 flex items-center gap-3">
+          {/* Scene name badge */}
+          <div
+            className="flex items-center gap-3 px-4 py-3 rounded-2xl backdrop-blur-sm"
+            style={{ background: "rgba(10,10,10,0.75)", border: "1px solid rgba(0,229,255,0.25)" }}
+          >
+            <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#00E5FF" }} />
+            <span className="text-sm font-medium text-white">{current.scene}</span>
+          </div>
+
+          {/* Dot nav */}
+          <div className="flex gap-1.5">
+            {HERO_IMAGES.map((img, i) => (
+              <button
+                key={img.scene}
+                onClick={() => { setVisible(false); setTimeout(() => { setImgIdx(i); setVisible(true); }, 400); }}
+                title={img.scene}
+                className="w-1.5 h-1.5 rounded-full transition-all duration-200"
+                style={{
+                  background: i === imgIdx ? "#00E5FF" : "rgba(255,255,255,0.3)",
+                  transform: i === imgIdx ? "scale(1.4)" : "scale(1)",
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
 

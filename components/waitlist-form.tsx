@@ -52,7 +52,7 @@ export default function WaitlistForm() {
             <h3 className="text-3xl font-bold mb-2" style={{ color: "#00E5FF", fontFamily: "var(--font-space-grotesk)" }}>
               Pre-Order #{preorderNumber.toString().padStart(4, "0")}
             </h3>
-            <p className="text-white font-medium mb-2">Your AM is reserved.</p>
+            <p className="text-white font-medium mb-2">Your AGI Companion is reserved.</p>
             <p style={{ color: "#aaaaaa" }}>
               We&apos;ll reach out with payment details and updates as July 2026 approaches.
               Your number is permanent — registered to you.

@@ -30,7 +30,7 @@ export default function Waitlist() {
             className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Reserve your <NameTag />.
+            Reserve your AGI Companion.
           </h2>
           <p className="text-lg leading-relaxed mb-3" style={{ color: "#aaaaaa" }}>
             Pre-orders are numbered and registered to you permanently. Each AM is
@@ -38,7 +38,7 @@ export default function Waitlist() {
             Shipping July 2026.
           </p>
           <p className="text-sm" style={{ color: "#888888" }}>
-            Your <NameTag /> belongs to you — and only you.
+            Your AGI Companion belongs to you — and only you.
           </p>
         </div>
 
