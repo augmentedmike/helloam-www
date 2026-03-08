@@ -1,4 +1,4 @@
-export type ColorId = "am-red" | "blue" | "pink" | "purple" | "black" | "white" | "green";
+export type ColorId = "am-red" | "blue" | "pink" | "purple" | "black" | "white";
 
 export interface AMColor {
   id: ColorId;
@@ -16,5 +16,4 @@ export const COLORS: AMColor[] = [
   { id: "purple", label: "Purple",  hex: "#7C3099", available: true,                   img: "/am/am-desk-purple.png" },
   { id: "black",  label: "Black",   hex: "#141414", available: true,                   img: "/am/am-desk-black.png" },
   { id: "white",  label: "White",   hex: "#F0EFEB", available: true,                   img: "/am/am-desk-white.png" },
-  { id: "green",  label: "Green",   hex: "#2D6B3A", available: false,                  img: "/am/am-desk-black.png" },
 ];

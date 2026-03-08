@@ -21,7 +21,7 @@ const PAYMENT_PLANS = [
 const INCLUDES = [
   "Pre-installed AM software, configured and named for you",
   "White glove video setup with the founder",
-  "Your pre-order number — registered to you, forever",
+  "Your machine number — registered to you, forever",
   "Hardware, skin, labor & shipping included",
   "Shipped from Austin, TX — AGI built in America",
   "Plug in. Turn on. Meet AM.",

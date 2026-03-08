@@ -58,7 +58,7 @@ export function NameTag({ className, style }: NameTagProps) {
           fontWeight: "inherit",
           lineHeight: "inherit",
           padding: "0 6px",
-          width: `${Math.max((draft.length || 1) + 1, 3)}ch`,
+          width: `${Math.max((draft.length || 1) + 2, 8)}ch`,
           outline: "none",
           ...style,
         }}

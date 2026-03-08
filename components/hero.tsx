@@ -77,7 +77,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base sm:text-lg font-medium mb-5 text-white">
-          A Mac Mini. Pre-installed with <NameTag /> — short for Amelia. Yours forever.
+          A Mac Mini. Pre-installed with AM — short for Amelia. Yours forever.
         </p>
 
         <p className="text-base leading-relaxed max-w-lg mb-8" style={{ color: "#aaaaaa" }}>
