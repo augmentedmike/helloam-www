@@ -9,12 +9,12 @@ interface ColorContextValue {
 }
 
 const ColorContext = createContext<ColorContextValue>({
-  selectedColor: "red",
+  selectedColor: "am-red",
   setSelectedColor: () => {},
 });
 
 export function ColorProvider({ children }: { children: ReactNode }) {
-  const [selectedColor, setSelectedColor] = useState<ColorId>("red");
+  const [selectedColor, setSelectedColor] = useState<ColorId>("am-red");
   return (
     <ColorContext.Provider value={{ selectedColor, setSelectedColor }}>
       {children}

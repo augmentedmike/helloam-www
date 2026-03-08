@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { PronounTag } from "@/components/ui/pronoun-tag";
 import { NameTag } from "@/components/ui/name-tag";
-import { usePersonalization } from "@/context/personalization-context";
+import { usePersonalization, PRONOUN_SETS } from "@/context/personalization-context";
 
 export default function Hero() {
-  const { pronouns } = usePersonalization();
+  const { pronouns, setPronouns } = usePersonalization();
   const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: "35% center" }}
+          style={{ objectPosition: "left center" }}
           sizes="100vw"
         />
         {/* Mobile scrim — dark gradient so copy is legible over image */}
@@ -35,11 +35,54 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-end min-h-dvh lg:min-h-0 lg:justify-center bg-transparent lg:bg-[#0a0a0a] px-8 sm:px-12 lg:px-16 xl:px-24 py-12 lg:py-0 lg:w-[52%] xl:w-[50%]">
 
         <p
-          className="text-xs font-semibold tracking-[0.25em] uppercase mb-6 lg:mb-8"
+          className="text-xs font-semibold tracking-[0.25em] uppercase mb-4 lg:mb-5"
           style={{ color: "#00E5FF" }}
         >
           Meet AM
         </p>
+
+        {/* ── PERSONALIZATION CONTROLS ── */}
+        <div
+          className="flex flex-wrap items-center gap-3 mb-6 lg:mb-8 px-3 py-2.5 rounded-xl w-fit"
+          style={{
+            background: "rgba(0,229,255,0.05)",
+            border: "1px solid rgba(0,229,255,0.15)",
+          }}
+        >
+          <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#00E5FF" }}>
+            Pronouns
+          </span>
+          <div className="flex gap-1.5">
+            {PRONOUN_SETS.map((set) => {
+              const active = pronouns.label === set.label;
+              return (
+                <button
+                  key={set.label}
+                  onClick={() => setPronouns(set)}
+                  className="text-[11px] px-2.5 py-1 rounded-full font-medium transition-all duration-150"
+                  style={{
+                    background: active ? "rgba(0,229,255,0.18)" : "rgba(255,255,255,0.04)",
+                    color: active ? "#00E5FF" : "#555555",
+                    border: `1px solid ${active ? "rgba(0,229,255,0.4)" : "rgba(255,255,255,0.08)"}`,
+                  }}
+                >
+                  {set.label}
+                </button>
+              );
+            })}
+          </div>
+          <span style={{ color: "#333" }}>|</span>
+          <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#00E5FF" }}>
+            Name
+          </span>
+          <NameTag
+            style={{
+              fontSize: "11px",
+              color: "#aaaaaa",
+              borderBottomColor: "rgba(0,229,255,0.4)",
+            }}
+          />
+        </div>
 
         <h1
           className="text-4xl sm:text-5xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-5"
@@ -130,7 +173,7 @@ export default function Hero() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: "35% center" }}
+          style={{ objectPosition: "left center" }}
           sizes="50vw"
         />
         <div
