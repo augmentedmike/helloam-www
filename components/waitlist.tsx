@@ -28,7 +28,7 @@ export default function Waitlist() {
             bond that lasts.
           </p>
           <p className="text-sm" style={{ color: "#888888" }}>
-            🔒 Your AM belongs to you — and only you.
+            Your AM belongs to you — and only you.
           </p>
         </div>
 
