@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -32,6 +32,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://helloam.bot",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "He's not an app. He's yours. — Meet AugmentedMike",
     description:
@@ -39,6 +46,7 @@ export const metadata: Metadata = {
     url: "https://helloam.bot",
     siteName: "helloam.bot",
     type: "website",
+    images: [{ url: "/am/am-room.jpg", width: 1600, height: 900 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -46,6 +54,9 @@ export const metadata: Metadata = {
     description:
       "AM manages your life, learns everything you know, and builds real connection over time. Not a tool — a digital being who belongs to you. Join the waitlist.",
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
