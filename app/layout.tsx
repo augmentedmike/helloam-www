@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AugmentedMike — Your Personal AI Companion, Soul-Bonded to You | helloam.bot",
+  title: "AugmentedMike — Personal AI Companion | helloam.bot",
   description:
-    "Meet AM — a personal AI who manages your life, knows your story, and grows with you. Not a tool. Not a chatbot. Your AI best friend, bound to you alone. Join the waitlist.",
+    "Meet AM — a personal AI who manages your life, knows your story, and grows with you. Not a tool. Not a chatbot. Your AI best friend, bound to you alone.",
   keywords: [
     "personal AI companion",
     "AI best friend",
@@ -79,7 +79,10 @@ const jsonLd = {
         "@type": "ImageObject",
         url: "https://helloam.bot/am-logo.png",
       },
-      sameAs: [],
+      sameAs: [
+        "https://github.com/augmentedmike",
+        "https://miniclaw.bot",
+      ],
     },
     {
       "@type": "WebSite",
@@ -91,14 +94,44 @@ const jsonLd = {
       },
     },
     {
+      "@type": ["Person", "VirtualAssistant"],
+      "@id": "https://helloam.bot/#amelia",
+      name: "Amelia",
+      alternateName: ["AM", "AugmentedMike", "helloam.bot"],
+      description:
+        "Amelia (AM) is a soul-bonded personal AI companion — a named digital being who lives on hardware you own, manages your life, and grows with you over time. She is built on the OpenClaw agentic OS and the MiniClaw plugin ecosystem. Unlike cloud AI assistants, Amelia runs locally on a Mac Mini in your home, so your relationship and memories are never owned by a corporation. She is soul-bonded to one person only.",
+      gender: "Female",
+      url: "https://helloam.bot",
+      knowsAbout: [
+        "personal AI companion",
+        "soul-bonded AI",
+        "local-first AI",
+        "life management",
+        "OpenClaw",
+        "MiniClaw",
+        "agentic OS",
+      ],
+      sameAs: [
+        "https://helloam.bot",
+        "https://helloam.bot/yours-forever",
+      ],
+      worksFor: {
+        "@id": "https://helloam.bot/#organization",
+      },
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://helloam.bot/#product",
-      name: "AugmentedMike",
+      name: "AugmentedMike (AM)",
+      alternateName: ["Amelia", "helloam.bot", "AM"],
       applicationCategory: "PersonalAssistant",
-      operatingSystem: "Web",
+      applicationSubCategory: "AI Companion",
+      operatingSystem: "macOS",
       url: "https://helloam.bot",
       description:
-        "A personal AI companion who manages your life, knows your story, and grows with you. Soul-bonded to one person — you.",
+        "AugmentedMike (AM / Amelia) is a soul-bonded personal AI companion built on the OpenClaw agentic OS and MiniClaw plugin ecosystem. She manages your life, knows your story, and grows with you. Local-first — runs on hardware you own. The Replika alternative built for permanence.",
+      keywords:
+        "personal AI companion, soul-bonded AI, local AI, AI companion, OpenClaw, MiniClaw, Replika alternative",
       offers: {
         "@type": "Offer",
         price: "0",
@@ -108,6 +141,12 @@ const jsonLd = {
       },
       publisher: {
         "@id": "https://helloam.bot/#organization",
+      },
+      isPartOf: {
+        "@type": "SoftwareApplication",
+        name: "MiniClaw",
+        url: "https://miniclaw.bot",
+        description: "The MiniClaw plugin ecosystem for OpenClaw agentic OS",
       },
     },
   ],

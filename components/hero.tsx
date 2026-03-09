@@ -17,9 +17,10 @@ export default function Hero() {
         <Image
           src="/am/am-student.jpg"
           alt="AM in your dorm — never lets you fall behind"
-          fill
+          width={2400}
+          height={1600}
           priority
-          className="object-cover"
+          className="object-cover absolute inset-0 w-full h-full"
           style={{ objectPosition: "35% center" }}
           sizes="100vw"
         />
@@ -127,9 +128,10 @@ export default function Hero() {
         <Image
           src="/am/am-student.jpg"
           alt="AM in your dorm — never lets you fall behind"
-          fill
+          width={2400}
+          height={1600}
           priority
-          className="object-cover"
+          className="object-cover absolute inset-0 w-full h-full"
           style={{ objectPosition: "35% center" }}
           sizes="50vw"
         />
