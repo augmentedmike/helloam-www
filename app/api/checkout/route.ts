@@ -8,13 +8,13 @@ const RACK_DEPOSIT = RACK_PRICE / 2;
 
 export async function POST(req: NextRequest) {
   try {
-    const sk = process.env.STRIPE_SECRET_KEY;
+    const sk = process.env.STRIPE_SECRET_KEY?.trim();
     if (!sk) {
       console.error("[checkout] STRIPE_SECRET_KEY not set");
       return NextResponse.json({ error: "Payments not configured." }, { status: 500 });
     }
 
-    const stripe = new Stripe(sk);
+    const stripe = new Stripe(sk, { timeout: 10000 });
 
     const body = await req.json();
     const { color, mode, qty, name, email, address } = body;
