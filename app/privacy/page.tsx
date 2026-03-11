@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | helloam.bot",
@@ -23,26 +24,12 @@ const jsonLd = {
 export default function PrivacyPage() {
   return (
     <main style={{ background: "#0a0a0a", color: "#ededed", minHeight: "100vh" }}>
-      {/* Nav */}
-      <div className="px-6 py-6 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-sm transition-colors hover:text-white"
-          style={{ color: "#666666" }}
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Back to helloam.bot
-        </a>
-      </div>
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="max-w-3xl mx-auto px-6 py-16">
+      <article className="max-w-3xl mx-auto px-6 pt-24 pb-16">
         <header className="mb-12">
           <p
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
@@ -72,10 +59,10 @@ export default function PrivacyPage() {
             <p>
               helloam.bot is operated by Tylt LLC, a Delaware company. We build AM — a
               personal AI companion designed to live on hardware you own, bonded to one person: you.
-              Questions about this policy? Email us at{" "}
-              <a href="mailto:hello@helloam.bot" className="text-white hover:underline">
-                hello@helloam.bot
-              </a>
+              Questions about this policy?{" "}
+              <ContactButton category="General" className="text-white hover:underline cursor-pointer">
+                Contact us
+              </ContactButton>
               .
             </p>
           </section>
@@ -180,10 +167,9 @@ export default function PrivacyPage() {
             </p>
             <ul className="space-y-2 pl-4" style={{ listStyle: "disc" }}>
               <li>
-                Email{" "}
-                <a href="mailto:hello@helloam.bot" className="text-white hover:underline">
-                  hello@helloam.bot
-                </a>{" "}
+                <ContactButton category="Support" className="text-white hover:underline cursor-pointer">
+                  Contact us
+                </ContactButton>{" "}
                 with your request. We will respond within 30 days.
               </li>
               <li>To unsubscribe from the waitlist, reply to any email with &quot;unsubscribe&quot; or email us directly.</li>
@@ -229,10 +215,10 @@ export default function PrivacyPage() {
             <p>
               This service is not directed at children under 13. We do not knowingly collect personal
               information from children. If you believe we have inadvertently collected information from
-              a child, contact us immediately at{" "}
-              <a href="mailto:hello@helloam.bot" className="text-white hover:underline">
-                hello@helloam.bot
-              </a>
+              a child,{" "}
+              <ContactButton category="Support" className="text-white hover:underline cursor-pointer">
+                contact us immediately
+              </ContactButton>
               .
             </p>
           </section>
@@ -261,25 +247,14 @@ export default function PrivacyPage() {
             <p>
               Tylt LLC · 1111B S Governors Ave #7126 · Dover, DE 19904 · USA
               <br />
-              <a href="mailto:hello@helloam.bot" className="text-white hover:underline">
-                hello@helloam.bot
-              </a>
+              <ContactButton category="General" className="text-white hover:underline cursor-pointer">
+                Contact us
+              </ContactButton>
             </p>
           </section>
         </div>
       </article>
 
-      <footer
-        className="px-6 py-8 text-center text-xs border-t"
-        style={{ borderColor: "rgba(255,255,255,0.06)", color: "#444444" }}
-      >
-        <p>
-          &copy; 2025 Tylt LLC &middot; Delaware &middot;{" "}
-          <a href="/" className="hover:text-white transition-colors">helloam.bot</a>
-          {" "}&middot;{" "}
-          <a href="/terms" className="hover:text-white transition-colors">Terms</a>
-        </p>
-      </footer>
     </main>
   );
 }

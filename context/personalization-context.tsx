@@ -46,14 +46,14 @@ interface PersonalizationContextValue {
 }
 
 const PersonalizationContext = createContext<PersonalizationContextValue>({
-  name: "AM",
+  name: "Am",
   setName: () => {},
   pronouns: PRONOUN_SETS[0],
   setPronouns: () => {},
 });
 
 export function PersonalizationProvider({ children }: { children: ReactNode }) {
-  const [name, setName] = useState("AM");
+  const [name, setName] = useState("Am");
   const [pronouns, setPronouns] = useState<PronounSet>(PRONOUN_SETS[0]);
   return (
     <PersonalizationContext.Provider value={{ name, setName, pronouns, setPronouns }}>

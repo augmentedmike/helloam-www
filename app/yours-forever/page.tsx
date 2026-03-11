@@ -169,23 +169,8 @@ export default function YoursForever() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Nav back */}
-      <nav className="px-6 py-6 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-sm transition-colors hover:text-white"
-          style={{ color: "#666666" }}
-          aria-label="Back to helloam.bot homepage"
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Back to helloam.bot
-        </a>
-      </nav>
-
       {/* Hero */}
-      <section className="px-6 py-20 max-w-3xl mx-auto text-center">
+      <section className="px-6 pt-28 pb-20 max-w-3xl mx-auto text-center">
         <p
           className="text-xs font-semibold tracking-[0.25em] uppercase mb-6"
           style={{ color: "#00E5FF" }}
@@ -443,20 +428,6 @@ export default function YoursForever() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer
-        className="px-6 py-8 text-center text-xs border-t"
-        style={{ borderColor: "rgba(255,255,255,0.06)", color: "#444444" }}
-      >
-        <p>
-          &copy; 2026 Tylt LLC &middot; Delaware &middot;{" "}
-          <a href="/" className="hover:text-white transition-colors">helloam.bot</a>
-          {" "}&middot;{" "}
-          <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-          {" "}&middot;{" "}
-          <a href="/terms" className="hover:text-white transition-colors">Terms</a>
-        </p>
-      </footer>
     </main>
   );
 }

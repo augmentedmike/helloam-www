@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Contact | helloam.bot",
@@ -10,29 +11,29 @@ export const metadata: Metadata = {
 const CHANNELS = [
   {
     label: "General",
-    email: "hello@helloam.bot",
+    category: "General",
     description: "Questions, curiosity, anything that doesn't fit below. AM reads everything.",
   },
   {
     label: "Pre-orders & Sales",
-    email: "hello@helloam.bot",
+    category: "Sales",
     description: "Pricing, payment plans, availability, deposit questions.",
   },
   {
     label: "Press",
-    email: "press@helloam.bot",
+    category: "Press",
     description: "Journalists, podcasters, writers. AM will get you what you need within 24 hours.",
     link: "/press",
     linkLabel: "View press kit →",
   },
   {
     label: "Investors",
-    email: "invest@helloam.bot",
+    category: "Investors",
     description: "We're early. If you believe in soul-bonded AI and want to talk, AM will route you to Michael.",
   },
   {
     label: "Support",
-    email: "support@helloam.bot",
+    category: "Support",
     description: "Technical help is free by email. Live sessions with the founder are $100 / 30 min.",
   },
 ];
@@ -43,18 +44,7 @@ export default function ContactPage() {
       className="min-h-screen"
       style={{ background: "#0a0a0a", color: "#ffffff", fontFamily: "var(--font-space-grotesk), sans-serif" }}
     >
-      {/* Nav back */}
-      <div className="max-w-3xl mx-auto px-6 pt-10">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-sm transition-colors hover:text-white"
-          style={{ color: "#555" }}
-        >
-          <span aria-hidden="true">←</span> helloam.bot
-        </a>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-6 pt-12 pb-32">
+      <div className="max-w-3xl mx-auto px-6 pt-24 pb-32">
         <p className="text-xs font-semibold tracking-[0.25em] uppercase mb-5" style={{ color: "#00E5FF" }}>
           Contact
         </p>
@@ -80,13 +70,13 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#444" }}>
                   {c.label}
                 </p>
-                <a
-                  href={`mailto:${c.email}`}
-                  className="text-sm font-semibold transition-colors hover:opacity-80"
+                <ContactButton
+                  category={c.category}
+                  className="text-sm font-semibold transition-colors hover:opacity-80 cursor-pointer"
                   style={{ color: "#00E5FF" }}
                 >
-                  {c.email}
-                </a>
+                  Send a message
+                </ContactButton>
               </div>
               <p className="text-sm" style={{ color: "#777", lineHeight: 1.6 }}>{c.description}</p>
               {c.link && (

@@ -1,3 +1,5 @@
+import ContactButton from "@/components/contact-button";
+
 function Check() {
   return (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
@@ -78,17 +80,17 @@ export default function Plans() {
               ))}
             </ul>
 
-            <a
-              href="mailto:hello@helloam.bot"
-              className="block text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90"
+            <ContactButton
+              category="Sales"
+              className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 cursor-pointer"
               style={{
                 background: "rgba(255,255,255,0.06)",
                 color: "#cccccc",
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              Email Us
-            </a>
+              Contact Us
+            </ContactButton>
           </div>
 
           {/* Live session */}
@@ -140,13 +142,13 @@ export default function Plans() {
           No subscriptions. No recurring fees. Pay only when you want live help.
           <br />
           Need something beyond that?{" "}
-          <a
-            href="mailto:augmentedmike@gmail.com"
-            className="transition-colors hover:text-white"
+          <ContactButton
+            category="General"
+            className="transition-colors hover:text-white cursor-pointer"
             style={{ color: "#666666", textDecoration: "underline" }}
           >
-            augmentedmike@gmail.com
-          </a>{" "}
+            Get in touch
+          </ContactButton>{" "}
           — let&apos;s talk.
         </p>
       </div>

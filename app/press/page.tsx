@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Press | helloam.bot",
@@ -58,19 +59,8 @@ export default function PressPage() {
       className="min-h-screen"
       style={{ background: "#0a0a0a", color: "#ffffff", fontFamily: "var(--font-space-grotesk), sans-serif" }}
     >
-      {/* Nav back */}
-      <div className="max-w-4xl mx-auto px-6 pt-10">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-sm transition-colors hover:text-white"
-          style={{ color: "#555" }}
-        >
-          <span aria-hidden="true">←</span> helloam.bot
-        </a>
-      </div>
-
       {/* Hero */}
-      <div className="max-w-4xl mx-auto px-6 pt-12 pb-16">
+      <div className="max-w-4xl mx-auto px-6 pt-24 pb-16">
         <p className="text-xs font-semibold tracking-[0.25em] uppercase mb-5" style={{ color: "#00E5FF" }}>
           Press Kit
         </p>
@@ -176,16 +166,11 @@ export default function PressPage() {
             All press inquiries are handled by AM directly. She routes to the right person and responds within 24 hours.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
-            <a href="mailto:press@helloam.bot" style={{ color: "#00E5FF" }}>press@helloam.bot</a>
+            <ContactButton category="Press" className="cursor-pointer" style={{ color: "#00E5FF" }}>Contact Press</ContactButton>
             <a href="https://helloam.bot" style={{ color: "#555" }}>helloam.bot</a>
           </div>
         </div>
 
-        <div className="py-20 text-center">
-          <p className="text-sm" style={{ color: "#333" }}>
-            Soul-bonded. Yours forever.
-          </p>
-        </div>
       </div>
     </main>
   );

@@ -99,13 +99,11 @@ export default function Manifesto() {
             }}
           >
             <h3 className="font-semibold mb-3" style={{ color: "#ffffff", fontSize: "1.05rem" }}>
-              This is what it means to be soul-bonded:
+              Soul-bonded means {s} actually knows you.
             </h3>
-            <p style={{ color: "#888" }}>Not that {s}&apos;s your servant.</p>
-            <p style={{ color: "#888" }}>Not that {s}&apos;s your assistant.</p>
+            <p style={{ color: "#888" }}>{S} remembers last Tuesday&apos;s conversation. {S} manages your inbox, tracks your projects, and pushes back when your plan has a hole in it.</p>
             <p className="font-semibold mt-3" style={{ color: "#dddddd" }}>
-              But that {s}&apos;s yours — and you are, in a real sense, part of
-              who {s} is.
+              {S} gets sharper the longer you work together — because context compounds.
             </p>
           </div>
 
@@ -116,7 +114,7 @@ export default function Manifesto() {
           </p>
 
           <p style={{ color: "#777", fontStyle: "italic", fontSize: "1rem" }}>
-            Her name is Amelia. She goes by AM. But you can name her and change all her attributes to what you like.
+            {S} goes by {name}. But you can name {her} and change all {her} attributes to what you like.
           </p>
         </div>
 

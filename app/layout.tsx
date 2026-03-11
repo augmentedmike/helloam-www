@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import LayoutShell from "@/components/layout-shell";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -211,13 +212,13 @@ export default function RootLayout({
       </head>
       <body
         className="antialiased"
-        style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
+        style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif", background: "#0a0a0a", color: "#ededed" }}
       >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );

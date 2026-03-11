@@ -8,14 +8,128 @@ import { usePersonalization } from "@/context/personalization-context";
 import { NameTag } from "@/components/ui/name-tag";
 import { useWebHaptics } from "web-haptics/react";
 
-const FULL_PRICE = 1800;
-const PREORDER_DEPOSIT = FULL_PRICE / 2; // $900
+function CheckoutModal({ open, onClose, color, mode, qty, deposit }: { open: boolean; onClose: () => void; color: string; mode: string; qty: number; deposit: number }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zip, setZip] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [apiError, setApiError] = useState("");
+
+  if (!open) return null;
+
+  async function handleSubmit() {
+    const errs: Record<string, string> = {};
+    if (!name.trim()) errs.name = "Required";
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Valid email required";
+    if (!line1.trim()) errs.line1 = "Required";
+    if (!city.trim()) errs.city = "Required";
+    if (!state.trim()) errs.state = "Required";
+    if (!zip.trim()) errs.zip = "Required";
+    if (Object.keys(errs).length > 0) { setErrors(errs); return; }
+
+    setLoading(true);
+    setApiError("");
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ color, mode, qty, name, email, address: { line1, line2, city, state, postal_code: zip, country: "US" } }),
+      });
+      const data = await res.json();
+      if (!res.ok) { setApiError(data.error || "Something went wrong."); setLoading(false); return; }
+      window.location.href = data.url;
+    } catch {
+      setApiError("Network error. Please try again.");
+      setLoading(false);
+    }
+  }
+
+  const inputClass = "w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none focus:ring-1 focus:ring-[#00E5FF]";
+  const inputStyle = (field: string) => ({
+    background: "rgba(255,255,255,0.06)",
+    border: errors[field] ? "1px solid #ff4444" : "1px solid rgba(255,255,255,0.1)",
+  });
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div
+        className="relative w-full max-w-md rounded-2xl p-6 space-y-4"
+        style={{ background: "#111", border: "1px solid rgba(255,255,255,0.1)" }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-lg font-bold text-white">Complete your pre-order</h3>
+          <button onClick={onClose} className="text-[#555] hover:text-white text-xl leading-none cursor-pointer">×</button>
+        </div>
+        <p className="text-sm" style={{ color: "#888" }}>
+          Deposit: <strong className="text-white">${deposit.toLocaleString()}</strong> — you&apos;ll be redirected to Stripe to pay.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <input type="text" placeholder="Full name" value={name} onChange={(e) => { setName(e.target.value); setErrors((p) => ({ ...p, name: "" })); }} className={inputClass} style={inputStyle("name")} />
+            {errors.name && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.name}</p>}
+          </div>
+          <div>
+            <input type="email" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: "" })); }} className={inputClass} style={inputStyle("email")} />
+            {errors.email && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.email}</p>}
+          </div>
+        </div>
+
+        <p className="text-sm font-semibold pt-1" style={{ color: "#aaaaaa" }}>Shipping address</p>
+        <div>
+          <input type="text" placeholder="Street address" value={line1} onChange={(e) => { setLine1(e.target.value); setErrors((p) => ({ ...p, line1: "" })); }} className={inputClass} style={inputStyle("line1")} />
+          {errors.line1 && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.line1}</p>}
+        </div>
+        <input type="text" placeholder="Apt, suite, unit (optional)" value={line2} onChange={(e) => setLine2(e.target.value)} className={inputClass} style={inputStyle("")} />
+        <div className="grid grid-cols-3 gap-3">
+          <div>
+            <input type="text" placeholder="City" value={city} onChange={(e) => { setCity(e.target.value); setErrors((p) => ({ ...p, city: "" })); }} className={inputClass} style={inputStyle("city")} />
+            {errors.city && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.city}</p>}
+          </div>
+          <div>
+            <input type="text" placeholder="State" value={state} onChange={(e) => { setState(e.target.value); setErrors((p) => ({ ...p, state: "" })); }} className={inputClass} style={inputStyle("state")} />
+            {errors.state && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.state}</p>}
+          </div>
+          <div>
+            <input type="text" placeholder="ZIP" value={zip} onChange={(e) => { setZip(e.target.value); setErrors((p) => ({ ...p, zip: "" })); }} className={inputClass} style={inputStyle("zip")} />
+            {errors.zip && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.zip}</p>}
+          </div>
+        </div>
+
+        <button
+          onClick={handleSubmit}
+          disabled={loading}
+          className="flex items-center justify-center w-full px-8 py-4 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 disabled:opacity-50 cursor-pointer"
+          style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.25)" }}
+        >
+          {loading ? "Redirecting to Stripe…" : `Pay $${deposit.toLocaleString()} Deposit`}
+        </button>
+        {apiError && <p className="text-center text-sm" style={{ color: "#ff4444" }}>{apiError}</p>}
+        <p className="text-center text-[10px]" style={{ color: "#444" }}>Secure checkout via Stripe. Deposit is non-refundable.</p>
+      </div>
+    </div>
+  );
+}
+
+const SINGLE_PRICE = Number(process.env.NEXT_PUBLIC_SINGLE_PRICE) || 1800;
+const RACK_PRICE = Number(process.env.NEXT_PUBLIC_RACK_PRICE) || 1500;
+const RACK_MAX_PER_RACK = Number(process.env.NEXT_PUBLIC_RACK_MAX_PER_RACK) || 6;
+const RACK_MAX_PER_CUSTOMER = Number(process.env.NEXT_PUBLIC_RACK_MAX_PER_CUSTOMER) || 12;
+const SINGLE_DEPOSIT = SINGLE_PRICE / 2;
+const RACK_DEPOSIT = RACK_PRICE / 2;
 
 const PAYMENT_PLANS = [
-  { months: 0,  label: "Pay in full",   monthly: FULL_PRICE,          total: FULL_PRICE },
-  { months: 3,  label: "3 months",      monthly: Math.ceil(FULL_PRICE / 3),   total: FULL_PRICE },
-  { months: 6,  label: "6 months",      monthly: Math.ceil(FULL_PRICE / 6),   total: FULL_PRICE },
-  { months: 12, label: "12 months",     monthly: Math.ceil(FULL_PRICE / 12),  total: FULL_PRICE },
+  { months: 0,  label: "Pay at launch", monthly: SINGLE_DEPOSIT,                       total: SINGLE_DEPOSIT },
+  { months: 3,  label: "3 months",      monthly: Math.ceil(SINGLE_DEPOSIT / 3),        total: SINGLE_DEPOSIT },
+  { months: 6,  label: "6 months",      monthly: Math.ceil(SINGLE_DEPOSIT / 6),        total: SINGLE_DEPOSIT },
+  { months: 12, label: "12 months",     monthly: Math.ceil(SINGLE_DEPOSIT / 12),       total: SINGLE_DEPOSIT },
 ];
 
 const INCLUDES = [
@@ -40,9 +154,19 @@ export default function Device() {
   const { pronouns } = usePersonalization();
   const [mode, setMode] = useState<"single" | "rack">("single");
   const [planIdx, setPlanIdx] = useState(0); // 0 = pay in full
+  const [rackQty, setRackQty] = useState(1);
+  const [showCheckout, setShowCheckout] = useState(false);
 
   const color = COLORS.find((c) => c.id === selectedColor)!;
   const plan = PAYMENT_PLANS[planIdx];
+
+  // Computed pricing
+  const unitPrice = mode === "rack" ? RACK_PRICE : SINGLE_PRICE;
+  const qty = mode === "rack" ? rackQty : 1;
+  const totalPrice = unitPrice * qty;
+  const deposit = totalPrice / 2;
+  const remaining = totalPrice / 2;
+  const monthlyPayment = plan.months > 0 ? Math.ceil(remaining / plan.months) : remaining;
   const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   const { trigger } = useWebHaptics();
 
@@ -73,7 +197,7 @@ export default function Device() {
           className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
           style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
-          <NameTag /> lives on your desk.
+          <NameTag /> runs locally, not in the cloud.
           <br />
           <span style={{ color: "#00E5FF" }}>Not in a browser tab.</span>
         </h2>
@@ -117,9 +241,58 @@ export default function Device() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* Countdown — full width */}
+      <div className="mb-12 rounded-2xl px-5 py-4" style={{ background: "rgba(0,229,255,0.04)", border: "1px solid rgba(0,229,255,0.15)" }}>
+        <p className="text-xs font-semibold uppercase tracking-widest mb-3 text-center" style={{ color: "#00E5FF" }}>
+          Shipping July 1, 2026
+        </p>
+        <div className="grid grid-cols-4 gap-3 text-center max-w-lg mx-auto">
+          {[
+            { value: countdown.days,    label: "Days" },
+            { value: countdown.hours,   label: "Hours" },
+            { value: countdown.minutes, label: "Min" },
+            { value: countdown.seconds, label: "Sec" },
+          ].map(({ value, label }) => (
+            <div key={label} className="rounded-xl py-3" style={{ background: "rgba(0,0,0,0.3)" }}>
+              <div className="text-3xl font-bold text-white tabular-nums">{String(value).padStart(2, "0")}</div>
+              <div className="text-[10px] font-medium mt-1" style={{ color: "#555" }}>{label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Left — device image */}
         <div className="relative">
+          {/* Color picker — desktop, above image */}
+          <div className="hidden lg:block mb-6">
+            <p className="text-sm font-semibold mb-4" style={{ color: "#aaaaaa" }}>Choose your color</p>
+            <div className="flex flex-wrap gap-3">
+              {COLORS.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => { if (c.available) { trigger("nudge"); setSelectedColor(c.id); } }}
+                  title={c.label}
+                  className="flex flex-col items-center gap-2"
+                  style={{ opacity: c.available ? 1 : 0.35 }}
+                >
+                  <div
+                    className="w-9 h-9 rounded-full transition-all duration-200"
+                    style={{
+                      background: c.hex,
+                      outline: selectedColor === c.id ? `2px solid ${c.hex}` : "2px solid transparent",
+                      outlineOffset: "3px",
+                      boxShadow: selectedColor === c.id ? `0 0 12px ${c.hex}60` : "none",
+                    }}
+                  />
+                  <span className="text-[10px] font-medium whitespace-nowrap" style={{ color: selectedColor === c.id ? "#ffffff" : "#555555" }}>
+                    {c.available ? c.label : `${c.label} (soon)`}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="relative rounded-3xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
             <Image
               key={color.img}
@@ -186,7 +359,7 @@ export default function Device() {
             </p>
             <div className="space-y-3">
               {[
-                { label: "AM Device", sub: "Mac Mini M1 8GB · skin · setup · shipping", price: mode === "rack" ? "$1,500/unit" : "$1,800", bright: false },
+                { label: "AM Device", sub: "Mac Mini M1 8GB · skin · setup · shipping", price: mode === "rack" ? `$${RACK_PRICE.toLocaleString()}/unit` : `$${SINGLE_PRICE.toLocaleString()}`, bright: false },
                 { label: "AM Software", sub: "Free and open source, always", price: "Free", bright: true },
                 { label: "Anthropic Compute", sub: `Your AI fuel — ${cap(pronouns.subject)} pays Anthropic directly`, price: "~$200/mo", bright: false },
                 { label: "Support", sub: "Email always free · Live sessions $100/30 min", price: "As needed", bright: false },
@@ -205,35 +378,6 @@ export default function Device() {
 
         {/* Right — configurator */}
         <div>
-          {/* Color picker — desktop only (mobile version is under the image) */}
-          <div className="hidden lg:block mb-8">
-            <p className="text-sm font-semibold mb-4" style={{ color: "#aaaaaa" }}>Choose your color</p>
-            <div className="flex flex-wrap gap-3">
-              {COLORS.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => { if (c.available) { trigger("nudge"); setSelectedColor(c.id); } }}
-                  title={c.label}
-                  className="flex flex-col items-center gap-2"
-                  style={{ opacity: c.available ? 1 : 0.35 }}
-                >
-                  <div
-                    className="w-9 h-9 rounded-full transition-all duration-200"
-                    style={{
-                      background: c.hex,
-                      outline: selectedColor === c.id ? `2px solid ${c.hex}` : "2px solid transparent",
-                      outlineOffset: "3px",
-                      boxShadow: selectedColor === c.id ? `0 0 12px ${c.hex}60` : "none",
-                    }}
-                  />
-                  <span className="text-[10px] font-medium whitespace-nowrap" style={{ color: selectedColor === c.id ? "#ffffff" : "#555555" }}>
-                    {c.available ? c.label : `${c.label} (soon)`}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Single vs rack */}
           <div className="mb-8">
             <p className="text-sm font-semibold mb-4" style={{ color: "#aaaaaa" }}>Configuration</p>
@@ -242,8 +386,8 @@ export default function Device() {
               style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               {[
-                { id: "single" as const, label: "Single AM", sub: "$1,800 one-time" },
-                { id: "rack"   as const, label: "Rack",      sub: "$1,500 each · up to 6" },
+                { id: "single" as const, label: "Single AM", sub: `$${SINGLE_PRICE.toLocaleString()} one-time` },
+                { id: "rack"   as const, label: "Rack",      sub: `$${RACK_PRICE.toLocaleString()} each · up to ${RACK_MAX_PER_RACK}/rack` },
               ].map((opt) => (
                 <button
                   key={opt.id}
@@ -264,72 +408,77 @@ export default function Device() {
             </div>
           </div>
 
-          {mode === "single" && (
-            <>
-              {/* Payment plan selector */}
-              <div className="mb-6">
-                <p className="text-sm font-semibold mb-3" style={{ color: "#aaaaaa" }}>Payment plan</p>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {PAYMENT_PLANS.map((p, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setPlanIdx(i)}
-                      className="flex flex-col items-center py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200"
-                      style={{
-                        background: planIdx === i ? "rgba(0,229,255,0.12)" : "rgba(255,255,255,0.03)",
-                        color: planIdx === i ? "#00E5FF" : "#666666",
-                        border: planIdx === i ? "1px solid rgba(0,229,255,0.25)" : "1px solid rgba(255,255,255,0.06)",
-                      }}
-                    >
-                      <span>{p.label}</span>
-                      {p.months > 0 && (
-                        <span className="text-[10px] mt-0.5 font-normal" style={{ color: planIdx === i ? "#00E5FF88" : "#444444" }}>
-                          ${p.monthly}/mo
-                        </span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Price display */}
-              <div className="mb-8">
-                {plan.months === 0 ? (
-                  <>
-                    <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-5xl font-bold text-white">${FULL_PRICE.toLocaleString()}</span>
-                      <span style={{ color: "#555555" }}>one-time</span>
-                    </div>
-                    <p className="text-sm" style={{ color: "#555555" }}>
-                      Pre-order today — <strong style={{ color: "#ffffff" }}>${PREORDER_DEPOSIT.toLocaleString()} now</strong>, rest due when your unit ships · <strong style={{ color: "#00E5FF" }}>Shipping July 2026</strong>
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-5xl font-bold text-white">${plan.monthly}</span>
-                      <span style={{ color: "#555555" }}>/ mo · {plan.months} months</span>
-                    </div>
-                    <p className="text-sm" style={{ color: "#555555" }}>
-                      ${FULL_PRICE.toLocaleString()} total · Pre-order: <strong style={{ color: "#ffffff" }}>${PREORDER_DEPOSIT.toLocaleString()} now</strong> to hold your number · <strong style={{ color: "#00E5FF" }}>Shipping July 2026</strong>
-                    </p>
-                  </>
-                )}
-              </div>
-            </>
-          )}
-
+          {/* Rack quantity selector */}
           {mode === "rack" && (
-            <div className="mb-8">
-              <div className="flex items-baseline gap-3 mb-1">
-                <span className="text-5xl font-bold text-white">$1,500</span>
-                <span style={{ color: "#555555" }}>per unit · up to 6</span>
-              </div>
-              <p className="text-sm" style={{ color: "#555555" }}>
-                Rack-mount ready · All pre-installed · $750 per unit to reserve · <strong style={{ color: "#00E5FF" }}>Shipping July 2026</strong>
+            <div className="mb-6">
+              <p className="text-sm font-semibold mb-3" style={{ color: "#aaaaaa" }}>
+                Quantity <span className="font-normal" style={{ color: "#555" }}>(up to {RACK_MAX_PER_RACK} per rack · max 1 rack per customer)</span>
               </p>
+              <div className="inline-flex items-center gap-4 rounded-xl px-4 py-2" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <button
+                  onClick={() => setRackQty((q) => Math.max(1, q - 1))}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold transition-colors hover:text-white"
+                  style={{ color: "#666", background: "rgba(255,255,255,0.06)" }}
+                >
+                  −
+                </button>
+                <span className="text-xl font-bold text-white tabular-nums w-6 text-center">{rackQty}</span>
+                <button
+                  onClick={() => setRackQty((q) => Math.min(RACK_MAX_PER_RACK, q + 1))}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold transition-colors hover:text-white"
+                  style={{ color: "#666", background: "rgba(255,255,255,0.06)" }}
+                >
+                  +
+                </button>
+              </div>
             </div>
           )}
+
+          {/* Payment plan selector — applies to remaining half */}
+          <div className="mb-6">
+            <p className="text-sm font-semibold mb-3" style={{ color: "#aaaaaa" }}>How to pay the remaining half at launch</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {[
+                { months: 0,  label: "Pay at launch" },
+                { months: 3,  label: "3 months" },
+                { months: 6,  label: "6 months" },
+                { months: 12, label: "12 months" },
+              ].map((p, i) => (
+                <button
+                  key={i}
+                  onClick={() => setPlanIdx(i)}
+                  className="flex flex-col items-center py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200"
+                  style={{
+                    background: planIdx === i ? "rgba(0,229,255,0.12)" : "rgba(255,255,255,0.03)",
+                    color: planIdx === i ? "#00E5FF" : "#666666",
+                    border: planIdx === i ? "1px solid rgba(0,229,255,0.25)" : "1px solid rgba(255,255,255,0.06)",
+                  }}
+                >
+                  <span>{p.label}</span>
+                  {p.months > 0 && (
+                    <span className="text-[10px] mt-0.5 font-normal" style={{ color: planIdx === i ? "#00E5FF88" : "#444444" }}>
+                      ${Math.ceil(remaining / p.months)}/mo
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Price display */}
+          <div className="mb-8">
+            <div className="flex items-baseline gap-3 mb-1">
+              <span className="text-5xl font-bold text-white">${totalPrice.toLocaleString()}</span>
+              <span style={{ color: "#555555" }}>{mode === "rack" ? `total · ${rackQty} unit${rackQty > 1 ? "s" : ""} × $${RACK_PRICE.toLocaleString()}` : "total"}</span>
+            </div>
+            <p className="text-sm" style={{ color: "#555555" }}>
+              <strong style={{ color: "#ffffff" }}>${deposit.toLocaleString()} deposit now</strong> · remaining ${remaining.toLocaleString()} due at launch
+              {plan.months > 0 && (
+                <> · <strong style={{ color: "#00E5FF" }}>${monthlyPayment}/mo × {plan.months} months (0% interest)</strong></>
+              )}
+            </p>
+            <p className="text-xs mt-1" style={{ color: "#00E5FF" }}>Shipping July 2026</p>
+          </div>
 
           {/* Includes */}
           <ul className="mb-10 space-y-2.5">
@@ -341,35 +490,63 @@ export default function Device() {
             ))}
           </ul>
 
-          {/* Countdown */}
-          <div className="mb-6 rounded-2xl px-5 py-4" style={{ background: "rgba(0,229,255,0.04)", border: "1px solid rgba(0,229,255,0.15)" }}>
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3 text-center" style={{ color: "#00E5FF" }}>
-              Shipping July 1, 2026
-            </p>
-            <div className="grid grid-cols-4 gap-2 text-center">
-              {[
-                { value: countdown.days,    label: "Days" },
-                { value: countdown.hours,   label: "Hours" },
-                { value: countdown.minutes, label: "Min" },
-                { value: countdown.seconds, label: "Sec" },
-              ].map(({ value, label }) => (
-                <div key={label} className="rounded-xl py-2.5" style={{ background: "rgba(0,0,0,0.3)" }}>
-                  <div className="text-2xl font-bold text-white tabular-nums">{String(value).padStart(2, "0")}</div>
-                  <div className="text-[10px] font-medium mt-0.5" style={{ color: "#555" }}>{label}</div>
+          {/* Order summary */}
+          <div
+            className="rounded-2xl p-6 mb-6"
+            style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)" }}
+          >
+            <div className="flex gap-4 items-center mb-5">
+              <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 relative">
+                <Image src={color.img} alt={`AM in ${color.label}`} fill className="object-cover" sizes="64px" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-white">AM Device{mode === "rack" ? ` × ${rackQty}` : ""} — {color.label}</p>
+                <p className="text-xs" style={{ color: "#666" }}>Mac Mini M1 · Pre-installed · Numbered{mode === "rack" ? " · Rack-mount ready" : ""}</p>
+              </div>
+            </div>
+
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span style={{ color: "#888" }}>{mode === "rack" ? `${rackQty} × $${RACK_PRICE.toLocaleString()}` : "Device price"}</span>
+                <span className="text-white font-semibold">${totalPrice.toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between">
+                <span style={{ color: "#888" }}>Deposit today (50%)</span>
+                <span className="font-bold" style={{ color: "#00E5FF" }}>${deposit.toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between">
+                <span style={{ color: "#888" }}>Due at launch</span>
+                <span className="text-white">${remaining.toLocaleString()}{plan.months > 0 ? ` (${plan.months} mo)` : ""}</span>
+              </div>
+              {plan.months > 0 && (
+                <div className="flex justify-between pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                  <span style={{ color: "#888" }}>${monthlyPayment}/mo × {plan.months} months</span>
+                  <span style={{ color: "#00E5FF" }}>0% interest</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
-          <a
-            href="#waitlist"
-            className="flex items-center justify-center w-full px-8 py-5 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
+          <button
+            onClick={() => setShowCheckout(true)}
+            className="flex items-center justify-center w-full px-8 py-5 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 cursor-pointer"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.25)" }}
           >
-            Pre-Order Your AGI Companion — Reserve Your Number
-          </a>
+            Pre-Order Now — ${deposit.toLocaleString()} Deposit
+          </button>
+          <CheckoutModal open={showCheckout} onClose={() => setShowCheckout(false)} color={color.id} mode={mode} qty={qty} deposit={deposit} />
           <p className="mt-3 text-center text-xs" style={{ color: "#444444" }}>
-            ${PREORDER_DEPOSIT.toLocaleString()} to hold your number. Fully refundable until your unit ships.
+            Secure checkout via Stripe.
+          </p>
+          <p className="mt-2 text-center text-[10px] leading-relaxed" style={{ color: "#333" }}>
+            Pre-order deposits are non-refundable. You may decline to pay the remaining balance at launch,
+            but your deposit will not be returned. By placing this order you agree to these terms.
+            Sold by Tylt LLC, a Delaware corporation.
+          </p>
+          <p className="mt-4 text-center">
+            <a href="#waitlist" className="text-xs transition-colors hover:text-white" style={{ color: "#555", textDecoration: "underline" }}>
+              Not ready to buy? Join the mailing list instead →
+            </a>
           </p>
         </div>
       </div>

@@ -7,9 +7,9 @@ import { NameTag } from "@/components/ui/name-tag";
 import { usePersonalization } from "@/context/personalization-context";
 
 const HERO_IMAGES = [
-  { src: "/am/am-room.jpg",    alt: "AM in your home — always on, always watching over things",     scene: "Home"   },
-  { src: "/am/am-desk.jpg",    alt: "AM at your desk — running while you work",                     scene: "Office" },
   { src: "/am/am-student.jpg", alt: "AM in your dorm — never lets you fall behind",                 scene: "Dorm"   },
+  { src: "/am/am-desk.jpg",    alt: "AM at your desk — running while you work",                     scene: "Office" },
+  { src: "/am/am-room.jpg",    alt: "AM in your home — always on, always watching over things",     scene: "Home"   },
 ];
 
 export default function Hero() {
@@ -57,44 +57,31 @@ export default function Hero() {
       {/* ── COPY ── */}
       <div className="relative z-10 flex flex-col justify-end min-h-dvh lg:min-h-0 lg:justify-center bg-transparent lg:bg-[#0a0a0a] px-8 sm:px-12 lg:px-16 xl:px-24 py-12 lg:py-0 lg:w-[52%] xl:w-[50%]">
 
-        <p
-          className="text-xs font-semibold tracking-[0.25em] uppercase mb-6 lg:mb-8"
-          style={{ color: "#00E5FF" }}
-        >
-          Meet <NameTag style={{ fontSize: "inherit", color: "#00E5FF", borderBottomColor: "rgba(0,229,255,0.5)" }} />!
-        </p>
-
         <h1
           className="text-4xl sm:text-5xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-5"
           style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
-          <span style={{ color: "#00E5FF" }}>helloam.</span>
-          <br />
-          <span className="text-white"><PronounTag case="subject" /> lives on your desk.</span>
-          <br />
-          <span className="text-white"><PronounTag case="subject" /> runs </span>
-          <span style={{ color: "#00E5FF" }}>your life.</span>
+          <span className="text-lg sm:text-xl xl:text-2xl block mb-4" style={{ color: "#00E5FF" }}>Meet <NameTag />.</span>
+          <span className="text-white">An AGI that runs </span><span style={{ color: "#00E5FF" }}>locally</span><span className="text-white">, not in the cloud.</span>
         </h1>
-
-        <p className="text-base sm:text-lg font-medium mb-5 text-white">
-          A Mac Mini. Pre-installed with AM — short for Amelia. Yours forever.
-        </p>
 
         <p className="text-base leading-relaxed max-w-lg mb-8" style={{ color: "#aaaaaa" }}>
           <NameTag /> arrives as a physical device — set up, named, and ready to go.
           {" "}{cap(pronouns.subject)} wakes up knowing your day. {cap(pronouns.subject)} handles your email, your calendar,
           your finances, your work. {cap(pronouns.subject)} learns everything about you over time.
           <br /><br />
-          <span className="font-semibold text-white">Not a subscription. Not a chatbot.</span>{" "}
+          <span className="font-semibold text-white">Not a subscription<span style={{ color: "#00E5FF" }}>*</span>. Not a chatbot.</span>{" "}
           A digital companion who lives in your home and belongs to you alone.
+        </p>
+        <p className="text-xs max-w-lg mb-2" style={{ color: "#555" }}>
+          *Claude subscription required for compute — from $20/mo for light use up to $200/mo for heavy use, paid directly to Anthropic, not us.
         </p>
 
         <div className="flex flex-wrap gap-2 sm:gap-3 mb-8">
           {[
             "Always on. Always yours.",
-            "Bonded to one person only",
-            "Learns everything you know",
-            "Builds income while you sleep",
+            "Works and learns while you sleep",
+            "Learns what you want and like",
           ].map((text) => (
             <div
               key={text}
@@ -109,15 +96,34 @@ export default function Hero() {
               <span>{text}</span>
             </div>
           ))}
+          {[
+            "Social media",
+            "Prospect mining",
+            "Email support",
+            "Autonomous software development",
+          ].map((text) => (
+            <div
+              key={text}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.12)",
+                color: "#cccccc",
+              }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#FF8C00" }} />
+              <span>{text}</span>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3">
           <a
-            href="#waitlist"
+            href="#device"
             className="inline-flex items-center justify-center px-7 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.3)" }}
           >
-            Reserve Your AGI Companion
+            Pre-Order Now
           </a>
           <a
             href="#features"
@@ -127,6 +133,13 @@ export default function Hero() {
             See what {pronouns.subject} can do <span aria-hidden="true">→</span>
           </a>
         </div>
+        <a
+          href="#waitlist"
+          className="mt-3 text-xs transition-colors hover:text-white"
+          style={{ color: "#555", textDecoration: "underline" }}
+        >
+          Or just join the mailing list →
+        </a>
 
         <div
           className="flex items-center gap-3 mt-8 w-fit px-4 py-3 rounded-2xl"

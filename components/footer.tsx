@@ -22,7 +22,6 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 flex-wrap justify-center">
             {[
-              { label: "Twitter / X", href: "https://twitter.com/augmentedmike", external: true },
               { label: "Press",       href: "/press",   external: false },
               { label: "Contact",     href: "/contact", external: false },
             ].map((l) => (

@@ -1,3 +1,5 @@
+import ContactButton from "@/components/contact-button";
+
 function Check() {
   return (
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
@@ -106,9 +108,10 @@ export default function Pilot() {
 
         {/* CTA */}
         <div className="text-center">
-          <a
-            href="mailto:hello@helloam.bot?subject=Pilot Program Application"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
+          <ContactButton
+            category="Pilot Program"
+            subject="Pilot Program Application"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 cursor-pointer"
             style={{
               background: "rgba(255,255,255,0.06)",
               color: "#cccccc",
@@ -116,7 +119,7 @@ export default function Pilot() {
             }}
           >
             Apply for Pilot Access
-          </a>
+          </ContactButton>
           <p className="mt-4 text-sm" style={{ color: "#444444" }}>
             Tell us who you are and how you plan to use AM.
             We review applications personally and reach out within a few days.
