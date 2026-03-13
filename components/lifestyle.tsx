@@ -9,19 +9,19 @@ export default function Lifestyle() {
 
   const scenes = [
     {
-      src: "/am/am-student.jpg",
+      src: "/am/am-student.webp",
       alt: `${name} in a student dorm — red Mac Mini running beside notes and textbooks`,
       label: "The Student",
       caption: `${cap(pronouns.subject)} reads what you don't have time to.`,
     },
     {
-      src: "/am/am-desk.jpg",
+      src: "/am/am-desk.webp",
       alt: `${name} on a professional night desk setup — red Mac Mini glowing beside the laptop`,
       label: "The Professional",
       caption: "Always prepped. Never behind.",
     },
     {
-      src: "/am/am-room-wide.jpg",
+      src: "/am/am-room-wide.webp",
       alt: `${name} in a cozy bedroom — red Mac Mini always on, city lights outside`,
       label: "At Home",
       caption: `${cap(pronouns.subject)}'s there when life gets quiet.`,

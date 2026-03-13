@@ -10,10 +10,10 @@ export interface AMColor {
 }
 
 export const COLORS: AMColor[] = [
-  { id: "am-red", label: "AM Red",  hex: "#CC2200", available: true,  signature: true, img: "/am/am-desk.jpg" },
-  { id: "blue",   label: "Blue",    hex: "#1B3254", available: true,                   img: "/am/am-desk-blue.png" },
-  { id: "pink",   label: "Pink",    hex: "#E8006A", available: true,                   img: "/am/am-desk-pink.png" },
-  { id: "purple", label: "Purple",  hex: "#7C3099", available: true,                   img: "/am/am-desk-purple.png" },
-  { id: "black",  label: "Black",   hex: "#141414", available: true,                   img: "/am/am-desk-black.png" },
-  { id: "white",  label: "White",   hex: "#F0EFEB", available: true,                   img: "/am/am-desk-white.png" },
+  { id: "am-red", label: "AM Red",  hex: "#CC2200", available: true,  signature: true, img: "/am/am-desk.webp" },
+  { id: "blue",   label: "Blue",    hex: "#1B3254", available: true,                   img: "/am/am-desk-blue.webp" },
+  { id: "pink",   label: "Pink",    hex: "#E8006A", available: true,                   img: "/am/am-desk-pink.webp" },
+  { id: "purple", label: "Purple",  hex: "#7C3099", available: true,                   img: "/am/am-desk-purple.webp" },
+  { id: "black",  label: "Black",   hex: "#141414", available: true,                   img: "/am/am-desk-black.webp" },
+  { id: "white",  label: "White",   hex: "#F0EFEB", available: true,                   img: "/am/am-desk-white.webp" },
 ];

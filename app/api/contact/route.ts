@@ -60,9 +60,13 @@ export async function POST(req: NextRequest) {
       auth: { user: "augmentedmike@gmail.com", pass: gmailPass },
     });
 
+    const toAddress = cleanCategory === "Support"
+      ? "amelia+helloamsupport@helloam.bot"
+      : "amelia+www@helloam.bot";
+
     await transporter.sendMail({
       from: '"Amelia — helloam.bot" <augmentedmike@gmail.com>',
-      to: "amelia+www@helloam.bot",
+      to: toAddress,
       cc: "augmentedmike@gmail.com",
       replyTo: cleanEmail,
       subject: `[${cleanCategory}] Contact from ${cleanName}`,

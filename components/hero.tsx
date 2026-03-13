@@ -7,9 +7,9 @@ import { NameTag } from "@/components/ui/name-tag";
 import { usePersonalization } from "@/context/personalization-context";
 
 const HERO_IMAGES = [
-  { src: "/am/am-student.jpg", alt: "AM in your dorm — never lets you fall behind",                 scene: "Dorm"   },
-  { src: "/am/am-desk.jpg",    alt: "AM at your desk — running while you work",                     scene: "Office" },
-  { src: "/am/am-room.jpg",    alt: "AM in your home — always on, always watching over things",     scene: "Home"   },
+  { src: "/am/am-student.webp", alt: "AM in your dorm — never lets you fall behind",                 scene: "Dorm"   },
+  { src: "/am/am-desk.webp",    alt: "AM at your desk — running while you work",                     scene: "Office" },
+  { src: "/am/am-room.webp",    alt: "AM in your home — always on, always watching over things",     scene: "Home"   },
 ];
 
 export default function Hero() {
@@ -38,7 +38,7 @@ export default function Hero() {
       {/* ── MOBILE IMAGE — absolute full-bleed background, hidden on desktop ── */}
       <div className="absolute inset-0 lg:hidden">
         <Image
-          src="/am/am-student.jpg"
+          src="/am/am-student.webp"
           alt="AM in your dorm — never lets you fall behind"
           fill
           priority
