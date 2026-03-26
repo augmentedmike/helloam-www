@@ -33,7 +33,7 @@ const CHANNELS = [
   {
     label: "Investors",
     category: "Investors",
-    description: "We're early. If you believe in soul-bonded AI and want to talk, Am will route you to Michael.",
+    description: "We're early. If you believe in the digital worker platform for teams and want to talk, Am will route you to Michael.",
   },
   {
     label: "Support",

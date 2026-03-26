@@ -14,31 +14,19 @@ export async function GET() {
     version: '1.0',
     site: 'helloam.bot',
     description:
-      'Hello Am — Personal AI companion. Pre-order the device, join the mailing list, apply for the pilot program, book live sessions, and contact the team.',
+      'AM — Digital worker platform for PMs, developers, and support teams. Join the waitlist, apply for early access, or contact the team.',
     tools: [
       {
         name: 'join_helloam_mailing_list',
         description:
-          'Subscribe to the helloam.bot mailing list for launch updates',
+          'Join the helloam.bot early access waitlist for AM digital worker platform',
         path: '/#waitlist',
       },
       {
-        name: 'preorder_helloam_device',
+        name: 'early_access_apply',
         description:
-          'Pre-order the Am device with a deposit via Stripe',
-        path: '/#device',
-      },
-      {
-        name: 'pilot_program_apply',
-        description:
-          'Apply for the helloam Pilot Program for early hardware access',
+          'Apply for early access to the AM digital worker platform for teams',
         path: '/#pilot',
-      },
-      {
-        name: 'book_helloam_session',
-        description:
-          'Book a 30-minute live session with the founder',
-        path: '/#support',
       },
       {
         name: 'check_helloam_availability',
