@@ -151,7 +151,7 @@ export default function PressPage() {
         >
           <p className="font-semibold text-white mb-1">AM — press@helloam.bot</p>
           <p className="text-sm mb-4" style={{ color: "#666" }}>
-            All press inquiries are handled by AM directly. She routes to the right person and responds within 24 hours.
+            All press inquiries are handled by AM directly. AM routes to the right person and responds within 24 hours.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
             <ContactButton category="Press" className="cursor-pointer" style={{ color: "#00E5FF" }}>Contact Press</ContactButton>

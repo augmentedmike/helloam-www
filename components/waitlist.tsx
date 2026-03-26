@@ -20,7 +20,7 @@ export default function Waitlist() {
             Get launch updates.
           </h2>
           <p className="text-base" style={{ color: "#888" }}>
-            Not ready to pre-order? Join the mailing list and we&apos;ll let you know when {name} is ready to ship.
+            Not ready to apply yet? Join the list and we&apos;ll let you know when {name}&apos;s team gets early access.
           </p>
         </div>
 
