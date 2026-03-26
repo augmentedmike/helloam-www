@@ -1,4 +1,12 @@
+"use client";
+
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
+
 export default function SoulRestore() {
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
   return (
     <section
       className="relative px-6 py-24 overflow-hidden"
@@ -20,7 +28,7 @@ export default function SoulRestore() {
           className="text-center text-xs font-semibold tracking-[0.25em] uppercase mb-6"
           style={{ color: "#00E5FF" }}
         >
-          Why AM is different
+          {t.soulRestore.eyebrow}
         </p>
 
         {/* Headline */}
@@ -33,35 +41,20 @@ export default function SoulRestore() {
             color: "#ffffff",
           }}
         >
-          Assistants respond.{" "}
-          <span style={{ color: "rgba(255,255,255,0.45)" }}>Workers own outcomes.</span>
+          {t.soulRestore.headline1}{" "}
+          <span style={{ color: "rgba(255,255,255,0.45)" }}>{t.soulRestore.headline2}</span>
         </h2>
 
         <p
           className="text-center text-lg leading-relaxed mb-16 max-w-2xl mx-auto"
           style={{ color: "#777777" }}
         >
-          Most AI tools make individual tasks faster. AM makes whole job functions autonomous —
-          because it builds persistent context across your team and operates with end-to-end
-          ownership, not prompt-by-prompt responses.
+          {t.soulRestore.subhead}
         </p>
 
         {/* Three pillars */}
         <div className="grid sm:grid-cols-3 gap-6 mb-16">
-          {[
-            {
-              label: "Persistent context",
-              body: "AM builds a model of your team — codebase, customers, decisions, patterns. It brings this context to every task without being re-briefed. The longer it works, the sharper it gets.",
-            },
-            {
-              label: "Outcome ownership",
-              body: "Give AM a goal, not a task. It plans the steps, executes them, and reports back. It's accountable for the result — not just the next line of the conversation.",
-            },
-            {
-              label: "Intelligent escalation",
-              body: "AM knows what it doesn't know. When it hits a situation that needs human judgment, it escalates with full context and a clear recommendation — not a failure message.",
-            },
-          ].map((p) => (
+          {t.soulRestore.pillars.map((p) => (
             <div
               key={p.label}
               className="rounded-2xl p-6"
@@ -99,13 +92,12 @@ export default function SoulRestore() {
               lineHeight: 1.2,
             }}
           >
-            AM isn&apos;t a tool you use.
+            {t.soulRestore.closerHeadline1}
             <br />
-            <span style={{ color: "#00E5FF" }}>It&apos;s a worker on your team.</span>
+            <span style={{ color: "#00E5FF" }}>{t.soulRestore.closerHeadline2}</span>
           </p>
           <p className="text-base" style={{ color: "#666666" }}>
-            It shows up every day, knows the context, and gets the work done —
-            so your team can focus on the work that actually needs them.
+            {t.soulRestore.closerBody}
           </p>
         </div>
       </div>

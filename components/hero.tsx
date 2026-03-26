@@ -1,6 +1,12 @@
 "use client";
 
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
+
 export default function Hero() {
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
   return (
     <section className="relative flex flex-col items-center justify-center min-h-dvh px-6 py-24 text-center overflow-hidden">
       {/* Background glow */}
@@ -27,7 +33,7 @@ export default function Hero() {
             className="w-1.5 h-1.5 rounded-full animate-pulse"
             style={{ background: "#00E5FF" }}
           />
-          Now in pilot — limited spots open
+          {t.hero.badge}
         </div>
 
         {/* Headline */}
@@ -35,8 +41,8 @@ export default function Hero() {
           className="text-5xl sm:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6"
           style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
-          <span className="text-white">The AI that </span>
-          <span style={{ color: "#00E5FF" }}>does the work.</span>
+          <span className="text-white">{t.hero.headline1}</span>
+          <span style={{ color: "#00E5FF" }}>{t.hero.headline2}</span>
         </h1>
 
         {/* Subhead */}
@@ -44,33 +50,32 @@ export default function Hero() {
           className="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10"
           style={{ color: "#888888" }}
         >
-          AM takes end-to-end ownership of your team&apos;s highest-volume work — triage, code, and support —
-          so your team ships faster with less overhead. One worker, your whole team covered.
+          {t.hero.subhead}
         </p>
 
         {/* Persona pills */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          {[
-            { label: "For PMs", color: "#00E5FF", desc: "Backlog triage & sprint grooming" },
-            { label: "For Developers", color: "#4A90D9", desc: "Tickets → PRs, autonomously" },
-            { label: "For Support", color: "#F5A623", desc: "24/7 ticket resolution" },
-          ].map((p) => (
-            <div
-              key={p.label}
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
-              style={{
-                background: `${p.color}12`,
-                border: `1px solid ${p.color}35`,
-                color: p.color,
-              }}
-            >
-              <span>{p.label}</span>
-              <span style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
-              <span className="text-xs font-normal" style={{ color: "#777" }}>
-                {p.desc}
-              </span>
-            </div>
-          ))}
+          {t.hero.personas.map((p, i) => {
+            const colors = ["#00E5FF", "#4A90D9", "#F5A623"];
+            const color = colors[i] || "#00E5FF";
+            return (
+              <div
+                key={p.label}
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
+                style={{
+                  background: `${color}12`,
+                  border: `1px solid ${color}35`,
+                  color: color,
+                }}
+              >
+                <span>{p.label}</span>
+                <span style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
+                <span className="text-xs font-normal" style={{ color: "#777" }}>
+                  {p.desc}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
         {/* CTAs */}
@@ -80,14 +85,14 @@ export default function Hero() {
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
             style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.3)" }}
           >
-            Get early access
+            {t.hero.ctaPrimary}
           </a>
           <a
             href="#how-it-works"
             className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-medium transition-colors hover:text-white"
             style={{ color: "#666666" }}
           >
-            See how it works <span aria-hidden="true">→</span>
+            {t.hero.ctaSecondary} <span aria-hidden="true">→</span>
           </a>
         </div>
 
@@ -96,11 +101,7 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-10 pt-10"
           style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
         >
-          {[
-            { stat: "24/7", label: "Always working" },
-            { stat: "85%", label: "Tickets auto-resolved" },
-            { stat: "0", label: "Context switches needed" },
-          ].map((s) => (
+          {t.hero.stats.map((s) => (
             <div key={s.label} className="text-center">
               <p
                 className="text-3xl font-bold text-white"

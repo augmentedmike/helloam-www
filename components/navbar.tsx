@@ -1,20 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useLocale } from "@/context/locale-context";
-
-const navLinks = [
-  { label: "For PMs", href: "#personas" },
-  { label: "For Developers", href: "#personas" },
-  { label: "For Support", href: "#personas" },
-  { label: "Help", href: "#support" },
-];
+import { getTranslation } from "@/lib/translations";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
+  const navLinks = [
+    { label: t.nav.forPMs, href: "#personas" },
+    { label: t.nav.forDevs, href: "#personas" },
+    { label: t.nav.forSupport, href: "#personas" },
+    { label: t.nav.help, href: "#support" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -83,14 +85,14 @@ export default function Navbar() {
             className="rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:text-white"
             style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
           >
-            Request demo
+            {t.nav.requestDemo}
           </a>
           <a
             href="#waitlist"
             className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
             style={{ background: "#00E5FF", color: "#000" }}
           >
-            Get early access
+            {t.nav.getEarlyAccess}
           </a>
         </div>
 
@@ -141,7 +143,7 @@ export default function Navbar() {
                 style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
                 onClick={() => setMobileOpen(false)}
               >
-                Request demo
+                {t.nav.requestDemo}
               </a>
               <a
                 href="#waitlist"
@@ -149,7 +151,7 @@ export default function Navbar() {
                 style={{ background: "#00E5FF", color: "#000" }}
                 onClick={() => setMobileOpen(false)}
               >
-                Get early access
+                {t.nav.getEarlyAccess}
               </a>
             </div>
           </div>

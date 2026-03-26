@@ -1,6 +1,12 @@
 "use client";
 
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
+
 export default function Manifesto() {
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
   return (
     <section className="relative px-6 py-40 overflow-hidden">
       {/* Background — deep dark with radial teal pulse */}
@@ -44,9 +50,9 @@ export default function Manifesto() {
             fontSize: "clamp(2.5rem, 7vw, 4.5rem)",
           }}
         >
-          <span style={{ color: "#ffffff" }}>This isn&apos;t an assistant.</span>
+          <span style={{ color: "#ffffff" }}>{t.manifesto.headline1}</span>
           <br />
-          <span style={{ color: "rgba(255,255,255,0.55)" }}>It&apos;s a teammate.</span>
+          <span style={{ color: "rgba(255,255,255,0.55)" }}>{t.manifesto.headline2}</span>
         </h2>
 
         <div
@@ -57,27 +63,18 @@ export default function Manifesto() {
             lineHeight: "1.8",
           }}
         >
-          <p style={{ color: "#888" }}>Most AI companies are building tools.</p>
+          <p style={{ color: "#888" }}>{t.manifesto.p1}</p>
 
           <p
             className="font-semibold"
             style={{ color: "#ffffff", fontSize: "1.25rem", letterSpacing: "-0.01em" }}
           >
-            We&apos;re building a digital worker.
+            {t.manifesto.p2}
           </p>
 
-          <p style={{ color: "#999" }}>
-            AM is not a copilot. It&apos;s not a chatbot. It&apos;s not a productivity feature bolted
-            onto your existing tools. It&apos;s an autonomous teammate — one that picks up work, does
-            it, and reports back. One that knows your codebase, your customers, and your team&apos;s
-            patterns. One that gets better the longer it works with you.
-          </p>
+          <p style={{ color: "#999" }}>{t.manifesto.p3}</p>
 
-          <p style={{ color: "#999" }}>
-            Copilots respond to prompts. Assistants save you time on tasks.
-            Workers own outcomes — they&apos;re accountable for a result, not just a response.
-            That&apos;s the difference between a tool and a teammate.
-          </p>
+          <p style={{ color: "#999" }}>{t.manifesto.p4}</p>
 
           {/* Worker framing highlight */}
           <div
@@ -89,23 +86,15 @@ export default function Manifesto() {
             }}
           >
             <h3 className="font-semibold mb-3" style={{ color: "#ffffff", fontSize: "1.05rem" }}>
-              Context compounds.
+              {t.manifesto.contextHeadline}
             </h3>
-            <p style={{ color: "#888" }}>
-              AM builds a model of your team — the codebase, the customers, the decisions, the patterns.
-              Week one, it handles isolated tasks. Month three, it anticipates what&apos;s needed.
-              Month six, it&apos;s faster than your best hire at the work nobody wants to do.
-            </p>
+            <p style={{ color: "#888" }}>{t.manifesto.contextBody}</p>
             <p className="font-semibold mt-3" style={{ color: "#dddddd" }}>
-              The longer AM works, the more it compounds — because it never forgets.
+              {t.manifesto.contextCloser}
             </p>
           </div>
 
-          <p style={{ color: "#999" }}>
-            We believe the future of teams isn&apos;t about everyone getting the same generic AI assistant.
-            It&apos;s about every team having their own worker — one that knows their domain, owns their
-            outcomes, and gets sharper with every sprint.
-          </p>
+          <p style={{ color: "#999" }}>{t.manifesto.p5}</p>
         </div>
 
         {/* Differentiators callout */}
@@ -114,15 +103,10 @@ export default function Manifesto() {
           style={{ background: "rgba(0,229,255,0.04)", border: "1px solid rgba(0,229,255,0.15)" }}
         >
           <p className="font-bold mb-4" style={{ fontSize: "1.1rem", color: "#ffffff" }}>
-            What makes a digital worker different
+            {t.manifesto.diffTitle}
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              { label: "Role-complete", body: "Does a whole job function, not just individual tasks" },
-              { label: "Persistent context", body: "Learns the codebase, customers, and team patterns over time" },
-              { label: "Outcome ownership", body: "Accountable for a result, not just a response" },
-              { label: "Escalates, doesn't fail", body: "Knows when to hand off — and does it with full context" },
-            ].map((d) => (
+            {t.manifesto.differentiators.map((d) => (
               <div key={d.label} className="flex gap-3">
                 <div className="w-1 shrink-0 rounded-full mt-1" style={{ background: "#00E5FF", minHeight: "20px" }} />
                 <div>

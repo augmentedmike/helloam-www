@@ -1,4 +1,8 @@
+"use client";
+
 import ContactButton from "@/components/contact-button";
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
 
 function Check() {
   return (
@@ -8,23 +12,10 @@ function Check() {
   );
 }
 
-const PILOT_PERKS = [
-  "30-day structured pilot with a dedicated success engineer",
-  "Direct access to the founding team — your feedback shapes the roadmap",
-  "Early-adopter pricing locked in for life",
-  "Priority integration support for your specific stack",
-  "Recognition as a founding partner team",
-];
-
-const WHO_QUALIFIES = [
-  { label: "Product teams", desc: "PMs and product leads who spend too much time on process and not enough on product" },
-  { label: "Engineering teams", desc: "Eng leads and developers with backlog debt they can never seem to close" },
-  { label: "Support teams", desc: "Support leads whose ticket volume has outgrown their team capacity" },
-  { label: "Startups & scale-ups", desc: "Companies who need to do more with a lean team, without sacrificing quality" },
-  { label: "Enterprises", desc: "Organizations exploring AI workers at the team level before broader rollout" },
-];
-
 export default function Pilot() {
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
   return (
     <section
       id="pilot"
@@ -41,19 +32,18 @@ export default function Pilot() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            Early Access Program
+            {t.pilot.eyebrow}
           </p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Join the founding cohort.
+            {t.pilot.headline1}
             <br />
-            <span style={{ color: "#00E5FF" }}>Shape what AM becomes.</span>
+            <span style={{ color: "#00E5FF" }}>{t.pilot.headline2}</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: "#666666" }}>
-            We&apos;re selecting a small group of teams to get early access and dedicated support —
-            in exchange for real-world feedback that makes AM better for everyone.
+            {t.pilot.subhead}
           </p>
         </div>
 
@@ -63,9 +53,9 @@ export default function Pilot() {
             className="rounded-2xl p-8"
             style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
           >
-            <h3 className="text-lg font-bold text-white mb-5">Who we&apos;re looking for</h3>
+            <h3 className="text-lg font-bold text-white mb-5">{t.pilot.whoTitle}</h3>
             <div className="space-y-4">
-              {WHO_QUALIFIES.map((item) => (
+              {t.pilot.who.map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
                   <div
                     className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
@@ -89,9 +79,9 @@ export default function Pilot() {
               boxShadow: "0 0 40px rgba(0,229,255,0.05)",
             }}
           >
-            <h3 className="text-lg font-bold text-white mb-5">What early access partners get</h3>
+            <h3 className="text-lg font-bold text-white mb-5">{t.pilot.perksTitle}</h3>
             <ul className="space-y-3">
-              {PILOT_PERKS.map((perk) => (
+              {t.pilot.perks.map((perk) => (
                 <li key={perk} className="flex items-start gap-2.5">
                   <Check />
                   <span className="text-sm" style={{ color: "#aaaaaa" }}>{perk}</span>
@@ -113,11 +103,10 @@ export default function Pilot() {
               border: "1px solid rgba(255,255,255,0.12)",
             }}
           >
-            Apply for early access
+            {t.pilot.cta}
           </ContactButton>
           <p className="mt-4 text-sm" style={{ color: "#444444" }}>
-            Tell us your team&apos;s biggest bottleneck and how you plan to use AM.
-            We review applications personally and follow up within a few days.
+            {t.pilot.ctaNote}
           </p>
         </div>
       </div>

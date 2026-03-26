@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import ContactButton from "@/components/contact-button";
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 const SESSION_PRICE = Number(process.env.NEXT_PUBLIC_SESSION_PRICE) || 75;
@@ -16,23 +18,9 @@ function Check() {
   );
 }
 
-const FREE_FEATURES = [
-  "Email support — we respond",
-  "Documentation & setup guides",
-  "Community updates as Am evolves",
-];
-
-const LIVE_FEATURES = [
-  "Screenshare session with the founder",
-  "Troubleshooting & live fixes",
-  "Training on Am's capabilities",
-  "Workflow design & custom setup",
-  "Book as many sessions as you need",
-];
-
 const inputClass = "w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none focus:ring-1 focus:ring-[#00E5FF]";
 
-function PaymentForm({ onSuccess }: { onSuccess: () => void }) {
+function PaymentForm({ onSuccess, processingLabel }: { onSuccess: () => void; processingLabel: string }) {
   const stripe = useStripe();
   const elements = useElements();
   const [loading, setLoading] = useState(false);
@@ -72,13 +60,21 @@ function PaymentForm({ onSuccess }: { onSuccess: () => void }) {
         className="flex items-center justify-center w-full px-8 py-4 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 disabled:opacity-50 cursor-pointer"
         style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.25)" }}
       >
-        {loading ? "Processing…" : `Pay $${SESSION_PRICE}`}
+        {loading ? processingLabel : `Pay $${SESSION_PRICE}`}
       </button>
     </form>
   );
 }
 
-function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+function SessionCheckoutModal({
+  open,
+  onClose,
+  modal,
+}: {
+  open: boolean;
+  onClose: () => void;
+  modal: ReturnType<typeof getTranslation>["plans"]["modal"];
+}) {
   const [step, setStep] = useState<"info" | "payment" | "success">("info");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -101,8 +97,8 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
 
   async function handleContinue() {
     const errs: Record<string, string> = {};
-    if (!name.trim() || name.trim().length < 2) errs.name = "Required";
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Valid email required";
+    if (!name.trim() || name.trim().length < 2) errs.name = modal.nameRequired;
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = modal.emailRequired;
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
 
     setLoading(true);
@@ -138,7 +134,7 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
       >
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg font-bold text-white">
-            {step === "success" ? "Session Booked" : "Book a Live Session"}
+            {step === "success" ? modal.titleSuccess : modal.titleBook}
           </h3>
           <button onClick={onClose} className="text-[#555] hover:text-white text-xl leading-none cursor-pointer">×</button>
         </div>
@@ -146,14 +142,14 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
         {step === "info" && (
           <>
             <p className="text-sm" style={{ color: "#888" }}>
-              30-minute screenshare with the founder — <strong className="text-white">${SESSION_PRICE}</strong>.
+              {modal.descInfo} — <strong className="text-white">${SESSION_PRICE}</strong>.
             </p>
             <div>
-              <input type="text" placeholder="Full name" value={name} onChange={(e) => { setName(e.target.value); setErrors((p) => ({ ...p, name: "" })); }} className={inputClass} style={inputStyle("name")} />
+              <input type="text" placeholder={modal.namePlaceholder} value={name} onChange={(e) => { setName(e.target.value); setErrors((p) => ({ ...p, name: "" })); }} className={inputClass} style={inputStyle("name")} />
               {errors.name && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.name}</p>}
             </div>
             <div>
-              <input type="email" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: "" })); }} className={inputClass} style={inputStyle("email")} />
+              <input type="email" placeholder={modal.emailPlaceholder} value={email} onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: "" })); }} className={inputClass} style={inputStyle("email")} />
               {errors.email && <p className="text-xs mt-1" style={{ color: "#ff4444" }}>{errors.email}</p>}
             </div>
             {apiError && <p className="text-sm" style={{ color: "#ff4444" }}>{apiError}</p>}
@@ -163,7 +159,7 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
               className="flex items-center justify-center w-full px-8 py-4 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 disabled:opacity-50 cursor-pointer"
               style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.25)" }}
             >
-              {loading ? "Loading…" : "Continue to Payment"}
+              {loading ? modal.loading : modal.continueBtn}
             </button>
           </>
         )}
@@ -190,14 +186,14 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
                 },
               }}
             >
-              <PaymentForm onSuccess={() => setStep("success")} />
+              <PaymentForm onSuccess={() => setStep("success")} processingLabel={modal.processing} />
             </Elements>
             <button
               onClick={() => setStep("info")}
               className="text-xs text-center w-full cursor-pointer"
               style={{ color: "#555" }}
             >
-              ← Back
+              {modal.back}
             </button>
           </>
         )}
@@ -212,23 +208,29 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
                 <path d="M5 12L10 17L19 8" stroke="#00E5FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p className="text-lg font-semibold text-white mb-2">Payment received.</p>
+            <p className="text-lg font-semibold text-white mb-2">{modal.successTitle}</p>
             <p className="text-sm mb-1" style={{ color: "#888" }}>
-              We&apos;ll email you at <strong className="text-white">{email}</strong> within 24 hours to schedule your Zoom session with Michael.
+              {(() => {
+                const parts = modal.successBody.split("{email}");
+                if (parts.length === 2) {
+                  return <>{parts[0]}<strong className="text-white">{email}</strong>{parts[1]}</>;
+                }
+                return modal.successBody.replace("{email}", email);
+              })()}
             </p>
-            <p className="text-xs mb-6" style={{ color: "#555" }}>Check your email for your receipt.</p>
+            <p className="text-xs mb-6" style={{ color: "#555" }}>{modal.successReceipt}</p>
             <button
               onClick={onClose}
               className="px-6 py-2.5 rounded-xl text-sm font-semibold cursor-pointer"
               style={{ background: "#00E5FF", color: "#0a0a0a" }}
             >
-              Done
+              {modal.done}
             </button>
           </div>
         )}
 
         {step !== "success" && (
-          <p className="text-center text-[10px]" style={{ color: "#444" }}>Secure payment via Stripe.</p>
+          <p className="text-center text-[10px]" style={{ color: "#444" }}>{modal.securePayment}</p>
         )}
       </div>
     </div>
@@ -237,6 +239,8 @@ function SessionCheckoutModal({ open, onClose }: { open: boolean; onClose: () =>
 
 export default function Plans() {
   const [showCheckout, setShowCheckout] = useState(false);
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
 
   return (
     <section
@@ -254,17 +258,16 @@ export default function Plans() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            Support
+            {t.plans.eyebrow}
           </p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            We&apos;re here when you need us.
+            {t.plans.headline}
           </h2>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "#666666" }}>
-            Am runs on your device — no subscriptions, no monthly fees.
-            Support is available free by email, or live with the founder when you need hands-on help.
+            {t.plans.subhead}
           </p>
         </div>
 
@@ -277,17 +280,17 @@ export default function Plans() {
               border: "1px solid rgba(255,255,255,0.07)",
             }}
           >
-            <h3 className="text-lg font-bold text-white mb-1">Email Support</h3>
+            <h3 className="text-lg font-bold text-white mb-1">{t.plans.free.title}</h3>
             <p className="text-sm mb-6" style={{ color: "#666666" }}>
-              Included with every Am. Always free.
+              {t.plans.free.subtitle}
             </p>
 
             <div className="flex items-baseline gap-1 mb-8">
-              <span className="text-4xl font-bold text-white">Free</span>
+              <span className="text-4xl font-bold text-white">{t.plans.free.price}</span>
             </div>
 
             <ul className="space-y-3 mb-8 flex-1">
-              {FREE_FEATURES.map((f) => (
+              {t.plans.free.features.map((f) => (
                 <li key={f} className="flex items-start gap-2.5">
                   <Check />
                   <span className="text-sm" style={{ color: "#888888" }}>{f}</span>
@@ -304,7 +307,7 @@ export default function Plans() {
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              Contact Us
+              {t.plans.free.cta}
             </ContactButton>
           </div>
 
@@ -321,21 +324,21 @@ export default function Plans() {
               className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap"
               style={{ background: "#00E5FF", color: "#0a0a0a" }}
             >
-              With the Founder
+              {t.plans.live.badge}
             </div>
 
-            <h3 className="text-lg font-bold text-white mb-1">Live Session</h3>
+            <h3 className="text-lg font-bold text-white mb-1">{t.plans.live.title}</h3>
             <p className="text-sm mb-6" style={{ color: "#666666" }}>
-              Screenshare directly with Michael. Book as needed.
+              {t.plans.live.subtitle}
             </p>
 
             <div className="flex items-baseline gap-2 mb-8">
               <span className="text-4xl font-bold text-white">${SESSION_PRICE}</span>
-              <span style={{ color: "#555555" }}>/ 30 min</span>
+              <span style={{ color: "#555555" }}>{t.plans.live.perMin}</span>
             </div>
 
             <ul className="space-y-3 mb-8 flex-1">
-              {LIVE_FEATURES.map((f) => (
+              {t.plans.live.features.map((f) => (
                 <li key={f} className="flex items-start gap-2.5">
                   <Check />
                   <span className="text-sm" style={{ color: "#888888" }}>{f}</span>
@@ -348,24 +351,23 @@ export default function Plans() {
               className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 cursor-pointer"
               style={{ background: "#00E5FF", color: "#0a0a0a" }}
             >
-              {`Book a Session — $${SESSION_PRICE}`}
+              {`${t.plans.live.cta} — $${SESSION_PRICE}`}
             </button>
-            <SessionCheckoutModal open={showCheckout} onClose={() => setShowCheckout(false)} />
+            <SessionCheckoutModal open={showCheckout} onClose={() => setShowCheckout(false)} modal={t.plans.modal} />
           </div>
         </div>
 
         <p className="text-center mt-8 text-sm" style={{ color: "#444444" }}>
-          No subscriptions. No recurring fees. Pay only when you want live help.
+          {t.plans.footer}
           <br />
-          Need something beyond that?{" "}
           <ContactButton
             category="General"
             className="transition-colors hover:text-white cursor-pointer"
             style={{ color: "#666666", textDecoration: "underline" }}
           >
-            Get in touch
+            {t.plans.footerCta}
           </ContactButton>{" "}
-          — let&apos;s talk.
+          {t.plans.footerSuffix}
         </p>
       </div>
     </section>

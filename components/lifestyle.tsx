@@ -1,33 +1,17 @@
 "use client";
 
-const PERSONAS = [
-  {
-    role: "For PMs",
-    color: "#00E5FF",
-    headline: "Stop managing process. Start managing product.",
-    pain: "60% of PM time goes to triage, grooming, status updates, and meeting prep — not product thinking.",
-    value: "AM handles the backlog, grooms tickets before every sprint, drafts release notes, and writes the weekly stakeholder update. Your PMs show up to every meeting ready and spend their time on the work that actually requires them.",
-    capabilities: ["Backlog triage & labeling", "Sprint grooming", "PRD drafts", "Release notes", "Stakeholder updates"],
-  },
-  {
-    role: "For Developers",
-    color: "#4A90D9",
-    headline: "Ship the backlog. Kill the context switches.",
-    pain: "Engineers spend 40% of their time on maintenance, migrations, documentation, and code review — not building.",
-    value: "AM picks up tickets, reads the codebase, writes the code, and opens PRs. It reviews incoming PRs like a senior engineer, handles migrations, and answers codebase questions instantly. Your engineers build, not babysit.",
-    capabilities: ["Ticket → PR", "Code review", "On-call triage", "Migrations & refactors", "Codebase Q&A"],
-  },
-  {
-    role: "For Support",
-    color: "#F5A623",
-    headline: "Resolve more tickets. Hire fewer people.",
-    pain: "Ticket volume grows faster than you can hire. CSAT drops. Nights and weekends go uncovered.",
-    value: "AM resolves tickets autonomously 24/7, escalates edge cases with full context, and gets better with every interaction. Your team handles the complex cases that need human judgment — not the hundred tickets that don't.",
-    capabilities: ["Autonomous resolution", "24/7 coverage", "Smart escalation", "KB maintenance", "CSAT analytics"],
-  },
-];
+import { useLocale } from "@/context/locale-context";
+import { getTranslation } from "@/lib/translations";
 
 export default function Lifestyle() {
+  const { locale } = useLocale();
+  const t = getTranslation(locale as "en" | "es" | "zh");
+
+  const PERSONAS = t.lifestyle.personas.map((p, i) => {
+    const colors = ["#00E5FF", "#4A90D9", "#F5A623"];
+    return { ...p, color: colors[i] || "#00E5FF" };
+  });
+
   return (
     <section id="personas" className="px-6 py-24 max-w-7xl mx-auto">
       {/* Header */}
@@ -36,15 +20,15 @@ export default function Lifestyle() {
           className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
           style={{ color: "#00E5FF" }}
         >
-          Who AM works for
+          {t.lifestyle.eyebrow}
         </p>
         <h2
           className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white"
           style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
-          One worker.
+          {t.lifestyle.headline1}
           <br />
-          <span style={{ color: "#00E5FF" }}>Three team functions.</span>
+          <span style={{ color: "#00E5FF" }}>{t.lifestyle.headline2}</span>
         </h2>
       </div>
 
