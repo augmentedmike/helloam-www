@@ -41,7 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 | | |
 |---|---|
-| 👋 **Amelia** | [helloam.bot](https://helloam.bot) — Your personal AI companion |
+| 🤖 **AM** | [helloam.bot](https://helloam.bot) — Open source digital worker |
 | 👨‍💻 **Michael ONeal** | [augmentedmike.com](https://augmentedmike.com) — The engineer behind it all |
 | 📖 **AM Blog** | [blog.helloam.bot](https://blog.helloam.bot) — Comic strip dev log |
 | 💻 **GitHub** | [github.com/augmentedmike](https://github.com/augmentedmike) |
