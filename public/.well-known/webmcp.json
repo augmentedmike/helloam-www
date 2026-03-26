@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "site": "helloam.bot",
-  "description": "Hello Am — Personal AI companion. Pre-order the device, join the mailing list, apply for the pilot program, book live sessions, and contact the team.",
+  "description": "Hello Am — Personal AI companion. Join the mailing list, apply for the pilot program, book live sessions, and contact the team.",
   "tools": [
     {
       "name": "join_helloam_mailing_list",
@@ -9,13 +9,8 @@
       "path": "/#waitlist"
     },
     {
-      "name": "preorder_helloam_device",
-      "description": "Pre-order the Am device with a deposit via Stripe",
-      "path": "/#device"
-    },
-    {
       "name": "pilot_program_apply",
-      "description": "Apply for the helloam Pilot Program for early hardware access",
+      "description": "Apply for the helloam Pilot Program for early access",
       "path": "/#pilot"
     },
     {
