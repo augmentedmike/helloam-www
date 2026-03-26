@@ -9,7 +9,6 @@ const navLinks = [
   { label: "For Developers", href: "#personas" },
   { label: "For Support", href: "#personas" },
   { label: "Help", href: "#support" },
-  { label: "Blog", href: "https://blog.helloam.bot" },
 ];
 
 export default function Navbar() {
