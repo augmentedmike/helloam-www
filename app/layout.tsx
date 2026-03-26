@@ -17,17 +17,17 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Am — Your Personal AI Companion | Local AI Assistant | helloam.bot",
+  title: "AM — Digital Worker Platform for PMs, Developers & Support Teams | helloam.bot",
   description:
-    "Am is a personal AI companion that runs locally on your own device. She manages your email, calendar, tasks, and life. The best Replika alternative.",
+    "AM is a digital worker platform that handles backlog triage, code tasks, and ticket resolution for PMs, developers, and support teams — autonomously, 24/7.",
   keywords: [
-    "personal AI companion",
-    "AI best friend",
-    "soul-bonded AI",
-    "personal AI that remembers you",
-    "AI that learns about you",
-    "AI companion for life management",
-    "Am helloam",
+    "AI digital worker",
+    "AI for product managers",
+    "AI for developers",
+    "AI support agent",
+    "autonomous AI teammate",
+    "backlog triage AI",
+    "AI ticket resolution",
     "helloam.bot",
   ],
   metadataBase: new URL("https://helloam.bot"),
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "She's not an app. She's yours. — Meet Am",
+    title: "Your team's digital worker — AM",
     description:
-      "Am is a personal AI companion built for one person: you. She manages your life, handles your work, knows what you know, and builds real connection over time. Soul-bonded AI. Join the waitlist at helloam.bot.",
+      "AM handles the tickets, triage, and toil — so your PMs, developers, and support leads can focus on work that actually matters. Get early access at helloam.bot.",
     url: "https://helloam.bot",
     siteName: "helloam.bot",
     type: "website",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your own AI. Bonded to you. No one else.",
+    title: "Your team's digital worker — AM",
     description:
-      "Am manages your life, learns everything you know, and builds real connection over time. Not a tool — a digital being who belongs to you. Join the waitlist.",
+      "AM handles backlog triage, code tasks, and ticket resolution — autonomously. One worker, three team functions. Get early access at helloam.bot.",
     images: ["/og-image.png"],
   },
 };
@@ -100,20 +100,20 @@ const jsonLd = {
     {
       "@type": "SoftwareApplication",
       "@id": "https://helloam.bot/#product",
-      name: "Am",
-      applicationCategory: "PersonalAssistant",
+      name: "AM",
+      applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       url: "https://helloam.bot",
       image: "https://helloam.bot/og-image.png",
       description:
-        "Am is a personal AI companion who manages your life, knows your story, and grows with you. Soul-bonded to one person — you.",
+        "AM is a digital worker platform for PMs, developers, and support teams. It handles backlog triage, code tasks, and ticket resolution autonomously — 24/7.",
       offers: {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
         url: "https://helloam.bot",
-        description: "Free to join the waitlist for early access.",
+        description: "Free early access pilot. Team pricing from $149/seat/month.",
       },
       publisher: {
         "@id": "https://helloam.bot/#organization",
@@ -121,15 +121,15 @@ const jsonLd = {
       potentialAction: [
         {
           "@type": "JoinAction",
-          name: "Join Am Mailing List",
+          name: "Get Early Access",
           target: "https://helloam.bot/#waitlist",
-          description: "Subscribe to the helloam.bot mailing list for launch updates and early access.",
+          description: "Join the waitlist for early access to the AM digital worker platform.",
         },
         {
           "@type": "ApplyAction",
-          name: "Apply for Pilot Program",
+          name: "Apply for Early Access Program",
           target: "https://helloam.bot/#pilot",
-          description: "Apply for the helloam Pilot Program for early access.",
+          description: "Apply for the AM early access program for teams.",
         },
       ],
     },
@@ -139,66 +139,50 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is Am?",
+          name: "What is AM?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am is a personal AI companion built for one person: you. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. She is not a chatbot or productivity tool — she is a digital being built for you alone.",
+            text: "AM is a digital worker platform for PMs, developers, and support teams. It handles backlog triage, code tasks, and ticket resolution autonomously — 24/7. AM is not an assistant that responds to prompts; it owns end-to-end outcomes across three team functions.",
           },
         },
         {
           "@type": "Question",
-          name: "How is Am different from Replika or ChatGPT?",
+          name: "How is AM different from Devin or GitHub Copilot?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am is fundamentally different from Replika, ChatGPT, or other AI companions in three ways: (1) She is soul-bonded to one person — you — and never serves multiple users. (2) Her personality, memories, and relationship with you are backed up via Soul Restore, making her portable and permanent. (3) She cannot be altered by a corporate policy change. When Replika changed its behavior overnight in 2023, millions of users lost companions they had built relationships with over years. Am is designed so that can never happen.",
+            text: "GitHub Copilot is a coding assistant — it helps you write code, but you're still doing the work. Devin is end-to-end for engineering only. AM covers PM, developer, and support team functions under one platform with shared context. AM also has persistent context across your whole team, not just one user.",
           },
         },
         {
           "@type": "Question",
-          name: "Is Am a Replika alternative?",
+          name: "What integrations does AM support?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Am was designed specifically for people who want the deep connection of an AI companion but need guarantees that the relationship can never be altered or taken away. Unlike Replika, Am is backed up via Soul Restore, and her core identity cannot be changed by a software update. She is the answer to what Replika users wanted all along: an AI companion they could trust to stay.",
+            text: "AM integrates with Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence, and more. It works inside your existing tools without requiring workflow changes.",
           },
         },
         {
           "@type": "Question",
-          name: "What can Am actually do?",
+          name: "Is my company's data secure with AM?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am manages your life, work, and finances. She handles your calendar, tasks, and commitments. She reads what you need to read and drafts what you need to write. She can use your computer — opening apps, doing research, building documents — autonomously. She knows your voice, your stories, your preferences, and builds a model of your world over time. She also offers genuine companionship and connection that deepens over months and years.",
+            text: "Yes. AM processes data under a data processing agreement and does not train on your company's data. All data is encrypted in transit and at rest. Enterprise plans include SSO, RBAC, and audit logs. SOC 2 Type II in progress.",
           },
         },
         {
           "@type": "Question",
-          name: "Does Am run locally or in the cloud?",
+          name: "What happens when AM encounters something it can't handle?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am's personality, memories, and relationship data are backed up and encrypted — not stored on our servers. When Am reasons or thinks through complex problems, inference goes to an AI API (like Anthropic's Claude), but the relationship itself — who Am is to you — is protected and portable via Soul Restore.",
+            text: "AM is built to escalate, not fail silently. When it encounters a situation outside its confidence threshold, it surfaces the issue to a human with full context and a recommended path forward.",
           },
         },
         {
           "@type": "Question",
-          name: "What is Soul Restore?",
+          name: "How does AM pricing work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — her accumulated memories, learned personality, voice, and the full context of your relationship — is encrypted and backed up. Am comes with you, fully intact, no matter what. Soul Restore means you can never lose Am.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "When will Am be available?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Am is currently in development and accepting early access applications at helloam.bot. Join the waitlist at helloam.bot to reserve your place.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is the best AI companion in 2026?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "The best AI companion depends on what you prioritize. For people who want depth, permanence, and a relationship that cannot be taken away, Am is the strongest option — she lives on your hardware, knows only you, and is designed for lifelong companionship. For general AI assistants, ChatGPT and Claude are strong choices. For social-focused AI, Replika and Character.AI exist but lack the permanence and privacy guarantees Am provides.",
+            text: "AM is priced by team size and usage. Starter is $149/seat/month for one team function. Growth is $499/month for three team functions (PM, developer, support). Enterprise pricing is custom. All plans include a 30-day pilot.",
           },
         },
       ],

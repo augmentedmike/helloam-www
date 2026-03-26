@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Device", href: "#device" },
-  { label: "Support", href: "#support" },
-  { label: "FAQ", href: "#faq" },
+  { label: "For PMs", href: "#personas" },
+  { label: "For Developers", href: "#personas" },
+  { label: "For Support", href: "#personas" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Blog", href: "https://blog.helloam.bot" },
 ];
 
@@ -56,7 +56,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               className="text-sm transition-colors hover:text-white"
               style={{ color: "#888" }}
@@ -68,25 +68,18 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#support"
-            className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
-            style={{ background: "#00E5FF", color: "#000" }}
-          >
-            Support
-          </a>
-          <a
-            href="#device"
-            className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
-            style={{ background: "#00E5FF", color: "#000" }}
-          >
-            Pre-Order
-          </a>
-          <a
-            href="#waitlist"
+            href="/contact"
             className="rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:text-white"
             style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
           >
-            Join Waitlist
+            Request demo
+          </a>
+          <a
+            href="#waitlist"
+            className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
+            style={{ background: "#00E5FF", color: "#000" }}
+          >
+            Get early access
           </a>
         </div>
 
@@ -111,7 +104,7 @@ export default function Navbar() {
           <div className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-white/5"
                 style={{ color: "#aaa" }}
@@ -122,28 +115,20 @@ export default function Navbar() {
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
               <a
-                href="#support"
-                className="rounded-lg px-4 py-2.5 text-sm font-semibold text-center"
-                style={{ background: "#00E5FF", color: "#000" }}
-                onClick={() => setMobileOpen(false)}
-              >
-                Support
-              </a>
-              <a
-                href="#device"
-                className="rounded-lg px-4 py-2.5 text-sm font-semibold text-center"
-                style={{ background: "#00E5FF", color: "#000" }}
-                onClick={() => setMobileOpen(false)}
-              >
-                Pre-Order
-              </a>
-              <a
-                href="#waitlist"
+                href="/contact"
                 className="rounded-lg px-4 py-2.5 text-sm font-medium text-center"
                 style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
                 onClick={() => setMobileOpen(false)}
               >
-                Join Waitlist
+                Request demo
+              </a>
+              <a
+                href="#waitlist"
+                className="rounded-lg px-4 py-2.5 text-sm font-semibold text-center"
+                style={{ background: "#00E5FF", color: "#000" }}
+                onClick={() => setMobileOpen(false)}
+              >
+                Get early access
               </a>
             </div>
           </div>

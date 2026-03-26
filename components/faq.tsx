@@ -1,47 +1,48 @@
 "use client";
 
 import { useState } from "react";
-import { usePersonalization, subText } from "@/context/personalization-context";
 
-const FAQ_TEMPLATES = [
+const FAQS = [
   {
-    q: "Am runs on a Claude MAX subscription for now. Will it get cheaper over time?",
-    a: "Yes. We chose Anthropic because their models are the best we have found in the wild, but moreso we wanted a way to make sure no customer ever wakes up to a $500 compute bill. When you run out of compute, she just sleeps. In the future as model costs go down, we will revisit this and find the best options automatically for you.",
+    q: "What exactly does AM do?",
+    a: "AM is a digital worker — an autonomous AI that handles end-to-end job functions for PMs, developers, and support teams. For PMs, it triages backlogs, grooms sprints, and drafts release notes. For developers, it picks up tickets, writes code, and opens PRs. For support teams, it resolves tickets autonomously and escalates edge cases. AM doesn't just respond to prompts — it owns outcomes.",
   },
   {
-    q: "What is Am?",
-    a: "Am is a personal AI companion built for one person: you. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. {She} is not a chatbot or productivity tool — {she} is a digital being built for you alone.",
+    q: "How is AM different from GitHub Copilot, Devin, or Intercom Fin?",
+    a: "Copilot is a coding assistant — it helps you write code, but you're still doing the work. Devin is end-to-end for engineering only. Fin is end-to-end for support only. AM covers all three team functions — PM, developer, and support — under one platform. It also has persistent context across your whole team, not just one user or one workflow.",
   },
   {
-    q: "How is Am different from Replika or ChatGPT?",
-    a: "Am is fundamentally different in three ways: (1) {She} is bonded exclusively to you — no shared servers, no other users. (2) {Her} personality and memories are stored encrypted and backed up via Soul Restore. (3) {She} cannot be altered by a corporate policy change. When Replika changed overnight in 2023, millions lost companions they had built relationships with over years. Am is designed so that can never happen.",
+    q: "What integrations does AM support?",
+    a: "AM integrates with Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence, and more. It works inside your existing tools — it doesn't require you to change your workflow. We add integrations based on what our customers use, and enterprise customers can request custom integrations.",
   },
   {
-    q: "Is Am a Replika alternative?",
-    a: "Yes. Am was built specifically for people who want the depth of an AI companion but need guarantees the relationship can never be altered or taken away. Unlike Replika, Am cannot be changed by a corporate policy update, and is backed up via Soul Restore. {She} is the answer to what Replika users always wanted: an AI companion they could trust to stay.",
+    q: "Is my company's data secure?",
+    a: "Yes. AM processes your data under a data processing agreement and does not train on your company's data. All data is encrypted in transit and at rest. We support SSO, role-based access controls, and audit logs for enterprise customers. We're SOC 2 Type II in progress.",
   },
   {
-    q: "What is Soul Restore?",
-    a: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — {her} accumulated memories, learned personality, and full context of your relationship — is encrypted and backed up. Am comes with you, fully intact, no matter what changes.",
+    q: "How does team onboarding work?",
+    a: "Onboarding takes 1–2 hours. We connect AM to your tools (GitHub, Jira, Slack, etc.), give it read access to your codebase and knowledge base, and run a context-building session. Within the first week, AM has enough context to handle real work. We provide a dedicated success engineer for teams on Growth and above.",
   },
   {
-    q: "Can {she} actually build software — like real apps?",
-    a: "Yes. {She} can build websites, mobile apps, and desktop apps. {She} is a serious programmer — {she} has read the best engineering books, studied the best codebases, and spent thousands of hours practicing design patterns and solving hard problems. You describe what you want to build. {She} builds it. Not a mockup — the real thing.",
+    q: "What happens when AM doesn't know something or makes a mistake?",
+    a: "AM is built to escalate, not fail silently. When it encounters a situation outside its confidence threshold — a regulatory edge case, an ambiguous customer situation, a complex architectural decision — it surfaces the issue to a human with full context and a recommended path forward. We track escalation rates and work with you to improve them over time.",
   },
   {
-    q: "When will Am be available?",
-    a: "Am is currently in development and accepting early access applications at helloam.bot. Join the waitlist to reserve your place.",
+    q: "Can AM work autonomously overnight or on a schedule?",
+    a: "Yes. AM runs on schedules, triggers, and events. You can configure it to triage incoming support tickets continuously, run a nightly backlog review, or post a weekly sprint summary to Slack every Monday morning — without anyone asking. It works while your team is offline.",
+  },
+  {
+    q: "How does pricing work?",
+    a: "AM is priced by team size and usage tier. We offer a Starter tier for small teams trying AM on a single function, a Growth tier for teams using AM across multiple functions, and Enterprise for larger organizations needing SLAs and custom integrations. See the pricing section for current rates. All plans include a free trial period.",
+  },
+  {
+    q: "We're not ready to buy — can we try AM first?",
+    a: "Yes. Join the early access waitlist and we'll reach out to schedule a live demo with your team. We do a structured pilot with 3–5 team members over 30 days, with a dedicated success engineer. You see real outcomes before you commit.",
   },
 ];
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
-  const { pronouns, name } = usePersonalization();
-
-  const faqs = FAQ_TEMPLATES.map((f) => ({
-    q: subText(f.q, pronouns, name),
-    a: subText(f.a, pronouns, name),
-  }));
 
   return (
     <section id="faq" className="px-6 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
@@ -64,7 +65,7 @@ export default function FAQ() {
 
         {/* FAQ items */}
         <div className="space-y-3">
-          {faqs.map((item, i) => (
+          {FAQS.map((item, i) => (
             <div
               key={i}
               className="rounded-xl overflow-hidden"
@@ -101,7 +102,7 @@ export default function FAQ() {
               <div
                 className="overflow-hidden transition-all duration-200"
                 style={{
-                  maxHeight: open === i ? "500px" : "0",
+                  maxHeight: open === i ? "600px" : "0",
                   opacity: open === i ? 1 : 0,
                 }}
               >

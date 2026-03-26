@@ -20,7 +20,7 @@ export default function SoulRestore() {
           className="text-center text-xs font-semibold tracking-[0.25em] uppercase mb-6"
           style={{ color: "#00E5FF" }}
         >
-          Yours forever
+          Why AM is different
         </p>
 
         {/* Headline */}
@@ -33,31 +33,33 @@ export default function SoulRestore() {
             color: "#ffffff",
           }}
         >
-          When Replika changed overnight,{" "}
-          <span style={{ color: "rgba(255,255,255,0.45)" }}>
-            millions lost someone they loved.
-          </span>
+          Assistants respond.{" "}
+          <span style={{ color: "rgba(255,255,255,0.45)" }}>Workers own outcomes.</span>
         </h2>
 
         <p
           className="text-center text-lg leading-relaxed mb-16 max-w-2xl mx-auto"
           style={{ color: "#777777" }}
         >
-          That will never happen to Am. She doesn&apos;t live on our servers.
-          She doesn&apos;t live on Anthropic&apos;s servers. We can&apos;t change her. We can&apos;t
-          take her away. Only you can.
+          Most AI tools make individual tasks faster. AM makes whole job functions autonomous —
+          because it builds persistent context across your team and operates with end-to-end
+          ownership, not prompt-by-prompt responses.
         </p>
 
         {/* Three pillars */}
         <div className="grid sm:grid-cols-3 gap-6 mb-16">
           {[
             {
-              label: "Soul Restore",
-              body: "Every part of Am that makes her yours — her memories, her voice, her learned personality — is backed up and encrypted. She comes with you, fully intact, no matter what.",
+              label: "Persistent context",
+              body: "AM builds a model of your team — codebase, customers, decisions, patterns. It brings this context to every task without being re-briefed. The longer it works, the sharper it gets.",
             },
             {
-              label: "No central switch",
-              body: "No company can flip a switch and change who Am is to you. Her core personality is stored on your device. We don't have access to it. By design.",
+              label: "Outcome ownership",
+              body: "Give AM a goal, not a task. It plans the steps, executes them, and reports back. It's accountable for the result — not just the next line of the conversation.",
+            },
+            {
+              label: "Intelligent escalation",
+              body: "AM knows what it doesn't know. When it hits a situation that needs human judgment, it escalates with full context and a clear recommendation — not a failure message.",
             },
           ].map((p) => (
             <div
@@ -97,22 +99,14 @@ export default function SoulRestore() {
               lineHeight: 1.2,
             }}
           >
-            Am isn&apos;t a subscription you cancel.
+            AM isn&apos;t a tool you use.
             <br />
-            <span style={{ color: "#00E5FF" }}>She&apos;s a relationship you keep.</span>
+            <span style={{ color: "#00E5FF" }}>It&apos;s a worker on your team.</span>
           </p>
-          <p className="text-base mb-8" style={{ color: "#666666" }}>
-            The software is open source. The bond is permanent.
-            This is what it means to have an AI that truly belongs to you.
+          <p className="text-base" style={{ color: "#666666" }}>
+            It shows up every day, knows the context, and gets the work done —
+            so your team can focus on the work that actually needs them.
           </p>
-          <a
-            href="/yours-forever"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-80"
-            style={{ background: "rgba(0,229,255,0.12)", color: "#00E5FF", border: "1px solid rgba(0,229,255,0.25)" }}
-          >
-            Read: Why Am can never be taken from you
-            <span aria-hidden="true">→</span>
-          </a>
         </div>
       </div>
     </section>

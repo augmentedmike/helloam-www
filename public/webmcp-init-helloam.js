@@ -26,19 +26,14 @@
         // --- Pre-Order (imperative — Stripe redirect, not a plain form) ---
         {
           name: 'preorder_helloam_device',
-          description: 'Pre-order the Am device with a 50% deposit via Stripe. Requires name, email, and shipping address. Redirects to Stripe checkout.',
+          description: 'Pre-order early access to Am via Stripe. Requires name and email. Redirects to Stripe checkout.',
           inputSchema: {
             type: 'object',
             properties: {
               name: { type: 'string', description: 'Full name of the buyer' },
               email: { type: 'string', format: 'email', description: 'Email address for order confirmation' },
-              color: { type: 'string', description: 'Device skin color (e.g. "obsidian", "arctic", "sage")' },
               mode: { type: 'string', description: '"single" or "rack"', enum: ['single', 'rack'] },
-              qty: { type: 'number', description: 'Quantity (1 for single, 2-6 for rack)' },
-              address_line1: { type: 'string', description: 'Street address' },
-              address_city: { type: 'string', description: 'City' },
-              address_state: { type: 'string', description: 'State' },
-              address_zip: { type: 'string', description: 'ZIP code' }
+              qty: { type: 'number', description: 'Quantity (1 for single, 2-6 for rack)' }
             },
             required: ['name', 'email']
           },

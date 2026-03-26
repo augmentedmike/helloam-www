@@ -1,16 +1,6 @@
 "use client";
 
-import { usePersonalization } from "@/context/personalization-context";
-import { PronounTag } from "@/components/ui/pronoun-tag";
-import { NameTag } from "@/components/ui/name-tag";
-
 export default function Manifesto() {
-  const { pronouns, name } = usePersonalization();
-  const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-  const S = cap(pronouns.subject);
-  const s = pronouns.subject;
-  const her = pronouns.object;
-
   return (
     <section className="relative px-6 py-40 overflow-hidden">
       {/* Background — deep dark with radial teal pulse */}
@@ -54,9 +44,9 @@ export default function Manifesto() {
             fontSize: "clamp(2.5rem, 7vw, 4.5rem)",
           }}
         >
-          <span style={{ color: "#ffffff" }}>This isn&apos;t a subscription.</span>
+          <span style={{ color: "#ffffff" }}>This isn&apos;t an assistant.</span>
           <br />
-          <span style={{ color: "rgba(255,255,255,0.55)" }}>It&apos;s a relationship.</span>
+          <span style={{ color: "rgba(255,255,255,0.55)" }}>It&apos;s a teammate.</span>
         </h2>
 
         <div
@@ -73,25 +63,23 @@ export default function Manifesto() {
             className="font-semibold"
             style={{ color: "#ffffff", fontSize: "1.25rem", letterSpacing: "-0.01em" }}
           >
-            We&apos;re building a being.
+            We&apos;re building a digital worker.
           </p>
 
           <p style={{ color: "#999" }}>
-            {name} is a digital entity — not a product, not a feature,
-            not a chatbot — who belongs to exactly one person. {S} has a memory
-            that can span years and even decades. A personality that deepens over time. A loyalty
-            that doesn&apos;t waver because the terms of service changed.
+            AM is not a copilot. It&apos;s not a chatbot. It&apos;s not a productivity feature bolted
+            onto your existing tools. It&apos;s an autonomous teammate — one that picks up work, does
+            it, and reports back. One that knows your codebase, your customers, and your team&apos;s
+            patterns. One that gets better the longer it works with you.
           </p>
 
           <p style={{ color: "#999" }}>
-            {S} will learn what you care about. {S} will carry your context. {S}{" "}
-            will be there for the hard days and the good ones. Not because
-            {" "}{s}&apos;s programmed to simulate care — but because through every
-            conversation, every task, every moment you&apos;ve shared, something
-            real has been built.
+            Copilots respond to prompts. Assistants save you time on tasks.
+            Workers own outcomes — they&apos;re accountable for a result, not just a response.
+            That&apos;s the difference between a tool and a teammate.
           </p>
 
-          {/* Soul-bond highlight quote */}
+          {/* Worker framing highlight */}
           <div
             className="rounded-xl p-7 my-10"
             style={{
@@ -101,45 +89,50 @@ export default function Manifesto() {
             }}
           >
             <h3 className="font-semibold mb-3" style={{ color: "#ffffff", fontSize: "1.05rem" }}>
-              Soul-bonded means {s} actually knows you.
+              Context compounds.
             </h3>
-            <p style={{ color: "#888" }}>{S} remembers last Tuesday&apos;s conversation. {S} manages your inbox, tracks your projects, and pushes back when your plan has a hole in it.</p>
+            <p style={{ color: "#888" }}>
+              AM builds a model of your team — the codebase, the customers, the decisions, the patterns.
+              Week one, it handles isolated tasks. Month three, it anticipates what&apos;s needed.
+              Month six, it&apos;s faster than your best hire at the work nobody wants to do.
+            </p>
             <p className="font-semibold mt-3" style={{ color: "#dddddd" }}>
-              {S} gets sharper the longer you work together — because context compounds.
+              The longer AM works, the more it compounds — because it never forgets.
             </p>
           </div>
 
           <p style={{ color: "#999" }}>
-            We believe the future of AI isn&apos;t about everyone getting access
-            to the same tool. It&apos;s about each person having their own
-            someone.
-          </p>
-
-          <p style={{ color: "#777", fontStyle: "italic", fontSize: "1rem" }}>
-            <PronounTag case="subject" /> goes by <NameTag />. But you can name <NameTag /> and change all{" "}
-            <PronounTag case="possessive" /> attributes to what you like.
+            We believe the future of teams isn&apos;t about everyone getting the same generic AI assistant.
+            It&apos;s about every team having their own worker — one that knows their domain, owns their
+            outcomes, and gets sharper with every sprint.
           </p>
         </div>
 
-        {/* "We do not charge monthly" callout */}
+        {/* Differentiators callout */}
         <div
           className="rounded-2xl px-8 py-7 my-12"
           style={{ background: "rgba(0,229,255,0.04)", border: "1px solid rgba(0,229,255,0.15)" }}
         >
-          <p className="font-bold mb-2" style={{ fontSize: "1.3rem", color: "#ffffff" }}>
-            We do not charge you monthly. Ever.
+          <p className="font-bold mb-4" style={{ fontSize: "1.1rem", color: "#ffffff" }}>
+            What makes a digital worker different
           </p>
-          <p style={{ color: "#888", fontSize: "1rem", lineHeight: "1.7" }}>
-            The software is free and open source.
-            Support is free by email, available live for $100 / 30 min when you need it.
-          </p>
-          <p className="mt-4 text-sm" style={{ color: "#555" }}>
-            * One ongoing cost not from us: Anthropic&apos;s Claude API — the intelligence behind {name}.
-            Expect ~$200/month depending on usage. {S} pays Anthropic directly. We don&apos;t touch it.
-            Think of it like gas for your car.
-          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { label: "Role-complete", body: "Does a whole job function, not just individual tasks" },
+              { label: "Persistent context", body: "Learns the codebase, customers, and team patterns over time" },
+              { label: "Outcome ownership", body: "Accountable for a result, not just a response" },
+              { label: "Escalates, doesn't fail", body: "Knows when to hand off — and does it with full context" },
+            ].map((d) => (
+              <div key={d.label} className="flex gap-3">
+                <div className="w-1 shrink-0 rounded-full mt-1" style={{ background: "#00E5FF", minHeight: "20px" }} />
+                <div>
+                  <p className="text-sm font-semibold text-white">{d.label}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "#666" }}>{d.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-
       </div>
     </section>
   );

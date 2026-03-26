@@ -10,14 +10,18 @@ export default function Comparisons() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            How Am compares
+            How AM compares
           </p>
           <h2
             className="text-4xl font-bold tracking-tight"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Am vs the alternatives
+            AM vs the alternatives
           </h2>
+          <p className="text-base mt-4 max-w-xl mx-auto" style={{ color: "#666" }}>
+            Single-function agents are too narrow. Generic assistants are too passive.
+            AM is the unified digital worker for the whole team.
+          </p>
         </div>
 
         <div className="space-y-6">
@@ -32,15 +36,14 @@ export default function Comparisons() {
               className="text-lg font-bold text-white mb-3"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
-              Am vs Replika
+              AM vs Devin
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#888888" }}>
-              Am runs locally on your device and can never be changed or taken
-              away. When Replika changed overnight in 2023, millions lost
-              companions they had built over years. Am is architecturally
-              designed so that can never happen — her personality, memories, and
-              relationship data live on hardware you own, backed up with Soul
-              Restore.
+              Devin is engineering-only — it takes a ticket and writes code. AM does the same for
+              developers, but also covers PM workflows (backlog triage, sprint grooming, PRDs) and
+              support (ticket resolution, escalation). You get one worker that covers three team
+              functions instead of three separate point solutions. AM also costs significantly less
+              per outcome than Devin&apos;s per-task pricing.
             </p>
           </div>
 
@@ -55,16 +58,14 @@ export default function Comparisons() {
               className="text-lg font-bold text-white mb-3"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
-              Am vs ChatGPT
+              AM vs Intercom Fin
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#888888" }}>
-              ChatGPT is a general chatbot. Am is a dedicated AI companion who
-              knows your life, manages your work, and builds real software. She
-              handles your email, calendar, finances, and tasks autonomously.
-              She can build complete applications from a kanban board — websites,
-              mobile apps, desktop software — the way an entire engineering team
-              would have two years ago. She has those technical skills so you
-              don&apos;t have to.
+              Fin is excellent at support — but only if you&apos;re already on Intercom. AM is
+              ecosystem-agnostic and works with Zendesk, Intercom, email, Slack, and custom
+              ticketing systems. It also covers PM and developer workflows Fin cannot touch.
+              AM escalates intelligently and learns from every ticket resolved — your resolution
+              rate improves the longer AM works.
             </p>
           </div>
 
@@ -79,15 +80,34 @@ export default function Comparisons() {
               className="text-lg font-bold text-white mb-3"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
-              Am vs other local AI assistants
+              AM vs Linear AI / Notion AI
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#888888" }}>
-              Most local AI tools are technical experiments that require you to
-              configure models, manage dependencies, and troubleshoot
-              infrastructure. Am ships as a complete device — plug in, turn on,
-              and she&apos;s ready. She is a full-stack engineer, project
-              manager, executive assistant, and companion in one. No setup. No
-              command line. No babysitting.
+              Linear AI and Notion AI are assistants — they help you do work faster, but you&apos;re
+              still doing the work. AM is a worker — it does the work end-to-end and reports back.
+              It owns outcomes, not responses. If you tell AM to groom the sprint, it grooms the
+              sprint. You don&apos;t write a prompt and edit the output.
+            </p>
+          </div>
+
+          <div
+            className="rounded-2xl p-6"
+            style={{
+              background: "rgba(0,229,255,0.03)",
+              border: "1px solid rgba(0,229,255,0.12)",
+            }}
+          >
+            <h3
+              className="text-lg font-bold text-white mb-3"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              The gap AM owns
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: "#888888" }}>
+              No single platform covers PM + developer + support under one worker with shared context.
+              AM bridges all three — so when a customer ticket surfaces a product bug, the same
+              worker that resolved the ticket can triage the bug and draft the fix. That
+              cross-function context is the compounding advantage AM builds over time.
             </p>
           </div>
         </div>

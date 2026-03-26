@@ -12,19 +12,19 @@ export default function Footer() {
           <div className="text-center sm:text-left">
             <p className="font-semibold text-sm" style={{ color: "#f5f5f5" }}>helloam.bot</p>
             <p className="text-xs mt-1" style={{ color: "#a3a3a3" }}>
-              An AGI Digital Companion & Worker. Yours forever.
+              Digital worker platform for PMs, developers, and support teams.
             </p>
             <p className="text-xs mt-1" style={{ color: "#6b6b6b" }}>
-              Shipped from Austin, TX · AGI built in Austin by a proud American company.
+              Built in Austin, TX · Tylt LLC
             </p>
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-6 flex-wrap justify-center">
             {[
-              { label: "Press",       href: "/press",   external: false },
-              { label: "Contact",     href: "/contact", external: false },
-              { label: "Support",     href: "/#support", external: false },
+              { label: "Press",   href: "/press",    external: false },
+              { label: "Contact", href: "/contact",  external: false },
+              { label: "Blog",    href: "https://blog.helloam.bot", external: true },
             ].map((l) => (
               <a
                 key={l.label}
@@ -46,7 +46,7 @@ export default function Footer() {
           {[
             { label: "Voice-to-Text Hotkey Tool", href: "https://github.com/augmentedmike/whisper-hotkey" },
             { label: "AI Comic Generator CLI",    href: "https://github.com/augmentedmike/comic-cli" },
-            { label: "Claude Image Optimizer",     href: "https://github.com/augmentedmike/claude-img-opt" },
+            { label: "Claude Image Optimizer",    href: "https://github.com/augmentedmike/claude-img-opt" },
           ].map((l) => (
             <a
               key={l.label}
@@ -73,13 +73,12 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             {[
-              { label: "Privacy",           href: "/privacy" },
-              { label: "Terms",             href: "/terms" },
+              { label: "Privacy", href: "/privacy" },
+              { label: "Terms",   href: "/terms" },
             ].map((l) => (
               <a
                 key={l.label}
                 href={l.href}
-                {...("external" in l ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-xs transition-colors"
                 style={{ color: "#6b6b6b" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#a3a3a3")}

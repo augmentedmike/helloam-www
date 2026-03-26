@@ -9,19 +9,19 @@ function Check() {
 }
 
 const PILOT_PERKS = [
-  "Early access — ahead of the public launch",
-  "Direct access to the founder for feedback sessions",
-  "Influence the roadmap — your use case shapes the product",
-  "Complimentary access in exchange for structured feedback",
-  "Recognition as a founding pilot partner",
+  "30-day structured pilot with a dedicated success engineer",
+  "Direct access to the founding team — your feedback shapes the roadmap",
+  "Early-adopter pricing locked in for life",
+  "Priority integration support for your specific stack",
+  "Recognition as a founding partner team",
 ];
 
 const WHO_QUALIFIES = [
-  { label: "High-performers", desc: "Founders, operators, executives who push productivity to its limits" },
-  { label: "Researchers & academics", desc: "Anyone studying AI, human-computer interaction, or digital companionship" },
-  { label: "Organizations & teams", desc: "Companies exploring AI-augmented workflows at the individual level" },
-  { label: "YouTubers & social media companies", desc: "Content creators and social brands who live online and need an AI that keeps up" },
-  { label: "Creators & builders", desc: "People who will document, share, and amplify what Am can do" },
+  { label: "Product teams", desc: "PMs and product leads who spend too much time on process and not enough on product" },
+  { label: "Engineering teams", desc: "Eng leads and developers with backlog debt they can never seem to close" },
+  { label: "Support teams", desc: "Support leads whose ticket volume has outgrown their team capacity" },
+  { label: "Startups & scale-ups", desc: "Companies who need to do more with a lean team, without sacrificing quality" },
+  { label: "Enterprises", desc: "Organizations exploring AI workers at the team level before broader rollout" },
 ];
 
 export default function Pilot() {
@@ -41,20 +41,19 @@ export default function Pilot() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            Pilot Program
+            Early Access Program
           </p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Help us build the future.
+            Join the founding cohort.
             <br />
-            <span style={{ color: "#00E5FF" }}>Get early access.</span>
+            <span style={{ color: "#00E5FF" }}>Shape what AM becomes.</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: "#666666" }}>
-            We&apos;re selecting a small group of individuals and organizations to receive
-            early access and dedicated support — in exchange for real-world feedback
-            that shapes Am into what it&apos;s meant to be.
+            We&apos;re selecting a small group of teams to get early access and dedicated support —
+            in exchange for real-world feedback that makes AM better for everyone.
           </p>
         </div>
 
@@ -64,7 +63,7 @@ export default function Pilot() {
             className="rounded-2xl p-8"
             style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
           >
-            <h3 className="text-lg font-bold text-white mb-5">Who qualifies</h3>
+            <h3 className="text-lg font-bold text-white mb-5">Who we&apos;re looking for</h3>
             <div className="space-y-4">
               {WHO_QUALIFIES.map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
@@ -90,11 +89,7 @@ export default function Pilot() {
               boxShadow: "0 0 40px rgba(0,229,255,0.05)",
             }}
           >
-            <div
-              className="absolute -top-3.5 left-1/2"
-              style={{ display: "none" }}
-            />
-            <h3 className="text-lg font-bold text-white mb-5">What pilot partners get</h3>
+            <h3 className="text-lg font-bold text-white mb-5">What early access partners get</h3>
             <ul className="space-y-3">
               {PILOT_PERKS.map((perk) => (
                 <li key={perk} className="flex items-start gap-2.5">
@@ -109,8 +104,8 @@ export default function Pilot() {
         {/* CTA */}
         <div className="text-center">
           <ContactButton
-            category="Pilot Program"
-            subject="Pilot Program Application"
+            category="Early Access"
+            subject="Early Access Application"
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 cursor-pointer"
             style={{
               background: "rgba(255,255,255,0.06)",
@@ -118,11 +113,11 @@ export default function Pilot() {
               border: "1px solid rgba(255,255,255,0.12)",
             }}
           >
-            Apply for Pilot Access
+            Apply for early access
           </ContactButton>
           <p className="mt-4 text-sm" style={{ color: "#444444" }}>
-            Tell us who you are and how you plan to use Am.
-            We review applications personally and reach out within a few days.
+            Tell us your team&apos;s biggest bottleneck and how you plan to use AM.
+            We review applications personally and follow up within a few days.
           </p>
         </div>
       </div>
