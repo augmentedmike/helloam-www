@@ -51,7 +51,7 @@
     "forSupport": "For Support",
     "help": "Help",
     "requestDemo": "Request demo",
-    "getEarlyAccess": "Get early access"
+    "getEarlyAccess": "Get AM on GitHub"
   },
   "hero": {
     "badge": "Now in pilot — limited spots open",
@@ -63,7 +63,7 @@
       { "label": "For Developers", "desc": "Tickets → PRs, autonomously" },
       { "label": "For Support", "desc": "24/7 ticket resolution" }
     ],
-    "ctaPrimary": "Get early access",
+    "ctaPrimary": "Get AM on GitHub",
     "ctaSecondary": "See how it works",
     "stats": [
       { "stat": "24/7", "label": "Always working" },

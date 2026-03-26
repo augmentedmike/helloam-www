@@ -88,7 +88,7 @@ export default function Navbar() {
             {t.nav.requestDemo}
           </a>
           <a
-            href="#waitlist"
+            href="https://github.com/augmentedmike/am-agi"
             className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
             style={{ background: "#00E5FF", color: "#000" }}
           >
@@ -146,7 +146,7 @@ export default function Navbar() {
                 {t.nav.requestDemo}
               </a>
               <a
-                href="#waitlist"
+                href="https://github.com/augmentedmike/am-agi"
                 className="rounded-lg px-4 py-2.5 text-sm font-semibold text-center"
                 style={{ background: "#00E5FF", color: "#000" }}
                 onClick={() => setMobileOpen(false)}

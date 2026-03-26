@@ -51,7 +51,7 @@
     "forSupport": "面向支持团队",
     "help": "帮助",
     "requestDemo": "申请演示",
-    "getEarlyAccess": "获取早期访问"
+    "getEarlyAccess": "在 GitHub 获取 AM"
   },
   "hero": {
     "badge": "试点中 — 名额有限",
@@ -63,7 +63,7 @@
       { "label": "面向开发者", "desc": "Ticket → PR，全自动" },
       { "label": "面向支持团队", "desc": "24/7 工单解决" }
     ],
-    "ctaPrimary": "获取早期访问",
+    "ctaPrimary": "在 GitHub 获取 AM",
     "ctaSecondary": "了解工作方式",
     "stats": [
       { "stat": "24/7", "label": "持续运转" },

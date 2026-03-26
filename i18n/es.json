@@ -51,7 +51,7 @@
     "forSupport": "Para Soporte",
     "help": "Ayuda",
     "requestDemo": "Solicitar demo",
-    "getEarlyAccess": "Acceso anticipado"
+    "getEarlyAccess": "Ver AM en GitHub"
   },
   "hero": {
     "badge": "En piloto — cupos limitados disponibles",
@@ -63,7 +63,7 @@
       { "label": "Para Desarrolladores", "desc": "Tickets → PRs, de forma autónoma" },
       { "label": "Para Soporte", "desc": "Resolución de tickets 24/7" }
     ],
-    "ctaPrimary": "Obtener acceso anticipado",
+    "ctaPrimary": "Ver AM en GitHub",
     "ctaSecondary": "Ver cómo funciona",
     "stats": [
       { "stat": "24/7", "label": "Siempre trabajando" },

@@ -6,7 +6,6 @@ import Device from "@/components/device";
 import Comparisons from "@/components/comparisons";
 import Plans from "@/components/plans";
 import Manifesto from "@/components/manifesto";
-import Waitlist from "@/components/waitlist";
 import Pilot from "@/components/pilot";
 import FAQ from "@/components/faq";
 
@@ -29,8 +28,6 @@ export default function Home() {
       <Plans />
       {/* Digital worker manifesto */}
       <Manifesto />
-      {/* Waitlist / early access CTA */}
-      <Waitlist />
       {/* Early access program */}
       <Pilot />
       {/* B2B FAQ */}
