@@ -8,7 +8,7 @@ const navLinks = [
   { label: "For PMs", href: "#personas" },
   { label: "For Developers", href: "#personas" },
   { label: "For Support", href: "#personas" },
-  { label: "Support", href: "#support" },
+  { label: "Help", href: "#support" },
   { label: "Blog", href: "https://blog.helloam.bot" },
 ];
 
