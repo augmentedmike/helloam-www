@@ -1,3 +1,0 @@
-E2E smoke test
-Card: a09cbcfd-1ad7-42a3-b364-ee1022afa6f4
-Created: 2026-03-26T02:14:30.538Z
