@@ -375,27 +375,27 @@
     "subhead": "¿Aún no estás listo para aplicar? Únete a la lista y te avisaremos cuando el equipo de {name} obtenga acceso anticipado."
   },
   "pilot": {
-    "eyebrow": "Programa de Acceso Anticipado",
-    "headline1": "Únete a la cohorte fundadora.",
-    "headline2": "Da forma a lo que AM se convertirá.",
-    "subhead": "Estamos seleccionando un pequeño grupo de equipos para obtener acceso anticipado y soporte dedicado — a cambio de retroalimentación del mundo real que hace que AM sea mejor para todos.",
-    "whoTitle": "A quién buscamos",
-    "perksTitle": "Lo que obtienen los socios de acceso anticipado",
-    "cta": "Aplicar para acceso anticipado",
-    "ctaNote": "Cuéntanos el mayor cuello de botella de tu equipo y cómo planeas usar AM. Revisamos las aplicaciones personalmente y respondemos en pocos días.",
+    "eyebrow": "Programa Piloto",
+    "headline1": "Haz que AM funcione",
+    "headline2": "para tu equipo.",
+    "subhead": "AM está activo y es de código abierto. El programa piloto te da acceso directo al fundador para configurar, integrar y poner en marcha AM según tu flujo de trabajo específico.",
+    "whoTitle": "Para quién es esto",
+    "perksTitle": "Lo que obtienen los equipos piloto",
+    "cta": "Aplicar al programa piloto",
+    "ctaNote": "Cuéntanos qué hace tu equipo y qué quieres que AM gestione. Respondemos personalmente en pocos días.",
     "who": [
-      { "label": "Equipos de producto", "desc": "PMs y líderes de producto que pasan demasiado tiempo en proceso y no suficiente en producto" },
-      { "label": "Equipos de ingeniería", "desc": "Líderes de ingeniería y desarrolladores con deuda de backlog que nunca logran cerrar" },
-      { "label": "Equipos de soporte", "desc": "Líderes de soporte cuyo volumen de tickets ha superado la capacidad de su equipo" },
-      { "label": "Startups y scale-ups", "desc": "Empresas que necesitan hacer más con un equipo reducido, sin sacrificar la calidad" },
-      { "label": "Empresas", "desc": "Organizaciones que exploran trabajadores de IA a nivel de equipo antes de un despliegue más amplio" }
+      { "label": "Equipos de producto", "desc": "PMs que quieren que AM clasifique su backlog, prepare sprints y redacte release notes" },
+      { "label": "Equipos de ingeniería", "desc": "Desarrolladores que quieren que AM tome tickets, escriba código y abra PRs" },
+      { "label": "Equipos de soporte", "desc": "Líderes de soporte que quieren que AM resuelva tickets de forma autónoma 24/7" },
+      { "label": "Startups y scale-ups", "desc": "Equipos pequeños que necesitan cubrir más terreno sin aumentar headcount" },
+      { "label": "Cualquier equipo usando Claude Code", "desc": "Si ya usas Claude Code o herramientas similares, AM es el siguiente paso" }
     ],
     "perks": [
-      "Piloto estructurado de 30 días con un ingeniero de éxito dedicado",
-      "Acceso directo al equipo fundador — tu retroalimentación da forma al roadmap",
-      "Precios de adoptante temprano bloqueados de por vida",
-      "Soporte de integración prioritario para tu stack específico",
-      "Reconocimiento como equipo socio fundador"
+      "Acceso directo al fundador — configuramos AM contigo, no para ti",
+      "Configuración personalizada para tu stack y flujo de trabajo",
+      "Ayuda con integraciones: GitHub, Jira, Linear, Slack, Zendesk y más",
+      "Soporte continuo mientras tu equipo escala el uso",
+      "Tu feedback define lo que se construye a continuación"
     ]
   }
 }

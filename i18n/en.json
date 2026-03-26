@@ -375,27 +375,27 @@
     "subhead": "Not ready to apply yet? Join the list and we'll let you know when {name}'s team gets early access."
   },
   "pilot": {
-    "eyebrow": "Early Access Program",
-    "headline1": "Join the founding cohort.",
-    "headline2": "Shape what AM becomes.",
-    "subhead": "We're selecting a small group of teams to get early access and dedicated support — in exchange for real-world feedback that makes AM better for everyone.",
-    "whoTitle": "Who we're looking for",
-    "perksTitle": "What early access partners get",
-    "cta": "Apply for early access",
-    "ctaNote": "Tell us your team's biggest bottleneck and how you plan to use AM. We review applications personally and follow up within a few days.",
+    "eyebrow": "Pilot Program",
+    "headline1": "Get AM working",
+    "headline2": "for your team.",
+    "subhead": "AM is live and open source. The pilot program gives your team direct access to the founder to get AM configured, integrated, and running for your specific workflow.",
+    "whoTitle": "Who this is for",
+    "perksTitle": "What pilot teams get",
+    "cta": "Apply for the pilot",
+    "ctaNote": "Tell us what your team does and what you want AM to handle. We follow up personally within a few days.",
     "who": [
-      { "label": "Product teams", "desc": "PMs and product leads who spend too much time on process and not enough on product" },
-      { "label": "Engineering teams", "desc": "Eng leads and developers with backlog debt they can never seem to close" },
-      { "label": "Support teams", "desc": "Support leads whose ticket volume has outgrown their team capacity" },
-      { "label": "Startups & scale-ups", "desc": "Companies who need to do more with a lean team, without sacrificing quality" },
-      { "label": "Enterprises", "desc": "Organizations exploring AI workers at the team level before broader rollout" }
+      { "label": "Product teams", "desc": "PMs who want AM triaging their backlog, grooming sprints, and drafting release notes" },
+      { "label": "Engineering teams", "desc": "Developers who want AM picking up tickets, writing code, and opening PRs" },
+      { "label": "Support teams", "desc": "Support leads who want AM resolving tickets autonomously 24/7" },
+      { "label": "Startups & scale-ups", "desc": "Lean teams who need to cover more ground without adding headcount" },
+      { "label": "Any team running Claude Code", "desc": "If you're already using Claude Code or similar tools, AM is the next step" }
     ],
     "perks": [
-      "30-day structured pilot with a dedicated success engineer",
-      "Direct access to the founding team — your feedback shapes the roadmap",
-      "Early-adopter pricing locked in for life",
-      "Priority integration support for your specific stack",
-      "Recognition as a founding partner team"
+      "Direct access to the founder — we set AM up with you, not for you",
+      "Custom configuration for your stack and workflow",
+      "Integration help for GitHub, Jira, Linear, Slack, Zendesk, and more",
+      "Ongoing support as your team scales usage",
+      "Your feedback shapes what gets built next"
     ]
   }
 }
