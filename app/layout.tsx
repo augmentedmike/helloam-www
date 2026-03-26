@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AM — Digital Worker Platform for PMs, Developers & Support Teams | helloam.bot",
+  title: "AM — The AI That Does the Work | helloam.bot",
   description:
-    "AM is a digital worker platform that handles backlog triage, code tasks, and ticket resolution for PMs, developers, and support teams — autonomously, 24/7.",
+    "AM is your team's autonomous digital worker — handling triage, code tasks, and ticket resolution 24/7 so your team ships faster with less overhead.",
   keywords: [
     "AI digital worker",
     "AI for product managers",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Your team's digital worker — AM",
+    title: "The AI that does the work — AM",
     description:
-      "AM handles the tickets, triage, and toil — so your PMs, developers, and support leads can focus on work that actually matters. Get early access at helloam.bot.",
+      "AM takes end-to-end ownership of your team's high-volume work — triage, code, and support. Ship faster without adding headcount. Get early access at helloam.bot.",
     url: "https://helloam.bot",
     siteName: "helloam.bot",
     type: "website",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your team's digital worker — AM",
+    title: "The AI that does the work — AM",
     description:
-      "AM handles backlog triage, code tasks, and ticket resolution — autonomously. One worker, three team functions. Get early access at helloam.bot.",
+      "AM autonomously handles triage, code tasks, and ticket resolution — 24/7. One worker, your whole team covered. Get early access at helloam.bot.",
     images: ["/og-image.png"],
   },
 };

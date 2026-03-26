@@ -27,7 +27,7 @@ export default function Hero() {
             className="w-1.5 h-1.5 rounded-full animate-pulse"
             style={{ background: "#00E5FF" }}
           />
-          Now accepting early access applications
+          Now in pilot — limited spots open
         </div>
 
         {/* Headline */}
@@ -35,8 +35,8 @@ export default function Hero() {
           className="text-5xl sm:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6"
           style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
-          <span className="text-white">Your team&apos;s </span>
-          <span style={{ color: "#00E5FF" }}>digital worker.</span>
+          <span className="text-white">The AI that </span>
+          <span style={{ color: "#00E5FF" }}>does the work.</span>
         </h1>
 
         {/* Subhead */}
@@ -44,8 +44,8 @@ export default function Hero() {
           className="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10"
           style={{ color: "#888888" }}
         >
-          AM handles the tickets, triage, and toil — so your PMs, developers, and support leads
-          can focus on work that actually matters.
+          AM takes end-to-end ownership of your team&apos;s highest-volume work — triage, code, and support —
+          so your team ships faster with less overhead. One worker, your whole team covered.
         </p>
 
         {/* Persona pills */}
@@ -98,7 +98,7 @@ export default function Hero() {
         >
           {[
             { stat: "24/7", label: "Always working" },
-            { stat: "3", label: "Team roles covered" },
+            { stat: "85%", label: "Tickets auto-resolved" },
             { stat: "0", label: "Context switches needed" },
           ].map((s) => (
             <div key={s.label} className="text-center">
