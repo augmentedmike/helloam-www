@@ -19,9 +19,9 @@ const CHANNELS = [
     description: "Questions, curiosity, anything that doesn't fit below. Am reads everything.",
   },
   {
-    label: "Pre-orders & Sales",
+    label: "Sales & Pricing",
     category: "Sales",
-    description: "Pricing, payment plans, availability, deposit questions.",
+    description: "Pricing, plans, team onboarding, and availability questions.",
   },
   {
     label: "Press",

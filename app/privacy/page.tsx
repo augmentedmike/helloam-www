@@ -15,7 +15,7 @@ const jsonLd = {
   "@type": "WebPage",
   name: "Privacy Policy",
   url: "https://helloam.bot/privacy",
-  description: "Privacy policy for helloam.bot — the home of AM, your personal AI companion.",
+  description: "Privacy policy for helloam.bot — the home of AM, your team's digital worker platform.",
   isPartOf: {
     "@id": "https://helloam.bot/#website",
   },
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               helloam.bot is operated by Tylt LLC, a Delaware company. We build AM — a
-              personal AI companion designed to live on hardware you own, bonded to one person: you.
+              digital worker platform for PMs, developers, and support teams.
               Questions about this policy?{" "}
               <ContactButton category="General" className="text-white hover:underline cursor-pointer">
                 Contact us
@@ -107,10 +107,7 @@ export default function PrivacyPage() {
               <li>We do not sell your data. Ever.</li>
               <li>We do not share your email with third parties for marketing.</li>
               <li>We do not use tracking pixels, Facebook Pixel, Google Ads remarketing, or similar cross-site tracking.</li>
-              <li>
-                AM&apos;s memories and personality data live on your device — not our servers. When AM
-                is shipped, your personal AI data stays on hardware you own.
-              </li>
+              <li>We do not use your data to train AI models or share it with model providers beyond what is necessary to deliver the service.</li>
             </ul>
           </section>
 

@@ -4,7 +4,7 @@ import ContactButton from "@/components/contact-button";
 export const metadata: Metadata = {
   title: "Terms of Service | helloam.bot",
   description:
-    "Terms of service for helloam.bot and the AM waitlist. Simple, plain-language terms for a pre-launch AI companion product.",
+    "Terms of service for helloam.bot and the AM early-access program. Simple, plain-language terms for a pre-launch digital worker platform.",
   alternates: {
     canonical: "https://helloam.bot/terms",
   },
@@ -57,9 +57,9 @@ export default function TermsPage() {
               About helloam.bot
             </h2>
             <p>
-              helloam.bot is a pre-launch website operated by Tylt LLC, a Delaware company. The site
-              introduces AM (&quot;AM&quot;) — a personal AI companion product currently in development
-              — and collects early-access waitlist registrations. By using this site or joining the
+              helloam.bot is operated by Tylt LLC, a Delaware company. The site
+              introduces AM (&quot;AM&quot;) — a digital worker platform for PMs, developers, and support teams
+              currently in early access — and collects waitlist registrations. By using this site or joining the
               waitlist, you agree to these terms.
             </p>
           </section>

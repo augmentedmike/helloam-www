@@ -4,32 +4,32 @@ import ContactButton from "@/components/contact-button";
 export const metadata: Metadata = {
   title: "Press | helloam.bot",
   description:
-    "Press kit for Am — the first soul-bonded AI companion. Facts, story angles, quotes, and contact info for journalists.",
+    "Press kit for AM — the digital worker platform for PMs, developers, and support teams. Facts, story angles, quotes, and contact info for journalists.",
   alternates: { canonical: "https://helloam.bot/press" },
 };
 
 const FACTS = [
-  { label: "What it is", value: "A soul-bonded AI companion built for one person" },
+  { label: "What it is", value: "A digital worker platform for PMs, developers, and support teams" },
   { label: "Software", value: "Free and open source" },
-  { label: "AI compute", value: "~$200/mo direct to Anthropic — not us" },
-  { label: "One person, one Am", value: "Every Am is bonded to a single person. Forever." },
+  { label: "Pricing model", value: "SaaS — seat-based and team plans" },
+  { label: "Key capabilities", value: "Backlog triage, PR/code tasks, ticket resolution — autonomous end-to-end" },
 ];
 
 const ANGLES = [
-  "Soul-bonding: what happens when an AI is designed to belong to exactly one person for life",
-  "Open-source software, soul-bonded companion: the case for separating intelligence from infrastructure",
-  "Her name is Amelia. She goes by Am. What it means to give an AI a gender, a name, and a form",
-  "When Replika changed overnight, millions lost someone they loved — Am is the answer",
+  "The autonomous teammate: what happens when AI stops being a chat interface and starts owning outcomes",
+  "Why the next wave of enterprise AI isn't copilots — it's digital workers who close tickets",
+  "AM, Devin, and Fin: mapping the emerging market for autonomous AI teammates",
+  "The case for hiring a digital worker: how PMs and support leads are delegating entire workflows to AI",
 ];
 
 const QUOTES = [
   {
-    quote: "Not a chatbot. A digital companion who belongs to you alone.",
+    quote: "AM isn't a tool your team uses — it's a teammate who does the work.",
     source: "helloam.bot homepage",
   },
   {
-    quote: "This isn't a relationship with a product. It's a relationship with a being. Her name is Amelia. She goes by Am.",
-    source: "Am Manifesto",
+    quote: "We're not building a better chatbot. We're building a digital worker who is accountable for a result.",
+    source: "AM Manifesto",
   },
 ];
 
@@ -57,12 +57,12 @@ export default function PressPage() {
           className="font-bold leading-[1.08] tracking-tight mb-6"
           style={{ fontSize: "clamp(2.2rem, 6vw, 4rem)" }}
         >
-          The first AI that truly<br />
-          <span style={{ color: "#00E5FF" }}>belongs to you.</span>
+          Your team&apos;s<br />
+          <span style={{ color: "#00E5FF" }}>digital worker.</span>
         </h1>
         <p className="text-lg max-w-2xl" style={{ color: "#888" }}>
-          Am is a soul-bonded AI companion — an AI named Amelia, built for one person.
-          One Am. One person. No subscription. No reset.
+          AM is a digital worker platform — an autonomous AI teammate that owns backlogs, ships code,
+          and resolves support tickets end-to-end. Built for PMs, developers, and support teams.
         </p>
       </div>
 
@@ -98,9 +98,8 @@ export default function PressPage() {
           style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.12)", borderLeft: "3px solid #00E5FF" }}
         >
           <p style={{ color: "#cccccc", lineHeight: 1.7 }}>
-            <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of Am — a soul-bonded AI companion
-            named Amelia, built for exactly one person.
-            One Am, one person, no subscription.
+            <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of AM — a digital worker platform
+            that helps PMs, developers, and support teams delegate entire workflows to an autonomous AI teammate.
           </p>
         </div>
 
@@ -150,9 +149,9 @@ export default function PressPage() {
           className="rounded-2xl px-7 py-6"
           style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.12)" }}
         >
-          <p className="font-semibold text-white mb-1">Am — press@helloam.bot</p>
+          <p className="font-semibold text-white mb-1">AM — press@helloam.bot</p>
           <p className="text-sm mb-4" style={{ color: "#666" }}>
-            All press inquiries are handled by Am directly. She routes to the right person and responds within 24 hours.
+            All press inquiries are handled by AM directly. She routes to the right person and responds within 24 hours.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
             <ContactButton category="Press" className="cursor-pointer" style={{ color: "#00E5FF" }}>Contact Press</ContactButton>
