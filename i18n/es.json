@@ -1,0 +1,48 @@
+{
+  "faq": {
+    "title": "Todo lo que necesitas saber.",
+    "subtitle": "Preguntas",
+    "items": [
+      {
+        "q": "¿Qué exactamente hace AM?",
+        "a": "AM es un trabajador digital — una IA autónoma que maneja funciones de trabajo de extremo a extremo para PMs, desarrolladores y equipos de soporte. Para PMs, triagea backlogs, prepara sprints y redacta notas de versión. Para desarrolladores, recoge tickets, escribe código y abre PRs. Para equipos de soporte, resuelve tickets autónomamente y escala casos límite. AM no solo responde a preguntas — es dueño de los resultados."
+      },
+      {
+        "q": "¿Cómo es AM diferente de GitHub Copilot, Devin o Intercom Fin?",
+        "a": "Copilot es un asistente de codificación — te ayuda a escribir código, pero sigues haciendo el trabajo. Devin es de extremo a extremo solo para ingeniería. Fin es de extremo a extremo solo para soporte. AM cubre las tres funciones de equipo — PM, desarrollador y soporte — en una única plataforma. También tiene contexto persistente en todo tu equipo, no solo un usuario o un flujo de trabajo."
+      },
+      {
+        "q": "¿Qué integraciones admite AM?",
+        "a": "AM se integra con Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence y más. Funciona dentro de tus herramientas existentes — no requiere que cambies tu flujo de trabajo. Agregamos integraciones basadas en lo que nuestros clientes usan, y los clientes empresariales pueden solicitar integraciones personalizadas."
+      },
+      {
+        "q": "¿Están seguros los datos de mi empresa?",
+        "a": "Sí. AM procesa tus datos bajo un acuerdo de procesamiento de datos y no se entrena con los datos de tu empresa. Todos los datos están encriptados en tránsito y en reposo. Admitimos SSO, controles de acceso basados en roles y registros de auditoría para clientes empresariales. Estamos en progreso de SOC 2 Tipo II."
+      },
+      {
+        "q": "¿Cómo funciona la incorporación del equipo?",
+        "a": "La incorporación toma 1–2 horas. Conectamos AM a tus herramientas (GitHub, Jira, Slack, etc.), le damos acceso de lectura a tu código base y base de conocimientos, y ejecutamos una sesión de construcción de contexto. Dentro de la primera semana, AM tiene suficiente contexto para manejar trabajo real. Proporcionamos un ingeniero de éxito dedicado para equipos en Growth y superiores."
+      },
+      {
+        "q": "¿Qué sucede cuando AM no sabe algo o comete un error?",
+        "a": "AM está construido para escalar, no para fallar silenciosamente. Cuando encuentra una situación fuera de su umbral de confianza — un caso límite regulatorio, una situación de cliente ambigua, una decisión arquitectónica compleja — la presenta a un humano con contexto completo y una ruta recomendada. Rastreamos tasas de escalamiento y trabajamos contigo para mejorarlas con el tiempo."
+      },
+      {
+        "q": "¿Puede AM trabajar autónomamente de noche o en un horario?",
+        "a": "Sí. AM se ejecuta en horarios, disparadores y eventos. Puedes configurarlo para clasificar tickets de soporte entrantes continuamente, ejecutar una revisión de backlog nocturna o publicar un resumen de sprint semanal en Slack cada lunes por la mañana — sin que nadie lo pida. Funciona mientras tu equipo está desconectado."
+      },
+      {
+        "q": "¿Cómo funciona el precio?",
+        "a": "AM es gratuito y de código abierto. Puedes auto-hospedarlo y usarlo indefinidamente sin costo. Ofrecemos servicios de soporte pagos opcionales ($50 por sesión de 30 minutos) para capacitación, integraciones personalizadas y consultoría estratégica."
+      },
+      {
+        "q": "No estamos listos para comprar — ¿podemos probar AM primero?",
+        "a": "Sí. AM es gratuito para siempre. Descárgalo de GitHub, auto-hospédalo y comienza a usarlo inmediatamente. Si necesitas orientación sobre configuración, capacitación o integraciones personalizadas, ofrecemos sesiones de soporte pagadas a $50 por 30 minutos."
+      },
+      {
+        "q": "¿Por qué AM admite español y chino?",
+        "a": "Eliminar barreras de idioma acelera la adopción global. Nuestros usuarios abarcan más de 40 países en América Latina, España, China y el Sudeste Asiático. Al admitir español y chino de forma nativa, hacemos que AM sea accesible para equipos independientemente de su idioma. Esto refleja nuestra creencia de que las herramientas poderosas deben estar disponibles para todos, globalmente, sin fricción de traducción."
+      }
+    ]
+  }
+}

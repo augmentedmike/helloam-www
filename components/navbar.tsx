@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLocale } from "@/context/locale-context";
 
 const navLinks = [
   { label: "For PMs", href: "#personas" },
@@ -14,6 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { locale, setLocale } = useLocale();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -67,6 +69,16 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
+          <select
+            value={locale}
+            onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh")}
+            className="rounded-lg px-3 py-2 text-sm transition-colors hover:text-white bg-transparent border"
+            style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+          </select>
           <a
             href="/contact"
             className="rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:text-white"
@@ -114,6 +126,16 @@ export default function Navbar() {
               </a>
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+              <select
+                value={locale}
+                onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh")}
+                className="rounded-lg px-4 py-2.5 text-sm bg-transparent border text-center"
+                style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
+              >
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="zh">中文</option>
+              </select>
               <a
                 href="/contact"
                 className="rounded-lg px-4 py-2.5 text-sm font-medium text-center"

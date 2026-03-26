@@ -3,6 +3,7 @@ import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import LayoutShell from "@/components/layout-shell";
 import WebMCPPolyfill from "@/components/webmcp-polyfill";
+import { LocaleProvider } from "@/context/locale-context";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -238,7 +239,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <WebMCPPolyfill />
-        <LayoutShell>{children}</LayoutShell>
+        <LocaleProvider>
+          <LayoutShell>{children}</LayoutShell>
+        </LocaleProvider>
       </body>
     </html>
   );
