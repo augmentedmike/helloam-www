@@ -1,5 +1,5 @@
 /**
- * webmcp-tools.js — Shared WebMCP utility for MiniClaw sites
+ * webmcp-tools.js — Shared WebMCP utility for helloam.bot sites
  *
  * Provides both declarative form annotation and imperative
  * navigator.modelContext registration with graceful fallback
@@ -8,7 +8,7 @@
  * Usage:
  *   <script src="/webmcp-tools.js"></script>
  *   <script>
- *     WebMCP.init({ site: 'miniclaw.bot' });
+ *     WebMCP.init({ site: 'helloam.bot' });
  *   </script>
  *
  * Declarative: Add toolname/tooldescription attributes to <form> elements.
@@ -131,7 +131,7 @@
   /**
    * Initialize WebMCP for a site.
    * @param {Object} opts
-   * @param {string} opts.site - Domain name (e.g. 'miniclaw.bot')
+   * @param {string} opts.site - Domain name (e.g. 'helloam.bot')
    * @param {Array}  opts.tools - Optional array of tool descriptors to register immediately
    */
   function init(opts) {

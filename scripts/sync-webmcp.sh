@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# sync-webmcp.sh — Copy shared WebMCP assets from miniclaw plugins to this project.
-# Run after updating shared/webmcp/ in the miniclaw plugins directory.
+# sync-webmcp.sh — Copy shared WebMCP assets from openclaw plugins to this project.
+# Run after updating shared/webmcp/ in the openclaw plugins directory.
 #
-# Source: ~/.openclaw/miniclaw/plugins/shared/webmcp/
+# Source: ~/.openclaw/plugins/shared/webmcp/
 # Target: public/
 
 set -euo pipefail
 
-SHARED_DIR="${HOME}/.openclaw/miniclaw/plugins/shared/webmcp"
+SHARED_DIR="${HOME}/.openclaw/plugins/shared/webmcp"
 PUBLIC_DIR="$(cd "$(dirname "$0")/.." && pwd)/public"
 
 if [ ! -d "$SHARED_DIR" ]; then

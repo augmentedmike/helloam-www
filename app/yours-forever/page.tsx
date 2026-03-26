@@ -375,7 +375,7 @@ export default function YoursForever() {
               },
               {
                 q: "Who makes Am?",
-                a: "Am is developed by Tylt LLC, a Delaware company. The product is built on open-source components and the OpenClaw agent runtime. Am's companion stack is the MiniClaw plugin ecosystem. Contact: hello@helloam.bot.",
+                a: "Am is developed by Tylt LLC, a Delaware company. The product is built on open-source components and the OpenClaw agent runtime. Am's companion stack is the OpenClaw plugin ecosystem. Contact: hello@helloam.bot.",
               },
             ].map((item, i) => (
               <div

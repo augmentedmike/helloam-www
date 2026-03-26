@@ -75,7 +75,6 @@ export default function Footer() {
             {[
               { label: "Privacy",           href: "/privacy" },
               { label: "Terms",             href: "/terms" },
-              { label: "Powered by MiniClaw", href: "https://miniclaw.bot", external: true },
             ].map((l) => (
               <a
                 key={l.label}
