@@ -25,7 +25,7 @@ export default function Home() {
       <Device />
       {/* Comparisons — vs Devin, Fin, Linear/Notion AI */}
       <Comparisons />
-      {/* SaaS pricing */}
+      {/* Support — free email + live session */}
       <Plans />
       {/* Digital worker manifesto */}
       <Manifesto />
