@@ -12,17 +12,36 @@ function Check() {
 
 const PLANS = [
   {
+    name: "Free Forever",
+    price: "$0",
+    unit: "/ month",
+    description: "Am core software, free forever. No credit card required. No time limit.",
+    highlight: false,
+    badge: "Free Forever",
+    badgeStyle: "free",
+    features: [
+      "Am core software",
+      "Email support",
+      "Documentation & setup guides",
+      "Community updates",
+      "Self-hosted, runs on your device",
+    ],
+    cta: "Get started free",
+    ctaHref: "#waitlist",
+  },
+  {
     name: "Starter",
     price: "$149",
     unit: "/ seat / month",
     description: "One AM worker for one team function. Great for running a proof-of-concept.",
     highlight: false,
     badge: null,
+    badgeStyle: null,
     features: [
       "1 AM worker (PM, Developer, or Support)",
       "Up to 3 integrations",
       "500 tasks per month",
-      "Email support",
+      "Priority email support",
       "30-day pilot included",
     ],
     cta: "Get early access",
@@ -35,6 +54,7 @@ const PLANS = [
     description: "AM across multiple team functions with shared context. The most popular tier.",
     highlight: true,
     badge: "Most popular",
+    badgeStyle: null,
     features: [
       "3 AM workers (PM + Developer + Support)",
       "Unlimited integrations",
@@ -53,6 +73,7 @@ const PLANS = [
     description: "Custom deployment, SLA, and dedicated engineering for large organizations.",
     highlight: false,
     badge: null,
+    badgeStyle: null,
     features: [
       "Unlimited AM workers",
       "Custom integrations & API access",
@@ -92,12 +113,12 @@ export default function Plans() {
             Simple, team-based pricing.
           </h2>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "#666666" }}>
-            Pay for the team functions AM covers, not per task or per API call.
-            All plans include a 30-day pilot.
+            Am is free forever at the core. Upgrade for expanded team coverage,
+            priority support, and dedicated onboarding.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PLANS.map((plan) => (
             <div
               key={plan.name}
@@ -111,7 +132,11 @@ export default function Plans() {
               {plan.badge && (
                 <div
                   className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap"
-                  style={{ background: "#00E5FF", color: "#0a0a0a" }}
+                  style={
+                    plan.badgeStyle === "free"
+                      ? { background: "rgba(0,229,255,0.15)", color: "#00E5FF", border: "1px solid rgba(0,229,255,0.4)" }
+                      : { background: "#00E5FF", color: "#0a0a0a" }
+                  }
                 >
                   {plan.badge}
                 </div>
