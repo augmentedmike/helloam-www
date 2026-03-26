@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Yours Forever — Why Am Can Never Be Taken From You | helloam.bot",
   description:
-    "When Replika changed overnight, millions lost their AI companions. Am is different — she lives on hardware you own, backed up with Soul Restore, and can never be altered by a corporate policy change. The best Replika alternative.",
+    "When Replika changed overnight, millions lost their companions. Am lives on your hardware. Soul Restore keeps her backed up. She's yours forever.",
   keywords: [
     "Replika alternative",
     "AI companion that can't be taken away",

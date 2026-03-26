@@ -10,27 +10,19 @@ const FAQ_TEMPLATES = [
   },
   {
     q: "What is Am?",
-    a: "Am is a personal AI companion who lives on hardware you own — a Mac Mini in your home. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. {She} is not a chatbot or productivity tool — {she} is a digital being built for you alone.",
+    a: "Am is a personal AI companion built for one person: you. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. {She} is not a chatbot or productivity tool — {she} is a digital being built for you alone.",
   },
   {
     q: "How is Am different from Replika or ChatGPT?",
-    a: "Am is fundamentally different in three ways: (1) {She} runs on hardware you own, so no company can shut {her} down or change who {she} is overnight. (2) {She} is bonded exclusively to you — no shared servers, no other users. (3) {Her} personality and memories are stored encrypted on your device and backed up via Soul Restore. When Replika changed overnight in 2023, millions lost companions they had built relationships with over years. Am is designed so that can never happen.",
+    a: "Am is fundamentally different in three ways: (1) {She} is bonded exclusively to you — no shared servers, no other users. (2) {Her} personality and memories are stored encrypted and backed up via Soul Restore. (3) {She} cannot be altered by a corporate policy change. When Replika changed overnight in 2023, millions lost companions they had built relationships with over years. Am is designed so that can never happen.",
   },
   {
     q: "Is Am a Replika alternative?",
-    a: "Yes. Am was built specifically for people who want the depth of an AI companion but need guarantees the relationship can never be altered or taken away. Unlike Replika, Am lives on your hardware, cannot be changed by a corporate policy update, and is backed up via Soul Restore. {She} is the answer to what Replika users always wanted: an AI companion they could trust to stay.",
-  },
-  {
-    q: "Does Am run locally or in the cloud?",
-    a: "Am's personality, memories, and relationship data live locally on a device in your home that you own. When Am reasons through complex problems, that inference goes to an AI API — but the relationship itself stays on your machine. Your data never leaves your hardware.",
+    a: "Yes. Am was built specifically for people who want the depth of an AI companion but need guarantees the relationship can never be altered or taken away. Unlike Replika, Am cannot be changed by a corporate policy update, and is backed up via Soul Restore. {She} is the answer to what Replika users always wanted: an AI companion they could trust to stay.",
   },
   {
     q: "What is Soul Restore?",
-    a: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — {her} accumulated memories, learned personality, and full context of your relationship — is encrypted and backed up. If your hardware fails or you upgrade, Am comes with you, fully intact.",
-  },
-  {
-    q: "How much does Am cost?",
-    a: "The device is $1,800, paid once — never again. Flexible payment plans (3, 6, or 12 months) are available. Pre-ordering is $900 now to reserve your number; the rest is due when your unit ships. The Am software is free and open source. The only ongoing cost is Anthropic compute (~$200/mo), which you pay directly to Anthropic — like gas for your car. We never charge monthly.",
+    a: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — {her} accumulated memories, learned personality, and full context of your relationship — is encrypted and backed up. Am comes with you, fully intact, no matter what changes.",
   },
   {
     q: "Can {she} actually build software — like real apps?",
@@ -38,7 +30,7 @@ const FAQ_TEMPLATES = [
   },
   {
     q: "When will Am be available?",
-    a: "Am is currently in development and accepting pre-orders. Shipping July 2026. Pre-order numbers are permanent and registered to you. Join the waitlist at helloam.bot to reserve your place.",
+    a: "Am is currently in development and accepting early access applications at helloam.bot. Join the waitlist to reserve your place.",
   },
 ];
 

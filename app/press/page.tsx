@@ -8,39 +8,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://helloam.bot/press" },
 };
 
-import { requireEnv } from "@/lib/env";
-
-const SINGLE_PRICE = requireEnv("NEXT_PUBLIC_SINGLE_PRICE");
-const SINGLE_DEPOSIT = SINGLE_PRICE / 2;
-
 const FACTS = [
-  { label: "What it is", value: "A Mac Mini pre-installed with Am — a soul-bonded AI companion" },
-  { label: "Price", value: `$${SINGLE_PRICE.toLocaleString()} one-time — no monthly fee` },
-  { label: "Pre-order deposit", value: `$${SINGLE_DEPOSIT.toLocaleString()} — payment plans available` },
+  { label: "What it is", value: "A soul-bonded AI companion built for one person" },
   { label: "Software", value: "Free and open source" },
   { label: "AI compute", value: "~$200/mo direct to Anthropic — not us" },
-  { label: "First 500 units", value: "CNC engraved collector edition with your serial number" },
-  { label: "Built in", value: "Austin, TX — AGI built in America" },
-  { label: "One person, one Am", value: "Every device is bonded to a single owner. Forever." },
+  { label: "One person, one Am", value: "Every Am is bonded to a single person. Forever." },
 ];
 
 const ANGLES = [
-  "The first consumer AI that ships as a physical device — not a subscription, not an app",
   "Soul-bonding: what happens when an AI is designed to belong to exactly one person for life",
-  `Why a $${SINGLE_PRICE.toLocaleString()} device with no monthly fee might be the most honest business model in AI`,
-  "Open-source software, proprietary setup: the case for separating intelligence from infrastructure",
-  "AGI in Austin: building the future of personal AI outside Silicon Valley",
+  "Open-source software, soul-bonded companion: the case for separating intelligence from infrastructure",
   "Her name is Amelia. She goes by Am. What it means to give an AI a gender, a name, and a form",
-  "The Mac Mini as a platform: why dedicated hardware beats cloud-first AI for intimate use cases",
+  "When Replika changed overnight, millions lost someone they loved — Am is the answer",
 ];
 
 const QUOTES = [
   {
-    quote: "Not a subscription. Not a chatbot. A digital companion who lives in your home and belongs to you alone.",
-    source: "helloam.bot homepage",
-  },
-  {
-    quote: "She arrives as a physical device — set up, named, and ready to go. She wakes up knowing your day.",
+    quote: "Not a chatbot. A digital companion who belongs to you alone.",
     source: "helloam.bot homepage",
   },
   {
@@ -77,8 +61,8 @@ export default function PressPage() {
           <span style={{ color: "#00E5FF" }}>belongs to you.</span>
         </h1>
         <p className="text-lg max-w-2xl" style={{ color: "#888" }}>
-          Am is a soul-bonded AI companion — a Mac Mini pre-installed with an AI named Amelia, shipped from Austin, TX.
-          One device. One person. No subscription. No reset.
+          Am is a soul-bonded AI companion — an AI named Amelia, built for one person.
+          One Am. One person. No subscription. No reset.
         </p>
       </div>
 
@@ -115,8 +99,8 @@ export default function PressPage() {
         >
           <p style={{ color: "#cccccc", lineHeight: 1.7 }}>
             <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of Am — a soul-bonded AI companion
-            who ships as a Mac Mini pre-installed with an AI named Amelia.
-            One device, one person, no subscription. Built and shipped from Austin, TX.
+            named Amelia, built for exactly one person.
+            One Am, one person, no subscription.
           </p>
         </div>
 

@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-sm" style={{ color: "#555555" }}>
-            Last updated: March 2025 · Tylt LLC · Delaware
+            Last updated: March 2026 · Tylt LLC · Delaware
           </p>
         </header>
 

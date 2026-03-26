@@ -130,7 +130,7 @@ export default function Manifesto() {
             We do not charge you monthly. Ever.
           </p>
           <p style={{ color: "#888", fontSize: "1rem", lineHeight: "1.7" }}>
-            You buy the device once — $1,800, with flexible payment plans. The software is free and open source.
+            The software is free and open source.
             Support is free by email, available live for $100 / 30 min when you need it.
           </p>
           <p className="mt-4 text-sm" style={{ color: "#555" }}>

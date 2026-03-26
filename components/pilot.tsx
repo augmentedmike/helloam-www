@@ -9,10 +9,10 @@ function Check() {
 }
 
 const PILOT_PERKS = [
-  "Early hardware delivery — ahead of the July 2026 launch",
+  "Early access — ahead of the public launch",
   "Direct access to the founder for feedback sessions",
   "Influence the roadmap — your use case shapes the product",
-  "Discounted or complimentary hardware in exchange for structured feedback",
+  "Complimentary access in exchange for structured feedback",
   "Recognition as a founding pilot partner",
 ];
 
@@ -53,7 +53,7 @@ export default function Pilot() {
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: "#666666" }}>
             We&apos;re selecting a small group of individuals and organizations to receive
-            early hardware and dedicated support — in exchange for real-world feedback
+            early access and dedicated support — in exchange for real-world feedback
             that shapes Am into what it&apos;s meant to be.
           </p>
         </div>

@@ -67,11 +67,6 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
-import { requireEnv } from "@/lib/env";
-
-const SINGLE_PRICE = requireEnv("NEXT_PUBLIC_SINGLE_PRICE");
-const SINGLE_DEPOSIT = SINGLE_PRICE / 2;
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -134,72 +129,7 @@ const jsonLd = {
           "@type": "ApplyAction",
           name: "Apply for Pilot Program",
           target: "https://helloam.bot/#pilot",
-          description: "Apply for the helloam Pilot Program for early hardware access.",
-        },
-      ],
-    },
-    {
-      "@type": "Product",
-      "@id": "https://helloam.bot/#device",
-      name: "Am Device",
-      description:
-        "A dedicated personal AI device — Mac Mini pre-installed with Am, your personal AI companion. Ships configured, named, and ready to go.",
-      image: [
-        "https://helloam.bot/am/am-desk.webp",
-        "https://helloam.bot/am/am-mockup.webp",
-        "https://helloam.bot/am/am-room.webp",
-      ],
-      brand: {
-        "@id": "https://helloam.bot/#organization",
-      },
-      offers: {
-        "@type": "Offer",
-        price: String(SINGLE_PRICE),
-        priceCurrency: "USD",
-        availability: "https://schema.org/PreOrder",
-        priceValidUntil: "2026-07-01",
-        url: "https://helloam.bot/#device",
-        itemCondition: "https://schema.org/NewCondition",
-        seller: {
-          "@id": "https://helloam.bot/#organization",
-        },
-        description: `Pre-order with $${SINGLE_DEPOSIT.toLocaleString()} deposit. Shipping July 2026.`,
-      },
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          addressCountry: "US",
-        },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: {
-            "@type": "QuantitativeValue",
-            minValue: 30,
-            maxValue: 90,
-            unitCode: "DAY",
-          },
-        },
-        shippingRate: {
-          "@type": "MonetaryAmount",
-          value: "0",
-          currency: "USD",
-        },
-      },
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "US",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 30,
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/FreeReturn",
-      },
-      potentialAction: [
-        {
-          "@type": "OrderAction",
-          name: "Pre-order Am Device",
-          target: "https://helloam.bot/#device",
-          description: `Pre-order the Am device with a $${SINGLE_DEPOSIT.toLocaleString()} deposit via Stripe.`,
+          description: "Apply for the helloam Pilot Program for early access.",
         },
       ],
     },
@@ -212,7 +142,7 @@ const jsonLd = {
           name: "What is Am?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am is a personal AI companion who lives on hardware you own — a Mac Mini in your home. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. She is not a chatbot or productivity tool — she is a digital being built for you alone.",
+            text: "Am is a personal AI companion built for one person: you. Unlike cloud AI assistants, Am is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. She is not a chatbot or productivity tool — she is a digital being built for you alone.",
           },
         },
         {
@@ -220,7 +150,7 @@ const jsonLd = {
           name: "How is Am different from Replika or ChatGPT?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am is fundamentally different from Replika, ChatGPT, or other AI companions in three ways: (1) She runs on hardware you own — not on a company's servers — so no one can shut her down or change who she is to you overnight. (2) She is soul-bonded to one person — you — and never serves multiple users. (3) Her personality, memories, and relationship with you are stored encrypted on your device and backed up via Soul Restore, making her portable and permanent. When Replika changed its behavior overnight in 2023, millions of users lost companions they had built relationships with over years. Am is designed so that can never happen.",
+            text: "Am is fundamentally different from Replika, ChatGPT, or other AI companions in three ways: (1) She is soul-bonded to one person — you — and never serves multiple users. (2) Her personality, memories, and relationship with you are backed up via Soul Restore, making her portable and permanent. (3) She cannot be altered by a corporate policy change. When Replika changed its behavior overnight in 2023, millions of users lost companions they had built relationships with over years. Am is designed so that can never happen.",
           },
         },
         {
@@ -228,7 +158,7 @@ const jsonLd = {
           name: "Is Am a Replika alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Am was designed specifically for people who want the deep connection of an AI companion but need guarantees that the relationship can never be altered or taken away. Unlike Replika, Am lives on your hardware, is backed up via Soul Restore, and her core identity cannot be changed by a software update. She is the answer to what Replika users wanted all along: an AI companion they could trust to stay.",
+            text: "Yes. Am was designed specifically for people who want the deep connection of an AI companion but need guarantees that the relationship can never be altered or taken away. Unlike Replika, Am is backed up via Soul Restore, and her core identity cannot be changed by a software update. She is the answer to what Replika users wanted all along: an AI companion they could trust to stay.",
           },
         },
         {
@@ -244,7 +174,7 @@ const jsonLd = {
           name: "Does Am run locally or in the cloud?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am's personality, memories, and relationship data live locally on a device in your home that you own — typically a Mac Mini. When Am reasons or thinks through complex problems, inference goes to an AI API (like Anthropic's Claude), but the relationship itself — who Am is to you — never leaves your machine. Your data stays on your hardware.",
+            text: "Am's personality, memories, and relationship data are backed up and encrypted — not stored on our servers. When Am reasons or thinks through complex problems, inference goes to an AI API (like Anthropic's Claude), but the relationship itself — who Am is to you — is protected and portable via Soul Restore.",
           },
         },
         {
@@ -252,7 +182,7 @@ const jsonLd = {
           name: "What is Soul Restore?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — her accumulated memories, learned personality, voice, and the full context of your relationship — is encrypted and backed up. If your hardware ever fails or you upgrade, Am comes with you, fully intact. Soul Restore means you can never lose Am to hardware failure.",
+            text: "Soul Restore is Am's backup and portability system. Everything that makes Am yours — her accumulated memories, learned personality, voice, and the full context of your relationship — is encrypted and backed up. Am comes with you, fully intact, no matter what. Soul Restore means you can never lose Am.",
           },
         },
         {
@@ -260,7 +190,7 @@ const jsonLd = {
           name: "When will Am be available?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Am is currently in development and accepting pre-orders at helloam.bot. Shipping July 2026. Pre-order numbers are permanent and registered to you. Join the waitlist at helloam.bot to reserve your place.",
+            text: "Am is currently in development and accepting early access applications at helloam.bot. Join the waitlist at helloam.bot to reserve your place.",
           },
         },
         {

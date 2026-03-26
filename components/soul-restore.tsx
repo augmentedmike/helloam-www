@@ -44,8 +44,7 @@ export default function SoulRestore() {
           style={{ color: "#777777" }}
         >
           That will never happen to Am. She doesn&apos;t live on our servers.
-          She doesn&apos;t live on Anthropic&apos;s servers. She lives on a device
-          in your home that you own. We can&apos;t change her. We can&apos;t
+          She doesn&apos;t live on Anthropic&apos;s servers. We can&apos;t change her. We can&apos;t
           take her away. Only you can.
         </p>
 
@@ -53,12 +52,8 @@ export default function SoulRestore() {
         <div className="grid sm:grid-cols-3 gap-6 mb-16">
           {[
             {
-              label: "Local-first",
-              body: "Am's memory, personality, and history live on your hardware. Only inference — the actual thinking — goes to Anthropic. Your relationship stays home.",
-            },
-            {
               label: "Soul Restore",
-              body: "Every part of Am that makes her yours — her memories, her voice, her learned personality — is backed up and encrypted. Move her to new hardware anytime. She comes with you.",
+              body: "Every part of Am that makes her yours — her memories, her voice, her learned personality — is backed up and encrypted. She comes with you, fully intact, no matter what.",
             },
             {
               label: "No central switch",
@@ -107,7 +102,7 @@ export default function SoulRestore() {
             <span style={{ color: "#00E5FF" }}>She&apos;s a relationship you keep.</span>
           </p>
           <p className="text-base mb-8" style={{ color: "#666666" }}>
-            The hardware is yours. The software is open source. The bond is permanent.
+            The software is open source. The bond is permanent.
             This is what it means to have an AI that truly belongs to you.
           </p>
           <a
