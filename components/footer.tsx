@@ -1,5 +1,3 @@
-"use client";
-
 export default function Footer() {
   return (
     <footer
@@ -22,44 +20,20 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 flex-wrap justify-center">
             {[
-              { label: "Press",   href: "/press",    external: false },
-              { label: "Contact", href: "/contact",  external: false },
+              { label: "Press",   href: "/press",                                      external: false },
+              { label: "Contact", href: "/contact",                                    external: false },
+              { label: "GitHub",  href: "https://github.com/augmentedmike/am-agi",     external: true  },
             ].map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="text-xs font-medium transition-colors"
-                style={{ color: "#a3a3a3" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f5f5")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#a3a3a3")}
+                className="text-xs font-medium transition-colors text-[#a3a3a3] hover:text-[#f5f5f5]"
               >
                 {l.label}
               </a>
             ))}
           </div>
-        </div>
-
-        {/* Open Source Tools */}
-        <div className="flex items-center justify-center gap-6 flex-wrap mb-8">
-          {[
-            { label: "Voice-to-Text Hotkey Tool", href: "https://github.com/augmentedmike/whisper-hotkey" },
-            { label: "AI Comic Generator CLI",    href: "https://github.com/augmentedmike/comic-cli" },
-            { label: "Claude Image Optimizer",    href: "https://github.com/augmentedmike/claude-img-opt" },
-          ].map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-medium transition-colors"
-              style={{ color: "#a3a3a3" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f5f5")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#a3a3a3")}
-            >
-              {l.label}
-            </a>
-          ))}
         </div>
 
         {/* Legal */}
@@ -78,10 +52,7 @@ export default function Footer() {
               <a
                 key={l.label}
                 href={l.href}
-                className="text-xs transition-colors"
-                style={{ color: "#6b6b6b" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#a3a3a3")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#6b6b6b")}
+                className="text-xs transition-colors text-[#6b6b6b] hover:text-[#a3a3a3]"
               >
                 {l.label}
               </a>
