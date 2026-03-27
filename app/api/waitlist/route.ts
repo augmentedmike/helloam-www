@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { sql } from "@vercel/postgres";
 
 const rateLimitMap = new Map<string, { count: number; windowStart: number }>();
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
@@ -27,6 +28,19 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+async function ensureTable() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS waitlist_signups (
+      id         SERIAL PRIMARY KEY,
+      name       TEXT        NOT NULL,
+      email      TEXT        NOT NULL,
+      type       TEXT        NOT NULL DEFAULT 'list',
+      ip         TEXT,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const ip = getClientIP(req);
@@ -46,6 +60,18 @@ export async function POST(req: NextRequest) {
     const cleanEmail = email.trim().toLowerCase().slice(0, 254);
     const cleanType  = type === "preorder" ? "preorder" : "list";
     const cleanColor = typeof color === "string" ? color.trim().slice(0, 50) : null;
+
+    // Persist to DB (auto-creates table on first request)
+    try {
+      await ensureTable();
+      await sql`
+        INSERT INTO waitlist_signups (name, email, type, ip)
+        VALUES (${cleanName}, ${cleanEmail}, ${cleanType}, ${ip})
+      `;
+    } catch (dbErr) {
+      // DB is optional — log but don't fail the request
+      console.error("[waitlist] DB error:", dbErr);
+    }
 
     const gmailPass = process.env.GMAIL_APP_PASSWORD;
     if (!gmailPass) {
