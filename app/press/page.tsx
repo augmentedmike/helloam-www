@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
@@ -13,6 +14,34 @@ const FACTS = [
   { label: "Software", value: "Free and open source" },
   { label: "Pricing model", value: "SaaS — seat-based and team plans" },
   { label: "Key capabilities", value: "Backlog triage, PR/code tasks, ticket resolution — autonomous end-to-end" },
+];
+
+const COMPANY_FACTS = [
+  { label: "Founded", value: "2025" },
+  { label: "Headquarters", value: "Austin, TX" },
+  { label: "Legal entity", value: "Tylt LLC" },
+  { label: "Status", value: "Private" },
+];
+
+const BRAND_ASSETS = [
+  {
+    label: "AM Logo",
+    previewSrc: "/am-logo.webp",
+    previewAlt: "AM wordmark logo",
+    downloads: [
+      { format: "WebP", href: "/am-logo.webp" },
+      { format: "PNG", href: "/am-logo.png" },
+    ],
+  },
+  {
+    label: "Product Screenshot",
+    previewSrc: "/am/am-mockup.webp",
+    previewAlt: "AM product mockup",
+    downloads: [
+      { format: "WebP", href: "/am/am-mockup.webp" },
+      { format: "JPG", href: "/am/am-mockup.jpg" },
+    ],
+  },
 ];
 
 const ANGLES = [
@@ -89,6 +118,27 @@ export default function PressPage() {
 
         <Divider />
 
+        {/* Company */}
+        <h2 className="text-xs font-semibold tracking-[0.25em] uppercase mb-6" style={{ color: "#555" }}>
+          Company
+        </h2>
+        <div className="grid sm:grid-cols-2 gap-3 mb-4">
+          {COMPANY_FACTS.map((f) => (
+            <div
+              key={f.label}
+              className="rounded-xl px-5 py-4"
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#444" }}>
+                {f.label}
+              </p>
+              <p className="text-sm font-medium text-white">{f.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <Divider />
+
         {/* One-liner */}
         <h2 className="text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "#555" }}>
           Attribution Guidance
@@ -101,6 +151,55 @@ export default function PressPage() {
             <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of AM — a digital worker platform
             that helps PMs, developers, and support teams delegate entire workflows to an autonomous AI teammate.
           </p>
+        </div>
+
+        <Divider />
+
+        {/* Brand Assets */}
+        <h2 className="text-xs font-semibold tracking-[0.25em] uppercase mb-6" style={{ color: "#555" }}>
+          Brand Assets
+        </h2>
+        <div className="grid sm:grid-cols-2 gap-4 mb-4">
+          {BRAND_ASSETS.map((asset) => (
+            <div
+              key={asset.label}
+              className="rounded-xl overflow-hidden"
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
+            >
+              <div
+                className="flex items-center justify-center p-6"
+                style={{ background: "rgba(255,255,255,0.02)", minHeight: "140px" }}
+              >
+                <Image
+                  src={asset.previewSrc}
+                  alt={asset.previewAlt}
+                  width={240}
+                  height={120}
+                  className="object-contain max-h-28"
+                />
+              </div>
+              <div className="px-5 py-4">
+                <p className="text-sm font-semibold text-white mb-3">{asset.label}</p>
+                <div className="flex gap-3">
+                  {asset.downloads.map((dl) => (
+                    <a
+                      key={dl.format}
+                      href={dl.href}
+                      download
+                      className="text-xs font-semibold px-3 py-1.5 rounded-md"
+                      style={{
+                        color: "#00E5FF",
+                        background: "rgba(0,229,255,0.08)",
+                        border: "1px solid rgba(0,229,255,0.2)",
+                      }}
+                    >
+                      ↓ {dl.format}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <Divider />
