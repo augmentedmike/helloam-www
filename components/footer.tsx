@@ -24,7 +24,6 @@ export default function Footer() {
             {[
               { label: "Press",   href: "/press",    external: false },
               { label: "Contact", href: "/contact",  external: false },
-              { label: "Blog",    href: "https://blog.helloam.bot", external: true },
             ].map((l) => (
               <a
                 key={l.label}
