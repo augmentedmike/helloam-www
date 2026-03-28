@@ -9,7 +9,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://helloam.bot/for-developers",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://helloam.bot/contact",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://helloam.bot/integrations",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
