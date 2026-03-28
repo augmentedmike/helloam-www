@@ -81,7 +81,7 @@ export default function Navbar() {
             <option value="zh">中文</option>
           </select>
           <a
-            href="/contact"
+            href="/demo"
             className="rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:text-white"
             style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
           >
@@ -138,7 +138,7 @@ export default function Navbar() {
                 <option value="zh">中文</option>
               </select>
               <a
-                href="/contact"
+                href="/demo"
                 className="rounded-lg px-4 py-2.5 text-sm font-medium text-center"
                 style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
                 onClick={() => setMobileOpen(false)}
