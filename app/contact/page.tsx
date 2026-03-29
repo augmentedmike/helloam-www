@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://helloam.bot/contact" },
 };
 
-import { requireEnv } from "@/lib/env";
-
-const SESSION_PRICE = requireEnv("NEXT_PUBLIC_SESSION_PRICE");
+const SESSION_PRICE = Number(process.env.NEXT_PUBLIC_SESSION_PRICE) || 75;
 
 const CHANNELS = [
   {
