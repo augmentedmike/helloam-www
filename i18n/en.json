@@ -431,5 +431,12 @@
       "Ongoing support as your team scales usage",
       "Your feedback shapes what gets built next"
     ]
+  },
+  "heroChat": {
+    "eyebrow": "Always On",
+    "headline1": "Chat with AM.",
+    "headline2": "She works while you sleep.",
+    "body": "Describe what needs to be done. AM reads the board, picks up the work, and logs every step — no hand-holding required.",
+    "cta": "Get early access"
   }
 }

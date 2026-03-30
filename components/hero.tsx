@@ -116,6 +116,49 @@ export default function Hero() {
           ))}
         </div>
       </div>
+
+      {/* App screenshot — board view */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto mt-20 px-4">
+        {/* Glow behind screenshot */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[60%] pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,229,255,0.10) 0%, transparent 70%)",
+          }}
+        />
+        {/* Browser chrome frame */}
+        <div
+          className="relative rounded-2xl overflow-hidden"
+          style={{
+            border: "1px solid rgba(255,255,255,0.08)",
+            boxShadow: "0 0 0 1px rgba(0,229,255,0.12), 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(0,229,255,0.08)",
+          }}
+        >
+          {/* Chrome top bar */}
+          <div
+            className="flex items-center gap-2 px-4 py-3"
+            style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+          >
+            <span className="w-3 h-3 rounded-full" style={{ background: "#FF5F57" }} />
+            <span className="w-3 h-3 rounded-full" style={{ background: "#FFBD2E" }} />
+            <span className="w-3 h-3 rounded-full" style={{ background: "#28CA41" }} />
+            <div
+              className="flex-1 mx-4 h-6 rounded-md flex items-center justify-center text-xs"
+              style={{ background: "rgba(255,255,255,0.04)", color: "#555", maxWidth: 240, margin: "0 auto" }}
+            >
+              helloam.bot
+            </div>
+          </div>
+          {/* Screenshot */}
+          <img
+            src="/hero-1-board.jpg"
+            alt="AM Board — Kanban view showing tasks in Backlog, In Progress, and In Review"
+            className="w-full block"
+            style={{ display: "block" }}
+          />
+        </div>
+      </div>
     </section>
   );
 }

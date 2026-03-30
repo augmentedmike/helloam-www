@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import HeroChat from "@/components/hero-chat";
 import Lifestyle from "@/components/lifestyle";
 import Features from "@/components/features";
 import SoulRestore from "@/components/soul-restore";
@@ -14,6 +15,8 @@ export default function Home() {
     <main style={{ background: "#0a0a0a", color: "#ededed", minHeight: "100vh" }}>
       {/* Hero — digital worker for teams */}
       <Hero />
+      {/* Chat showcase — AM working in real time */}
+      <HeroChat />
       {/* Personas — PM / Developer / Support */}
       <Lifestyle />
       {/* Capabilities by role */}

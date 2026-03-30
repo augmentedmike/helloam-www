@@ -397,5 +397,12 @@
       "Soporte continuo mientras tu equipo escala el uso",
       "Tu feedback define lo que se construye a continuación"
     ]
+  },
+  "heroChat": {
+    "eyebrow": "Siempre Activa",
+    "headline1": "Habla con AM.",
+    "headline2": "Ella trabaja mientras duermes.",
+    "body": "Describe lo que hay que hacer. AM lee el tablero, retoma el trabajo y registra cada paso — sin necesidad de supervisión.",
+    "cta": "Obtener acceso anticipado"
   }
 }
