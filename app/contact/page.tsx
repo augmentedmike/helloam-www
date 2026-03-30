@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Contact | helloam.bot",
@@ -7,38 +6,6 @@ export const metadata: Metadata = {
     "Get in touch with Am. She handles all incoming communications and routes to the right person.",
   alternates: { canonical: "https://helloam.bot/contact" },
 };
-
-const SESSION_PRICE = Number(process.env.NEXT_PUBLIC_SESSION_PRICE) || 75;
-
-const CHANNELS = [
-  {
-    label: "General",
-    category: "General",
-    description: "Questions, curiosity, anything that doesn't fit below. Am reads everything.",
-  },
-  {
-    label: "Sales & Pricing",
-    category: "Sales",
-    description: "Pricing, plans, team onboarding, and availability questions.",
-  },
-  {
-    label: "Press",
-    category: "Press",
-    description: "Journalists, podcasters, writers. Am will get you what you need within 24 hours.",
-    link: "/press",
-    linkLabel: "View press kit →",
-  },
-  {
-    label: "Investors",
-    category: "Investors",
-    description: "We're early. If you believe in the digital worker platform for teams and want to talk, Am will route you to Michael.",
-  },
-  {
-    label: "Support",
-    category: "Support",
-    description: `Technical help is free by email. Live sessions with the founder are $${SESSION_PRICE} / 30 min.`,
-  },
-];
 
 export default function ContactPage() {
   return (
@@ -61,37 +28,20 @@ export default function ContactPage() {
           Nothing falls through the cracks.
         </p>
 
-        <div className="space-y-4">
-          {CHANNELS.map((c) => (
-            <div
-              key={c.label}
-              className="rounded-2xl px-7 py-6"
-              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-2">
-                <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#444" }}>
-                  {c.label}
-                </p>
-                <ContactButton
-                  category={c.category}
-                  className="text-sm font-semibold transition-colors hover:opacity-80 cursor-pointer"
-                  style={{ color: "#00E5FF" }}
-                >
-                  Send a message
-                </ContactButton>
-              </div>
-              <p className="text-sm" style={{ color: "#777", lineHeight: 1.6 }}>{c.description}</p>
-              {c.link && (
-                <a
-                  href={c.link}
-                  className="inline-block mt-3 text-xs transition-colors hover:text-white"
-                  style={{ color: "#555" }}
-                >
-                  {c.linkLabel}
-                </a>
-              )}
-            </div>
-          ))}
+        <div
+          className="rounded-2xl px-7 py-8 text-center"
+          style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.15)" }}
+        >
+          <p className="text-sm mb-4" style={{ color: "#888" }}>
+            Send Am an email — she reads everything.
+          </p>
+          <a
+            href="mailto:augmentedmike@gmail.com"
+            className="text-xl font-semibold transition-colors hover:opacity-80"
+            style={{ color: "#00E5FF" }}
+          >
+            augmentedmike@gmail.com
+          </a>
         </div>
 
         {/* Am note */}

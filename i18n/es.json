@@ -382,6 +382,7 @@
     "whoTitle": "Para quién es esto",
     "perksTitle": "Lo que obtienen los equipos piloto",
     "cta": "Aplicar al programa piloto",
+    "ctaRepo": "Ver en GitHub",
     "ctaNote": "Cuéntanos qué hace tu equipo y qué quieres que AM gestione. Respondemos personalmente en pocos días.",
     "who": [
       { "label": "Equipos de producto", "desc": "PMs que quieren que AM clasifique su backlog, prepare sprints y redacte release notes" },

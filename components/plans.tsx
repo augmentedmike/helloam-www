@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import ContactButton from "@/components/contact-button";
+
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
 
@@ -298,9 +298,9 @@ export default function Plans() {
               ))}
             </ul>
 
-            <ContactButton
-              category="Support"
-              className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 cursor-pointer"
+            <a
+              href="mailto:augmentedmike@gmail.com"
+              className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90"
               style={{
                 background: "rgba(255,255,255,0.06)",
                 color: "#cccccc",
@@ -308,7 +308,7 @@ export default function Plans() {
               }}
             >
               {t.plans.free.cta}
-            </ContactButton>
+            </a>
           </div>
 
           {/* Live session */}
@@ -360,13 +360,13 @@ export default function Plans() {
         <p className="text-center mt-8 text-sm" style={{ color: "#444444" }}>
           {t.plans.footer}
           <br />
-          <ContactButton
-            category="General"
-            className="transition-colors hover:text-white cursor-pointer"
+          <a
+            href="mailto:augmentedmike@gmail.com"
+            className="transition-colors hover:text-white"
             style={{ color: "#666666", textDecoration: "underline" }}
           >
             {t.plans.footerCta}
-          </ContactButton>{" "}
+          </a>{" "}
           {t.plans.footerSuffix}
         </p>
       </div>

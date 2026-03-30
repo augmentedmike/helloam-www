@@ -1,6 +1,5 @@
 "use client";
 
-import ContactButton from "@/components/contact-button";
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
 
@@ -93,18 +92,32 @@ export default function Pilot() {
 
         {/* CTA */}
         <div className="text-center">
-          <ContactButton
-            category="Early Access"
-            subject="Early Access Application"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100 cursor-pointer"
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              color: "#cccccc",
-              border: "1px solid rgba(255,255,255,0.12)",
-            }}
-          >
-            {t.pilot.cta}
-          </ContactButton>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="mailto:augmentedmike@gmail.com"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                color: "#cccccc",
+                border: "1px solid rgba(255,255,255,0.12)",
+              }}
+            >
+              {t.pilot.cta}
+            </a>
+            <a
+              href="https://github.com/augmentedmike/am-agi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                color: "#888888",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              {t.pilot.ctaRepo}
+            </a>
+          </div>
           <p className="mt-4 text-sm" style={{ color: "#444444" }}>
             {t.pilot.ctaNote}
           </p>

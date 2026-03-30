@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Terms of Service | helloam.bot",
@@ -77,9 +76,9 @@ export default function TermsPage() {
               <li>Waitlist registration is free. We do not charge fees to join.</li>
               <li>You must be at least 13 years old to join the waitlist. By registering, you represent that you meet this requirement.</li>
               <li>You may request removal from the waitlist at any time by{" "}
-                <ContactButton category="Support" className="text-white hover:underline cursor-pointer">
+                <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                   contacting us
-                </ContactButton>.
+                </a>.
               </li>
             </ul>
           </section>
@@ -197,9 +196,9 @@ export default function TermsPage() {
             <p>
               Tylt LLC · 1111B S Governors Ave #7126 · Dover, DE 19904 · USA
               <br />
-              <ContactButton category="General" className="text-white hover:underline cursor-pointer">
+              <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                 Contact us
-              </ContactButton>
+              </a>
             </p>
           </section>
         </div>

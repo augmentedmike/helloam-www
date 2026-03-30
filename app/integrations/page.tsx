@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactButton from "@/components/contact-button";
+
 
 export const metadata: Metadata = {
   title: "Integrations | helloam.bot",
@@ -188,16 +188,16 @@ export default function IntegrationsPage() {
           <p className="text-sm max-w-md mx-auto mb-6" style={{ color: "#666" }}>
             Tell us what you&apos;re using and we&apos;ll prioritize it. AM is built to fit your stack, not the other way around.
           </p>
-          <ContactButton
-            category="Integration Request"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer"
+          <a
+            href="mailto:augmentedmike@gmail.com"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all"
             style={{
               background: "#00E5FF",
               color: "#0a0a0a",
             }}
           >
             Request an integration
-          </ContactButton>
+          </a>
         </div>
       </div>
     </main>

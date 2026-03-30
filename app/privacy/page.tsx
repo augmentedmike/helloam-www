@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | helloam.bot",
@@ -60,9 +59,9 @@ export default function PrivacyPage() {
               helloam.bot is operated by Tylt LLC, a Delaware company. We build AM — a
               digital worker platform for PMs, developers, and support teams.
               Questions about this policy?{" "}
-              <ContactButton category="General" className="text-white hover:underline cursor-pointer">
+              <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                 Contact us
-              </ContactButton>
+              </a>
               .
             </p>
           </section>
@@ -164,9 +163,9 @@ export default function PrivacyPage() {
             </p>
             <ul className="space-y-2 pl-4" style={{ listStyle: "disc" }}>
               <li>
-                <ContactButton category="Support" className="text-white hover:underline cursor-pointer">
+                <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                   Contact us
-                </ContactButton>{" "}
+                </a>{" "}
                 with your request. We will respond within 30 days.
               </li>
               <li>To unsubscribe from the waitlist, reply to any email with &quot;unsubscribe&quot; or email us directly.</li>
@@ -213,9 +212,9 @@ export default function PrivacyPage() {
               This service is not directed at children under 13. We do not knowingly collect personal
               information from children. If you believe we have inadvertently collected information from
               a child,{" "}
-              <ContactButton category="Support" className="text-white hover:underline cursor-pointer">
+              <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                 contact us immediately
-              </ContactButton>
+              </a>
               .
             </p>
           </section>
@@ -244,9 +243,9 @@ export default function PrivacyPage() {
             <p>
               Tylt LLC · 1111B S Governors Ave #7126 · Dover, DE 19904 · USA
               <br />
-              <ContactButton category="General" className="text-white hover:underline cursor-pointer">
+              <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                 Contact us
-              </ContactButton>
+              </a>
             </p>
           </section>
         </div>

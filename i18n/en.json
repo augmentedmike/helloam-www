@@ -416,6 +416,7 @@
     "whoTitle": "Who this is for",
     "perksTitle": "What pilot teams get",
     "cta": "Apply for the pilot",
+    "ctaRepo": "View on GitHub",
     "ctaNote": "Tell us what your team does and what you want AM to handle. We follow up personally within a few days.",
     "who": [
       { "label": "Product teams", "desc": "PMs who want AM triaging their backlog, grooming sprints, and drafting release notes" },

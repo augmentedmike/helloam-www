@@ -382,6 +382,7 @@
     "whoTitle": "适合哪些团队",
     "perksTitle": "试点团队获得什么",
     "cta": "申请试点计划",
+    "ctaRepo": "在 GitHub 上查看",
     "ctaNote": "告诉我们你的团队做什么，以及你希望 AM 处理哪些工作。我们会在几天内亲自回复。",
     "who": [
       { "label": "产品团队", "desc": "希望 AM 处理 backlog 分类、sprint 准备和发布说明的产品经理" },

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContactButton from "@/components/contact-button";
 
 export const metadata: Metadata = {
   title: "Press | helloam.bot",
@@ -268,7 +267,7 @@ export default function PressPage() {
             on-the-record quotes, or deeper background.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
-            <ContactButton category="Press" className="cursor-pointer" style={{ color: "#00E5FF" }}>Contact Press</ContactButton>
+            <a href="mailto:augmentedmike@gmail.com" style={{ color: "#00E5FF" }}>Contact Press</a>
             <a href="https://helloam.bot" style={{ color: "#555" }}>helloam.bot</a>
           </div>
         </div>
