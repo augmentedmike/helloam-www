@@ -8,7 +8,6 @@ import Plans from "@/components/plans";
 import Manifesto from "@/components/manifesto";
 import Pilot from "@/components/pilot";
 import FAQ from "@/components/faq";
-import ScreenshotGallery from "@/components/screenshot-gallery";
 
 export default function Home() {
   return (
@@ -19,8 +18,6 @@ export default function Home() {
       <Lifestyle />
       {/* Capabilities by role */}
       <Features />
-      {/* Real screenshots of AM Board */}
-      <ScreenshotGallery />
       {/* Why AM is different — persistent context, outcome ownership */}
       <SoulRestore />
       {/* How it works — 3-step: connect, assign, review */}

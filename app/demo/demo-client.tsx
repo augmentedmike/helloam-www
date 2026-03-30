@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import ScreenshotGallery from "@/components/screenshot-gallery";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -355,9 +354,6 @@ export default function DemoClient({
           </div>
         )}
       </section>
-
-      {/* ── Screenshot Gallery ── */}
-      <ScreenshotGallery />
 
       {/* ── CTA ── */}
       <section className="px-6 py-24 max-w-3xl mx-auto text-center">
