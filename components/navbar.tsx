@@ -38,11 +38,12 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2">
           <img
-            src="/favicon-32.png"
+            src="/am-headshot.jpg"
             alt="Am"
-            width={28}
-            height={28}
-            className="h-7 w-7 object-contain"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-cover rounded-full"
+            style={{ border: "1.5px solid rgba(0,229,255,0.4)" }}
           />
           <span
             className="font-bold tracking-tight transition-all duration-300"

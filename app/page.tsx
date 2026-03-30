@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import HeroChat from "@/components/hero-chat";
+import IntroducingAm from "@/components/introducing-am";
 import Lifestyle from "@/components/lifestyle";
 import Features from "@/components/features";
 import SoulRestore from "@/components/soul-restore";
@@ -17,6 +18,8 @@ export default function Home() {
       <Hero />
       {/* Chat showcase — AM working in real time */}
       <HeroChat />
+      {/* Introducing Amelia */}
+      <IntroducingAm />
       {/* Personas — PM / Developer / Support */}
       <Lifestyle />
       {/* Capabilities by role */}

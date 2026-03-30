@@ -7,14 +7,24 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
           {/* Brand */}
-          <div className="text-center sm:text-left">
-            <p className="font-semibold text-sm" style={{ color: "#f5f5f5" }}>helloam.bot</p>
-            <p className="text-xs mt-1" style={{ color: "#a3a3a3" }}>
-              Digital worker platform for PMs, developers, and support teams.
-            </p>
-            <p className="text-xs mt-1" style={{ color: "#6b6b6b" }}>
-              Built in Austin, TX · Tylt LLC
-            </p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/am-headshot.jpg"
+              alt="Amelia"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-cover rounded-full flex-shrink-0"
+              style={{ border: "1.5px solid rgba(0,229,255,0.3)" }}
+            />
+            <div className="text-center sm:text-left">
+              <p className="font-semibold text-sm" style={{ color: "#f5f5f5" }}>helloam.bot</p>
+              <p className="text-xs mt-1" style={{ color: "#a3a3a3" }}>
+                Digital worker platform for PMs, developers, and support teams.
+              </p>
+              <p className="text-xs mt-1" style={{ color: "#6b6b6b" }}>
+                Built in Austin, TX · Tylt LLC
+              </p>
+            </div>
           </div>
 
           {/* Links */}
