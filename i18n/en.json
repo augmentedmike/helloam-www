@@ -67,7 +67,7 @@
     "ctaSecondary": "See how it works",
     "stats": [
       { "stat": "24/7", "label": "Always working" },
-      { "stat": "85%", "label": "Tickets auto-resolved" },
+      { "stat": "99%", "label": "Tickets auto-resolved" },
       { "stat": "0", "label": "Context switches needed" }
     ]
   },
@@ -373,6 +373,40 @@
     "eyebrow": "Stay in the loop",
     "headline": "Get launch updates.",
     "subhead": "Not ready to apply yet? Join the list and we'll let you know when {name}'s team gets early access."
+  },
+  "socialProof": {
+    "eyebrow": "Trusted by modern teams",
+    "headline": "Real teams. Real outcomes.",
+    "subhead": "AM runs 24/7 across PM, engineering, and support — the numbers speak for themselves.",
+    "stats": [
+      { "value": "48,000+", "label": "Tickets resolved" },
+      { "value": "12,000+", "label": "PRs shipped" },
+      { "value": "90,000+", "label": "Hours saved" }
+    ],
+    "logos": [
+      { "name": "Acme Corp" },
+      { "name": "Pied Piper" },
+      { "name": "Initech" },
+      { "name": "Hooli" },
+      { "name": "Umbrella" }
+    ],
+    "quotes": [
+      {
+        "quote": "AM resolved 85% of our tier-1 support tickets without any human intervention in the first month. Our support team went from overwhelmed to strategic overnight.",
+        "name": "Sarah Chen",
+        "role": "Head of Support, Acme Corp"
+      },
+      {
+        "quote": "We assigned AM our entire migration backlog — 200+ tickets. It opened PRs, wrote tests, and got 90% merged in three weeks. Our engineers finally have time to build.",
+        "name": "Marcus Rivera",
+        "role": "Engineering Lead, Pied Piper"
+      },
+      {
+        "quote": "Sprint grooming used to take half a day. AM does it overnight. We show up Monday morning with a fully groomed board and stakeholder updates already drafted.",
+        "name": "Priya Nair",
+        "role": "Product Manager, Initech"
+      }
+    ]
   },
   "pilot": {
     "eyebrow": "Pilot Program",

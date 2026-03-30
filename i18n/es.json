@@ -67,7 +67,7 @@
     "ctaSecondary": "Ver cómo funciona",
     "stats": [
       { "stat": "24/7", "label": "Siempre trabajando" },
-      { "stat": "85%", "label": "Tickets resueltos automáticamente" },
+      { "stat": "99%", "label": "Tickets resueltos automáticamente" },
       { "stat": "0", "label": "Cambios de contexto necesarios" }
     ]
   },
