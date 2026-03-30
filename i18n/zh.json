@@ -96,7 +96,54 @@
         "pain": "工单量增长速度超过招聘速度。CSAT 下降，夜间和周末无人覆盖。",
         "value": "AM 24/7 自主解决工单，在全上下文下升级边界案例，并随每次交互持续改进。你的团队处理需要人类判断的复杂案例——而非那一百个不需要的工单。",
         "capabilities": ["自主解决", "24/7 覆盖", "智能升级", "KB 维护", "CSAT 分析"]
+      },
+      {
+        "role": "面向销售",
+        "headline": "Fill the pipeline. Skip the busywork.",
+        "pain": "Reps spend more time on CRM updates, research, and follow-up emails than actually selling. Pipeline data is always stale.",
+        "value": "AM researches prospects, drafts outreach, logs activities in your CRM, and keeps follow-up cadences running on schedule. Your reps spend their time on calls and closing — not admin.",
+        "capabilities": ["Prospect research", "Outreach drafts", "CRM updates", "Follow-up cadences", "Pipeline reports"]
+      },
+      {
+        "role": "面向内容",
+        "headline": "Publish more. Write less.",
+        "pain": "Content teams bottleneck on drafts, briefs, and distribution. The calendar slips before it starts.",
+        "value": "AM drafts blog posts, social copy, and newsletters from a brief or a URL. It repurposes long-form into short-form, maintains the editorial calendar, and keeps every channel fed.",
+        "capabilities": ["Blog drafts", "Social copy", "Newsletter drafts", "SEO briefs", "Content repurposing"]
+      },
+      {
+        "role": "面向邮件",
+        "headline": "Handle the inbox. Reclaim your week.",
+        "pain": "Email is where work goes to disappear. Inboxes overflow, outreach goes cold, and support threads fall through the cracks.",
+        "value": "AM reads your inbox, triages support threads, drafts replies, runs outreach campaigns, and follows up automatically. Every email gets handled.",
+        "capabilities": ["Inbox triage", "Support replies", "Outreach campaigns", "Follow-up sequences", "Email analytics"]
       }
+    ]
+  },
+  "memory": {
+    "eyebrow": "Built-in memory",
+    "headline1": "AM never",
+    "headline2": "forgets.",
+    "subhead": "Most AI tools start from zero every session. AM builds a persistent model of your codebase, team, preferences, and history — and gets sharper every day.",
+    "features": [
+      { "title": "Short-term memory", "body": "Within every session, AM holds full context — what it read, what it changed, what it decided and why." },
+      { "title": "Long-term memory", "body": "Learnings persist across sessions in a structured knowledge base. Lessons from last month's sprint are available this month." },
+      { "title": "Vector & graph KBs", "body": "Semantic search over your codebase, docs, and history. AM finds relevant context across thousands of files without being told where to look." },
+      { "title": "Ranked search", "body": "When context is retrieved, it's ranked by relevance — not just recency. AM surfaces what matters for the current task." },
+      { "title": "Nightly reflection", "body": "Every night, AM consolidates what it learned, promotes important short-term lessons to long-term storage, and prunes stale context." },
+      { "title": "Self-improving", "body": "AM tracks its own mistakes and corrections. Feedback loops back into future behavior — it gets better the longer it runs on your team." }
+    ]
+  },
+  "gitHistory": {
+    "eyebrow": "Auditable by default",
+    "headline1": "Backed by git.",
+    "headline2": "Atomic history, out of the box.",
+    "subhead": "Every action AM takes is committed atomically to git. A human-readable trail of what changed, when, and why — with no extra configuration.",
+    "features": [
+      { "title": "Atomic commits", "body": "Each unit of work lands as a single, clean commit. One action. One record. No partial states." },
+      { "title": "Full audit trail", "body": "See exactly what AM changed and why. Every decision is logged in commit messages, not just the diff." },
+      { "title": "One-line rollback", "body": "Don't like what AM did? Revert any commit instantly. You're always in control of what ships." },
+      { "title": "Works with your repo", "body": "AM works inside your existing git repo. No new tools, no new systems. Just clean history alongside your own commits." }
     ]
   },
   "features": {

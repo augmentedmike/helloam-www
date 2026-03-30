@@ -32,7 +32,7 @@ export default function IntroducingAm() {
             className="text-3xl md:text-4xl font-bold leading-tight mb-4"
             style={{ color: "#f5f5f5", fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Introducing Amelia.
+            Introducing Am.
           </h2>
           <p className="text-base leading-relaxed mb-4" style={{ color: "#a3a3a3" }}>
             AM is a digital worker — not a chatbot, not a copilot. She reads your backlog,

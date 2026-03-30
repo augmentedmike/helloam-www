@@ -59,25 +59,6 @@ export default function Features() {
   return (
     <section id="features" className="px-6 py-24">
       <div className="max-w-6xl mx-auto">
-        {/* Section header */}
-        <div className="text-center mb-10">
-          <p
-            className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: "#00E5FF" }}
-          >
-            {t.features.eyebrow}
-          </p>
-          <h2
-            className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight"
-            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
-          >
-            {t.features.headline}
-          </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: "#888888" }}>
-            {t.features.subhead}
-          </p>
-        </div>
-
         {/* Tab bar */}
         <div className="flex items-center justify-center gap-1 mb-12 flex-wrap">
           {TABS.map((tab, i) => {

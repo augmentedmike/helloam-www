@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
 
-const COLORS = ["#00E5FF", "#4A90D9", "#F5A623", "#4CAF50", "#E8006A"];
+const COLORS = ["#00E5FF", "#4A90D9", "#F5A623", "#4CAF50", "#E8006A", "#9B59B6"];
 
 export default function Lifestyle() {
   const { locale } = useLocale();
