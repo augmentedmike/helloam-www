@@ -79,7 +79,7 @@ export default function Hero() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a
             href="https://github.com/augmentedmike/am-agi"
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
@@ -96,29 +96,10 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-10 pt-10"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
-        >
-          {t.hero.stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p
-                className="text-3xl font-bold text-white"
-                style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
-              >
-                {s.stat}
-              </p>
-              <p className="text-xs mt-1" style={{ color: "#555" }}>
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* App screenshot — board view */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto mt-20 px-4">
+      <div className="relative z-10 w-full max-w-6xl mx-auto mt-6 px-4">
         {/* Glow behind screenshot */}
         <div
           aria-hidden="true"
@@ -158,6 +139,26 @@ export default function Hero() {
             style={{ display: "block" }}
           />
         </div>
+      </div>
+
+      {/* Stats — below screenshot */}
+      <div
+        className="relative z-10 w-full max-w-6xl mx-auto mt-10 px-4 flex flex-wrap items-center justify-center gap-10 pt-8"
+        style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+      >
+        {t.hero.stats.map((s) => (
+          <div key={s.label} className="text-center">
+            <p
+              className="text-3xl font-bold text-white"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              {s.stat}
+            </p>
+            <p className="text-xs mt-1" style={{ color: "#555" }}>
+              {s.label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
