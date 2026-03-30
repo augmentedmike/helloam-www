@@ -8,21 +8,38 @@ export default function Hero() {
   const t = getTranslation(locale as "en" | "es" | "zh");
 
   return (
-    <section className="relative min-h-dvh flex items-center overflow-hidden px-6 py-24">
-      {/* Background glow */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 60% 50%, rgba(0,229,255,0.05) 0%, transparent 70%)",
-        }}
-      />
+    <section className="relative min-h-dvh overflow-hidden">
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Board screenshot — fills the full background */}
+      <div className="absolute inset-0">
+        <img
+          src="/hero-1-board.jpg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-left-top"
+        />
+        {/* Left gradient — makes text readable over the screenshot */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to right, #0a0a0a 35%, rgba(10,10,10,0.88) 52%, rgba(10,10,10,0.25) 72%, transparent 100%)",
+          }}
+        />
+        {/* Top gradient — blends into navbar */}
+        <div
+          className="absolute inset-x-0 top-0 h-40"
+          style={{ background: "linear-gradient(to bottom, #0a0a0a 0%, transparent 100%)" }}
+        />
+        {/* Bottom gradient — blends into next section */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-40"
+          style={{ background: "linear-gradient(to top, #0a0a0a 0%, transparent 100%)" }}
+        />
+      </div>
 
-        {/* Left — text */}
-        <div className="flex flex-col items-start text-left">
+      {/* Hero text — left-aligned, overlaid on gradient */}
+      <div className="relative z-10 min-h-dvh flex items-center px-8 sm:px-16">
+        <div className="max-w-xl">
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8"
@@ -38,7 +55,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className="text-5xl sm:text-6xl font-bold leading-[1.05] tracking-tight mb-5"
+            className="text-5xl sm:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
             <span className="text-white">{t.hero.headline1}</span>
@@ -46,7 +63,7 @@ export default function Hero() {
           </h1>
 
           {/* Subhead */}
-          <p className="text-lg leading-relaxed max-w-lg mb-8" style={{ color: "#888888" }}>
+          <p className="text-lg leading-relaxed mb-8" style={{ color: "#888888" }}>
             {t.hero.subhead}
           </p>
 
@@ -87,51 +104,13 @@ export default function Hero() {
             })}
           </div>
         </div>
-
-        {/* Right — board screenshot */}
-        <div className="relative">
-          {/* Glow */}
-          <div
-            aria-hidden="true"
-            className="absolute -inset-8 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,229,255,0.08) 0%, transparent 70%)" }}
-          />
-          {/* Browser chrome frame */}
-          <div
-            className="relative rounded-2xl overflow-hidden"
-            style={{
-              border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 0 0 1px rgba(0,229,255,0.12), 0 32px 80px rgba(0,0,0,0.7), 0 0 60px rgba(0,229,255,0.08)",
-            }}
-          >
-            <div
-              className="flex items-center gap-2 px-4 py-3"
-              style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
-            >
-              <span className="w-3 h-3 rounded-full" style={{ background: "#FF5F57" }} />
-              <span className="w-3 h-3 rounded-full" style={{ background: "#FFBD2E" }} />
-              <span className="w-3 h-3 rounded-full" style={{ background: "#28CA41" }} />
-              <div
-                className="h-6 rounded-md flex items-center justify-center text-xs px-6"
-                style={{ background: "rgba(255,255,255,0.04)", color: "#555", margin: "0 auto" }}
-              >
-                helloam.bot
-              </div>
-            </div>
-            <img
-              src="/hero-1-board.jpg"
-              alt="AM Board — Kanban view showing tasks in Backlog, In Progress, and In Review"
-              className="w-full block"
-            />
-          </div>
-        </div>
       </div>
 
-      {/* Stats strip — bottom of viewport */}
+      {/* Stats strip — anchored to bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div
-          className="flex flex-wrap items-center justify-center gap-10 py-5 max-w-7xl mx-auto px-6"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+          className="flex flex-wrap items-center justify-center gap-10 py-6 max-w-7xl mx-auto px-6"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           {t.hero.stats.map((s) => (
             <div key={s.label} className="text-center">
