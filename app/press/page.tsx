@@ -25,12 +25,11 @@ const COMPANY_FACTS = [
 
 const BRAND_ASSETS = [
   {
-    label: "AM Logo",
-    previewSrc: "/am-logo.webp",
-    previewAlt: "AM wordmark logo",
+    label: "AM Headshot",
+    previewSrc: "/am-headshot.jpg",
+    previewAlt: "Amelia — AM digital worker headshot",
     downloads: [
-      { format: "WebP", href: "/am-logo.webp" },
-      { format: "PNG", href: "/am-logo.png" },
+      { format: "JPG", href: "/am-headshot.jpg" },
     ],
   },
   {

@@ -74,7 +74,7 @@ const jsonLd = {
       url: "https://helloam.bot",
       logo: {
         "@type": "ImageObject",
-        url: "https://helloam.bot/am-logo.png",
+        url: "https://helloam.bot/am-headshot.jpg",
       },
       sameAs: [
         "https://twitter.com/augmentedmike",
