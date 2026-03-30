@@ -5,49 +5,58 @@ import ContactButton from "@/components/contact-button";
 export const metadata: Metadata = {
   title: "Press | helloam.bot",
   description:
-    "Press kit for AM — the digital worker platform for PMs, developers, and support teams. Facts, story angles, quotes, and contact info for journalists.",
+    "Press kit for AM — the digital worker platform. Facts, story angles, quotes, and contact info for journalists.",
   alternates: { canonical: "https://helloam.bot/press" },
 };
 
 const FACTS = [
-  { label: "What it is", value: "A digital worker platform for PMs, developers, and support teams" },
-  { label: "Software", value: "Free and open source" },
-  { label: "Pricing model", value: "SaaS — seat-based and team plans" },
-  { label: "Key capabilities", value: "Backlog triage, PR/code tasks, ticket resolution — autonomous end-to-end" },
+  { label: "What it is", value: "An autonomous digital worker that owns tasks end-to-end" },
+  { label: "Software", value: "Free and open source (MIT)" },
+  { label: "Runs on", value: "Bun — fast, modern JavaScript runtime" },
+  { label: "Key capabilities", value: "Kanban board agent, conversational interface, file I/O, web search" },
 ];
 
 const COMPANY_FACTS = [
   { label: "Founded", value: "2025" },
+  { label: "Creator", value: "Michael O'Neal" },
   { label: "Headquarters", value: "Austin, TX" },
   { label: "Legal entity", value: "Tylt LLC" },
   { label: "Status", value: "Private" },
+  { label: "Product site", value: "helloam.bot" },
 ];
 
 const BRAND_ASSETS = [
   {
-    label: "AM Headshot",
-    previewSrc: "/am-headshot.jpg",
-    previewAlt: "Amelia — AM digital worker headshot",
+    label: "AM Logo",
+    previewSrc: "/android-chrome-512.png",
+    previewAlt: "AM logo — android chrome 512px",
     downloads: [
-      { format: "JPG", href: "/am-headshot.jpg" },
+      { format: "PNG", href: "/android-chrome-512.png" },
     ],
   },
   {
-    label: "Product Screenshot",
-    previewSrc: "/am/am-mockup.webp",
-    previewAlt: "AM product mockup",
+    label: "Board Screenshot",
+    previewSrc: "/hero-1-board.jpg",
+    previewAlt: "AM board — real product screenshot",
     downloads: [
-      { format: "WebP", href: "/am/am-mockup.webp" },
-      { format: "JPG", href: "/am/am-mockup.jpg" },
+      { format: "JPG", href: "/hero-1-board.jpg" },
+    ],
+  },
+  {
+    label: "Chat Screenshot",
+    previewSrc: "/hero-2-chat.jpg",
+    previewAlt: "AM chat — real product screenshot",
+    downloads: [
+      { format: "JPG", href: "/hero-2-chat.jpg" },
     ],
   },
 ];
 
 const ANGLES = [
   "The autonomous teammate: what happens when AI stops being a chat interface and starts owning outcomes",
-  "Why the next wave of enterprise AI isn't copilots — it's digital workers who close tickets",
-  "AM, Devin, and Fin: mapping the emerging market for autonomous AI teammates",
-  "The case for hiring a digital worker: how PMs and support leads are delegating entire workflows to AI",
+  "Why the next wave of AI isn't copilots — it's digital workers who close tickets and ship code",
+  "Open-source AI agents: how AM gives developers a self-hosted digital worker they can actually trust",
+  "The case for a digital worker: how solo founders and small teams are delegating entire workflows to AM",
 ];
 
 const QUOTES = [
@@ -89,8 +98,8 @@ export default function PressPage() {
           <span style={{ color: "#00E5FF" }}>digital worker.</span>
         </h1>
         <p className="text-lg max-w-2xl" style={{ color: "#888" }}>
-          AM is a digital worker platform — an autonomous AI teammate that owns backlogs, ships code,
-          and resolves support tickets end-to-end. Built for PMs, developers, and support teams.
+          AM is an open-source digital worker — an autonomous AI that owns a Kanban board, converses
+          naturally, and completes real tasks end-to-end. Built and maintained by Michael O&apos;Neal.
         </p>
       </div>
 
@@ -147,8 +156,9 @@ export default function PressPage() {
           style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.12)", borderLeft: "3px solid #00E5FF" }}
         >
           <p style={{ color: "#cccccc", lineHeight: 1.7 }}>
-            <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of AM — a digital worker platform
-            that helps PMs, developers, and support teams delegate entire workflows to an autonomous AI teammate.
+            <strong style={{ color: "#fff" }}>helloam.bot</strong> is the home of AM — an open-source digital
+            worker created by Michael O&apos;Neal that autonomously manages tasks, writes code, and converses
+            with users through a natural chat interface.
           </p>
         </div>
 
@@ -158,7 +168,10 @@ export default function PressPage() {
         <h2 className="text-xs font-semibold tracking-[0.25em] uppercase mb-6" style={{ color: "#555" }}>
           Brand Assets
         </h2>
-        <div className="grid sm:grid-cols-2 gap-4 mb-4">
+        <p className="text-sm mb-6" style={{ color: "#555" }}>
+          All images below are real — the logo and actual product screenshots. No mockups or AI-generated imagery.
+        </p>
+        <div className="grid sm:grid-cols-3 gap-4 mb-4">
           {BRAND_ASSETS.map((asset) => (
             <div
               key={asset.label}
@@ -189,7 +202,7 @@ export default function PressPage() {
                       style={{
                         color: "#00E5FF",
                         background: "rgba(0,229,255,0.08)",
-                        border: "1px solid rgba(0,229,255,0.2)",
+                        border: "1px solid rgba(0,229,229,0.2)",
                       }}
                     >
                       ↓ {dl.format}
@@ -249,7 +262,10 @@ export default function PressPage() {
         >
           <p className="font-semibold text-white mb-1">AM — press@helloam.bot</p>
           <p className="text-sm mb-4" style={{ color: "#666" }}>
-            All press inquiries are handled by AM directly. AM routes to the right person and responds within 24 hours.
+            Email AM directly at <strong style={{ color: "#aaa" }}>press@helloam.bot</strong>. AM reads and
+            responds to press inquiries, and can connect you directly with{" "}
+            <strong style={{ color: "#aaa" }}>Michael O&apos;Neal</strong>, the creator, for interviews,
+            on-the-record quotes, or deeper background.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
             <ContactButton category="Press" className="cursor-pointer" style={{ color: "#00E5FF" }}>Contact Press</ContactButton>
