@@ -8,7 +8,7 @@ export default function Hero() {
   const t = getTranslation(locale as "en" | "es" | "zh");
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-dvh px-6 pt-24 pb-16 text-center overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center px-6 pt-24 pb-0 text-center overflow-hidden">
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -98,7 +98,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* App screenshot — board view, tightly coupled to hero content above */}
+      {/* App screenshot — clipped to keep top visible above the fold */}
       <div className="relative z-10 w-full max-w-6xl mx-auto mt-6 px-4">
         {/* Glow behind screenshot */}
         <div
@@ -131,18 +131,26 @@ export default function Hero() {
               helloam.bot
             </div>
           </div>
-          {/* Screenshot */}
-          <img
-            src="/hero-1-board.jpg"
-            alt="AM Board — Kanban view showing tasks in Backlog, In Progress, and In Review"
-            className="w-full block"
-            style={{ display: "block" }}
-          />
+          {/* Screenshot — clipped so top portion is always above fold */}
+          <div className="relative" style={{ maxHeight: "38vh", overflow: "hidden" }}>
+            <img
+              src="/hero-1-board.jpg"
+              alt="AM Board — Kanban view showing tasks in Backlog, In Progress, and In Review"
+              className="w-full block"
+              style={{ display: "block" }}
+            />
+            {/* Fade to dark at the bottom so the clip looks intentional */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
+              style={{ background: "linear-gradient(to bottom, transparent, #0a0a0a)" }}
+            />
+          </div>
         </div>
       </div>
 
-      {/* Stats — anchored below the screenshot as a subtle footer strip */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
+      {/* Stats */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10 pb-16">
         <div
           className="flex flex-wrap items-center justify-center gap-10 pt-8"
           style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
