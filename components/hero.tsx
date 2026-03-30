@@ -8,7 +8,7 @@ export default function Hero() {
   const t = getTranslation(locale as "en" | "es" | "zh");
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-dvh px-6 py-24 text-center overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-dvh px-6 pt-24 pb-16 text-center overflow-hidden">
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -19,6 +19,7 @@ export default function Hero() {
         }}
       />
 
+      {/* Hero text content */}
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Badge */}
         <div
@@ -54,7 +55,7 @@ export default function Hero() {
         </p>
 
         {/* Persona pills */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
           {t.hero.personas.map((p, i) => {
             const colors = ["#00E5FF", "#4A90D9", "#F5A623"];
             const color = colors[i] || "#00E5FF";
@@ -79,7 +80,7 @@ export default function Hero() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a
             href="https://github.com/augmentedmike/am-agi"
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
@@ -95,30 +96,10 @@ export default function Hero() {
             {t.hero.ctaSecondary} <span aria-hidden="true">→</span>
           </a>
         </div>
-
-        {/* Stats */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-10 pt-10"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
-        >
-          {t.hero.stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p
-                className="text-3xl font-bold text-white"
-                style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
-              >
-                {s.stat}
-              </p>
-              <p className="text-xs mt-1" style={{ color: "#555" }}>
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
-      {/* App screenshot — board view */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto mt-20 px-4">
+      {/* App screenshot — board view, tightly coupled to hero content above */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto mt-6 px-4">
         {/* Glow behind screenshot */}
         <div
           aria-hidden="true"
@@ -157,6 +138,28 @@ export default function Hero() {
             className="w-full block"
             style={{ display: "block" }}
           />
+        </div>
+      </div>
+
+      {/* Stats — anchored below the screenshot as a subtle footer strip */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
+        <div
+          className="flex flex-wrap items-center justify-center gap-10 pt-8"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+        >
+          {t.hero.stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p
+                className="text-3xl font-bold text-white"
+                style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+              >
+                {s.stat}
+              </p>
+              <p className="text-xs mt-1" style={{ color: "#555" }}>
+                {s.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
