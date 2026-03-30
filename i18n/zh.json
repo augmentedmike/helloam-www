@@ -55,9 +55,9 @@
   },
   "hero": {
     "badge": "试点中 — 名额有限",
-    "headline1": "真正",
-    "headline2": "做事的 AI。",
-    "subhead": "AM 端到端承担团队中量最大的工作——工单分类、代码开发和客户支持——让你的团队以更低成本更快交付。一个数字员工，覆盖整个团队。",
+    "headline1": "你团队的",
+    "headline2": "分布式认知工作者。",
+    "subhead": "AM 以并行智能体集群的方式运行——每个智能体拥有独立的记忆、上下文和专属领域——同时在产品、工程和支持团队中协同工作。不是一个 AI，而是一支数字团队。",
     "personas": [
       { "label": "面向产品经理", "desc": "Backlog 分类与 sprint 梳理" },
       { "label": "面向开发者", "desc": "Ticket → PR，全自动" },
@@ -66,8 +66,8 @@
     "ctaPrimary": "在 GitHub 获取 AM",
     "ctaSecondary": "了解工作方式",
     "stats": [
-      { "stat": "24/7", "label": "持续运转" },
-      { "stat": "99%", "label": "工单自动解决率" },
+      { "stat": "∞", "label": "并行智能体" },
+      { "stat": "3×", "label": "交付提速" },
       { "stat": "0", "label": "所需的上下文切换" }
     ]
   },

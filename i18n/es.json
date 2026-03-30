@@ -55,9 +55,9 @@
   },
   "hero": {
     "badge": "En piloto — cupos limitados disponibles",
-    "headline1": "La IA que ",
-    "headline2": "hace el trabajo.",
-    "subhead": "AM toma ownership de extremo a extremo del trabajo de mayor volumen de tu equipo — triage, código y soporte — para que tu equipo entregue más rápido con menos fricción. Un trabajador, todo tu equipo cubierto.",
+    "headline1": "El trabajador cognitivo ",
+    "headline2": "distribuido de tu equipo.",
+    "subhead": "AM funciona como una red de agentes paralelos — cada uno con su propia memoria, contexto y dominio — trabajando simultáneamente en PM, ingeniería y soporte. No una IA. Una fuerza de trabajo.",
     "personas": [
       { "label": "Para PMs", "desc": "Triage de backlog y preparación de sprints" },
       { "label": "Para Desarrolladores", "desc": "Tickets → PRs, de forma autónoma" },
@@ -66,8 +66,8 @@
     "ctaPrimary": "Ver AM en GitHub",
     "ctaSecondary": "Ver cómo funciona",
     "stats": [
-      { "stat": "24/7", "label": "Siempre trabajando" },
-      { "stat": "99%", "label": "Tickets resueltos automáticamente" },
+      { "stat": "∞", "label": "Agentes en paralelo" },
+      { "stat": "3×", "label": "Entrega más rápida" },
       { "stat": "0", "label": "Cambios de contexto necesarios" }
     ]
   },

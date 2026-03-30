@@ -55,9 +55,9 @@
   },
   "hero": {
     "badge": "Now in pilot — limited spots open",
-    "headline1": "The AI that ",
-    "headline2": "does the work.",
-    "subhead": "AM takes end-to-end ownership of your team's highest-volume work — triage, code, and support — so your team ships faster with less overhead. One worker, your whole team covered.",
+    "headline1": "Your team's ",
+    "headline2": "distributed cognitive worker.",
+    "subhead": "AM runs as a fleet of parallel agents — each with its own memory, context, and domain — working across PM, engineering, and support simultaneously. Not one AI. A workforce.",
     "personas": [
       { "label": "For PMs", "desc": "Backlog triage & sprint grooming" },
       { "label": "For Developers", "desc": "Tickets → PRs, autonomously" },
@@ -66,8 +66,8 @@
     "ctaPrimary": "Get AM on GitHub",
     "ctaSecondary": "See how it works",
     "stats": [
-      { "stat": "24/7", "label": "Always working" },
-      { "stat": "99%", "label": "Tickets auto-resolved" },
+      { "stat": "∞", "label": "Parallel agents" },
+      { "stat": "3×", "label": "Faster delivery" },
       { "stat": "0", "label": "Context switches needed" }
     ]
   },
