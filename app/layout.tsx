@@ -35,6 +35,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://helloam.bot",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
   icons: {
     icon: [
       { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
