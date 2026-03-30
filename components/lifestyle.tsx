@@ -1,98 +1,111 @@
 "use client";
 
+import { useState } from "react";
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
+
+const COLORS = ["#00E5FF", "#4A90D9", "#F5A623", "#4CAF50", "#E8006A"];
 
 export default function Lifestyle() {
   const { locale } = useLocale();
   const t = getTranslation(locale as "en" | "es" | "zh");
+  const [active, setActive] = useState(0);
 
-  const PERSONAS = t.lifestyle.personas.map((p, i) => {
-    const colors = ["#00E5FF", "#4A90D9", "#F5A623"];
-    return { ...p, color: colors[i] || "#00E5FF" };
-  });
+  const personas = t.lifestyle.personas.map((p, i) => ({
+    ...p,
+    color: COLORS[i] || "#00E5FF",
+  }));
+
+  const p = personas[active];
 
   return (
-    <section id="personas" className="px-6 py-24 max-w-7xl mx-auto">
-      {/* Header */}
-      <div className="text-center mb-16">
-        <p
-          className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
-          style={{ color: "#00E5FF" }}
-        >
-          {t.lifestyle.eyebrow}
-        </p>
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white"
-          style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
-        >
-          {t.lifestyle.headline1}
-          <br />
-          <span style={{ color: "#00E5FF" }}>{t.lifestyle.headline2}</span>
-        </h2>
-      </div>
+    <section id="personas" className="px-6 py-24">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p
+            className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
+            style={{ color: "#00E5FF" }}
+          >
+            {t.lifestyle.eyebrow}
+          </p>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white"
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+          >
+            {t.lifestyle.headline1}
+            <br />
+            <span style={{ color: "#00E5FF" }}>{t.lifestyle.headline2}</span>
+          </h2>
+        </div>
 
-      {/* Persona cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {PERSONAS.map((p) => (
+        {/* Tab nav + detail panel */}
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          {/* Left: role tabs */}
+          <div className="flex flex-row md:flex-col gap-2 md:w-52 shrink-0 flex-wrap">
+            {personas.map((persona, i) => (
+              <button
+                key={persona.role}
+                onClick={() => setActive(i)}
+                className="text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap"
+                style={{
+                  color: active === i ? persona.color : "rgba(255,255,255,0.35)",
+                  background: active === i ? `${persona.color}12` : "transparent",
+                  border: active === i ? `1px solid ${persona.color}35` : "1px solid transparent",
+                }}
+              >
+                {persona.role}
+              </button>
+            ))}
+          </div>
+
+          {/* Right: detail */}
           <div
-            key={p.role}
-            className="group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
+            key={active}
+            className="flex-1 rounded-2xl p-8"
             style={{
               background: "rgba(255,255,255,0.025)",
-              border: "1px solid rgba(255,255,255,0.07)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.borderColor = `${p.color}44`;
-              (e.currentTarget as HTMLDivElement).style.boxShadow = `0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px ${p.color}22`;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)";
-              (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+              border: `1px solid ${p.color}22`,
+              boxShadow: `0 0 40px ${p.color}08`,
             }}
           >
             {/* Top accent */}
             <div
-              className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl"
-              style={{ background: p.color, opacity: 0.9 }}
+              className="h-[3px] rounded-full mb-8 w-12"
+              style={{ background: p.color }}
             />
 
-            {/* Role badge */}
-            <div
-              className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: `${p.color}15`, border: `1px solid ${p.color}35`, color: p.color }}
+            <p
+              className="text-xs font-bold tracking-widest uppercase mb-3"
+              style={{ color: p.color }}
             >
               {p.role}
-            </div>
+            </p>
 
-            {/* Headline */}
             <h3
-              className="text-xl font-bold text-white mb-3 leading-snug"
+              className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
               {p.headline}
             </h3>
 
-            {/* Pain point */}
-            <p className="text-sm mb-5 leading-relaxed" style={{ color: "#666" }}>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: "#666" }}>
               {p.pain}
             </p>
 
-            {/* Value prop */}
-            <p className="text-sm mb-6 leading-relaxed" style={{ color: "#999" }}>
+            <p className="text-base leading-relaxed mb-8" style={{ color: "#999" }}>
               {p.value}
             </p>
 
-            {/* Capabilities */}
             <div className="flex flex-wrap gap-2">
               {p.capabilities.map((cap) => (
                 <span
                   key={cap}
-                  className="text-xs px-2.5 py-1 rounded-full font-medium"
+                  className="text-xs px-3 py-1.5 rounded-full font-medium"
                   style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    color: "#888",
+                    background: `${p.color}10`,
+                    border: `1px solid ${p.color}28`,
+                    color: p.color,
                   }}
                 >
                   {cap}
@@ -100,7 +113,7 @@ export default function Lifestyle() {
               ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

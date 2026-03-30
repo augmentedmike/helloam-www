@@ -92,7 +92,7 @@
   "lifestyle": {
     "eyebrow": "Who AM works for",
     "headline1": "One worker.",
-    "headline2": "Three team functions.",
+    "headline2": "Every function covered.",
     "personas": [
       {
         "role": "For PMs",
@@ -131,6 +131,32 @@
           "Smart escalation",
           "KB maintenance",
           "CSAT analytics"
+        ]
+      },
+      {
+        "role": "For Sales",
+        "headline": "Fill the pipeline. Skip the busywork.",
+        "pain": "Reps spend more time on CRM updates, research, and follow-up emails than actually selling. Pipeline data is always stale.",
+        "value": "AM researches prospects, drafts outreach, logs activities in your CRM, and keeps follow-up cadences running on schedule. Your reps spend their time on calls and closing — not admin.",
+        "capabilities": [
+          "Prospect research",
+          "Outreach drafts",
+          "CRM updates",
+          "Follow-up cadences",
+          "Pipeline reports"
+        ]
+      },
+      {
+        "role": "For Content",
+        "headline": "Publish more. Write less.",
+        "pain": "Content teams bottleneck on drafts, briefs, and distribution. The calendar slips before it starts.",
+        "value": "AM drafts blog posts, social copy, and newsletters from a brief or a URL. It repurposes long-form into short-form, maintains the editorial calendar, and keeps every channel fed — without the context-switching.",
+        "capabilities": [
+          "Blog drafts",
+          "Social copy",
+          "Newsletter drafts",
+          "SEO briefs",
+          "Content repurposing"
         ]
       }
     ]
