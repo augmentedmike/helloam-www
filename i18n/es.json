@@ -290,7 +290,22 @@
     ],
     "closerHeadline1": "AM no es una herramienta que usas.",
     "closerHeadline2": "Es un trabajador en tu equipo.",
-    "closerBody": "Se presenta todos los días, conoce el contexto y realiza el trabajo — para que tu equipo pueda enfocarse en el trabajo que realmente los necesita."
+    "closerBody": "Se presenta todos los días, conoce el contexto y realiza el trabajo — para que tu equipo pueda enfocarse en el trabajo que realmente los necesita.",
+    "body": "AM se ejecuta localmente en segundo plano, trabajando constantemente en las tareas y objetivos que le has asignado. Ejecuta múltiples proyectos simultáneamente — pipelines de ventas, atención al cliente, desarrollo web y de software, gestión de contenido. Si puedes visualizarlo en un tablero y la entrega es electrónica, AM se convertirá en tu mejor aliado.",
+    "points": [
+      {
+        "label": "Siempre activo",
+        "body": "AM trabaja en segundo plano 24/7 — sin prompts, sin supervisión. Asigna un objetivo y se pone a trabajar."
+      },
+      {
+        "label": "Múltiples proyectos a la vez",
+        "body": "Pipelines de ventas, atención al cliente, desarrollo, contenido — gestiónalos todos simultáneamente en tableros separados."
+      },
+      {
+        "label": "Conecta tus AMs",
+        "body": "¿Equipo pequeño, cada uno con su AM? Vincúlalos. Negocian confianza, comparten contexto y colaboran en planes de alto nivel — así todo tu equipo queda amplificado, no solo una persona."
+      }
+    ]
   },
   "device": {
     "eyebrow": "Cómo funciona",
@@ -343,6 +358,10 @@
       {
         "title": "El espacio que AM ocupa",
         "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de un cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Ese contexto entre funciones es la ventaja compuesta que AM construye con el tiempo."
+      },
+      {
+        "title": "La brecha que AM ocupa",
+        "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Esa ventaja compuesta entre funciones crece con el tiempo."
       }
     ]
   },
@@ -452,5 +471,39 @@
     "headline2": "Ella trabaja mientras duermes.",
     "body": "Describe lo que hay que hacer. AM lee el tablero, retoma el trabajo y registra cada paso — sin necesidad de supervisión.",
     "cta": "Obtener acceso anticipado"
+  },
+  "socialProof": {
+    "eyebrow": "Confiado por equipos modernos",
+    "headline": "Equipos reales. Resultados reales.",
+    "subhead": "AM trabaja 24/7 en PM, ingeniería y soporte — los números hablan por sí solos.",
+    "logos": [
+      { "name": "Acme Corp" },
+      { "name": "Pied Piper" },
+      { "name": "Initech" },
+      { "name": "Hooli" },
+      { "name": "Umbrella" }
+    ],
+    "quotes": [
+      {
+        "quote": "AM resolvió el 85% de nuestros tickets de soporte de nivel 1 sin intervención humana en el primer mes. Nuestro equipo de soporte pasó de estar abrumado a ser estratégico de la noche a la mañana.",
+        "name": "Sarah Chen",
+        "role": "Directora de Soporte, Acme Corp"
+      },
+      {
+        "quote": "Le asignamos a AM todo nuestro backlog de migración — más de 200 tickets. Abrió PRs, escribió pruebas y logró que el 90% se fusionara en tres semanas. Nuestros ingenieros finalmente tienen tiempo para construir.",
+        "name": "Marcus Rivera",
+        "role": "Líder de Ingeniería, Pied Piper"
+      },
+      {
+        "quote": "La preparación del sprint solía tomar medio día. AM lo hace de noche. Los lunes llegamos con un tablero completamente preparado y las actualizaciones de stakeholders ya redactadas.",
+        "name": "Priya Nair",
+        "role": "Gerente de Producto, Initech"
+      }
+    ],
+    "stats": [
+      { "value": "48,000+", "label": "Tickets resueltos" },
+      { "value": "12,000+", "label": "PRs enviados" },
+      { "value": "90,000+", "label": "Horas ahorradas" }
+    ]
   }
 }
