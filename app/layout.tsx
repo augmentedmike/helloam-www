@@ -4,6 +4,7 @@ import "./globals.css";
 import LayoutShell from "@/components/layout-shell";
 import WebMCPPolyfill from "@/components/webmcp-polyfill";
 import { LocaleProvider } from "@/context/locale-context";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -244,6 +245,7 @@ export default function RootLayout({
         <LocaleProvider>
           <LayoutShell>{children}</LayoutShell>
         </LocaleProvider>
+        <Analytics />
       </body>
     </html>
   );
