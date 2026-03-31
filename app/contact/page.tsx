@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | helloam.bot",
   description:
     "Get in touch with Am. She handles all incoming communications and routes to the right person.",
   alternates: { canonical: "https://helloam.bot/contact" },
+  openGraph: {
+    title: "Contact | helloam.bot",
+    description:
+      "Get in touch with Am. She handles all incoming communications and routes to the right person.",
+    url: "https://helloam.bot/contact",
+    images: [{ url: "https://helloam.bot/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | helloam.bot",
+    description:
+      "Get in touch with Am. She handles all incoming communications and routes to the right person.",
+    images: ["https://helloam.bot/og-image.png"],
+  },
 };
 
 export default function ContactPage() {
@@ -23,25 +38,16 @@ export default function ContactPage() {
         >
           Am handles all incoming.
         </h1>
-        <p className="text-lg mb-16" style={{ color: "#666" }}>
+        <p className="text-lg mb-12" style={{ color: "#666" }}>
           Every message goes to Am first. She reads it, routes it to the right person, and responds.
           Nothing falls through the cracks.
         </p>
 
         <div
-          className="rounded-2xl px-7 py-8 text-center"
+          className="rounded-2xl px-7 py-8"
           style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.15)" }}
         >
-          <p className="text-sm mb-4" style={{ color: "#888" }}>
-            Send Am an email — she reads everything.
-          </p>
-          <a
-            href="mailto:augmentedmike@gmail.com"
-            className="text-xl font-semibold transition-colors hover:opacity-80"
-            style={{ color: "#00E5FF" }}
-          >
-            augmentedmike@gmail.com
-          </a>
+          <ContactForm />
         </div>
 
         {/* Am note */}

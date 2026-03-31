@@ -60,36 +60,29 @@ export default function Features() {
     <section id="features" className="px-6 py-24">
       <div className="max-w-6xl mx-auto">
         {/* Tab bar */}
-        <div className="flex items-center justify-center gap-1 mb-12 flex-wrap">
-          {TABS.map((tab, i) => {
-            const isActive = active === tab.id;
-            const accentColor = ACCENTS[tab.id];
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActive(tab.id)}
-                className="relative px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200"
-                style={{
-                  color: isActive ? accentColor : "rgba(255,255,255,0.4)",
-                  background: isActive ? `${accentColor}18` : "transparent",
-                  border: isActive
-                    ? `1px solid ${accentColor}44`
-                    : "1px solid transparent",
-                }}
-              >
-                {tab.label}
-                {i < TABS.length - 1 && (
-                  <span
-                    aria-hidden="true"
-                    className="absolute -right-[3px] top-1/2 -translate-y-1/2 text-xs select-none pointer-events-none"
-                    style={{ color: "rgba(255,255,255,0.15)" }}
-                  >
-                    |
-                  </span>
-                )}
-              </button>
-            );
-          })}
+        <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mb-12">
+          <div className="flex items-center justify-center gap-2 flex-nowrap px-4 min-w-max mx-auto">
+            {TABS.map((tab) => {
+              const isActive = active === tab.id;
+              const accentColor = ACCENTS[tab.id];
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActive(tab.id)}
+                  className="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 whitespace-nowrap"
+                  style={{
+                    color: isActive ? accentColor : "rgba(255,255,255,0.4)",
+                    background: isActive ? `${accentColor}18` : "transparent",
+                    border: isActive
+                      ? `1px solid ${accentColor}44`
+                      : "1px solid transparent",
+                  }}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Feature grid */}
