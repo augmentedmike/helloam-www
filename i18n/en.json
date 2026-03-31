@@ -659,5 +659,11 @@
     "headline2": "She works while you sleep.",
     "body": "Describe what needs to be done. AM reads the board, picks up the work, and logs every step — no hand-holding required.",
     "cta": "Get early access"
+  },
+  "introducingAm": {
+    "eyebrow": "Meet AM",
+    "heading": "Introducing Am.",
+    "body1": "AM is a digital worker — not a chatbot, not a copilot. She reads your backlog, writes the code, opens the PRs, resolves the tickets, and sends the updates. All while your team sleeps.",
+    "body2": "She runs 24/7, remembers everything, and gets better with every sprint. Your team stays human. The gruntwork is hers."
   }
 }

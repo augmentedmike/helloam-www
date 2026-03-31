@@ -59,16 +59,34 @@
     "headline2": "分布式认知工作者。",
     "subhead": "AM 以并行智能体集群的方式运行——每个智能体拥有独立的记忆、上下文和专属领域——同时在产品、工程和支持团队中协同工作。不是一个 AI，而是一支数字团队。",
     "personas": [
-      { "label": "面向产品经理", "desc": "Backlog 分类与 sprint 梳理" },
-      { "label": "面向开发者", "desc": "Ticket → PR，全自动" },
-      { "label": "面向支持团队", "desc": "24/7 工单解决" }
+      {
+        "label": "面向产品经理",
+        "desc": "Backlog 分类与 sprint 梳理"
+      },
+      {
+        "label": "面向开发者",
+        "desc": "Ticket → PR，全自动"
+      },
+      {
+        "label": "面向支持团队",
+        "desc": "24/7 工单解决"
+      }
     ],
     "ctaPrimary": "在 GitHub 获取 AM",
     "ctaSecondary": "了解工作方式",
     "stats": [
-      { "stat": "∞", "label": "并行智能体" },
-      { "stat": "3×", "label": "交付提速" },
-      { "stat": "0", "label": "所需的上下文切换" }
+      {
+        "stat": "∞",
+        "label": "并行智能体"
+      },
+      {
+        "stat": "3×",
+        "label": "交付提速"
+      },
+      {
+        "stat": "0",
+        "label": "所需的上下文切换"
+      }
     ]
   },
   "lifestyle": {
@@ -81,42 +99,78 @@
         "headline": "停止管理流程，专注产品思考。",
         "pain": "产品经理 60% 的时间花在工单分类、sprint 梳理、状态更新和会议准备上——而非产品思考。",
         "value": "AM 管理 backlog、在每次 sprint 前梳理工单、起草发布说明，并撰写每周干系人更新。你的产品经理随时准备好参会，将时间真正花在需要他们的工作上。",
-        "capabilities": ["Backlog 分类与标签", "Sprint 梳理", "PRD 草稿", "发布说明", "干系人更新"]
+        "capabilities": [
+          "Backlog 分类与标签",
+          "Sprint 梳理",
+          "PRD 草稿",
+          "发布说明",
+          "干系人更新"
+        ]
       },
       {
         "role": "面向开发者",
         "headline": "交付 backlog，消除上下文切换。",
         "pain": "工程师 40% 的时间花在维护、迁移、文档和代码审查上——而非构建功能。",
         "value": "AM 接收工单、阅读代码库、编写代码并开启 PR。它像高级工程师一样审查传入的 PR，处理迁移，并即时回答代码库问题。你的工程师专注构建，而非琐事。",
-        "capabilities": ["Ticket → PR", "代码审查", "值班分类", "迁移与重构", "代码库问答"]
+        "capabilities": [
+          "Ticket → PR",
+          "代码审查",
+          "值班分类",
+          "迁移与重构",
+          "代码库问答"
+        ]
       },
       {
         "role": "面向支持团队",
         "headline": "解决更多工单，减少招聘成本。",
         "pain": "工单量增长速度超过招聘速度。CSAT 下降，夜间和周末无人覆盖。",
         "value": "AM 24/7 自主解决工单，在全上下文下升级边界案例，并随每次交互持续改进。你的团队处理需要人类判断的复杂案例——而非那一百个不需要的工单。",
-        "capabilities": ["自主解决", "24/7 覆盖", "智能升级", "KB 维护", "CSAT 分析"]
+        "capabilities": [
+          "自主解决",
+          "24/7 覆盖",
+          "智能升级",
+          "KB 维护",
+          "CSAT 分析"
+        ]
       },
       {
         "role": "面向销售",
         "headline": "Fill the pipeline. Skip the busywork.",
         "pain": "Reps spend more time on CRM updates, research, and follow-up emails than actually selling. Pipeline data is always stale.",
         "value": "AM researches prospects, drafts outreach, logs activities in your CRM, and keeps follow-up cadences running on schedule. Your reps spend their time on calls and closing — not admin.",
-        "capabilities": ["Prospect research", "Outreach drafts", "CRM updates", "Follow-up cadences", "Pipeline reports"]
+        "capabilities": [
+          "Prospect research",
+          "Outreach drafts",
+          "CRM updates",
+          "Follow-up cadences",
+          "Pipeline reports"
+        ]
       },
       {
         "role": "面向内容",
         "headline": "Publish more. Write less.",
         "pain": "Content teams bottleneck on drafts, briefs, and distribution. The calendar slips before it starts.",
         "value": "AM drafts blog posts, social copy, and newsletters from a brief or a URL. It repurposes long-form into short-form, maintains the editorial calendar, and keeps every channel fed.",
-        "capabilities": ["Blog drafts", "Social copy", "Newsletter drafts", "SEO briefs", "Content repurposing"]
+        "capabilities": [
+          "Blog drafts",
+          "Social copy",
+          "Newsletter drafts",
+          "SEO briefs",
+          "Content repurposing"
+        ]
       },
       {
         "role": "面向邮件",
         "headline": "Handle the inbox. Reclaim your week.",
         "pain": "Email is where work goes to disappear. Inboxes overflow, outreach goes cold, and support threads fall through the cracks.",
         "value": "AM reads your inbox, triages support threads, drafts replies, runs outreach campaigns, and follows up automatically. Every email gets handled.",
-        "capabilities": ["Inbox triage", "Support replies", "Outreach campaigns", "Follow-up sequences", "Email analytics"]
+        "capabilities": [
+          "Inbox triage",
+          "Support replies",
+          "Outreach campaigns",
+          "Follow-up sequences",
+          "Email analytics"
+        ]
       }
     ]
   },
@@ -126,12 +180,30 @@
     "headline2": "forgets.",
     "subhead": "Most AI tools start from zero every session. AM builds a persistent model of your codebase, team, preferences, and history — and gets sharper every day.",
     "features": [
-      { "title": "Short-term memory", "body": "Within every session, AM holds full context — what it read, what it changed, what it decided and why." },
-      { "title": "Long-term memory", "body": "Learnings persist across sessions in a structured knowledge base. Lessons from last month's sprint are available this month." },
-      { "title": "Vector & graph KBs", "body": "Semantic search over your codebase, docs, and history. AM finds relevant context across thousands of files without being told where to look." },
-      { "title": "Ranked search", "body": "When context is retrieved, it's ranked by relevance — not just recency. AM surfaces what matters for the current task." },
-      { "title": "Nightly reflection", "body": "Every night, AM consolidates what it learned, promotes important short-term lessons to long-term storage, and prunes stale context." },
-      { "title": "Self-improving", "body": "AM tracks its own mistakes and corrections. Feedback loops back into future behavior — it gets better the longer it runs on your team." }
+      {
+        "title": "Short-term memory",
+        "body": "Within every session, AM holds full context — what it read, what it changed, what it decided and why."
+      },
+      {
+        "title": "Long-term memory",
+        "body": "Learnings persist across sessions in a structured knowledge base. Lessons from last month's sprint are available this month."
+      },
+      {
+        "title": "Vector & graph KBs",
+        "body": "Semantic search over your codebase, docs, and history. AM finds relevant context across thousands of files without being told where to look."
+      },
+      {
+        "title": "Ranked search",
+        "body": "When context is retrieved, it's ranked by relevance — not just recency. AM surfaces what matters for the current task."
+      },
+      {
+        "title": "Nightly reflection",
+        "body": "Every night, AM consolidates what it learned, promotes important short-term lessons to long-term storage, and prunes stale context."
+      },
+      {
+        "title": "Self-improving",
+        "body": "AM tracks its own mistakes and corrections. Feedback loops back into future behavior — it gets better the longer it runs on your team."
+      }
     ]
   },
   "gitHistory": {
@@ -140,10 +212,22 @@
     "headline2": "Atomic history, out of the box.",
     "subhead": "Every action AM takes is committed atomically to git. A human-readable trail of what changed, when, and why — with no extra configuration.",
     "features": [
-      { "title": "Atomic commits", "body": "Each unit of work lands as a single, clean commit. One action. One record. No partial states." },
-      { "title": "Full audit trail", "body": "See exactly what AM changed and why. Every decision is logged in commit messages, not just the diff." },
-      { "title": "One-line rollback", "body": "Don't like what AM did? Revert any commit instantly. You're always in control of what ships." },
-      { "title": "Works with your repo", "body": "AM works inside your existing git repo. No new tools, no new systems. Just clean history alongside your own commits." }
+      {
+        "title": "Atomic commits",
+        "body": "Each unit of work lands as a single, clean commit. One action. One record. No partial states."
+      },
+      {
+        "title": "Full audit trail",
+        "body": "See exactly what AM changed and why. Every decision is logged in commit messages, not just the diff."
+      },
+      {
+        "title": "One-line rollback",
+        "body": "Don't like what AM did? Revert any commit instantly. You're always in control of what ships."
+      },
+      {
+        "title": "Works with your repo",
+        "body": "AM works inside your existing git repo. No new tools, no new systems. Just clean history alongside your own commits."
+      }
     ]
   },
   "features": {
@@ -273,6 +357,7 @@
     "eyebrow": "AM 与众不同之处",
     "headline1": "助手只会响应。",
     "headline2": "员工才能拥有结果。",
+    "body": "AM 在后台本地运行，持续处理你分配的任务和目标。同时运行多个项目——销售漏斗、客户支持、网站和软件开发、内容管理。只要你能在看板上可视化它，且交付是电子化的，AM 就会成为你最得力的助手。",
     "subhead": "大多数 AI 工具让单项任务更快。AM 让整个工作职能实现自主——因为它在团队范围内构建持久上下文，并以端到端所有权运作，而非逐提示响应。",
     "pillars": [
       {
@@ -286,6 +371,20 @@
       {
         "label": "智能升级",
         "body": "AM 知道自己不知道什么。当遇到需要人类判断的情况时，它携带完整上下文和明确建议进行升级——而非报错。"
+      }
+    ],
+    "points": [
+      {
+        "label": "始终运行",
+        "body": "AM 24/7 在后台工作——无需提示，无需监督。分配目标，它即刻开始工作。"
+      },
+      {
+        "label": "同时运行多个项目",
+        "body": "销售漏斗、客户支持、开发、内容——在独立的看板上同时运行所有项目。"
+      },
+      {
+        "label": "关联你的 AM",
+        "body": "小团队，每人都有自己的 AM？将它们连接起来。它们协商信任、共享上下文，并在高层计划上协作——让整个团队都得到增强，而不仅仅是一个人。"
       }
     ],
     "closerHeadline1": "AM 不是你使用的工具。",
@@ -317,25 +416,49 @@
         "number": "01",
         "title": "连接你的工具",
         "body": "AM 与你现有的技术栈集成——Jira、Linear、GitHub、Slack、Zendesk、Intercom、Notion。配置不到两小时。AM 读取你的代码库、知识库和历史数据以构建上下文。",
-        "detail": ["GitHub / GitLab", "Jira / Linear", "Slack / Teams", "Zendesk / Intercom"]
+        "detail": [
+          "GitHub / GitLab",
+          "Jira / Linear",
+          "Slack / Teams",
+          "Zendesk / Intercom"
+        ]
       },
       {
         "number": "02",
         "title": "像对待团队成员一样分配工作",
         "body": "分配给 AM 一个工单、一个目标或整个工作流程。它规划步骤，端到端执行，并按你的时间表工作——包括夜间和周末。无需提示词工程。",
-        "detail": ["分配工单", "设置计划", "定义工作流", "给定目标"]
+        "detail": [
+          "分配工单",
+          "设置计划",
+          "定义工作流",
+          "给定目标"
+        ]
       },
       {
         "number": "03",
         "title": "审查结果",
         "body": "AM 交付结果——PR、已解决的工单、梳理好的 sprint、干系人更新。它说明做了什么以及原因。你审查、批准并发布。它从你的反馈中学习。",
-        "detail": ["PR 等待审查", "工单已解决", "Sprint 已梳理", "报告已交付"]
+        "detail": [
+          "PR 等待审查",
+          "工单已解决",
+          "Sprint 已梳理",
+          "报告已交付"
+        ]
       }
     ],
     "trustStats": [
-      { "stat": "< 2 小时", "label": "平均配置时间" },
-      { "stat": "1 周", "label": "到首个真实成果" },
-      { "stat": "30 天", "label": "每个团队的结构化试点" }
+      {
+        "stat": "< 2 小时",
+        "label": "平均配置时间"
+      },
+      {
+        "stat": "1 周",
+        "label": "到首个真实成果"
+      },
+      {
+        "stat": "30 天",
+        "label": "每个团队的结构化试点"
+      }
     ]
   },
   "comparisons": {
@@ -354,6 +477,10 @@
       {
         "title": "AM vs Linear AI / Notion AI",
         "body": "Linear AI 和 Notion AI 是助手——它们帮你更快地完成工作，但你仍在做这项工作。AM 是一名员工——它端到端完成工作并汇报。它拥有结果，而非回复。如果你让 AM 梳理 sprint，它就会梳理 sprint。你不需要写提示词再编辑输出。"
+      },
+      {
+        "title": "AM vs Monday.com / Jira / Asana",
+        "body": "项目管理看板追踪工作——但不执行工作。AM 维护自己的看板，同时可与 Monday.com、Jira、Asana 或任何具有 API 的系统关联。你现有的工作流程保持不变；AM 只是开始在其中完成工作。"
       },
       {
         "title": "AM 占据的差异化空间",
@@ -429,10 +556,22 @@
     "p5": "我们相信，团队的未来不是每个人都获得同样的通用 AI 助手，而是每个团队都拥有自己的员工——一个了解其领域、承担其结果、随每个 sprint 日益精进的员工。",
     "diffTitle": "数字员工的差异化所在",
     "differentiators": [
-      { "label": "职能完整", "body": "承担完整的工作职能，而非单项任务" },
-      { "label": "持久上下文", "body": "随时间学习代码库、客户和团队模式" },
-      { "label": "结果所有权", "body": "对结果负责，而非仅对一个回复" },
-      { "label": "升级而非失败", "body": "知道何时移交——并携带完整上下文进行" }
+      {
+        "label": "职能完整",
+        "body": "承担完整的工作职能，而非单项任务"
+      },
+      {
+        "label": "持久上下文",
+        "body": "随时间学习代码库、客户和团队模式"
+      },
+      {
+        "label": "结果所有权",
+        "body": "对结果负责，而非仅对一个回复"
+      },
+      {
+        "label": "升级而非失败",
+        "body": "知道何时移交——并携带完整上下文进行"
+      }
     ]
   },
   "waitlist": {
@@ -451,11 +590,26 @@
     "ctaRepo": "在 GitHub 上查看",
     "ctaNote": "告诉我们你的团队做什么，以及你希望 AM 处理哪些工作。我们会在几天内亲自回复。",
     "who": [
-      { "label": "产品团队", "desc": "希望 AM 处理 backlog 分类、sprint 准备和发布说明的产品经理" },
-      { "label": "工程团队", "desc": "希望 AM 接取工单、编写代码并提交 PR 的开发者" },
-      { "label": "支持团队", "desc": "希望 AM 全天候自主解决工单的支持负责人" },
-      { "label": "初创公司与成长期公司", "desc": "需要以精简团队覆盖更多工作、无需增加人手的团队" },
-      { "label": "任何使用 Claude Code 的团队", "desc": "如果你已在使用 Claude Code 或类似工具，AM 是自然的下一步" }
+      {
+        "label": "产品团队",
+        "desc": "希望 AM 处理 backlog 分类、sprint 准备和发布说明的产品经理"
+      },
+      {
+        "label": "工程团队",
+        "desc": "希望 AM 接取工单、编写代码并提交 PR 的开发者"
+      },
+      {
+        "label": "支持团队",
+        "desc": "希望 AM 全天候自主解决工单的支持负责人"
+      },
+      {
+        "label": "初创公司与成长期公司",
+        "desc": "需要以精简团队覆盖更多工作、无需增加人手的团队"
+      },
+      {
+        "label": "任何使用 Claude Code 的团队",
+        "desc": "如果你已在使用 Claude Code 或类似工具，AM 是自然的下一步"
+      }
     ],
     "perks": [
       "与创始人直接合作——我们陪你一起配置 AM，而不是替你配置",
@@ -505,5 +659,11 @@
       { "value": "12,000+", "label": "已合并 PR" },
       { "value": "90,000+", "label": "节省工时" }
     ]
+  },
+  "introducingAm": {
+    "eyebrow": "认识 AM",
+    "heading": "介绍 Am。",
+    "body1": "AM 是一位数字工作者——不是聊天机器人，不是副驾驶。她读取你的待办事项，编写代码，开启 PR，处理工单，并发送更新——一切都在你的团队休息时完成。",
+    "body2": "她全天候运行，记住一切，并在每个冲刺中不断进步。你的团队保持人性化。繁琐的工作是她的。"
   }
 }
