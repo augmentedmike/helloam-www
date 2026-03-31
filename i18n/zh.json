@@ -134,10 +134,10 @@
         ]
       },
       {
-        "role": "面向销售",
-        "headline": "Fill the pipeline. Skip the busywork.",
-        "pain": "Reps spend more time on CRM updates, research, and follow-up emails than actually selling. Pipeline data is always stale.",
-        "value": "AM researches prospects, drafts outreach, logs activities in your CRM, and keeps follow-up cadences running on schedule. Your reps spend their time on calls and closing — not admin.",
+        "role": "销售团队",
+        "headline": "填满销售管道，跳过繁琐工作。",
+        "pain": "销售代表花在CRM更新、调研和跟进邮件上的时间比真正销售的时间还多。管道数据总是过时的。",
+        "value": "AM研究潜在客户、起草外联邮件、在CRM中记录活动，并按时执行跟进节奏。你的销售代表把时间花在通话和成交上——而不是行政工作。",
         "capabilities": [
           "Prospect research",
           "Outreach drafts",
@@ -147,10 +147,10 @@
         ]
       },
       {
-        "role": "面向内容",
-        "headline": "Publish more. Write less.",
-        "pain": "Content teams bottleneck on drafts, briefs, and distribution. The calendar slips before it starts.",
-        "value": "AM drafts blog posts, social copy, and newsletters from a brief or a URL. It repurposes long-form into short-form, maintains the editorial calendar, and keeps every channel fed.",
+        "role": "内容团队",
+        "headline": "发布更多，写作更少。",
+        "pain": "内容团队在草稿、简报和分发上遇到瓶颈。日历在开始之前就滑落了。",
+        "value": "AM根据简报或URL起草博客文章、社交文案和时事通讯。它将长内容重新利用为短内容，维护编辑日历，并保持每个频道持续输出。",
         "capabilities": [
           "Blog drafts",
           "Social copy",
@@ -160,10 +160,10 @@
         ]
       },
       {
-        "role": "面向邮件",
-        "headline": "Handle the inbox. Reclaim your week.",
-        "pain": "Email is where work goes to disappear. Inboxes overflow, outreach goes cold, and support threads fall through the cracks.",
-        "value": "AM reads your inbox, triages support threads, drafts replies, runs outreach campaigns, and follows up automatically. Every email gets handled.",
+        "role": "邮件管理",
+        "headline": "处理收件箱，夺回你的一周。",
+        "pain": "邮件是工作消失的地方。收件箱溢出，外联变冷，支持线程从缝隙中溜走。",
+        "value": "AM阅读你的收件箱、分类支持线程、起草回复、运行外联活动并自动跟进。每封邮件都得到处理。",
         "capabilities": [
           "Inbox triage",
           "Support replies",
@@ -175,34 +175,34 @@
     ]
   },
   "memory": {
-    "eyebrow": "Built-in memory",
-    "headline1": "AM never",
-    "headline2": "forgets.",
-    "subhead": "Most AI tools start from zero every session. AM builds a persistent model of your codebase, team, preferences, and history — and gets sharper every day.",
+    "eyebrow": "内置记忆",
+    "headline1": "AM 从不",
+    "headline2": "遗忘。",
+    "subhead": "大多数 AI 工具每次会话都从零开始。AM 构建对你的代码库、团队、偏好和历史的持久模型 — 并且每天都在进步。",
     "features": [
       {
-        "title": "Short-term memory",
-        "body": "Within every session, AM holds full context — what it read, what it changed, what it decided and why."
+        "title": "短期记忆",
+        "body": "在每次会话中，AM 保持完整的上下文 — 读了什么、改了什么、做了什么决定以及原因。无需重复解释。"
       },
       {
-        "title": "Long-term memory",
-        "body": "Learnings persist across sessions in a structured knowledge base. Lessons from last month's sprint are available this month."
+        "title": "长期记忆",
+        "body": "学习成果以结构化知识库的形式跨会话持久保存。上个月冲刺的经验教训在本月同样可用。"
       },
       {
-        "title": "Vector & graph KBs",
-        "body": "Semantic search over your codebase, docs, and history. AM finds relevant context across thousands of files without being told where to look."
+        "title": "向量与图谱知识库",
+        "body": "对你的代码库、文档和历史进行语义搜索。AM 无需被告知在哪里查找，即可在数千个文件中找到相关上下文。"
       },
       {
-        "title": "Ranked search",
-        "body": "When context is retrieved, it's ranked by relevance — not just recency. AM surfaces what matters for the current task."
+        "title": "相关性排序搜索",
+        "body": "检索上下文时，按相关性排序 — 而不仅仅是时间顺序。AM 会呈现与当前任务最相关的内容。"
       },
       {
-        "title": "Nightly reflection",
-        "body": "Every night, AM consolidates what it learned, promotes important short-term lessons to long-term storage, and prunes stale context."
+        "title": "夜间反思",
+        "body": "每晚，AM 会整合所学内容，将重要的短期经验提升为长期存储，并清除过时的上下文。"
       },
       {
-        "title": "Self-improving",
-        "body": "AM tracks its own mistakes and corrections. Feedback loops back into future behavior — it gets better the longer it runs on your team."
+        "title": "持续自我改进",
+        "body": "AM 追踪自身的错误与纠正。反馈循环作用于未来的行为 — 在你团队中运行越久，表现越好。"
       }
     ]
   },
@@ -210,23 +210,23 @@
     "eyebrow": "默认可审计",
     "headline1": "由 git 支撑。",
     "headline2": "开箱即用的原子历史记录。",
-    "subhead": "AM 的每个操作都会原子性地提交到 git。无需额外配置，即可获得人类可读的变更追踪记录——包括改了什么、何时改的以及原因。",
+    "subhead": "AM 执行的每个操作都以原子方式提交到 git。清晰可读的变更追踪 — 记录什么改变了、何时改变、以及原因 — 无需额外配置。",
     "features": [
       {
         "title": "原子提交",
-        "body": "每个工作单元以单一、干净的提交落地。一个操作。一条记录。无中间状态。"
+        "body": "每个工作单元以单一、整洁的提交记录。一个操作。一条记录。没有部分状态。"
       },
       {
         "title": "完整审计追踪",
-        "body": "精确查看 AM 改了什么以及原因。每个决策都记录在提交信息中，而不仅仅是 diff。"
+        "body": "清楚地看到 AM 改变了什么以及为什么。每个决策都记录在提交消息中，而不仅仅是 diff。"
       },
       {
         "title": "一行回滚",
-        "body": "不喜欢 AM 的操作？随时还原任何提交。你始终掌控发布内容。"
+        "body": "不喜欢 AM 的操作？立即还原任何提交。你始终掌控发布的内容。"
       },
       {
-        "title": "与您的仓库无缝集成",
-        "body": "AM 在您现有的 git 仓库中工作。无需新工具，无需新系统。只是在您自己的提交旁边保持干净的历史记录。"
+        "title": "与你的仓库协同工作",
+        "body": "AM 在你现有的 git 仓库中运行。无需新工具，无需新系统。只是在你自己的提交旁边生成干净的历史记录。"
       }
     ]
   },

@@ -135,9 +135,9 @@
       },
       {
         "role": "Para Ventas",
-        "headline": "Fill the pipeline. Skip the busywork.",
-        "pain": "Reps spend more time on CRM updates, research, and follow-up emails than actually selling. Pipeline data is always stale.",
-        "value": "AM researches prospects, drafts outreach, logs activities in your CRM, and keeps follow-up cadences running on schedule. Your reps spend their time on calls and closing — not admin.",
+        "headline": "Llena el pipeline. Olvida el trabajo mecánico.",
+        "pain": "Los representantes pasan más tiempo en actualizaciones de CRM, investigación y correos de seguimiento que vendiendo. Los datos del pipeline siempre están desactualizados.",
+        "value": "AM investiga prospectos, redacta mensajes de alcance, registra actividades en tu CRM y mantiene las cadencias de seguimiento en marcha. Tus representantes dedican su tiempo a llamadas y cierres — no a tareas administrativas.",
         "capabilities": [
           "Prospect research",
           "Outreach drafts",
@@ -148,9 +148,9 @@
       },
       {
         "role": "Para Contenido",
-        "headline": "Publish more. Write less.",
-        "pain": "Content teams bottleneck on drafts, briefs, and distribution. The calendar slips before it starts.",
-        "value": "AM drafts blog posts, social copy, and newsletters from a brief or a URL. It repurposes long-form into short-form, maintains the editorial calendar, and keeps every channel fed.",
+        "headline": "Publica más. Escribe menos.",
+        "pain": "Los equipos de contenido se atascan en borradores, briefs y distribución. El calendario se retrasa antes de comenzar.",
+        "value": "AM redacta entradas de blog, textos para redes sociales y newsletters a partir de un brief o una URL. Reutiliza contenido largo en formato corto, mantiene el calendario editorial y alimenta todos los canales.",
         "capabilities": [
           "Blog drafts",
           "Social copy",
@@ -161,9 +161,9 @@
       },
       {
         "role": "Para Email",
-        "headline": "Handle the inbox. Reclaim your week.",
-        "pain": "Email is where work goes to disappear. Inboxes overflow, outreach goes cold, and support threads fall through the cracks.",
-        "value": "AM reads your inbox, triages support threads, drafts replies, runs outreach campaigns, and follows up automatically. Every email gets handled.",
+        "headline": "Gestiona la bandeja de entrada. Recupera tu semana.",
+        "pain": "El correo es donde el trabajo va a desaparecer. Las bandejas de entrada se desbordan, el alcance se enfría y los hilos de soporte se pierden.",
+        "value": "AM lee tu bandeja de entrada, clasifica los hilos de soporte, redacta respuestas, ejecuta campañas de alcance y hace seguimiento automáticamente. Cada correo se atiende.",
         "capabilities": [
           "Inbox triage",
           "Support replies",
@@ -175,58 +175,58 @@
     ]
   },
   "memory": {
-    "eyebrow": "Built-in memory",
-    "headline1": "AM never",
-    "headline2": "forgets.",
-    "subhead": "Most AI tools start from zero every session. AM builds a persistent model of your codebase, team, preferences, and history — and gets sharper every day.",
+    "eyebrow": "Memoria integrada",
+    "headline1": "AM nunca",
+    "headline2": "olvida.",
+    "subhead": "La mayoría de las herramientas de IA empiezan desde cero en cada sesión. AM construye un modelo persistente de tu base de código, equipo, preferencias e historial — y se vuelve más preciso cada día.",
     "features": [
       {
-        "title": "Short-term memory",
-        "body": "Within every session, AM holds full context — what it read, what it changed, what it decided and why."
+        "title": "Memoria a corto plazo",
+        "body": "En cada sesión, AM mantiene el contexto completo — lo que leyó, lo que cambió, lo que decidió y por qué. Sin necesidad de volver a explicar."
       },
       {
-        "title": "Long-term memory",
-        "body": "Learnings persist across sessions in a structured knowledge base. Lessons from last month's sprint are available this month."
+        "title": "Memoria a largo plazo",
+        "body": "Los aprendizajes persisten entre sesiones en una base de conocimiento estructurada. Las lecciones del sprint del mes pasado están disponibles este mes."
       },
       {
-        "title": "Vector & graph KBs",
-        "body": "Semantic search over your codebase, docs, and history. AM finds relevant context across thousands of files without being told where to look."
+        "title": "KBs de vector y grafo",
+        "body": "Búsqueda semántica sobre tu base de código, documentación e historial. AM encuentra contexto relevante entre miles de archivos sin que le digan dónde buscar."
       },
       {
-        "title": "Ranked search",
-        "body": "When context is retrieved, it's ranked by relevance — not just recency. AM surfaces what matters for the current task."
+        "title": "Búsqueda por relevancia",
+        "body": "Cuando se recupera contexto, se ordena por relevancia — no solo por recencia. AM muestra lo que importa para la tarea actual."
       },
       {
-        "title": "Nightly reflection",
-        "body": "Every night, AM consolidates what it learned, promotes important short-term lessons to long-term storage, and prunes stale context."
+        "title": "Reflexión nocturna",
+        "body": "Cada noche, AM consolida lo que aprendió, promueve las lecciones importantes de la memoria a corto plazo al almacenamiento a largo plazo y elimina el contexto obsoleto."
       },
       {
-        "title": "Self-improving",
-        "body": "AM tracks its own mistakes and corrections. Feedback loops back into future behavior — it gets better the longer it runs on your team."
+        "title": "Auto-mejora",
+        "body": "AM registra sus propios errores y correcciones. Los ciclos de retroalimentación se incorporan al comportamiento futuro — mejora cuanto más tiempo trabaja con tu equipo."
       }
     ]
   },
   "gitHistory": {
     "eyebrow": "Auditable por defecto",
     "headline1": "Respaldado por git.",
-    "headline2": "Historial atómico, desde el primer momento.",
-    "subhead": "Cada acción que AM realiza se confirma atómicamente en git. Un registro legible de qué cambió, cuándo y por qué — sin ninguna configuración adicional.",
+    "headline2": "Historial atómico, sin configuración.",
+    "subhead": "Cada acción que realiza AM se confirma atómicamente en git. Un registro legible por humanos de qué cambió, cuándo y por qué — sin configuración adicional.",
     "features": [
       {
         "title": "Commits atómicos",
-        "body": "Cada unidad de trabajo se registra como un commit único y limpio. Una acción. Un registro. Sin estados parciales."
+        "body": "Cada unidad de trabajo queda como un único commit limpio. Una acción. Un registro. Sin estados parciales."
       },
       {
-        "title": "Historial de auditoría completo",
-        "body": "Vea exactamente qué cambió AM y por qué. Cada decisión queda registrada en los mensajes de commit, no solo en el diff."
+        "title": "Trazabilidad completa",
+        "body": "Ve exactamente qué cambió AM y por qué. Cada decisión queda registrada en los mensajes de commit, no solo en el diff."
       },
       {
         "title": "Reversión en una línea",
-        "body": "¿No te gusta lo que hizo AM? Revierte cualquier commit al instante. Siempre tienes el control sobre lo que se publica."
+        "body": "¿No te gusta lo que hizo AM? Revierte cualquier commit al instante. Siempre tienes el control de lo que se publica."
       },
       {
         "title": "Funciona con tu repositorio",
-        "body": "AM trabaja dentro de tu repositorio git existente. Sin nuevas herramientas, sin nuevos sistemas. Solo historial limpio junto a tus propios commits."
+        "body": "AM trabaja dentro de tu repositorio git existente. Sin nuevas herramientas, sin nuevos sistemas. Solo historial limpio junto con tus propios commits."
       }
     ]
   },
@@ -433,7 +433,7 @@
     ],
     "trustStats": [
       {
-        "stat": "< 2 hrs",
+        "stat": "< 2 h",
         "label": "Tiempo promedio de configuración"
       },
       {
