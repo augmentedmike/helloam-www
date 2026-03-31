@@ -207,26 +207,26 @@
     ]
   },
   "gitHistory": {
-    "eyebrow": "Auditable by default",
-    "headline1": "Backed by git.",
-    "headline2": "Atomic history, out of the box.",
-    "subhead": "Every action AM takes is committed atomically to git. A human-readable trail of what changed, when, and why — with no extra configuration.",
+    "eyebrow": "Auditable por defecto",
+    "headline1": "Respaldado por git.",
+    "headline2": "Historial atómico, desde el primer momento.",
+    "subhead": "Cada acción que AM realiza se confirma atómicamente en git. Un registro legible de qué cambió, cuándo y por qué — sin ninguna configuración adicional.",
     "features": [
       {
-        "title": "Atomic commits",
-        "body": "Each unit of work lands as a single, clean commit. One action. One record. No partial states."
+        "title": "Commits atómicos",
+        "body": "Cada unidad de trabajo se registra como un commit único y limpio. Una acción. Un registro. Sin estados parciales."
       },
       {
-        "title": "Full audit trail",
-        "body": "See exactly what AM changed and why. Every decision is logged in commit messages, not just the diff."
+        "title": "Historial de auditoría completo",
+        "body": "Vea exactamente qué cambió AM y por qué. Cada decisión queda registrada en los mensajes de commit, no solo en el diff."
       },
       {
-        "title": "One-line rollback",
-        "body": "Don't like what AM did? Revert any commit instantly. You're always in control of what ships."
+        "title": "Reversión en una línea",
+        "body": "¿No te gusta lo que hizo AM? Revierte cualquier commit al instante. Siempre tienes el control sobre lo que se publica."
       },
       {
-        "title": "Works with your repo",
-        "body": "AM works inside your existing git repo. No new tools, no new systems. Just clean history alongside your own commits."
+        "title": "Funciona con tu repositorio",
+        "body": "AM trabaja dentro de tu repositorio git existente. Sin nuevas herramientas, sin nuevos sistemas. Solo historial limpio junto a tus propios commits."
       }
     ]
   },
@@ -389,22 +389,7 @@
     ],
     "closerHeadline1": "AM no es una herramienta que usas.",
     "closerHeadline2": "Es un trabajador en tu equipo.",
-    "closerBody": "Se presenta todos los días, conoce el contexto y realiza el trabajo — para que tu equipo pueda enfocarse en el trabajo que realmente los necesita.",
-    "body": "AM se ejecuta localmente en segundo plano, trabajando constantemente en las tareas y objetivos que le has asignado. Ejecuta múltiples proyectos simultáneamente — pipelines de ventas, atención al cliente, desarrollo web y de software, gestión de contenido. Si puedes visualizarlo en un tablero y la entrega es electrónica, AM se convertirá en tu mejor aliado.",
-    "points": [
-      {
-        "label": "Siempre activo",
-        "body": "AM trabaja en segundo plano 24/7 — sin prompts, sin supervisión. Asigna un objetivo y se pone a trabajar."
-      },
-      {
-        "label": "Múltiples proyectos a la vez",
-        "body": "Pipelines de ventas, atención al cliente, desarrollo, contenido — gestiónalos todos simultáneamente en tableros separados."
-      },
-      {
-        "label": "Conecta tus AMs",
-        "body": "¿Equipo pequeño, cada uno con su AM? Vincúlalos. Negocian confianza, comparten contexto y colaboran en planes de alto nivel — así todo tu equipo queda amplificado, no solo una persona."
-      }
-    ]
+    "closerBody": "Se presenta todos los días, conoce el contexto y realiza el trabajo — para que tu equipo pueda enfocarse en el trabajo que realmente los necesita."
   },
   "device": {
     "eyebrow": "Cómo funciona",
@@ -485,10 +470,6 @@
       {
         "title": "El espacio que AM ocupa",
         "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de un cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Ese contexto entre funciones es la ventaja compuesta que AM construye con el tiempo."
-      },
-      {
-        "title": "La brecha que AM ocupa",
-        "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Esa ventaja compuesta entre funciones crece con el tiempo."
       }
     ]
   },
@@ -627,37 +608,56 @@
     "cta": "Obtener acceso anticipado"
   },
   "socialProof": {
-    "eyebrow": "Confiado por equipos modernos",
+    "eyebrow": "Elegido por equipos modernos",
     "headline": "Equipos reales. Resultados reales.",
-    "subhead": "AM trabaja 24/7 en PM, ingeniería y soporte — los números hablan por sí solos.",
+    "subhead": "AM trabaja 24/7 en PM, ingeniería y soporte — los números hablan por sí mismos.",
     "logos": [
-      { "name": "Acme Corp" },
-      { "name": "Pied Piper" },
-      { "name": "Initech" },
-      { "name": "Hooli" },
-      { "name": "Umbrella" }
+      {
+        "name": "Acme Corp"
+      },
+      {
+        "name": "Pied Piper"
+      },
+      {
+        "name": "Initech"
+      },
+      {
+        "name": "Hooli"
+      },
+      {
+        "name": "Umbrella"
+      }
     ],
     "quotes": [
       {
-        "quote": "AM resolvió el 85% de nuestros tickets de soporte de nivel 1 sin intervención humana en el primer mes. Nuestro equipo de soporte pasó de estar abrumado a ser estratégico de la noche a la mañana.",
         "name": "Sarah Chen",
-        "role": "Directora de Soporte, Acme Corp"
+        "role": "Directora de Soporte, Acme Corp",
+        "quote": "AM resolvió el 85% de nuestros tickets de soporte de primer nivel sin intervención humana en el primer mes. Nuestro equipo de soporte pasó de estar desbordado a ser estratégico de la noche a la mañana."
       },
       {
-        "quote": "Le asignamos a AM todo nuestro backlog de migración — más de 200 tickets. Abrió PRs, escribió pruebas y logró que el 90% se fusionara en tres semanas. Nuestros ingenieros finalmente tienen tiempo para construir.",
         "name": "Marcus Rivera",
-        "role": "Líder de Ingeniería, Pied Piper"
+        "role": "Líder de Ingeniería, Pied Piper",
+        "quote": "Asignamos a AM todo nuestro backlog de migración — más de 200 tickets. Abrió PRs, escribió pruebas y logró que el 90% se fusionara en tres semanas. Nuestros ingenieros finalmente tienen tiempo para construir."
       },
       {
-        "quote": "La preparación del sprint solía tomar medio día. AM lo hace de noche. Los lunes llegamos con un tablero completamente preparado y las actualizaciones de stakeholders ya redactadas.",
         "name": "Priya Nair",
-        "role": "Gerente de Producto, Initech"
+        "role": "Product Manager, Initech",
+        "quote": "La preparación del sprint solía llevar medio día. AM lo hace de noche. Los lunes por la mañana llegamos con el tablero completamente preparado y las actualizaciones para stakeholders ya redactadas."
       }
     ],
     "stats": [
-      { "value": "48,000+", "label": "Tickets resueltos" },
-      { "value": "12,000+", "label": "PRs enviados" },
-      { "value": "90,000+", "label": "Horas ahorradas" }
+      {
+        "value": "48,000+",
+        "label": "Tickets resueltos"
+      },
+      {
+        "value": "12,000+",
+        "label": "PRs enviados"
+      },
+      {
+        "value": "90,000+",
+        "label": "Horas ahorradas"
+      }
     ]
   },
   "introducingAm": {
