@@ -2,6 +2,7 @@
 
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
+import { track } from "@/lib/analytics";
 
 export default function Hero() {
   const { locale } = useLocale();
@@ -61,6 +62,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
         <a
           href="https://github.com/augmentedmike/am-agi"
+          onClick={() => track("cta_click", { label: "get_early_access", location: "hero" })}
           className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-100 whitespace-nowrap"
           style={{ background: "#00E5FF", color: "#0a0a0a", boxShadow: "0 0 48px rgba(0,229,255,0.3)" }}
         >
@@ -68,6 +70,7 @@ export default function Hero() {
         </a>
         <a
           href="#how-it-works"
+          onClick={() => track("cta_click", { label: "how_it_works", location: "hero" })}
           className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-medium transition-colors hover:text-white"
           style={{ color: "#666666" }}
         >

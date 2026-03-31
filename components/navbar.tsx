@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
+import { track } from "@/lib/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -83,6 +84,7 @@ export default function Navbar() {
           </select>
           <a
             href="/demo"
+            onClick={() => track("cta_click", { label: "demo_request", location: "navbar" })}
             className="rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:text-white"
             style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
           >
@@ -90,6 +92,7 @@ export default function Navbar() {
           </a>
           <a
             href="https://github.com/augmentedmike/am-agi"
+            onClick={() => track("cta_click", { label: "get_early_access", location: "navbar" })}
             className="rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
             style={{ background: "#00E5FF", color: "#000" }}
           >
@@ -142,7 +145,7 @@ export default function Navbar() {
                 href="/demo"
                 className="rounded-lg px-4 py-2.5 text-sm font-medium text-center"
                 style={{ color: "#888", border: "1px solid rgba(255,255,255,0.12)" }}
-                onClick={() => setMobileOpen(false)}
+                onClick={() => { track("cta_click", { label: "demo_request", location: "navbar" }); setMobileOpen(false); }}
               >
                 {t.nav.requestDemo}
               </a>
@@ -150,7 +153,7 @@ export default function Navbar() {
                 href="https://github.com/augmentedmike/am-agi"
                 className="rounded-lg px-4 py-2.5 text-sm font-semibold text-center"
                 style={{ background: "#00E5FF", color: "#000" }}
-                onClick={() => setMobileOpen(false)}
+                onClick={() => { track("cta_click", { label: "get_early_access", location: "navbar" }); setMobileOpen(false); }}
               >
                 {t.nav.getEarlyAccess}
               </a>

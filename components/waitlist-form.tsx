@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { track } from "@/lib/analytics";
 
 export default function WaitlistForm() {
   const [name, setName] = useState("");
@@ -21,6 +22,7 @@ export default function WaitlistForm() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        track("cta_click", { label: "waitlist_submit", location: "waitlist" });
         setStatus("success");
         setName(""); setEmail("");
       } else {

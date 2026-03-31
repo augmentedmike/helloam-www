@@ -2,6 +2,7 @@
 
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
+import { track } from "@/lib/analytics";
 
 function Check() {
   return (
@@ -95,6 +96,7 @@ export default function Pilot() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:augmentedmike@gmail.com"
+              onClick={() => track("cta_click", { label: "apply_email", location: "pilot" })}
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
               style={{
                 background: "rgba(255,255,255,0.06)",
@@ -108,6 +110,7 @@ export default function Pilot() {
               href="https://github.com/augmentedmike/am-agi"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track("cta_click", { label: "github_repo", location: "pilot" })}
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-100"
               style={{
                 background: "rgba(255,255,255,0.04)",

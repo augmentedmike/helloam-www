@@ -6,6 +6,7 @@ import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-
 
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
+import { track } from "@/lib/analytics";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 const SESSION_PRICE = Number(process.env.NEXT_PUBLIC_SESSION_PRICE) || 75;
@@ -300,6 +301,7 @@ export default function Plans() {
 
             <a
               href="mailto:augmentedmike@gmail.com"
+              onClick={() => track("cta_click", { label: "support_email", location: "plans" })}
               className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90"
               style={{
                 background: "rgba(255,255,255,0.06)",
@@ -347,7 +349,7 @@ export default function Plans() {
             </ul>
 
             <button
-              onClick={() => setShowCheckout(true)}
+              onClick={() => { track("cta_click", { label: "book_session", location: "plans" }); setShowCheckout(true); }}
               className="block w-full text-center px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 cursor-pointer"
               style={{ background: "#00E5FF", color: "#0a0a0a" }}
             >
