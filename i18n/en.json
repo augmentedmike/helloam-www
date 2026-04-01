@@ -460,28 +460,130 @@
   },
   "comparisons": {
     "eyebrow": "How AM compares",
-    "headline": "AM vs the alternatives",
-    "subhead": "One digital worker for every team function. No separate tools, no capability gaps, no handoffs.",
-    "items": [
+    "headline": "One worker for every team",
+    "subhead": "Sales, support, marketing, PM, engineering — AM covers all roles in one. No siloed tools, no handoffs, no gaps.",
+    "columns": [
       {
-        "title": "AM vs Zapier, Copilot, Jasper",
-        "body": "Zapier automates tasks. Copilot writes code. Jasper drafts copy. These are single-function point tools — they help with one step, then hand off to you. AM owns outcomes end-to-end: memory, follow-through, and no handoffs. One worker, every function."
+        "key": "role",
+        "label": "Works for your role"
       },
       {
-        "body": "Devin is engineering-only — it takes a ticket and writes code. AM does the same for developers, but also covers PM workflows and support. One worker, three team functions, at significantly lower cost per outcome.",
-        "title": "AM vs Devin"
+        "key": "memory",
+        "label": "Remembers context"
       },
       {
-        "body": "Fin is excellent at support — but only on Intercom. AM is ecosystem-agnostic and works with Zendesk, Intercom, email, Slack, and custom ticketing. It also covers PM and developer workflows Fin cannot touch.",
-        "title": "AM vs Intercom Fin"
+        "key": "outcomes",
+        "label": "Owns outcomes"
       },
       {
-        "body": "Linear AI and Notion AI are assistants — they help you work faster, but you are still doing the work. AM is a worker — it owns outcomes end-to-end. Tell AM to groom the sprint and it grooms the sprint.",
-        "title": "AM vs Linear AI / Notion AI"
+        "key": "crossteam",
+        "label": "Works cross-team"
       },
       {
-        "body": "Project management boards track work — they do not do it. AM keeps her own board but can be linked to Monday.com, Jira, Asana, or any system with an API. Your existing workflows stay intact; AM just starts doing the work inside them.",
-        "title": "AM vs Monday.com / Jira / Asana"
+        "key": "setup",
+        "label": "No setup required"
+      }
+    ],
+    "rows": [
+      {
+        "name": "AM",
+        "am": true,
+        "note": "helloam.bot",
+        "cells": {
+          "role": "yes",
+          "memory": "yes",
+          "outcomes": "yes",
+          "crossteam": "yes",
+          "setup": "yes"
+        }
+      },
+      {
+        "name": "Zapier / Make",
+        "note": "Automation",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Microsoft Copilot",
+        "note": "M365",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Notion AI",
+        "note": "Docs & wiki",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "ClickUp Brain",
+        "note": "Project mgmt",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "HubSpot AI",
+        "note": "CRM",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Intercom Fin",
+        "note": "Support",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Salesforce Agentforce",
+        "note": "Enterprise",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Jasper / GitHub Copilot",
+        "note": "Content / Code",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
       }
     ],
     "legend": "Key:",

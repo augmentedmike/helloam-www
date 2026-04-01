@@ -448,32 +448,130 @@
   },
   "comparisons": {
     "eyebrow": "AM 的比较优势",
-    "headline": "AM 与竞品对比",
-    "subhead": "一个数字员工，覆盖所有团队职能。无需独立工具，无能力缺口，无交接。",
-    "items": [
+    "headline": "一个员工，覆盖全团队",
+    "subhead": "销售、支持、市场营销、项目管理、工程——AM 用一个员工覆盖所有角色。无需独立工具，无能力缺口，无交接。",
+    "columns": [
       {
-        "title": "AM vs Devin",
-        "body": "Devin 仅限于工程——它接收工单并编写代码。AM 为开发者做同样的事，但还覆盖 PM 工作流（backlog 分类、sprint 梳理、PRD）和支持（工单解决、升级）。你获得一个覆盖三个团队职能的员工，而非三个独立的单点解决方案。AM 的每次成果成本也显著低于 Devin 的按任务定价。"
+        "key": "role",
+        "label": "适合你的角色"
       },
       {
-        "title": "AM vs Intercom Fin",
-        "body": "Fin 在支持方面表现出色——但仅限于已在使用 Intercom 的情况。AM 与生态系统无关，可与 Zendesk、Intercom、电子邮件、Slack 和自定义工单系统协作。它还覆盖 Fin 无法触及的 PM 和开发者工作流。AM 智能升级，并从每个已解决的工单中学习——你的解决率随 AM 工作时间的增长而提升。"
+        "key": "memory",
+        "label": "记住上下文"
       },
       {
-        "title": "AM vs Linear AI / Notion AI",
-        "body": "Linear AI 和 Notion AI 是助手——它们帮你更快地完成工作，但你仍在做这项工作。AM 是一名员工——它端到端完成工作并汇报。它拥有结果，而非回复。如果你让 AM 梳理 sprint，它就会梳理 sprint。你不需要写提示词再编辑输出。"
+        "key": "outcomes",
+        "label": "负责结果"
       },
       {
-        "title": "AM vs Monday.com / Jira / Asana",
-        "body": "项目管理看板追踪工作——但不执行工作。AM 维护自己的看板，同时可与 Monday.com、Jira、Asana 或任何具有 API 的系统关联。你现有的工作流程保持不变；AM 只是开始在其中完成工作。"
+        "key": "crossteam",
+        "label": "跨团队协作"
       },
       {
-        "title": "AM 占据的差异化空间",
-        "body": "没有任何单一平台能在一个拥有共享上下文的员工下同时覆盖 PM + 开发者 + 支持。AM 连接这三者——因此当客户工单揭示产品 bug 时，同一个解决了该工单的员工可以分类 bug 并起草修复方案。这种跨职能上下文是 AM 随时间积累的复利优势。"
+        "key": "setup",
+        "label": "无需配置"
+      }
+    ],
+    "rows": [
+      {
+        "name": "AM",
+        "am": true,
+        "note": "helloam.bot",
+        "cells": {
+          "role": "yes",
+          "memory": "yes",
+          "outcomes": "yes",
+          "crossteam": "yes",
+          "setup": "yes"
+        }
       },
       {
-        "title": "AM 占据的差距",
-        "body": "没有任何单一平台能在一个拥有共享上下文的员工下同时覆盖 PM + 开发者 + 支持。AM 连接这三者——因此当客户工单揭示产品 bug 时，同一个解决了该工单的员工可以分类 bug 并起草修复方案。这种跨职能的复利优势随时间增长。"
+        "name": "Zapier / Make",
+        "note": "自动化",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Microsoft Copilot",
+        "note": "M365",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Notion AI",
+        "note": "文档与知识库",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "ClickUp Brain",
+        "note": "项目管理",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "HubSpot AI",
+        "note": "CRM",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Intercom Fin",
+        "note": "客户支持",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Salesforce Agentforce",
+        "note": "企业级",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Jasper / GitHub Copilot",
+        "note": "内容 / 代码",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
       }
     ],
     "legend": "图例：",

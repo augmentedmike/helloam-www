@@ -448,32 +448,130 @@
   },
   "comparisons": {
     "eyebrow": "Cómo se compara AM",
-    "headline": "AM vs las alternativas",
-    "subhead": "Un trabajador digital para cada función del equipo. Sin herramientas separadas, sin brechas, sin traspasos.",
-    "items": [
+    "headline": "Un trabajador para todo el equipo",
+    "subhead": "Ventas, soporte, marketing, gestión de proyectos, ingeniería — AM cubre todos los roles en uno. Sin herramientas aisladas, sin brechas, sin traspasos.",
+    "columns": [
       {
-        "title": "AM vs Devin",
-        "body": "Devin es solo para ingeniería — toma un ticket y escribe código. AM hace lo mismo para desarrolladores, pero también cubre flujos de trabajo de PM (triage de backlog, preparación de sprints, PRDs) y soporte (resolución de tickets, escalación). Obtienes un trabajador que cubre tres funciones de equipo en lugar de tres soluciones puntuales separadas. AM también cuesta significativamente menos por resultado que el precio por tarea de Devin."
+        "key": "role",
+        "label": "Funciona para tu rol"
       },
       {
-        "title": "AM vs Intercom Fin",
-        "body": "Fin es excelente para soporte — pero solo si ya usas Intercom. AM es agnóstico del ecosistema y funciona con Zendesk, Intercom, email, Slack y sistemas de tickets personalizados. También cubre flujos de trabajo de PM y desarrollador que Fin no puede tocar. AM escala de forma inteligente y aprende de cada ticket resuelto — tu tasa de resolución mejora cuanto más tiempo trabaja AM."
+        "key": "memory",
+        "label": "Recuerda el contexto"
       },
       {
-        "title": "AM vs Linear AI / Notion AI",
-        "body": "Linear AI y Notion AI son asistentes — te ayudan a hacer el trabajo más rápido, pero sigues haciendo el trabajo. AM es un trabajador — hace el trabajo de extremo a extremo y reporta. Es dueño de los resultados, no de las respuestas. Si le dices a AM que prepare el sprint, prepara el sprint. No escribes un prompt y editas el resultado."
+        "key": "outcomes",
+        "label": "Gestiona resultados"
       },
       {
-        "title": "AM vs Monday.com / Jira / Asana",
-        "body": "Los tableros de gestión de proyectos rastrean el trabajo — pero no lo hacen. AM mantiene su propio tablero, pero puede vincularse a Monday.com, Jira, Asana o cualquier sistema con una API. Tus flujos de trabajo existentes se mantienen intactos; AM simplemente empieza a hacer el trabajo dentro de ellos."
+        "key": "crossteam",
+        "label": "Trabaja entre equipos"
       },
       {
-        "title": "El espacio que AM ocupa",
-        "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de un cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Ese contexto entre funciones es la ventaja compuesta que AM construye con el tiempo."
+        "key": "setup",
+        "label": "Sin configuración"
+      }
+    ],
+    "rows": [
+      {
+        "name": "AM",
+        "am": true,
+        "note": "helloam.bot",
+        "cells": {
+          "role": "yes",
+          "memory": "yes",
+          "outcomes": "yes",
+          "crossteam": "yes",
+          "setup": "yes"
+        }
       },
       {
-        "title": "La brecha que AM ocupa",
-        "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Esa ventaja compuesta entre funciones crece con el tiempo."
+        "name": "Zapier / Make",
+        "note": "Automatización",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Microsoft Copilot",
+        "note": "M365",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Notion AI",
+        "note": "Docs y wikis",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "ClickUp Brain",
+        "note": "Gestión de proyectos",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "HubSpot AI",
+        "note": "CRM",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Intercom Fin",
+        "note": "Soporte",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Salesforce Agentforce",
+        "note": "Empresarial",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Jasper / GitHub Copilot",
+        "note": "Contenido / Código",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
       }
     ],
     "legend": "Clave:",

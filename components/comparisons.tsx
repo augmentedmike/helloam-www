@@ -3,137 +3,16 @@
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
 
-// Comparison matrix — structural data, not translated
-type CellValue = "yes" | "partial" | "no" | string;
-
-interface Competitor {
-  name: string;
-  note?: string;
-}
-
-interface Row {
-  label: string;
-  sublabel?: string;
-  am: CellValue;
-  devin: CellValue;
-  fin: CellValue;
-  copilot: CellValue;
-  zapier: CellValue;
-  notion: CellValue;
-}
-
-const COMPETITORS: Competitor[] = [
-  { name: "Devin", note: "Cognition" },
-  { name: "Fin", note: "Intercom" },
-  { name: "Copilot", note: "Microsoft 365" },
-  { name: "Zapier AI" },
-  { name: "Notion AI" },
-];
-
-const ROWS: Row[] = [
-  {
-    label: "Engineering work",
-    sublabel: "Code, PRs, bug fixes",
-    am: "yes",
-    devin: "yes",
-    fin: "no",
-    copilot: "partial",
-    zapier: "partial",
-    notion: "no",
-  },
-  {
-    label: "Customer support",
-    sublabel: "Tickets, escalation, resolution",
-    am: "yes",
-    devin: "no",
-    fin: "yes",
-    copilot: "partial",
-    zapier: "partial",
-    notion: "no",
-  },
-  {
-    label: "Project management",
-    sublabel: "Sprint grooming, backlogs, PRDs",
-    am: "yes",
-    devin: "no",
-    fin: "no",
-    copilot: "partial",
-    zapier: "partial",
-    notion: "partial",
-  },
-  {
-    label: "Sales & marketing",
-    sublabel: "Outreach, content, follow-ups",
-    am: "yes",
-    devin: "no",
-    fin: "no",
-    copilot: "partial",
-    zapier: "partial",
-    notion: "partial",
-  },
-  {
-    label: "Persistent memory",
-    sublabel: "Context that carries across tasks",
-    am: "yes",
-    devin: "partial",
-    fin: "no",
-    copilot: "partial",
-    zapier: "no",
-    notion: "no",
-  },
-  {
-    label: "Owns outcomes",
-    sublabel: "Does the work, not just assists",
-    am: "yes",
-    devin: "partial",
-    fin: "partial",
-    copilot: "no",
-    zapier: "no",
-    notion: "no",
-  },
-  {
-    label: "Ecosystem agnostic",
-    sublabel: "Works with tools you already use",
-    am: "yes",
-    devin: "partial",
-    fin: "no",
-    copilot: "partial",
-    zapier: "yes",
-    notion: "no",
-  },
-  {
-    label: "Starting price",
-    am: "Pilot",
-    devin: "$20 / mo",
-    fin: "$0.99 / outcome",
-    copilot: "$18 / user",
-    zapier: "Free",
-    notion: "$10 / user",
-  },
-];
+type CellValue = "yes" | "partial" | "no";
 
 function Cell({ value, isAm }: { value: CellValue; isAm?: boolean }) {
-  const isPriceRow =
-    value !== "yes" && value !== "partial" && value !== "no";
-
-  if (isPriceRow) {
-    return (
-      <span
-        className="text-sm font-semibold tabular-nums"
-        style={{ color: isAm ? "#00E5FF" : "rgba(255,255,255,0.55)" }}
-      >
-        {value}
-      </span>
-    );
-  }
-
   if (value === "yes") {
     return (
       <span
         aria-label="Yes"
-        className="inline-flex items-center justify-center w-7 h-7 rounded-full text-base font-bold"
+        className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold"
         style={{
-          background: isAm ? "rgba(0,229,255,0.12)" : "rgba(52,199,89,0.12)",
+          background: isAm ? "rgba(0,229,255,0.15)" : "rgba(52,199,89,0.12)",
           color: isAm ? "#00E5FF" : "#34C759",
         }}
       >
@@ -146,7 +25,7 @@ function Cell({ value, isAm }: { value: CellValue; isAm?: boolean }) {
     return (
       <span
         aria-label="Partial"
-        className="inline-flex items-center justify-center w-7 h-7 rounded-full text-base font-bold"
+        className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold"
         style={{
           background: "rgba(255,159,10,0.10)",
           color: "#FF9F0A",
@@ -162,7 +41,7 @@ function Cell({ value, isAm }: { value: CellValue; isAm?: boolean }) {
       aria-label="No"
       className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold"
       style={{
-        background: "rgba(255,69,58,0.08)",
+        background: "rgba(255,255,255,0.04)",
         color: "rgba(255,255,255,0.2)",
       }}
     >
@@ -174,6 +53,7 @@ function Cell({ value, isAm }: { value: CellValue; isAm?: boolean }) {
 export default function Comparisons() {
   const { locale } = useLocale();
   const t = getTranslation(locale as "en" | "es" | "zh");
+  const c = t.comparisons;
 
   return (
     <section
@@ -187,19 +67,16 @@ export default function Comparisons() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            {t.comparisons.eyebrow}
+            {c.eyebrow}
           </p>
           <h2
             className="text-4xl font-bold tracking-tight mb-4"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            {t.comparisons.headline}
+            {c.headline}
           </h2>
-          <p
-            className="text-base max-w-xl mx-auto"
-            style={{ color: "#666" }}
-          >
-            {t.comparisons.subhead}
+          <p className="text-base max-w-xl mx-auto" style={{ color: "#666" }}>
+            {c.subhead}
           </p>
         </div>
 
@@ -211,136 +88,108 @@ export default function Comparisons() {
             background: "rgba(255,255,255,0.02)",
           }}
         >
-          {/* Overflow wrapper for mobile scroll */}
+          {/* Mobile scroll wrapper */}
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] border-collapse">
-              {/* Column headers */}
+            <table className="w-full border-collapse" style={{ minWidth: 560 }}>
               <thead>
                 <tr>
-                  {/* Row label column */}
+                  {/* Tool column header */}
                   <th
                     className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-widest"
                     style={{
                       color: "rgba(255,255,255,0.25)",
-                      width: "30%",
-                      borderBottom: "1px solid rgba(255,255,255,0.06)",
+                      width: "28%",
+                      borderBottom: "1px solid rgba(255,255,255,0.07)",
                     }}
                   >
-                    Capability
+                    Tool
                   </th>
 
-                  {/* AM — highlighted */}
-                  <th
-                    className="px-4 py-4 text-center"
-                    style={{
-                      borderBottom: "1px solid rgba(0,229,255,0.2)",
-                      background: "rgba(0,229,255,0.04)",
-                      borderLeft: "1px solid rgba(0,229,255,0.12)",
-                      borderRight: "1px solid rgba(0,229,255,0.12)",
-                    }}
-                  >
-                    <span
-                      className="block text-sm font-bold tracking-wide"
-                      style={{
-                        color: "#00E5FF",
-                        fontFamily: "var(--font-space-grotesk), sans-serif",
-                      }}
-                    >
-                      AM
-                    </span>
-                    <span
-                      className="block text-xs mt-0.5"
-                      style={{ color: "rgba(0,229,255,0.5)" }}
-                    >
-                      helloam.bot
-                    </span>
-                  </th>
-
-                  {/* Competitor columns */}
-                  {COMPETITORS.map((c) => (
+                  {/* Feature column headers */}
+                  {c.columns.map((col) => (
                     <th
-                      key={c.name}
-                      className="px-4 py-4 text-center"
+                      key={col.key}
+                      className="px-3 py-4 text-center text-xs font-semibold"
                       style={{
-                        borderBottom: "1px solid rgba(255,255,255,0.06)",
+                        color: "rgba(255,255,255,0.4)",
+                        borderBottom: "1px solid rgba(255,255,255,0.07)",
+                        lineHeight: "1.3",
+                        maxWidth: 100,
                       }}
                     >
-                      <span
-                        className="block text-sm font-semibold"
-                        style={{ color: "rgba(255,255,255,0.65)" }}
-                      >
-                        {c.name}
-                      </span>
-                      {c.note && (
-                        <span
-                          className="block text-xs mt-0.5"
-                          style={{ color: "rgba(255,255,255,0.25)" }}
-                        >
-                          {c.note}
-                        </span>
-                      )}
+                      {col.label}
                     </th>
                   ))}
                 </tr>
               </thead>
 
               <tbody>
-                {ROWS.map((row, i) => {
-                  const isPriceRow = i === ROWS.length - 1;
+                {c.rows.map((row, i) => {
+                  const isAm = "am" in row && row.am === true;
+                  const isLast = i === c.rows.length - 1;
+
                   return (
                     <tr
-                      key={row.label}
+                      key={row.name}
                       style={{
-                        borderTop: isPriceRow
-                          ? "1px solid rgba(255,255,255,0.08)"
+                        borderTop: i === 0
+                          ? "none"
+                          : isAm
+                          ? "none"
                           : "1px solid rgba(255,255,255,0.04)",
-                        background: isPriceRow
-                          ? "rgba(255,255,255,0.015)"
+                        background: isAm
+                          ? "rgba(0,229,255,0.04)"
                           : "transparent",
+                        ...(isLast && !isAm
+                          ? { borderBottom: "none" }
+                          : {}),
                       }}
                     >
-                      {/* Capability label */}
-                      <td className="px-5 py-4">
+                      {/* Tool name cell */}
+                      <td
+                        className="px-5 py-3.5"
+                        style={{
+                          borderLeft: isAm
+                            ? "2px solid rgba(0,229,255,0.4)"
+                            : "2px solid transparent",
+                        }}
+                      >
                         <span
-                          className="block text-sm font-semibold text-white"
+                          className="block text-sm font-semibold"
                           style={{
-                            fontFamily:
-                              "var(--font-space-grotesk), sans-serif",
+                            color: isAm ? "#00E5FF" : "rgba(255,255,255,0.8)",
+                            fontFamily: isAm
+                              ? "var(--font-space-grotesk), sans-serif"
+                              : "inherit",
                           }}
                         >
-                          {row.label}
+                          {row.name}
                         </span>
-                        {row.sublabel && (
+                        {"note" in row && row.note && (
                           <span
                             className="block text-xs mt-0.5"
-                            style={{ color: "rgba(255,255,255,0.3)" }}
+                            style={{
+                              color: isAm
+                                ? "rgba(0,229,255,0.45)"
+                                : "rgba(255,255,255,0.25)",
+                            }}
                           >
-                            {row.sublabel}
+                            {row.note}
                           </span>
                         )}
                       </td>
 
-                      {/* AM cell — highlighted column */}
-                      <td
-                        className="px-4 py-4 text-center"
-                        style={{
-                          background: "rgba(0,229,255,0.04)",
-                          borderLeft: "1px solid rgba(0,229,255,0.10)",
-                          borderRight: "1px solid rgba(0,229,255,0.10)",
-                        }}
-                      >
-                        <div className="flex items-center justify-center">
-                          <Cell value={row.am} isAm />
-                        </div>
-                      </td>
-
-                      {/* Competitor cells */}
-                      {(
-                        ["devin", "fin", "copilot", "zapier", "notion"] as const
-                      ).map((key) => (
-                        <td key={key} className="px-4 py-4 text-center">
+                      {/* Feature cells */}
+                      {c.columns.map((col) => (
+                        <td
+                          key={col.key}
+                          className="px-3 py-3.5 text-center"
+                        >
                           <div className="flex items-center justify-center">
-                            <Cell value={row[key]} />
+                            <Cell
+                              value={(row.cells as Record<string, string>)[col.key] as CellValue}
+                              isAm={isAm}
+                            />
                           </div>
                         </td>
                       ))}
@@ -356,16 +205,13 @@ export default function Comparisons() {
             className="flex items-center gap-5 px-5 py-3 flex-wrap"
             style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
           >
-            <span
-              className="text-xs"
-              style={{ color: "rgba(255,255,255,0.2)" }}
-            >
-              {t.comparisons.legend ?? "Key:"}
+            <span className="text-xs" style={{ color: "rgba(255,255,255,0.2)" }}>
+              {c.legend}
             </span>
             {[
-              { sym: "✓", label: t.comparisons.legendYes ?? "Full support", color: "#34C759" },
-              { sym: "~", label: t.comparisons.legendPartial ?? "Partial", color: "#FF9F0A" },
-              { sym: "✗", label: t.comparisons.legendNo ?? "Not supported", color: "rgba(255,255,255,0.2)" },
+              { sym: "✓", label: c.legendYes, color: "#34C759" },
+              { sym: "~", label: c.legendPartial, color: "#FF9F0A" },
+              { sym: "✗", label: c.legendNo, color: "rgba(255,255,255,0.2)" },
             ].map(({ sym, label, color }) => (
               <span
                 key={sym}
@@ -386,8 +232,7 @@ export default function Comparisons() {
           className="text-center text-xs mt-5"
           style={{ color: "rgba(255,255,255,0.2)" }}
         >
-          {t.comparisons.footnote ??
-            "Based on published features and pricing as of Q1 2026. Partial (˜) indicates limited or tool-specific coverage."}
+          {c.footnote}
         </p>
       </div>
     </section>
