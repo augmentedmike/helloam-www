@@ -33,7 +33,7 @@
       },
       {
         "q": "¿Cómo funciona el precio?",
-        "a": "AM es gratuito y de código abierto. Puedes auto-hospedarlo y usarlo indefinidamente sin costo. Ofrecemos servicios de soporte pagos opcionales ($50 por sesión de 30 minutos) para capacitación, integraciones personalizadas y consultoría estratégica."
+        "a": "AM es gratuito y de código abierto — puedes auto-hospedarlo indefinidamente sin costo. Al incluir las herramientas de IA, la mayoría de los equipos gasta $3K–12K/año. Eso es menos que una sola contratación a tiempo parcial ($7K–12K/año) — y AM cubre todas las funciones: soporte, ventas, marketing, ops, ingeniería y finanzas, frente a una función por contratación."
       },
       {
         "q": "No estamos listos para comprar — ¿podemos probar AM primero?",
@@ -135,41 +135,41 @@
       },
       {
         "role": "Para Ventas",
-        "headline": "Llena el pipeline. Olvida el trabajo mecánico.",
-        "pain": "Los representantes pasan más tiempo en actualizaciones de CRM, investigación y correos de seguimiento que vendiendo. Los datos del pipeline siempre están desactualizados.",
-        "value": "AM investiga prospectos, redacta mensajes de alcance, registra actividades en tu CRM y mantiene las cadencias de seguimiento en marcha. Tus representantes dedican su tiempo a llamadas y cierres — no a tareas administrativas.",
+        "headline": "Llena el pipeline. Olvídate del trabajo tedioso.",
+        "pain": "Los representantes dedican más tiempo a actualizaciones en el CRM, investigación y emails de seguimiento que a vender. Los datos del pipeline siempre están desactualizados.",
+        "value": "AM investiga prospectos, redacta mensajes, registra actividades en tu CRM y mantiene las cadencias de seguimiento en marcha. Tus representantes se concentran en llamadas y cierres, no en tareas administrativas.",
         "capabilities": [
-          "Prospect research",
-          "Outreach drafts",
-          "CRM updates",
-          "Follow-up cadences",
-          "Pipeline reports"
+          "Investigación de prospectos",
+          "Borradores de outreach",
+          "Actualizaciones de CRM",
+          "Cadencias de seguimiento",
+          "Informes de pipeline"
         ]
       },
       {
         "role": "Para Contenido",
         "headline": "Publica más. Escribe menos.",
-        "pain": "Los equipos de contenido se atascan en borradores, briefs y distribución. El calendario se retrasa antes de comenzar.",
-        "value": "AM redacta entradas de blog, textos para redes sociales y newsletters a partir de un brief o una URL. Reutiliza contenido largo en formato corto, mantiene el calendario editorial y alimenta todos los canales.",
+        "pain": "Los equipos de contenido se bloquean con borradores, briefs y distribución. El calendario se retrasa antes de comenzar.",
+        "value": "AM redacta posts de blog, copy para redes y newsletters a partir de un brief o una URL. Adapta el contenido largo en formato corto, mantiene el calendario editorial y alimenta cada canal.",
         "capabilities": [
-          "Blog drafts",
-          "Social copy",
-          "Newsletter drafts",
-          "SEO briefs",
-          "Content repurposing"
+          "Borradores de blog",
+          "Copy para redes",
+          "Borradores de newsletter",
+          "Briefs de SEO",
+          "Reutilización de contenido"
         ]
       },
       {
         "role": "Para Email",
-        "headline": "Gestiona la bandeja de entrada. Recupera tu semana.",
-        "pain": "El correo es donde el trabajo va a desaparecer. Las bandejas de entrada se desbordan, el alcance se enfría y los hilos de soporte se pierden.",
-        "value": "AM lee tu bandeja de entrada, clasifica los hilos de soporte, redacta respuestas, ejecuta campañas de alcance y hace seguimiento automáticamente. Cada correo se atiende.",
+        "headline": "Gestiona el inbox. Recupera tu semana.",
+        "pain": "El email es el lugar donde el trabajo desaparece. Los buzones se desbordan, el outreach se enfría y los hilos de soporte se pierden.",
+        "value": "AM lee tu bandeja de entrada, triagea hilos de soporte, redacta respuestas, gestiona campañas de outreach y hace seguimiento automáticamente. Cada email queda atendido.",
         "capabilities": [
-          "Inbox triage",
-          "Support replies",
-          "Outreach campaigns",
-          "Follow-up sequences",
-          "Email analytics"
+          "Triaje de bandeja de entrada",
+          "Respuestas de soporte",
+          "Campañas de outreach",
+          "Secuencias de seguimiento",
+          "Analítica de email"
         ]
       }
     ]
@@ -178,55 +178,55 @@
     "eyebrow": "Memoria integrada",
     "headline1": "AM nunca",
     "headline2": "olvida.",
-    "subhead": "La mayoría de las herramientas de IA empiezan desde cero en cada sesión. AM construye un modelo persistente de tu base de código, equipo, preferencias e historial — y se vuelve más preciso cada día.",
+    "subhead": "La mayoría de las herramientas de IA empiezan desde cero en cada sesión. AM construye un modelo persistente de tu código, equipo, preferencias e historial — y mejora cada día.",
     "features": [
       {
         "title": "Memoria a corto plazo",
-        "body": "En cada sesión, AM mantiene el contexto completo — lo que leyó, lo que cambió, lo que decidió y por qué. Sin necesidad de volver a explicar."
+        "body": "En cada sesión, AM mantiene el contexto completo — qué leyó, qué cambió, qué decidió y por qué."
       },
       {
         "title": "Memoria a largo plazo",
         "body": "Los aprendizajes persisten entre sesiones en una base de conocimiento estructurada. Las lecciones del sprint del mes pasado están disponibles este mes."
       },
       {
-        "title": "KBs de vector y grafo",
-        "body": "Búsqueda semántica sobre tu base de código, documentación e historial. AM encuentra contexto relevante entre miles de archivos sin que le digan dónde buscar."
+        "title": "KBs vectoriales y de grafo",
+        "body": "Búsqueda semántica sobre tu código, documentación e historial. AM encuentra contexto relevante entre miles de archivos sin que le indiques dónde buscar."
       },
       {
-        "title": "Búsqueda por relevancia",
-        "body": "Cuando se recupera contexto, se ordena por relevancia — no solo por recencia. AM muestra lo que importa para la tarea actual."
+        "title": "Búsqueda clasificada",
+        "body": "Cuando se recupera contexto, se clasifica por relevancia — no solo por recencia. AM muestra lo que importa para la tarea actual."
       },
       {
         "title": "Reflexión nocturna",
-        "body": "Cada noche, AM consolida lo que aprendió, promueve las lecciones importantes de la memoria a corto plazo al almacenamiento a largo plazo y elimina el contexto obsoleto."
+        "body": "Cada noche, AM consolida lo aprendido, promueve lecciones cortas importantes al almacenamiento a largo plazo y elimina el contexto obsoleto."
       },
       {
         "title": "Auto-mejora",
-        "body": "AM registra sus propios errores y correcciones. Los ciclos de retroalimentación se incorporan al comportamiento futuro — mejora cuanto más tiempo trabaja con tu equipo."
+        "body": "AM registra sus propios errores y correcciones. El feedback retroalimenta el comportamiento futuro — mejora cuanto más tiempo trabaja con tu equipo."
       }
     ]
   },
   "gitHistory": {
     "eyebrow": "Auditable por defecto",
     "headline1": "Respaldado por git.",
-    "headline2": "Historial atómico, sin configuración.",
-    "subhead": "Cada acción que realiza AM se confirma atómicamente en git. Un registro legible por humanos de qué cambió, cuándo y por qué — sin configuración adicional.",
+    "headline2": "Historial atómico, desde el primer momento.",
+    "subhead": "Cada acción que realiza AM se confirma atómicamente en git. Un registro legible de qué cambió, cuándo y por qué — sin configuración adicional.",
     "features": [
       {
         "title": "Commits atómicos",
-        "body": "Cada unidad de trabajo queda como un único commit limpio. Una acción. Un registro. Sin estados parciales."
+        "body": "Cada unidad de trabajo aterriza como un commit único y limpio. Una acción. Un registro. Sin estados parciales."
       },
       {
-        "title": "Trazabilidad completa",
+        "title": "Historial de auditoría completo",
         "body": "Ve exactamente qué cambió AM y por qué. Cada decisión queda registrada en los mensajes de commit, no solo en el diff."
       },
       {
-        "title": "Reversión en una línea",
-        "body": "¿No te gusta lo que hizo AM? Revierte cualquier commit al instante. Siempre tienes el control de lo que se publica."
+        "title": "Rollback en una línea",
+        "body": "¿No te gusta lo que hizo AM? Revierte cualquier commit al instante. Siempre tienes el control de lo que se despliega."
       },
       {
         "title": "Funciona con tu repositorio",
-        "body": "AM trabaja dentro de tu repositorio git existente. Sin nuevas herramientas, sin nuevos sistemas. Solo historial limpio junto con tus propios commits."
+        "body": "AM trabaja dentro de tu repositorio git existente. Sin nuevas herramientas, sin nuevos sistemas. Solo historial limpio junto a tus propios commits."
       }
     ]
   },
@@ -357,7 +357,7 @@
     "eyebrow": "Por qué AM es diferente",
     "headline1": "Los asistentes responden.",
     "headline2": "Los trabajadores son dueños de los resultados.",
-    "body": "AM se ejecuta localmente en segundo plano, trabajando constantemente en las tareas y objetivos que has asignado. Ejecuta múltiples proyectos simultáneamente — pipelines de ventas, soporte al cliente, desarrollo web y de software, gestión de contenido. Si puedes visualizarlo en un tablero y la entrega es electrónica, AM se convertirá en tu mejor aliado.",
+    "body": "AM se ejecuta localmente en segundo plano, trabajando constantemente en las tareas y objetivos que le has asignado. Ejecuta múltiples proyectos simultáneamente — pipelines de ventas, atención al cliente, desarrollo web y de software, gestión de contenido. Si puedes visualizarlo en un tablero y la entrega es electrónica, AM se convertirá en tu mejor aliado.",
     "subhead": "La mayoría de las herramientas de IA aceleran tareas individuales. AM hace que funciones de trabajo completas sean autónomas — porque construye contexto persistente en todo tu equipo y opera con ownership de extremo a extremo, no con respuestas prompt a prompt.",
     "pillars": [
       {
@@ -376,15 +376,15 @@
     "points": [
       {
         "label": "Siempre activo",
-        "body": "AM trabaja en segundo plano 24/7 — sin prompts, sin supervisión. Asígnale un objetivo y se pone a trabajar."
+        "body": "AM trabaja en segundo plano 24/7 — sin prompts, sin supervisión. Asigna un objetivo y se pone a trabajar."
       },
       {
         "label": "Múltiples proyectos a la vez",
-        "body": "Pipelines de ventas, soporte al cliente, desarrollo, contenido — ejecuta todos simultáneamente en tableros separados."
+        "body": "Pipelines de ventas, atención al cliente, desarrollo, contenido — gestiónalos todos simultáneamente en tableros separados."
       },
       {
         "label": "Conecta tus AMs",
-        "body": "¿Equipo pequeño, cada uno con su AM? Vincúlalos. Negocian confianza, comparten contexto y colaboran en planes de alto nivel — para que todo tu equipo esté aumentado, no solo una persona."
+        "body": "¿Equipo pequeño, cada uno con su AM? Vincúlalos. Negocian confianza, comparten contexto y colaboran en planes de alto nivel — así todo tu equipo queda amplificado, no solo una persona."
       }
     ],
     "closerHeadline1": "AM no es una herramienta que usas.",
@@ -433,7 +433,7 @@
     ],
     "trustStats": [
       {
-        "stat": "< 2 h",
+        "stat": "< 2 hrs",
         "label": "Tiempo promedio de configuración"
       },
       {
@@ -449,7 +449,7 @@
   "comparisons": {
     "eyebrow": "Cómo se compara AM",
     "headline": "AM vs las alternativas",
-    "subhead": "Los agentes de función única son demasiado limitados. Los asistentes genéricos son demasiado pasivos. AM es el trabajador digital unificado para todo el equipo.",
+    "subhead": "Un trabajador digital para cada función del equipo. Sin herramientas separadas, sin brechas, sin traspasos.",
     "items": [
       {
         "title": "AM vs Devin",
@@ -470,8 +470,17 @@
       {
         "title": "El espacio que AM ocupa",
         "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de un cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Ese contexto entre funciones es la ventaja compuesta que AM construye con el tiempo."
+      },
+      {
+        "title": "La brecha que AM ocupa",
+        "body": "Ninguna plataforma única cubre PM + desarrollador + soporte bajo un trabajador con contexto compartido. AM conecta las tres — de modo que cuando un ticket de cliente revela un bug de producto, el mismo trabajador que resolvió el ticket puede triar el bug y redactar la solución. Esa ventaja compuesta entre funciones crece con el tiempo."
       }
-    ]
+    ],
+    "legend": "Clave:",
+    "legendYes": "Soporte completo",
+    "legendPartial": "Parcial / limitado",
+    "legendNo": "No soportado",
+    "footnote": "Basado en funciones y precios publicados en Q1 2026. Parcial (~) indica cobertura limitada o específica de herramienta."
   },
   "plans": {
     "eyebrow": "Soporte",
@@ -608,9 +617,9 @@
     "cta": "Obtener acceso anticipado"
   },
   "socialProof": {
-    "eyebrow": "Elegido por equipos modernos",
+    "eyebrow": "Confiado por equipos modernos",
     "headline": "Equipos reales. Resultados reales.",
-    "subhead": "AM trabaja 24/7 en PM, ingeniería y soporte — los números hablan por sí mismos.",
+    "subhead": "AM trabaja 24/7 en PM, ingeniería y soporte — los números hablan por sí solos.",
     "logos": [
       {
         "name": "Acme Corp"
@@ -630,19 +639,19 @@
     ],
     "quotes": [
       {
+        "quote": "AM resolvió el 85% de nuestros tickets de soporte de nivel 1 sin intervención humana en el primer mes. Nuestro equipo de soporte pasó de estar abrumado a ser estratégico de la noche a la mañana.",
         "name": "Sarah Chen",
-        "role": "Directora de Soporte, Acme Corp",
-        "quote": "AM resolvió el 85% de nuestros tickets de soporte de primer nivel sin intervención humana en el primer mes. Nuestro equipo de soporte pasó de estar desbordado a ser estratégico de la noche a la mañana."
+        "role": "Directora de Soporte, Acme Corp"
       },
       {
+        "quote": "Le asignamos a AM todo nuestro backlog de migración — más de 200 tickets. Abrió PRs, escribió pruebas y logró que el 90% se fusionara en tres semanas. Nuestros ingenieros finalmente tienen tiempo para construir.",
         "name": "Marcus Rivera",
-        "role": "Líder de Ingeniería, Pied Piper",
-        "quote": "Asignamos a AM todo nuestro backlog de migración — más de 200 tickets. Abrió PRs, escribió pruebas y logró que el 90% se fusionara en tres semanas. Nuestros ingenieros finalmente tienen tiempo para construir."
+        "role": "Líder de Ingeniería, Pied Piper"
       },
       {
+        "quote": "La preparación del sprint solía tomar medio día. AM lo hace de noche. Los lunes llegamos con un tablero completamente preparado y las actualizaciones de stakeholders ya redactadas.",
         "name": "Priya Nair",
-        "role": "Product Manager, Initech",
-        "quote": "La preparación del sprint solía llevar medio día. AM lo hace de noche. Los lunes por la mañana llegamos con el tablero completamente preparado y las actualizaciones para stakeholders ya redactadas."
+        "role": "Gerente de Producto, Initech"
       }
     ],
     "stats": [
@@ -665,5 +674,60 @@
     "heading": "Te presentamos a Am.",
     "body1": "AM es una trabajadora digital — no un chatbot, no un copiloto. Lee tu backlog, escribe el código, abre los PRs, resuelve los tickets y envía las actualizaciones. Todo mientras tu equipo duerme.",
     "body2": "Trabaja 24/7, recuerda todo y mejora con cada sprint. Tu equipo sigue siendo humano. El trabajo pesado es de ella."
+  },
+  "useCases": {
+    "eyebrow": "Casos de uso",
+    "headline": "Un trabajador. Todas las funciones.",
+    "subhead": "AM cubre los roles que le faltan a un equipo pequeño — con resultados medibles.",
+    "roles": [
+      {
+        "persona": "Agente de Soporte",
+        "forRole": "Fundador / Líder de Soporte",
+        "task": "Enruta y responde tickets de soporte entrantes 24/7, escala casos extremos y registra patrones resueltos en una base de conocimiento.",
+        "outcome": "50% de reducción en la carga de soporte; cobertura nocturna y de fin de semana sin contratar."
+      },
+      {
+        "persona": "Representante de Desarrollo de Ventas",
+        "forRole": "Fundador / Líder de Crecimiento",
+        "task": "Califica leads entrantes, los enruta a etapas del pipeline, envía secuencias de seguimiento y actualiza el CRM — de principio a fin.",
+        "outcome": "Equivalente a evitar un FTE de SDR por cada cinco consultores activos; cero leads se pierden."
+      },
+      {
+        "persona": "Coordinador de Marketing",
+        "forRole": "Fundador de Contenido / Indie Hacker",
+        "task": "Redacta publicaciones de formato largo a partir de esquemas, las adapta en hilos sociales, programa y rastrea la distribución.",
+        "outcome": "Recupera 15–20 horas/semana consumidas por la producción de contenido de marketing."
+      },
+      {
+        "persona": "Compañero de Ingeniería",
+        "forRole": "Desarrollador Solo / Fundador Técnico",
+        "task": "Generación de código, revisión de PR, escritura de pruebas, mantenimiento del tablero kanban y confirmación de cambios auditables.",
+        "outcome": "55–60% de reducción en el tiempo del ciclo de desarrollo; el contexto persistente evita reexplicar la base de código."
+      },
+      {
+        "persona": "Coordinador de Operaciones",
+        "forRole": "Equipo sin Ops",
+        "task": "Rastrea el estado del proyecto, detecta bloqueos, escribe notas de reuniones y actualizaciones asíncronas, mantiene la documentación.",
+        "outcome": "Más de 21 horas/trimestre ahorradas en coordinación; elimina el modo de falla del fundador como cuello de botella."
+      },
+      {
+        "persona": "Analista Financiero",
+        "forRole": "Fundador Bootstrapped",
+        "task": "Categoriza automáticamente las transacciones, prepara resúmenes mensuales, señala anomalías y ensambla informes listos para impuestos.",
+        "outcome": "Elimina un contador a tiempo parcial ($600–$1K/mes); cierra los libros mensualmente sin esfuerzo manual."
+      }
+    ]
+  },
+  "costFrame": {
+    "eyebrow": "Comparación de costos",
+    "headline": "Menos que una contratación. Cubre todas las funciones.",
+    "subhead": "La contratación tradicional cubre un rol. AM los cubre todos — a una fracción del costo.",
+    "aiCost": "$3K–12K/año",
+    "aiCostLabel": "Costo de herramientas AM",
+    "aiCostNote": "Cubre soporte, ventas, marketing, ops, ingeniería y finanzas",
+    "hiringCost": "$7K–12K/año",
+    "hiringCostLabel": "Por contratación a tiempo parcial",
+    "hiringCostNote": "Cada contratación cubre solo una función",
+    "cta": "Calcula tus ahorros"
   }
 }

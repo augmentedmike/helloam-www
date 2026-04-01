@@ -3,6 +3,8 @@ import HeroChat from "@/components/hero-chat";
 import IntroducingAm from "@/components/introducing-am";
 import Lifestyle from "@/components/lifestyle";
 import Features from "@/components/features";
+import UseCases from "@/components/use-cases";
+import CostFrame from "@/components/cost-frame";
 import MemorySection from "@/components/memory-section";
 import GitHistory from "@/components/git-history";
 import SoulRestore from "@/components/soul-restore";
@@ -26,6 +28,10 @@ export default function Home() {
       <Lifestyle />
       {/* Capabilities by role */}
       <Features />
+      {/* Use cases — 6 roles with measurable outcomes */}
+      <UseCases />
+      {/* Cost comparison — AI tooling vs. traditional staffing */}
+      <CostFrame />
       {/* Memory — AM never forgets */}
       <MemorySection />
       {/* Git atomic history */}

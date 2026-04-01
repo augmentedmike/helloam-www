@@ -33,7 +33,7 @@
       },
       {
         "q": "How does pricing work?",
-        "a": "AM is free and open source. You can self-host it and use it indefinitely at no cost. We offer optional paid support services ($50 per 30-minute session) for training, custom integrations, and strategic consulting."
+        "a": "AM is free and open source — you can self-host it indefinitely at no cost. When you factor in AI tooling, most teams spend $3K–12K/year. That's less than a single part-time hire ($7K–12K/year) — and AM covers every function: support, sales, marketing, ops, engineering, and finance, vs. one function per hire."
       },
       {
         "q": "We're not ready to buy — can we try AM first?",
@@ -55,37 +55,49 @@
   },
   "hero": {
     "badge": "Free and open source",
-    "headline1": "Your team,",
-    "headline2": " multiplied.",
-    "subhead": "Pair AM with each person on your team. A 3-person team moves at the velocity of 20 — without the payroll, taxes, insurance, or meetings.",
+    "headline1": "Run like a 20-person team.",
+    "headline2": "Stay a team of 3.",
+    "subhead": "AM is a persistent digital worker that fills every role your small team is missing — support, sales, marketing, ops, engineering, finance — with memory, follow-through, and no handoffs.",
     "personas": [
       {
-        "label": "For PMs",
-        "desc": "Backlog triage & sprint grooming"
+        "label": "Support",
+        "desc": "24/7 ticket resolution, zero hires"
       },
       {
-        "label": "For Developers",
+        "label": "Sales",
+        "desc": "Lead qualify & CRM, end-to-end"
+      },
+      {
+        "label": "Marketing",
+        "desc": "Content, social, distribution"
+      },
+      {
+        "label": "Ops",
+        "desc": "Projects, docs, async coordination"
+      },
+      {
+        "label": "Engineering",
         "desc": "Tickets → PRs, autonomously"
       },
       {
-        "label": "For Support",
-        "desc": "24/7 ticket resolution"
+        "label": "Finance",
+        "desc": "Books, reporting, tax-ready"
       }
     ],
     "ctaPrimary": "Get AM on GitHub",
     "ctaSecondary": "See how it works",
     "stats": [
       {
-        "stat": "∞",
-        "label": "Parallel agents"
+        "stat": "50%",
+        "label": "Less support overhead"
       },
       {
-        "stat": "3×",
-        "label": "Faster delivery"
+        "stat": "55%",
+        "label": "Faster dev cycles"
       },
       {
-        "stat": "0",
-        "label": "Context switches needed"
+        "stat": "98%",
+        "label": "Lower cost vs. hiring"
       }
     ]
   },
@@ -449,8 +461,12 @@
   "comparisons": {
     "eyebrow": "How AM compares",
     "headline": "AM vs the alternatives",
-    "subhead": "Single-function agents are too narrow. Generic assistants are too passive. AM is the unified digital worker for the whole team — and she works alongside whatever tools you already use.",
+    "subhead": "One digital worker for every team function. No separate tools, no capability gaps, no handoffs.",
     "items": [
+      {
+        "title": "AM vs Zapier, Copilot, Jasper",
+        "body": "Zapier automates tasks. Copilot writes code. Jasper drafts copy. These are single-function point tools — they help with one step, then hand off to you. AM owns outcomes end-to-end: memory, follow-through, and no handoffs. One worker, every function."
+      },
       {
         "body": "Devin is engineering-only — it takes a ticket and writes code. AM does the same for developers, but also covers PM workflows and support. One worker, three team functions, at significantly lower cost per outcome.",
         "title": "AM vs Devin"
@@ -466,12 +482,13 @@
       {
         "body": "Project management boards track work — they do not do it. AM keeps her own board but can be linked to Monday.com, Jira, Asana, or any system with an API. Your existing workflows stay intact; AM just starts doing the work inside them.",
         "title": "AM vs Monday.com / Jira / Asana"
-      },
-      {
-        "body": "No single platform covers PM + developer + support under one worker with shared context. AM bridges all three — so when a customer ticket surfaces a product bug, the same worker that resolved the ticket can triage the bug and draft the fix. That cross-function compounding advantage grows over time.",
-        "title": "The gap AM owns"
       }
-    ]
+    ],
+    "legend": "Key:",
+    "legendYes": "Full support",
+    "legendPartial": "Partial / limited",
+    "legendNo": "Not supported",
+    "footnote": "Based on published features and pricing as of Q1 2026. Partial (~) indicates limited or tool-specific coverage."
   },
   "plans": {
     "eyebrow": "Support",
@@ -665,5 +682,60 @@
     "heading": "Introducing Am.",
     "body1": "AM is a digital worker — not a chatbot, not a copilot. She reads your backlog, writes the code, opens the PRs, resolves the tickets, and sends the updates. All while your team sleeps.",
     "body2": "She runs 24/7, remembers everything, and gets better with every sprint. Your team stays human. The gruntwork is hers."
+  },
+  "useCases": {
+    "eyebrow": "Use cases",
+    "headline": "One worker. Every function.",
+    "subhead": "AM covers the roles a small team is missing — with measurable outcomes.",
+    "roles": [
+      {
+        "persona": "Support Agent",
+        "forRole": "Founder / Support Lead",
+        "task": "Routes and responds to inbound support tickets 24/7, escalates edge cases, logs resolved patterns to a knowledge base.",
+        "outcome": "50% reduction in support overhead; overnight and weekend coverage without a hire."
+      },
+      {
+        "persona": "Sales Development Rep",
+        "forRole": "Founder / Growth Lead",
+        "task": "Qualifies inbound leads, routes them to pipeline stages, sends follow-up sequences, updates the CRM — end-to-end.",
+        "outcome": "Equivalent to avoiding one SDR FTE per five active consultants; zero leads fall through the cracks."
+      },
+      {
+        "persona": "Marketing Coordinator",
+        "forRole": "Content Founder / Indie Hacker",
+        "task": "Drafts long-form posts from bullet outlines, repurposes into social threads, schedules and tracks distribution.",
+        "outcome": "Reclaims 15–20 hrs/week consumed by marketing content production."
+      },
+      {
+        "persona": "Engineering Teammate",
+        "forRole": "Solo Developer / Technical Founder",
+        "task": "Code generation, PR review, writing tests, keeping a kanban board current, committing auditable changes.",
+        "outcome": "55–60% reduction in dev cycle time; persistent context means no re-explaining the codebase."
+      },
+      {
+        "persona": "Operations Coordinator",
+        "forRole": "Ops-less Team",
+        "task": "Tracks project state, surfaces blockers, writes meeting notes and async updates, maintains documentation.",
+        "outcome": "21+ hrs/quarter saved on coordination; eliminates the founder-as-bottleneck failure mode."
+      },
+      {
+        "persona": "Financial Analyst",
+        "forRole": "Bootstrapped Founder",
+        "task": "Auto-categorizes transactions, prepares monthly summaries, flags anomalies, assembles tax-ready reports.",
+        "outcome": "Eliminates a part-time bookkeeper ($600–$1K/month); closes the books monthly without manual effort."
+      }
+    ]
+  },
+  "costFrame": {
+    "eyebrow": "Cost comparison",
+    "headline": "Less than one hire. Covers every function.",
+    "subhead": "Traditional staffing covers one role. AM covers them all — at a fraction of the cost.",
+    "aiCost": "$3K–12K/yr",
+    "aiCostLabel": "AM tooling cost",
+    "aiCostNote": "Covers support, sales, marketing, ops, engineering, and finance",
+    "hiringCost": "$7K–12K/yr",
+    "hiringCostLabel": "Per part-time hire",
+    "hiringCostNote": "Each hire covers only one function",
+    "cta": "Calculate your savings"
   }
 }
