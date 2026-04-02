@@ -70,6 +70,9 @@ const jsonLd = [
       url: "https://helloam.bot/for-developers#waitlist",
       description: "Free early access pilot. Team pricing from $149/seat/month.",
     },
+    creator: {
+      "@id": "https://helloam.bot/#organization",
+    },
     publisher: {
       "@type": "Organization",
       name: "helloam.bot",

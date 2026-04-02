@@ -124,6 +124,18 @@ const jsonLd = {
         url: "https://helloam.bot",
         description: "Free early access pilot. Team pricing from $149/seat/month.",
       },
+      featureList: [
+        "Backlog triage automation",
+        "Ticket to Pull Request",
+        "AI code review",
+        "On-call incident triage",
+        "Support ticket resolution",
+        "PM task ownership",
+      ],
+      creator: {
+        "@id": "https://helloam.bot/#organization",
+      },
+      applicationSubCategory: ["Project Management", "Developer Tools", "Customer Support"],
       publisher: {
         "@id": "https://helloam.bot/#organization",
       },
@@ -207,6 +219,25 @@ const jsonLd = {
           item: "https://helloam.bot",
         },
       ],
+    },
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://helloam.bot/#business",
+      name: "AM by helloam.bot",
+      url: "https://helloam.bot",
+      description:
+        "AM is a digital worker platform that autonomously handles PM, developer, and support team functions — backlog triage, code tasks, and ticket resolution — 24/7.",
+      priceRange: "$$",
+      areaServed: "Worldwide",
+      sameAs: [
+        "https://twitter.com/augmentedmike",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        url: "https://helloam.bot/#waitlist",
+        availableLanguage: "English",
+      },
     },
   ],
 };
