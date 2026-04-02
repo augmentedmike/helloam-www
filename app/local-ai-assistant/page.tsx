@@ -241,7 +241,7 @@ export default function LocalAIAssistantPage() {
               <div key={item.stat} className="text-center">
                 <div
                   className="text-2xl font-bold mb-1"
-                  style={{ fontFamily: "var(--font-space-grotesk)", color: ACCENT }}
+                  style={{ fontFamily: HEADING_FONT, color: ACCENT }}
                 >
                   {item.stat}
                 </div>
