@@ -1,8 +1,19 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
+import { LOCALES, type Locale } from "@/lib/translations";
 
-type Locale = "en" | "es" | "zh" | "de" | "fr" | "ko";
+const VALID_LOCALES = Object.keys(LOCALES) as Locale[];
+
+function detectBrowserLocale(): Locale {
+  if (typeof navigator === "undefined") return "en";
+  const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const tag of langs) {
+    const base = tag.split("-")[0].toLowerCase() as Locale;
+    if (VALID_LOCALES.includes(base)) return base;
+  }
+  return "en";
+}
 
 interface LocaleContextType {
   locale: Locale;
@@ -16,10 +27,11 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Load from localStorage on mount
     const saved = localStorage.getItem("locale") as Locale | null;
-    if (saved && ["en", "es", "zh", "de", "fr", "ko"].includes(saved)) {
+    if (saved && VALID_LOCALES.includes(saved)) {
       setLocale(saved);
+    } else {
+      setLocale(detectBrowserLocale());
     }
     setMounted(true);
   }, []);
@@ -43,7 +55,6 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 export function useLocale() {
   const context = useContext(LocaleContext);
   if (!context) {
-    // Return default value if not in provider (for special routes, 404, etc)
     return { locale: "en" as Locale, setLocale: () => {} };
   }
   return context;

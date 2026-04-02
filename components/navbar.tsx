@@ -10,7 +10,11 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale } = useLocale();
-  const t = getTranslation(locale as Locale);
+  const t = getTranslation(locale);
+
+  const localeOptions = Object.entries(LOCALES).map(([code, label]) => (
+    <option key={code} value={code}>{label}</option>
+  ));
 
   const navLinks = [
     { label: t.nav.forPMs, href: "#personas" },
@@ -78,9 +82,7 @@ export default function Navbar() {
             className="rounded-lg px-3 py-2 text-sm transition-colors hover:text-white bg-transparent border"
             style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
           >
-            {Object.entries(LOCALES).map(([code, label]) => (
-              <option key={code} value={code}>{label}</option>
-            ))}
+            {localeOptions}
           </select>
           <a
             href="/demo"
@@ -137,10 +139,7 @@ export default function Navbar() {
                 className="rounded-lg px-4 py-2.5 text-sm bg-transparent border text-center"
                 style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
               >
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="zh">中文</option>
-                <option value="de">Deutsch</option>
+                {localeOptions}
               </select>
               <a
                 href="/demo"
