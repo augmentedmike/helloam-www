@@ -1,66 +1,73 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
   return [
     {
       url: "https://helloam.bot",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: "https://helloam.bot/for-developers",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: "https://helloam.bot/demo",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://helloam.bot/faq",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: "https://helloam.bot/contact",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: "https://helloam.bot/waitlist",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: "https://helloam.bot/integrations",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: "https://helloam.bot/press",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: "https://helloam.bot/privacy",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: "https://helloam.bot/terms",
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
+    },
+    {
+      url: "https://helloam.bot/replika-alternative",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }

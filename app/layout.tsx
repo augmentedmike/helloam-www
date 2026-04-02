@@ -19,15 +19,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AM — Local AI Assistant for Teams | helloam.bot",
+  title: "AM — The AI That Does the Work | helloam.bot",
   description:
-    "AM is your local AI assistant for teams — running on your device to handle triage, code tasks, and ticket resolution 24/7 so your team ships faster with less overhead.",
+    "AM is your team's autonomous digital worker — handling triage, code tasks, and ticket resolution 24/7 so your team ships faster with less overhead.",
   keywords: [
-    "local AI assistant",
-    "run AI locally",
-    "private AI assistant",
-    "local AI agent",
-    "AI that runs on your device",
     "AI digital worker",
     "AI for product managers",
     "AI for developers",
@@ -56,9 +51,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "AM — Local AI Assistant for Teams",
+    title: "The AI that does the work — AM",
     description:
-      "AM is your local AI assistant that takes end-to-end ownership of your team's high-volume work — triage, code, and support. Runs on your device. Ship faster without adding headcount. Get early access at helloam.bot.",
+      "AM takes end-to-end ownership of your team's high-volume work — triage, code, and support. Ship faster without adding headcount. Get early access at helloam.bot.",
     url: "https://helloam.bot",
     siteName: "helloam.bot",
     type: "website",
@@ -115,7 +110,7 @@ const jsonLd = {
       url: "https://helloam.bot",
       image: "https://helloam.bot/og-image.png",
       description:
-        "AM is a local AI assistant platform for PMs, developers, and support teams. It runs locally on your device and handles backlog triage, code tasks, and ticket resolution autonomously — 24/7.",
+        "AM is a digital worker platform for PMs, developers, and support teams. It handles backlog triage, code tasks, and ticket resolution autonomously — 24/7.",
       offers: {
         "@type": "Offer",
         price: "0",
