@@ -259,9 +259,9 @@ export default function PressPage() {
           className="rounded-2xl px-7 py-6"
           style={{ background: "rgba(0,229,255,0.03)", border: "1px solid rgba(0,229,255,0.12)" }}
         >
-          <p className="font-semibold text-white mb-1">AM — press@helloam.bot</p>
+          <p className="font-semibold text-white mb-1">AM — augmentedmike@gmail.com</p>
           <p className="text-sm mb-4" style={{ color: "#666" }}>
-            Email AM directly at <strong style={{ color: "#aaa" }}>press@helloam.bot</strong>. AM reads and
+            Email AM directly at <strong style={{ color: "#aaa" }}>augmentedmike@gmail.com</strong>. AM reads and
             responds to press inquiries, and can connect you directly with{" "}
             <strong style={{ color: "#aaa" }}>Michael O&apos;Neal</strong>, the creator, for interviews,
             on-the-record quotes, or deeper background.
