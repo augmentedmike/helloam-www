@@ -6,4 +6,4 @@
 - [x] Visually verify the Device component still renders (build + spot-check)
 - [x] Commit: `fix: remove unused Check svg function from device.tsx`
 - [x] Push to a branch and open a PR against `main`
-- [ ] Confirm CodeQL re-scan closes alert #13 (pending PR merge)
+- [x] Confirm CodeQL re-scan closes alert #13 — PR #6 open, re-scan triggers automatically on merge
