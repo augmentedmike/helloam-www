@@ -10,7 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   const navLinks = [
     { label: t.nav.forPMs, href: "#personas" },
@@ -74,13 +74,14 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <select
             value={locale}
-            onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh")}
+            onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh" | "de")}
             className="rounded-lg px-3 py-2 text-sm transition-colors hover:text-white bg-transparent border"
             style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
           >
             <option value="en">English</option>
             <option value="es">Español</option>
             <option value="zh">中文</option>
+            <option value="de">Deutsch</option>
           </select>
           <a
             href="/demo"
@@ -133,13 +134,14 @@ export default function Navbar() {
             <div className="mt-3 flex flex-col gap-2 border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
               <select
                 value={locale}
-                onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh")}
+                onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh" | "de")}
                 className="rounded-lg px-4 py-2.5 text-sm bg-transparent border text-center"
                 style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
               >
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="zh">中文</option>
+                <option value="de">Deutsch</option>
               </select>
               <a
                 href="/demo"

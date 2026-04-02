@@ -14,7 +14,7 @@ function Check() {
 
 export default function Pilot() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section

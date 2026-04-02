@@ -5,7 +5,7 @@ import { getTranslation } from "@/lib/translations";
 
 export default function HeroChat() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section className="relative overflow-hidden">

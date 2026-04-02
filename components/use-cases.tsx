@@ -5,7 +5,7 @@ import { getTranslation } from "@/lib/translations";
 
 export default function UseCases() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
   const uc = t.useCases;
 
   return (

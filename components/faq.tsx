@@ -7,7 +7,7 @@ import { getTranslation } from "@/lib/translations";
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   const { locale } = useLocale();
-  const trans = getTranslation(locale as "en" | "es" | "zh");
+  const trans = getTranslation(locale as "en" | "es" | "zh" | "de");
   const FAQS = trans.faq.items;
 
   return (

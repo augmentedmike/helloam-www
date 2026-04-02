@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 
-type Locale = "en" | "es" | "zh";
+type Locale = "en" | "es" | "zh" | "de";
 
 interface LocaleContextType {
   locale: Locale;
@@ -18,7 +18,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Load from localStorage on mount
     const saved = localStorage.getItem("locale") as Locale | null;
-    if (saved && ["en", "es", "zh"].includes(saved)) {
+    if (saved && ["en", "es", "zh", "de"].includes(saved)) {
       setLocale(saved);
     }
     setMounted(true);

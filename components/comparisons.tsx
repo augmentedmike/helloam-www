@@ -52,7 +52,7 @@ function Cell({ value, isAm }: { value: CellValue; isAm?: boolean }) {
 
 export default function Comparisons() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
   const c = t.comparisons;
 
   return (

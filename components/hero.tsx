@@ -6,7 +6,7 @@ import { track } from "@/lib/analytics";
 
 export default function Hero() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section className="relative flex flex-col items-center text-center px-6 pt-20 pb-16 overflow-hidden">

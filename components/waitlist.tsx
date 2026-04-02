@@ -8,7 +8,7 @@ import { getTranslation } from "@/lib/translations";
 export default function Waitlist() {
   const { name } = usePersonalization();
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section id="waitlist" className="relative px-6 py-24 overflow-hidden">
