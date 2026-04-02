@@ -58,6 +58,13 @@ const comparisons = [
     description:
       "Fin handles customer conversations. AM handles conversations and the work behind them — ticket routing, code changes, cross-team coordination — all in one worker.",
   },
+  {
+    slug: "am-vs-hubspot-ai",
+    competitor: "HubSpot AI",
+    tagline: "CRM-locked AI vs stack-wide digital worker",
+    description:
+      "HubSpot Breeze lives inside HubSpot. AM works across your entire stack — Slack, email, GitHub, Zendesk — without lock-in, credit pools, or a five-figure onboarding fee.",
+  },
 ];
 
 export default function ComparePage() {

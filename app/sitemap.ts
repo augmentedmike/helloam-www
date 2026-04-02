@@ -94,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://helloam.bot/compare/am-vs-hubspot-ai",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://helloam.bot/ai-agent-for-productivity",
       lastModified: now,
       changeFrequency: "monthly",
