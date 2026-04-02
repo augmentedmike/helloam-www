@@ -1,4 +1,22 @@
+"use client";
+
+import React from "react";
+import { useLocale } from "@/context/locale-context";
+
+const LANGUAGES = [
+  { value: "en", label: "EN", name: "English" },
+  { value: "es", label: "ES", name: "Español" },
+  { value: "zh", label: "中文", name: "Chinese" },
+  { value: "de", label: "DE", name: "Deutsch" },
+  { value: "fr", label: "FR", name: "Français" },
+  { value: "ko", label: "한국어", name: "Korean" },
+] as const;
+
+type Locale = "en" | "es" | "zh" | "de" | "fr" | "ko";
+
 export default function Footer() {
+  const { locale, setLocale } = useLocale();
+
   return (
     <footer
       className="px-6 py-12"
@@ -47,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Legal */}
+        {/* Legal + Language selector */}
         <div
           className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
           style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
@@ -55,7 +73,7 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "#6b6b6b" }}>
             © 2026 Tylt LLC · Delaware · All rights reserved
           </p>
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             {[
               { label: "Privacy", href: "/privacy" },
               { label: "Terms",   href: "/terms" },
@@ -68,6 +86,19 @@ export default function Footer() {
                 {l.label}
               </a>
             ))}
+            <select
+              value={locale}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setLocale(e.target.value as Locale)}
+              className="rounded-lg px-3 py-1.5 text-xs bg-transparent border transition-colors hover:text-white"
+              style={{ color: "#6b6b6b", borderColor: "rgba(255,255,255,0.12)" }}
+              aria-label="Select language"
+            >
+              {LANGUAGES.map((lang) => (
+                <option key={lang.value} value={lang.value} style={{ background: "#0a0a0a", color: "#f5f5f5" }}>
+                  {lang.label}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>

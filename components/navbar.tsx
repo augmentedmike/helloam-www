@@ -3,18 +3,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocale } from "@/context/locale-context";
-import { getTranslation, LOCALES, type Locale } from "@/lib/translations";
+import { getTranslation } from "@/lib/translations";
 import { track } from "@/lib/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { locale, setLocale } = useLocale();
+  const { locale } = useLocale();
   const t = getTranslation(locale);
-
-  const localeOptions = Object.entries(LOCALES).map(([code, label]) => (
-    <option key={code} value={code}>{label}</option>
-  ));
 
   const navLinks = [
     { label: t.nav.forPMs, href: "#personas" },
@@ -76,14 +72,6 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <select
-            value={locale}
-            onChange={(e) => setLocale(e.target.value as Locale)}
-            className="rounded-lg px-3 py-2 text-sm transition-colors hover:text-white bg-transparent border"
-            style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
-          >
-            {localeOptions}
-          </select>
           <a
             href="/demo"
             onClick={() => track("cta_click", { label: "demo_request", location: "navbar" })}
@@ -133,14 +121,6 @@ export default function Navbar() {
               </a>
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-              <select
-                value={locale}
-                onChange={(e) => setLocale(e.target.value as Locale)}
-                className="rounded-lg px-4 py-2.5 text-sm bg-transparent border text-center"
-                style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
-              >
-                {localeOptions}
-              </select>
               <a
                 href="/demo"
                 className="rounded-lg px-4 py-2.5 text-sm font-medium text-center"
