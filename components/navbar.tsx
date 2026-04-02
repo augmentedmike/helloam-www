@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocale } from "@/context/locale-context";
-import { getTranslation } from "@/lib/translations";
+import { getTranslation, LOCALES, type Locale } from "@/lib/translations";
 import { track } from "@/lib/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh" | "de" | "fr" | "ko");
+  const t = getTranslation(locale as Locale);
 
   const navLinks = [
     { label: t.nav.forPMs, href: "#personas" },
@@ -74,16 +74,13 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <select
             value={locale}
-            onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh" | "de" | "fr" | "ko")}
+            onChange={(e) => setLocale(e.target.value as Locale)}
             className="rounded-lg px-3 py-2 text-sm transition-colors hover:text-white bg-transparent border"
             style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
           >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="zh">中文</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="ko">한국어</option>
+            {Object.entries(LOCALES).map(([code, label]) => (
+              <option key={code} value={code}>{label}</option>
+            ))}
           </select>
           <a
             href="/demo"
@@ -136,7 +133,7 @@ export default function Navbar() {
             <div className="mt-3 flex flex-col gap-2 border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
               <select
                 value={locale}
-                onChange={(e) => setLocale(e.target.value as "en" | "es" | "zh" | "de" | "fr" | "ko")}
+                onChange={(e) => setLocale(e.target.value as Locale)}
                 className="rounded-lg px-4 py-2.5 text-sm bg-transparent border text-center"
                 style={{ color: "#888", borderColor: "rgba(255,255,255,0.12)" }}
               >
