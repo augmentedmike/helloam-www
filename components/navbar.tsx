@@ -54,7 +54,7 @@ export default function Navbar() {
               color: "#ffffff",
             }}
           >
-            helloam<span style={{ color: "#00E5FF" }}>.</span>bot
+            HelloAm<span style={{ color: "#00E5FF" }}>!</span>
           </span>
         </a>
 

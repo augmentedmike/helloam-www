@@ -17,7 +17,7 @@ export default function Footer() {
               style={{ border: "1.5px solid rgba(0,229,255,0.3)" }}
             />
             <div className="text-center sm:text-left">
-              <p className="font-semibold text-sm" style={{ color: "#f5f5f5" }}>helloam.bot</p>
+              <p className="font-semibold text-sm" style={{ color: "#f5f5f5" }}>HelloAm!</p>
               <p className="text-xs mt-1" style={{ color: "#a3a3a3" }}>
                 Digital worker platform for PMs, developers, and support teams.
               </p>
