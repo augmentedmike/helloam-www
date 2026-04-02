@@ -1,0 +1,16 @@
+# Iteration 1 — fix: remove unused Check svg function from device.tsx
+
+## Work done
+- Read criteria.md, research.md, todo.md
+- Removed `Check` function (lines 6–12) from `components/device.tsx`
+- Verified no other files import/reference `Check` from device.tsx (plans.tsx and pilot.tsx have their own independent `Check` definitions)
+- Ran `bun install` + `bun run build` — build succeeded, all pages compiled
+- Committed: `fix: remove unused Check svg function from device.tsx`
+- Pushed branch `5e2a3423-e476-4d71-84a1-621b15f958db` to origin
+- Opened PR: https://github.com/augmentedmike/helloam-www/pull/6 against main
+
+## Criteria status
+1. ✅ `Check` function removed from `components/device.tsx`
+2. ✅ No other code imports `Check` from `device.tsx`
+3. ✅ `Device` component still builds and renders correctly
+4. ⏳ CodeQL alert #13 closes after PR merges to main (pending merge)
