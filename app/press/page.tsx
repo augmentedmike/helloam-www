@@ -27,10 +27,10 @@ const COMPANY_FACTS = [
 const BRAND_ASSETS = [
   {
     label: "AM Logo",
-    previewSrc: "/android-chrome-512.png",
-    previewAlt: "AM logo — android chrome 512px",
+    previewSrc: "/am-headshot.jpg",
+    previewAlt: "AM — Amelia headshot",
     downloads: [
-      { format: "PNG", href: "/android-chrome-512.png" },
+      { format: "JPG", href: "/am-headshot.jpg" },
     ],
   },
   {
@@ -177,8 +177,11 @@ export default function PressPage() {
               className="rounded-xl overflow-hidden"
               style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
             >
-              <div
-                className="flex items-center justify-center p-6"
+              <a
+                href={asset.previewSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center p-6 cursor-zoom-in"
                 style={{ background: "rgba(255,255,255,0.02)", minHeight: "140px" }}
               >
                 <Image
@@ -188,7 +191,7 @@ export default function PressPage() {
                   height={120}
                   className="object-contain max-h-28"
                 />
-              </div>
+              </a>
               <div className="px-5 py-4">
                 <p className="text-sm font-semibold text-white mb-3">{asset.label}</p>
                 <div className="flex gap-3">
