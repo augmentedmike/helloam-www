@@ -55,9 +55,9 @@
   },
   "hero": {
     "badge": "Free and open source",
-    "headline1": "Run like a 20-person team.",
-    "headline2": "Stay a team of 3.",
-    "subhead": "AM is a persistent digital worker that fills every role your small team is missing — support, sales, marketing, ops, engineering, finance — with memory, follow-through, and no handoffs.",
+    "headline1": "Your local AI assistant.",
+    "headline2": "A full team. In your pocket.",
+    "subhead": "AM is your local AI assistant — a persistent digital worker that runs locally on your device and fills every role your small team is missing — support, sales, marketing, ops, engineering, finance — with memory, follow-through, and no handoffs.",
     "personas": [
       {
         "label": "Support",
@@ -367,8 +367,8 @@
   },
   "soulRestore": {
     "eyebrow": "Runs on your computer",
-    "headline1": "Makes a 1–3 person team",
-    "headline2": "feel like 20.",
+    "headline1": "Your private AI assistant.",
+    "headline2": "Runs on your machine.",
     "subhead": "AM runs locally in the background, constantly working on the tasks and goals you have assigned. Run multiple projects simultaneously — sales pipelines, customer support, dev, content. If you can visualize it on a board and the delivery is electronic, AM will become your new best friend.",
     "pillars": [
       {
@@ -774,8 +774,8 @@
   },
   "heroChat": {
     "eyebrow": "Always On",
-    "headline1": "Chat with AM.",
-    "headline2": "She works while you sleep.",
+    "headline1": "Local AI, always on.",
+    "headline2": "Works while you sleep.",
     "body": "Describe what needs to be done. AM reads the board, picks up the work, and logs every step — no hand-holding required.",
     "cta": "Get early access"
   },
