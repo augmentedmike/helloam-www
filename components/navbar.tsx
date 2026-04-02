@@ -140,6 +140,7 @@ export default function Navbar() {
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="zh">中文</option>
+                <option value="de">Deutsch</option>
               </select>
               <a
                 href="/demo"

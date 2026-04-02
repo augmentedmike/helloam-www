@@ -5,7 +5,7 @@ import { getTranslation } from "@/lib/translations";
 
 export default function CostFrame() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
   const cf = t.costFrame;
 
   return (

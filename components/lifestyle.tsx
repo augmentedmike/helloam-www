@@ -8,7 +8,7 @@ const COLORS = ["#00E5FF", "#4A90D9", "#F5A623", "#4CAF50", "#E8006A", "#9B59B6"
 
 export default function Lifestyle() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
   const [active, setActive] = useState(0);
 
   const personas = t.lifestyle.personas.map((p, i) => ({

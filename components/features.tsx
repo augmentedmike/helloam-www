@@ -42,7 +42,7 @@ const FEATURE_META: { accent: string; categories: Category[] }[] = [
 export default function Features() {
   const [active, setActive] = useState<Category>("pm");
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   const TABS: { id: Category; label: string }[] = [
     { id: "pm",      label: t.features.tabs.pm      },

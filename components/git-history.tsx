@@ -5,7 +5,7 @@ import { getTranslation } from "@/lib/translations";
 
 export default function GitHistory() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section className="px-6 py-24">

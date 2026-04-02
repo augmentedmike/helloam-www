@@ -15,7 +15,7 @@ const STEP_COLORS = ["#00E5FF", "#4A90D9", "#F5A623"];
 
 export default function Device() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   const STEPS = t.device.steps.map((step, i) => ({
     ...step,

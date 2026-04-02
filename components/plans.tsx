@@ -241,7 +241,7 @@ function SessionCheckoutModal({
 export default function Plans() {
   const [showCheckout, setShowCheckout] = useState(false);
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section

@@ -7,7 +7,7 @@ const ACCENTS = ["#00E5FF", "#4A90D9", "#9B59B6", "#00BCD4", "#F5A623", "#4CAF50
 
 export default function MemorySection() {
   const { locale } = useLocale();
-  const t = getTranslation(locale as "en" | "es" | "zh");
+  const t = getTranslation(locale as "en" | "es" | "zh" | "de");
 
   return (
     <section className="px-6 py-24">
