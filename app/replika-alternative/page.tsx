@@ -215,7 +215,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How much does AM cost?",
-    a: "The device is $1,800 — paid once. No monthly subscription. The only ongoing cost is Anthropic compute (~$200/mo), paid directly to Anthropic. Pre-orders are $900 now to reserve your number, with the rest due at shipping. Units ship July 2026.",
+    a: "AM is free and open source (MIT). No device to buy. The only cost is your Anthropic API usage, paid directly to Anthropic. Install on Mac, Windows, or Linux in one command.",
   },
 ];
 
@@ -437,7 +437,7 @@ export default function ReplikaAlternativePage() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            Reserve your number
+            Get started
           </p>
           <h2
             className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
@@ -446,9 +446,7 @@ export default function ReplikaAlternativePage() {
             The AI companion who stays.
           </h2>
           <p className="text-base mb-10" style={{ color: "#888888" }}>
-            Get early access. Pre-orders shipping July 2026.
-            <br />
-            $900 now, remainder at ship. One-time — never again.
+            Free and open source. Runs on Mac, Windows, and Linux.
           </p>
           <div id="waitlist" className="flex justify-center">
             <WaitlistForm />

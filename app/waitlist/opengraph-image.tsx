@@ -6,8 +6,8 @@ import { buildOGImage } from "@/lib/og-image";
 
 export default function Image() {
   return buildOGImage({
-    title: "Get early access",
-    tagline: "Sign up for early access to the AM digital worker platform",
-    pageLabel: "Early Access",
+    title: "Get started",
+    tagline: "Free, open-source AI digital worker for Mac, Windows, and Linux",
+    pageLabel: "Get Started",
   });
 }

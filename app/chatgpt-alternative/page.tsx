@@ -809,8 +809,7 @@ export default function ChatGPTAlternativePage() {
             <span style={{ color: AM }}>Get early access to AM.</span>
           </h2>
           <p className="text-lg" style={{ color: "#666" }}>
-            Sign up for early access. We&apos;ll reach out when your spot is ready.
-            No credit card. No commitment.
+            Free and open source. Install in one command on Mac, Windows, or Linux.
           </p>
         </div>
 

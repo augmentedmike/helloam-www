@@ -68,7 +68,7 @@ const jsonLd = {
         name: "How does AM pricing compare to Devin?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AM is currently in early access with free pilot access available. Team pricing starts from $149/seat/month. Devin's pricing is usage-based starting at $500/month. For teams needing cross-functional coverage, AM delivers more scope per dollar.",
+          text: "AM is free and open source (MIT). The only cost is your Anthropic API usage, paid directly to Anthropic. Devin's pricing is usage-based starting at $500/month. For teams needing cross-functional coverage, AM delivers more scope at zero subscription cost.",
         },
       },
     ],
@@ -120,7 +120,7 @@ export default function AmVsDevinPage() {
         {[
           { label: "AM wins on", point: "Cross-functional scope — dev, support, and ops in one worker" },
           { label: "AM wins on", point: "Incident triage and on-call response built in" },
-          { label: "AM wins on", point: "Pricing — free early access, team plans from $149/seat" },
+          { label: "AM wins on", point: "Pricing — free and open source, no subscription required" },
         ].map(({ label, point }, i) => (
           <div key={i} className="rounded-xl border border-[#00E5FF]/20 bg-[#00E5FF]/5 p-5">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#00E5FF] mb-2">{label}</p>
@@ -204,7 +204,7 @@ export default function AmVsDevinPage() {
       <section className="max-w-xl mx-auto px-6 pb-24 text-center">
         <h2 className="text-2xl font-bold mb-4">Try AM free</h2>
         <p className="text-gray-400 mb-8">
-          Get early access — no credit card required.
+          Free and open source — no credit card, no subscription, ever.
         </p>
         <WaitlistForm />
       </section>

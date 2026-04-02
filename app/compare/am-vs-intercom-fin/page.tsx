@@ -403,7 +403,7 @@ export default function AmVsIntercomFinPage() {
             <span style={{ color: ACCENT }}>Autonomously.</span>
           </h2>
           <p className="text-lg" style={{ color: "#666" }}>
-            Join the early access list. No credit card. No commitment.
+            Free and open source — no credit card, no subscription, ever.
           </p>
         </div>
         <div className="max-w-lg mx-auto">

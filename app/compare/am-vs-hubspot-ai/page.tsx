@@ -89,7 +89,7 @@ const jsonLd = [
         name: "How does AM's pricing compare to HubSpot AI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HubSpot AI features require a HubSpot subscription. Breeze Agents (including the Customer Agent) require Professional or Enterprise tiers — roughly $10,800 per year for a 10-person team, plus a mandatory onboarding fee of $3,000–$7,000. AM has flat, transparent pricing with no credit pools, no per-seat escalation, and no onboarding fee.",
+          text: "HubSpot AI features require a HubSpot subscription. Breeze Agents (including the Customer Agent) require Professional or Enterprise tiers — roughly $10,800 per year for a 10-person team, plus a mandatory onboarding fee of $3,000–$7,000. AM is free and open source (MIT) — the only cost is your Anthropic API usage, paid directly to Anthropic. No subscription, no credit pools, no onboarding fee.",
         },
       },
       {
@@ -433,7 +433,7 @@ export default function AmVsHubSpotAiPage() {
               },
               {
                 q: "How does AM's pricing compare to HubSpot AI?",
-                a: "HubSpot AI features require a HubSpot subscription. Breeze Agents require Professional or Enterprise tiers — roughly $10,800 per year for a 10-person team, plus a mandatory onboarding fee of $3,000–$7,000. AM has flat, transparent pricing with no credit pools, no per-seat escalation, and no onboarding fee.",
+                a: "HubSpot AI features require a HubSpot subscription. Breeze Agents require Professional or Enterprise tiers — roughly $10,800 per year for a 10-person team, plus a mandatory onboarding fee of $3,000–$7,000. AM is free and open source (MIT) — the only cost is your Anthropic API usage. No subscription, no credit pools, no onboarding fee.",
               },
               {
                 q: "Does AM remember context across sessions?",
@@ -477,7 +477,7 @@ export default function AmVsHubSpotAiPage() {
             <span style={{ color: ACCENT }}>Not just inside HubSpot.</span>
           </h2>
           <p className="text-lg" style={{ color: "#666" }}>
-            Join the early access list. No credit card. No commitment.
+            Free and open source — no credit card, no subscription, ever.
           </p>
         </div>
         <div className="max-w-lg mx-auto">

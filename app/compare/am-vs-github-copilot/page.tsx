@@ -68,7 +68,7 @@ const jsonLd = {
         name: "Is AM more expensive than GitHub Copilot?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "GitHub Copilot Individual is $10/month; Business is $19/seat/month. AM early access is free; team pricing starts at $149/seat/month. AM covers a fundamentally wider scope — autonomous task execution, support triage, on-call response — so the comparison is less about price and more about what work you need covered.",
+          text: "GitHub Copilot Individual is $10/month; Business is $19/seat/month. AM is free and open source (MIT) — the only cost is your Anthropic API usage, paid directly to Anthropic. AM covers a fundamentally wider scope — autonomous task execution, support triage, on-call response — so the comparison is less about price and more about what work you need covered.",
         },
       },
       {
@@ -212,7 +212,7 @@ export default function AmVsCopilotPage() {
       <section className="max-w-xl mx-auto px-6 pb-24 text-center">
         <h2 className="text-2xl font-bold mb-4">Try AM free</h2>
         <p className="text-gray-400 mb-8">
-          Get early access — no credit card required.
+          Free and open source — no credit card, no subscription, ever.
         </p>
         <WaitlistForm />
       </section>
