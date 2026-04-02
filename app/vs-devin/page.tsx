@@ -102,7 +102,7 @@ const jsonLd = [
         name: "What does AM cost compared to Devin?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AM is a one-time device cost of $1,800 (with a $900 pre-order deposit, remainder at ship). The only ongoing cost is Anthropic compute (~$200/mo), paid directly to Anthropic — not to AM. Devin costs $20–$500+/month on top of per-ACU compute fees that can compound when tasks fail.",
+          text: "AM is free and open source. The only cost is your Anthropic API usage, paid directly to Anthropic. Devin costs $20–$500+/month on top of per-ACU compute fees that can compound when tasks fail.",
         },
       },
     ],
@@ -208,7 +208,7 @@ const painPoints = [
   {
     number: "03",
     title: "You pay whether it works or not.",
-    body: "Devin's Agent Compute Unit (ACU) model means every minute of agent runtime consumes budget — including the time Devin spends going down dead ends, misunderstanding requirements, or failing tasks. Independent testing found roughly a 15% success rate on complex tasks. The answer.AI review (January 2025) found 14 failures in 20 tasks. The Team plan starts at $500/month before ACU add-ons. AM's compute is billed through Anthropic directly at ~$200/month. You pay for actual usage — not an AI that runs your budget down on tasks it cannot complete.",
+    body: "Devin's Agent Compute Unit (ACU) model means every minute of agent runtime consumes budget — including the time Devin spends going down dead ends, misunderstanding requirements, or failing tasks. Independent testing found roughly a 15% success rate on complex tasks. The answer.AI review (January 2025) found 14 failures in 20 tasks. The Team plan starts at $500/month before ACU add-ons. AM is free and open source — you only pay Anthropic for API usage on tasks that actually run.",
     label: "ACU cost model / failure rate",
   },
 ];
@@ -232,7 +232,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How much does AM cost?",
-    a: "The AM device is $1,800 — paid once. Pre-orders are $900 now to reserve your number, with the remainder due at shipping. The only ongoing cost is Anthropic compute at approximately $200/month, billed directly to Anthropic. No AM subscription, ever. Units ship July 2026.",
+    a: "AM is free and open source (MIT license). Install it on Mac, Windows, or Linux in one command. The only cost is your Anthropic API usage, paid directly to Anthropic. No AM subscription, ever.",
   },
 ];
 
@@ -454,7 +454,7 @@ export default function VsDevinPage() {
             className="text-xs font-semibold tracking-[0.25em] uppercase mb-4"
             style={{ color: "#00E5FF" }}
           >
-            Reserve your number
+            Get started
           </p>
           <h2
             className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
@@ -463,9 +463,7 @@ export default function VsDevinPage() {
             The AI worker who knows you.
           </h2>
           <p className="text-base mb-10" style={{ color: "#888888" }}>
-            Get early access. Pre-orders shipping July 2026.
-            <br />
-            $900 now, remainder at ship. One-time — never again.
+            Free and open source. Runs on Mac, Windows, and Linux.
           </p>
           <div id="waitlist" className="flex justify-center">
             <WaitlistForm />

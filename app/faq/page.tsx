@@ -62,7 +62,7 @@ const faqs = [
   {
     question: "How much does AM cost?",
     answer:
-      "The device is $1,800, paid once — never again. Flexible payment plans (3, 6, or 12 months) are available. Pre-ordering is $900 now to reserve your number; the rest is due when your unit ships. The AM software is free and open source. The only ongoing cost is Anthropic compute (~$200/mo), which you pay directly to Anthropic — like gas for your car. We never charge monthly.",
+      "AM is free and open source (MIT license). Install it in one command on Mac, Windows, or Linux. The only ongoing cost is your Anthropic API usage, billed directly by Anthropic — AM itself costs nothing.",
   },
   {
     question: "What can AM actually do?",
@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "When will AM (helloam) be available?",
     answer:
-      "AM is currently accepting pre-orders with shipping planned for July 2026. Pre-order numbers are permanent and registered to you. Get early access at helloam.bot to reserve your place.",
+      "AM is available now. It is free, open source, and installs in one command on Mac, Windows, or Linux. Get started at github.com/augmentedmike/am-agi.",
   },
   {
     question: "Is AM an AI companion that runs on my hardware?",
@@ -82,7 +82,7 @@ const faqs = [
   {
     question: "What is helloam.bot?",
     answer:
-      "helloam.bot is the official website for AM — a soul-bonded personal AI companion. It is where you can learn about AM, get early access, pre-order your device, and read about the technology behind AM. The domain helloam.bot reflects the product name: hello, AM.",
+      "helloam.bot is the official website for AM — an open-source digital worker. It is where you can learn about AM and get started. The domain helloam.bot reflects the product name: hello, AM.",
   },
   {
     question: "Can AM build software?",
@@ -90,9 +90,9 @@ const faqs = [
       "Yes. AM can build websites, mobile apps, and desktop apps. She is a serious programmer — she has studied the best engineering practices, design patterns, and problem-solving techniques. You describe what you want to build. She builds it. Not a mockup — the real thing.",
   },
   {
-    question: "AM runs on a Claude MAX subscription — will costs go down?",
+    question: "What API does AM use?",
     answer:
-      "Yes. We chose Anthropic because their models are the best available, and because their MAX subscription pricing ensures customers never see a surprise $500 compute bill. When you hit your compute limit, AM simply sleeps. As model costs decrease over time, we will find the best options automatically for you.",
+      "AM uses the Anthropic API (Claude models). You provide your own API key. You pay Anthropic directly for usage — AM itself is free. As model costs decrease over time, AM automatically benefits.",
   },
 ];
 
@@ -186,15 +186,17 @@ export default function FAQPage() {
             Ready to meet AM?
           </p>
           <p className="mb-6" style={{ color: "#888888" }}>
-            Get early access at helloam.bot — pre-orders shipping July 2026.
+            Free and open source. Install in one command.
           </p>
-          <Link
-            href="/"
+          <a
+            href="https://github.com/augmentedmike/am-agi"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
             style={{ background: "#00E5FF", color: "#0a0a0a" }}
           >
-            Get early access
-          </Link>
+            Get Started on GitHub
+          </a>
         </div>
       </div>
     </main>
