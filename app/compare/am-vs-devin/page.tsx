@@ -71,14 +71,6 @@ const jsonLd = {
           text: "AM is currently in early access with free pilot access available. Team pricing starts from $149/seat/month. Devin's pricing is usage-based starting at $500/month. For teams needing cross-functional coverage, AM delivers more scope per dollar.",
         },
       },
-      {
-        "@type": "Question",
-        name: "Which integrations does AM support that Devin does not?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "AM integrates with customer support channels (Intercom, Zendesk, Slack), incident alerting tools (PagerDuty, OpsGenie), and project management platforms (Jira, Linear, Notion) — in addition to GitHub and GitLab for code work. Devin is primarily focused on the engineering toolchain.",
-        },
-      },
     ],
 };
 

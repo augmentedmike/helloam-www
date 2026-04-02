@@ -176,14 +176,6 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "What integrations does AM support?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "AM integrates with Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence, and more. It works inside your existing tools without requiring workflow changes.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "Is my company's data secure with AM?",
           acceptedAnswer: {
             "@type": "Answer",

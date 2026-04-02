@@ -12,10 +12,6 @@
         "a": "Copilot is a coding assistant — it helps you write code, but you're still doing the work. Devin is end-to-end for engineering only. Fin is end-to-end for support only. AM covers all three team functions — PM, developer, and support — under one platform. It also has persistent context across your whole team, not just one user or one workflow."
       },
       {
-        "q": "What integrations does AM support?",
-        "a": "AM integrates with Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence, and more. It works inside your existing tools — it doesn't require you to change your workflow. We add integrations based on what our customers use, and enterprise customers can request custom integrations."
-      },
-      {
         "q": "Is my company's data secure?",
         "a": "Yes. AM processes your data under a data processing agreement and does not train on your company's data. All data is encrypted in transit and at rest. We support SSO, role-based access controls, and audit logs for enterprise customers. We're SOC 2 Type II in progress."
       },

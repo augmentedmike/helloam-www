@@ -30,7 +30,6 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 flex-wrap justify-center">
             {[
-              { label: "Integrations", href: "/integrations",                              external: false },
               { label: "Press",        href: "/press",                                  external: false },
               { label: "Contact",      href: "/contact",                                external: false },
               { label: "GitHub",       href: "https://github.com/augmentedmike/am-agi", external: true  },

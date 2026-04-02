@@ -116,14 +116,6 @@ const jsonLd = [
           text: "AM monitors your alerting system (PagerDuty, OpsGenie, etc.), correlates firing alerts with recent deployments and code changes, and surfaces the most likely root cause — before you're fully awake. It reduces the time between alert and diagnosis so you can fix the issue faster.",
         },
       },
-      {
-        "@type": "Question",
-        name: "What integrations does AM support for developers?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "AM integrates with GitHub, GitLab, Jira, Linear, Slack, PagerDuty, OpsGenie, Confluence, and Notion. It works inside your existing toolchain — no workflow changes required.",
-        },
-      },
     ],
   },
 ];
@@ -608,10 +600,6 @@ export default function ForDevelopersPage() {
               {
                 q: "How does on-call triage work?",
                 a: "AM monitors your alerting system (PagerDuty, OpsGenie, etc.), correlates firing alerts with recent deployments and code changes, and surfaces the most likely root cause — often before you've finished reading the page. Less time diagnosing. More time fixing.",
-              },
-              {
-                q: "What integrations does AM support?",
-                a: "GitHub, GitLab, Jira, Linear, Slack, PagerDuty, OpsGenie, Confluence, and Notion. AM works inside your existing toolchain — no workflow changes required.",
               },
             ].map((item) => (
               <div
