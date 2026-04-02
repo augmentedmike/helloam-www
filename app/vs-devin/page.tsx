@@ -94,7 +94,7 @@ const jsonLd = [
         name: "How is AM different from Devin?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AM runs on a Mac Mini in your home — your code, files, and conversations never leave your hardware. AM builds persistent long-term memory of your work, preferences, and context across every session. Unlike Devin, AM is not limited to coding: it handles research, writing, scheduling, and personal projects. There is no subscription — you own the device outright.",
+          text: "AM runs on your own machine — your code, files, and conversations never leave your hardware. AM builds persistent long-term memory of your work, preferences, and context across every session. Unlike Devin, AM is not limited to coding: it handles research, writing, scheduling, and personal projects. There is no subscription — you own the device outright.",
         },
       },
       {
@@ -196,7 +196,7 @@ const painPoints = [
   {
     number: "01",
     title: "Your code is on their servers — by default.",
-    body: "On Devin's Core and Team plans, every file you share, every codebase you connect, every command you run goes through Cognition's cloud infrastructure. Zero data retention and private VPC deployment are locked behind an Enterprise contract. If you are an individual developer or small team, you get none of those protections — the entry plans don't offer them. AM runs entirely on a Mac Mini in your home. Nothing leaves your hardware. Not your code, not your conversation, not your memory.",
+    body: "On Devin's Core and Team plans, every file you share, every codebase you connect, every command you run goes through Cognition's cloud infrastructure. Zero data retention and private VPC deployment are locked behind an Enterprise contract. If you are an individual developer or small team, you get none of those protections — the entry plans don't offer them. AM runs entirely on your own machine. Nothing leaves your hardware. Not your code, not your conversation, not your memory.",
     label: "Cloud privacy risk",
   },
   {
@@ -277,7 +277,7 @@ export default function VsDevinPage() {
         </h1>
         <p className="text-lg leading-relaxed mb-8" style={{ color: "#888888" }}>
           Devin costs $20–$500/month, sends your code to a third-party server, and
-          forgets everything after each session. AM runs on a Mac Mini in your home,
+          forgets everything after each session. AM runs on your own machine,
           builds persistent memory of your work, and handles every domain — not just code.
         </p>
         <Link
@@ -285,7 +285,7 @@ export default function VsDevinPage() {
           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
           style={{ background: "#00E5FF", color: "#0a0a0a" }}
         >
-          Join the waitlist
+          Get early access
         </Link>
       </div>
 
@@ -463,7 +463,7 @@ export default function VsDevinPage() {
             The AI worker who knows you.
           </h2>
           <p className="text-base mb-10" style={{ color: "#888888" }}>
-            Join the waitlist. Pre-orders shipping July 2026.
+            Get early access. Pre-orders shipping July 2026.
             <br />
             $900 now, remainder at ship. One-time — never again.
           </p>

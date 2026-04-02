@@ -7,7 +7,7 @@ import { buildOGImage } from "@/lib/og-image";
 export default function Image() {
   return buildOGImage({
     title: "Get early access",
-    tagline: "Join the waitlist for the AM digital worker platform",
-    pageLabel: "Waitlist",
+    tagline: "Sign up for early access to the AM digital worker platform",
+    pageLabel: "Early Access",
   });
 }

@@ -58,8 +58,7 @@ export default function TermsPage() {
             <p>
               helloam.bot is operated by Tylt LLC, a Delaware company. The site
               introduces AM (&quot;AM&quot;) — a digital worker platform for PMs, developers, and support teams
-              currently in early access — and collects waitlist registrations. By using this site or joining the
-              waitlist, you agree to these terms.
+              currently in early access — and collects early access registrations. By using this site or signing up for early access, you agree to these terms.
             </p>
           </section>
 
@@ -68,14 +67,14 @@ export default function TermsPage() {
               className="text-lg font-semibold text-white mb-3"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
-              Waitlist registration
+              Early access registration
             </h2>
             <ul className="space-y-2 pl-4" style={{ listStyle: "disc" }}>
-              <li>Joining the waitlist does not create a contract for purchase or delivery of any product.</li>
-              <li>We reserve the right to invite waitlist members in any order at our discretion.</li>
-              <li>Waitlist registration is free. We do not charge fees to join.</li>
-              <li>You must be at least 13 years old to join the waitlist. By registering, you represent that you meet this requirement.</li>
-              <li>You may request removal from the waitlist at any time by{" "}
+              <li>Signing up for early access does not create a contract for purchase or delivery of any product.</li>
+              <li>We reserve the right to invite early access members in any order at our discretion.</li>
+              <li>Early access registration is free. We do not charge fees to join.</li>
+              <li>You must be at least 13 years old to sign up for early access. By registering, you represent that you meet this requirement.</li>
+              <li>You may request removal from the early access list at any time by{" "}
                 <a href="mailto:augmentedmike@gmail.com" className="text-white hover:underline">
                   contacting us
                 </a>.
@@ -140,7 +139,7 @@ export default function TermsPage() {
             <p>
               TO THE MAXIMUM EXTENT PERMITTED BY LAW, TYLT LLC SHALL NOT BE LIABLE FOR ANY INDIRECT,
               INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OF THIS SITE OR
-              PARTICIPATION IN THE WAITLIST. OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM SHALL NOT EXCEED
+              PARTICIPATION IN THE EARLY ACCESS PROGRAM. OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM SHALL NOT EXCEED
               $100 USD.
             </p>
           </section>

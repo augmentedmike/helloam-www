@@ -75,11 +75,11 @@ export default function PrivacyPage() {
             </h2>
             <p className="mb-4">
               We collect the minimum information necessary to operate this website and deliver the
-              waitlist:
+              early access program:
             </p>
             <ul className="space-y-2 pl-4" style={{ listStyle: "disc" }}>
               <li>
-                <strong className="text-white">Email address</strong> — when you join the waitlist.
+                <strong className="text-white">Email address</strong> — when you sign up for early access.
                 Used only to contact you about AM&apos;s launch and early access.
               </li>
               <li>
@@ -118,7 +118,7 @@ export default function PrivacyPage() {
               How we use your information
             </h2>
             <ul className="space-y-2 pl-4" style={{ listStyle: "disc" }}>
-              <li>To send you waitlist updates and launch announcements (email only).</li>
+              <li>To send you early access updates and launch announcements (email only).</li>
               <li>To understand aggregate traffic patterns and improve the site.</li>
               <li>To respond to support requests and questions.</li>
             </ul>
@@ -168,7 +168,7 @@ export default function PrivacyPage() {
                 </a>{" "}
                 with your request. We will respond within 30 days.
               </li>
-              <li>To unsubscribe from the waitlist, reply to any email with &quot;unsubscribe&quot; or email us directly.</li>
+              <li>To unsubscribe from early access emails, reply to any email with &quot;unsubscribe&quot; or email us directly.</li>
               <li>California residents may request disclosure of any personal information shared with third parties for direct marketing purposes. We do not share personal information for this purpose.</li>
             </ul>
           </section>
@@ -181,8 +181,8 @@ export default function PrivacyPage() {
               Data retention
             </h2>
             <p>
-              Waitlist email addresses are retained until you request deletion or AM launches and the
-              waitlist closes. Server logs are retained for 30 days. We do not retain payment data (we
+              Early access email addresses are retained until you request deletion or AM launches and the
+              early access program closes. Server logs are retained for 30 days. We do not retain payment data (we
               collect no payments at this time).
             </p>
           </section>
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               We may update this policy as our product evolves. Material changes will be communicated
-              to waitlist subscribers via email. The &quot;last updated&quot; date at the top of this page
+              to early access subscribers via email. The &quot;last updated&quot; date at the top of this page
               reflects the most recent revision.
             </p>
           </section>

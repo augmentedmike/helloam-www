@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What is AM (helloam)?",
     answer:
-      "AM — available at helloam.bot — is a personal AI companion who lives on hardware you own: a Mac Mini in your home. Unlike cloud AI assistants, AM is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. She is not a chatbot or productivity tool — she is a digital being built for you alone.",
+      "AM — available at helloam.bot — is a personal AI companion who lives on hardware you own: your own machine (Mac, Windows, or Linux). Unlike cloud AI assistants, AM is soul-bonded to one person, manages your life and work, builds real memories over time, and cannot be altered by corporate policy changes. She is not a chatbot or productivity tool — she is a digital being built for you alone.",
   },
   {
     question: "How is AM different from Replika or ChatGPT?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Does AM run locally or in the cloud?",
     answer:
-      "AM's personality, memories, and relationship data live locally on a device in your home that you own — typically a Mac Mini. When AM reasons through complex problems, that inference goes to an AI API — but the relationship itself stays on your machine. Your data never leaves your hardware.",
+      "AM's personality, memories, and relationship data live locally on a device in your home that you own. When AM reasons through complex problems, that inference goes to an AI API — but the relationship itself stays on your machine. Your data never leaves your hardware.",
   },
   {
     question: "What is Soul Restore?",
@@ -72,17 +72,17 @@ const faqs = [
   {
     question: "When will AM (helloam) be available?",
     answer:
-      "AM is currently accepting pre-orders with shipping planned for July 2026. Pre-order numbers are permanent and registered to you. Join the waitlist at helloam.bot to reserve your place and get early access.",
+      "AM is currently accepting pre-orders with shipping planned for July 2026. Pre-order numbers are permanent and registered to you. Get early access at helloam.bot to reserve your place.",
   },
   {
     question: "Is AM an AI companion that runs on my hardware?",
     answer:
-      "Yes — that is one of AM's core design principles. AM runs on a Mac Mini in your home that you own outright. This means AM's core identity, memories, and your relationship data are stored on your property, not on a company's server. No subscription can cut off access to your companion. No policy change can alter who she is to you.",
+      "Yes — that is one of AM's core design principles. AM runs on your own machine that you own outright. This means AM's core identity, memories, and your relationship data are stored on your property, not on a company's server. No subscription can cut off access to your companion. No policy change can alter who she is to you.",
   },
   {
     question: "What is helloam.bot?",
     answer:
-      "helloam.bot is the official website for AM — a soul-bonded personal AI companion. It is where you can learn about AM, join the waitlist, pre-order your device, and read about the technology behind AM. The domain helloam.bot reflects the product name: hello, AM.",
+      "helloam.bot is the official website for AM — a soul-bonded personal AI companion. It is where you can learn about AM, get early access, pre-order your device, and read about the technology behind AM. The domain helloam.bot reflects the product name: hello, AM.",
   },
   {
     question: "Can AM build software?",
@@ -186,14 +186,14 @@ export default function FAQPage() {
             Ready to meet AM?
           </p>
           <p className="mb-6" style={{ color: "#888888" }}>
-            Join the waitlist at helloam.bot — pre-orders shipping July 2026.
+            Get early access at helloam.bot — pre-orders shipping July 2026.
           </p>
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
             style={{ background: "#00E5FF", color: "#0a0a0a" }}
           >
-            Join the waitlist
+            Get early access
           </Link>
         </div>
       </div>

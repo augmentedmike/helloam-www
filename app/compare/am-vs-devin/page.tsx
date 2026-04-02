@@ -204,7 +204,7 @@ export default function AmVsDevinPage() {
       <section className="max-w-xl mx-auto px-6 pb-24 text-center">
         <h2 className="text-2xl font-bold mb-4">Try AM free</h2>
         <p className="text-gray-400 mb-8">
-          Join the waitlist and get early pilot access — no credit card required.
+          Get early access — no credit card required.
         </p>
         <WaitlistForm />
       </section>

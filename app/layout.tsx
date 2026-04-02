@@ -144,7 +144,7 @@ const jsonLd = {
           "@type": "JoinAction",
           name: "Get Early Access",
           target: "https://helloam.bot/#waitlist",
-          description: "Join the waitlist for early access to the AM digital worker platform.",
+          description: "Sign up for early access to the AM digital worker platform.",
         },
         {
           "@type": "ApplyAction",

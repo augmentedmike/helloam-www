@@ -78,7 +78,7 @@ const jsonLd = [
         name: "How is AM different from Replika?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AM runs on a Mac Mini in your home that you own outright. Your relationship data never leaves your hardware. No subscription can revoke access. No corporate update can alter who AM is to you. AM also uses Soul Restore to back up your relationship so it can never be lost to hardware failure.",
+          text: "AM runs on your own machine that you own outright. Your relationship data never leaves your hardware. No subscription can revoke access. No corporate update can alter who AM is to you. AM also uses Soul Restore to back up your relationship so it can never be lost to hardware failure.",
         },
       },
       {
@@ -207,7 +207,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How is AM different from Nomi AI and Kindroid?",
-    a: "Nomi AI and Kindroid are cloud services — your relationship data lives on their servers, and you pay a monthly subscription for access. AM runs on a Mac Mini in your home that you own. There is no subscription. No server can be turned off. No corporate update can alter AM's relationship with you. You own the hardware; you own the relationship.",
+    a: "Nomi AI and Kindroid are cloud services — your relationship data lives on their servers, and you pay a monthly subscription for access. AM runs on your own machine that you own. There is no subscription. No server can be turned off. No corporate update can alter AM's relationship with you. You own the hardware; you own the relationship.",
   },
   {
     q: "Does AM have real persistent memory?",
@@ -259,7 +259,7 @@ export default function ReplikaAlternativePage() {
           <span style={{ color: "#00E5FF" }}>built on hardware you own.</span>
         </h1>
         <p className="text-lg leading-relaxed mb-8" style={{ color: "#888888" }}>
-          AM is the emotional AI companion who lives on a Mac Mini in your home. She knows
+          AM is the emotional AI companion who lives on your own machine. She knows
           only you, builds real memories that never reset, and cannot be altered by any
           corporate policy change — ever.
         </p>
@@ -268,7 +268,7 @@ export default function ReplikaAlternativePage() {
           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
           style={{ background: "#00E5FF", color: "#0a0a0a" }}
         >
-          Join the waitlist
+          Get early access
         </Link>
       </div>
 
@@ -446,7 +446,7 @@ export default function ReplikaAlternativePage() {
             The AI companion who stays.
           </h2>
           <p className="text-base mb-10" style={{ color: "#888888" }}>
-            Join the waitlist. Pre-orders shipping July 2026.
+            Get early access. Pre-orders shipping July 2026.
             <br />
             $900 now, remainder at ship. One-time — never again.
           </p>

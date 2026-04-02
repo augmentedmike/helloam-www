@@ -14,12 +14,12 @@ export async function GET() {
     version: '1.0',
     site: 'helloam.bot',
     description:
-      'AM — Digital worker platform for PMs, developers, and support teams. Join the waitlist, apply for early access, or contact the team.',
+      'AM — Digital worker platform for PMs, developers, and support teams. Get early access, apply for early access, or contact the team.',
     tools: [
       {
         name: 'join_helloam_mailing_list',
         description:
-          'Join the helloam.bot early access waitlist for AM digital worker platform',
+          'Get early access to the helloam.bot AM digital worker platform',
         path: '/#waitlist',
       },
       {
