@@ -1,0 +1,843 @@
+{
+  "faq": {
+    "title": "Alles, was du wissen möchtest.",
+    "subtitle": "Häufige Fragen",
+    "items": [
+      {
+        "q": "Was genau macht AM?",
+        "a": "AM ist ein digitaler Mitarbeiter — eine autonome KI, die end-to-end-Aufgaben für PMs, Entwickler und Support-Teams übernimmt. Für PMs: Triage von Backlogs, Sprint-Grooming und Release-Notes. Für Entwickler: Tickets aufgreifen, Code schreiben und PRs öffnen. Für Support-Teams: Tickets autonom lösen und Sonderfälle eskalieren. AM reagiert nicht nur auf Prompts — sie ist für Ergebnisse verantwortlich."
+      },
+      {
+        "q": "Wie unterscheidet sich AM von GitHub Copilot, Devin oder Intercom Fin?",
+        "a": "Copilot ist ein Coding-Assistent — er hilft beim Schreiben von Code, aber du machst noch die Arbeit. Devin ist end-to-end für Engineering. Fin ist end-to-end für Support. AM deckt alle drei Teamfunktionen ab — PM, Entwickler und Support — auf einer Plattform. Außerdem hat sie persistenten Kontext über dein gesamtes Team, nicht nur für einen Nutzer oder einen Workflow."
+      },
+      {
+        "q": "Welche Integrationen unterstützt AM?",
+        "a": "AM integriert sich mit Jira, Linear, GitHub, GitLab, Slack, Zendesk, Intercom, Notion, Confluence und mehr. Sie arbeitet in deinen bestehenden Tools — du musst deinen Workflow nicht ändern. Wir fügen Integrationen basierend auf dem hinzu, was unsere Kunden nutzen, und Enterprise-Kunden können individuelle Integrationen anfordern."
+      },
+      {
+        "q": "Sind die Daten meines Unternehmens sicher?",
+        "a": "Ja. AM verarbeitet deine Daten unter einem Datenverarbeitungsvertrag und trainiert nicht mit den Daten deines Unternehmens. Alle Daten sind im Transit und im Ruhezustand verschlüsselt. Wir unterstützen SSO, rollenbasierte Zugriffskontrollen und Audit-Logs für Enterprise-Kunden. Wir befinden uns im SOC 2 Type II-Prozess."
+      },
+      {
+        "q": "Wie funktioniert das Team-Onboarding?",
+        "a": "Das Onboarding dauert 1–2 Stunden. Wir verbinden AM mit deinen Tools (GitHub, Jira, Slack usw.), gewähren ihr Lesezugriff auf deinen Codebase und deine Knowledge Base und führen eine Kontext-Aufbausitzung durch. Innerhalb der ersten Woche hat AM genug Kontext für echte Arbeit. Wir stellen Teams auf Growth und höher einen dedizierten Success Engineer zur Verfügung."
+      },
+      {
+        "q": "Was passiert, wenn AM etwas nicht weiß oder einen Fehler macht?",
+        "a": "AM ist darauf ausgelegt zu eskalieren, nicht still zu scheitern. Wenn sie auf eine Situation trifft, die außerhalb ihres Vertrauensschwellenwerts liegt — ein regulatorischer Sonderfall, eine mehrdeutige Kundensituation, eine komplexe Architekturentscheidung — bringt sie das Problem einem Menschen mit vollem Kontext und einem empfohlenen Weg nach vorne. Wir verfolgen Eskalationsraten und arbeiten mit dir daran, diese im Laufe der Zeit zu verbessern."
+      },
+      {
+        "q": "Kann AM autonom über Nacht oder nach einem Zeitplan arbeiten?",
+        "a": "Ja. AM läuft nach Zeitplänen, Triggern und Ereignissen. Du kannst sie so konfigurieren, dass sie eingehende Support-Tickets kontinuierlich triagiert, eine nächtliche Backlog-Überprüfung durchführt oder jeden Montag eine wöchentliche Sprint-Zusammenfassung an Slack sendet — ohne dass jemand fragen muss. Sie arbeitet, während dein Team offline ist."
+      },
+      {
+        "q": "Wie funktioniert die Preisgestaltung?",
+        "a": "AM ist kostenlos und Open Source — du kannst es ohne Kosten selbst hosten. Wenn du KI-Tooling einrechnest, geben die meisten Teams 3.000–12.000 $/Jahr aus. Das ist weniger als eine einzige Teilzeitkraft (7.000–12.000 $/Jahr) — und AM deckt jede Funktion ab: Support, Vertrieb, Marketing, Ops, Engineering und Finanzen, statt einer Funktion pro Einstellung."
+      },
+      {
+        "q": "Wir sind noch nicht kaufbereit — können wir AM zuerst ausprobieren?",
+        "a": "Ja. AM ist für immer kostenlos. Lade es von GitHub herunter, hoste es selbst und beginne sofort damit. Wenn du Hilfe bei Einrichtung, Training oder individuellen Integrationen benötigst, bieten wir kostenpflichtige Support-Sitzungen für 50 $ pro 30 Minuten an."
+      },
+      {
+        "q": "Warum unterstützt AM Spanisch, Chinesisch und Deutsch?",
+        "a": "Das Beseitigen von Sprachbarrieren beschleunigt die globale Einführung. Unsere Nutzer kommen aus 40+ Ländern in Lateinamerika, Spanien, China, Südostasien und dem deutschsprachigen Raum. Durch die native Unterstützung von Spanisch, Chinesisch und Deutsch machen wir AM für Teams unabhängig von ihrer Sprache zugänglich. Dies spiegelt unsere Überzeugung wider, dass leistungsstarke Tools für alle Menschen weltweit verfügbar sein sollten — ohne Übersetzungshürden."
+      }
+    ]
+  },
+  "nav": {
+    "forPMs": "Für PMs",
+    "forDevs": "Für Entwickler",
+    "forSupport": "Für Support",
+    "help": "Hilfe",
+    "requestDemo": "Demo anfragen",
+    "getEarlyAccess": "AM auf GitHub"
+  },
+  "hero": {
+    "badge": "Kostenlos und Open Source",
+    "headline1": "Dein lokaler KI-Assistent.",
+    "headline2": "Ein ganzes Team. In deiner Tasche.",
+    "subhead": "AM ist dein lokaler KI-Assistent — ein persistenter digitaler Mitarbeiter, der lokal auf deinem Gerät läuft und jede Rolle ausfüllt, die deinem kleinen Team fehlt — Support, Vertrieb, Marketing, Ops, Engineering, Finanzen — mit Gedächtnis, Konsequenz und ohne Übergaben.",
+    "personas": [
+      {
+        "label": "Support",
+        "desc": "24/7 Ticket-Lösung, null Einstellungen"
+      },
+      {
+        "label": "Vertrieb",
+        "desc": "Lead-Qualifizierung & CRM, end-to-end"
+      },
+      {
+        "label": "Marketing",
+        "desc": "Content, Social, Distribution"
+      },
+      {
+        "label": "Ops",
+        "desc": "Projekte, Docs, asynchrone Koordination"
+      },
+      {
+        "label": "Engineering",
+        "desc": "Tickets → PRs, autonom"
+      },
+      {
+        "label": "Finanzen",
+        "desc": "Buchhaltung, Reporting, steuerbereit"
+      }
+    ],
+    "ctaPrimary": "AM auf GitHub",
+    "ctaSecondary": "Wie es funktioniert",
+    "stats": [
+      {
+        "stat": "50%",
+        "label": "Weniger Support-Aufwand"
+      },
+      {
+        "stat": "55%",
+        "label": "Schnellere Entwicklungszyklen"
+      },
+      {
+        "stat": "98%",
+        "label": "Geringere Kosten als Einstellung"
+      }
+    ]
+  },
+  "lifestyle": {
+    "eyebrow": "Für wen AM arbeitet",
+    "headline1": "Ein Mitarbeiter.",
+    "headline2": "Jede Funktion abgedeckt.",
+    "personas": [
+      {
+        "role": "Für PMs",
+        "headline": "Hör auf, Prozesse zu managen. Fang an, Produkte zu managen.",
+        "pain": "60 % der PM-Zeit geht für Triage, Grooming, Status-Updates und Meeting-Vorbereitung drauf — nicht für Produktdenken.",
+        "value": "AM übernimmt das Backlog, groomed Tickets vor jedem Sprint, erstellt Release Notes und schreibt das wöchentliche Stakeholder-Update. Deine PMs erscheinen zu jedem Meeting vorbereitet und verbringen ihre Zeit mit Arbeit, die wirklich sie erfordert.",
+        "capabilities": [
+          "Backlog-Triage & Labeling",
+          "Sprint-Grooming",
+          "PRD-Entwürfe",
+          "Release Notes",
+          "Stakeholder-Updates"
+        ]
+      },
+      {
+        "role": "Für Entwickler",
+        "headline": "Das Backlog abarbeiten. Kontextwechsel eliminieren.",
+        "pain": "Entwickler verbringen 40 % ihrer Zeit mit Wartung, Migrationen, Dokumentation und Code-Reviews — nicht mit Entwickeln.",
+        "value": "AM greift Tickets auf, liest den Codebase, schreibt den Code und öffnet PRs. Sie reviewed eingehende PRs wie ein Senior-Engineer, übernimmt Migrationen und beantwortet Codebase-Fragen sofort. Deine Entwickler bauen, anstatt zu babysittern.",
+        "capabilities": [
+          "Ticket → PR",
+          "Code Review",
+          "On-Call-Triage",
+          "Migrationen & Refactorings",
+          "Codebase-Q&A"
+        ]
+      },
+      {
+        "role": "Für Support",
+        "headline": "Mehr Tickets lösen. Weniger einstellen.",
+        "pain": "Ticket-Volumen wächst schneller, als du einstellen kannst. CSAT fällt. Nächte und Wochenenden bleiben unabgedeckt.",
+        "value": "AM löst Tickets autonom rund um die Uhr, eskaliert Sonderfälle mit vollem Kontext und wird mit jeder Interaktion besser. Dein Team bearbeitet die komplexen Fälle, die menschliches Urteilsvermögen erfordern — nicht die hundert Tickets, die das nicht tun.",
+        "capabilities": [
+          "Autonome Lösung",
+          "24/7-Abdeckung",
+          "Intelligente Eskalation",
+          "KB-Pflege",
+          "CSAT-Analyse"
+        ]
+      },
+      {
+        "role": "Für Vertrieb",
+        "headline": "Die Pipeline füllen. Verwaltungsarbeit überspringen.",
+        "pain": "Vertriebsmitarbeiter verbringen mehr Zeit mit CRM-Updates, Recherche und Follow-up-E-Mails als mit echtem Verkaufen. Pipeline-Daten sind immer veraltet.",
+        "value": "AM recherchiert Interessenten, erstellt Outreach-Entwürfe, protokolliert Aktivitäten in deinem CRM und hält Follow-up-Kadenz im Zeitplan. Deine Mitarbeiter verbringen ihre Zeit mit Anrufen und Abschlüssen — nicht mit Verwaltung.",
+        "capabilities": [
+          "Prospect-Recherche",
+          "Outreach-Entwürfe",
+          "CRM-Updates",
+          "Follow-up-Kadenzen",
+          "Pipeline-Reports"
+        ]
+      },
+      {
+        "role": "Für Content",
+        "headline": "Mehr veröffentlichen. Weniger schreiben.",
+        "pain": "Content-Teams stagnieren bei Entwürfen, Briefings und Distribution. Der Kalender gerät ins Stocken, bevor er startet.",
+        "value": "AM erstellt Blog-Beiträge, Social-Copy und Newsletter aus einem Brief oder einer URL. Sie verwertet Langform in Kurzform, pflegt den Redaktionskalender und hält jeden Kanal versorgt — ohne Kontextwechsel.",
+        "capabilities": [
+          "Blog-Entwürfe",
+          "Social Copy",
+          "Newsletter-Entwürfe",
+          "SEO-Briefings",
+          "Content-Verwertung"
+        ]
+      },
+      {
+        "role": "Für E-Mail",
+        "headline": "Den Posteingang verwalten. Deine Woche zurückgewinnen.",
+        "pain": "E-Mail ist der Ort, wo Arbeit verschwindet. Posteingänge laufen über, Outreach wird kalt und Support-Threads fallen durchs Raster.",
+        "value": "AM liest deinen Posteingang, triagiert Support-Threads, erstellt Antworten, führt Outreach-Kampagnen durch und folgt automatisch nach. Jede E-Mail wird bearbeitet. Keine davon erfordert deine Aufmerksamkeit.",
+        "capabilities": [
+          "Posteingang-Triage",
+          "Support-Antworten",
+          "Outreach-Kampagnen",
+          "Follow-up-Sequenzen",
+          "E-Mail-Analyse"
+        ]
+      }
+    ]
+  },
+  "memory": {
+    "eyebrow": "Eingebautes Gedächtnis",
+    "headline1": "AM vergisst",
+    "headline2": "nie.",
+    "subhead": "Die meisten KI-Tools fangen jede Sitzung von vorne an. AM baut ein persistentes Modell deines Codebases, Teams, deiner Präferenzen und Geschichte auf — und wird jeden Tag schärfer.",
+    "features": [
+      {
+        "title": "Kurzzeitgedächtnis",
+        "body": "In jeder Sitzung behält AM den vollen Kontext — was sie gelesen, was sie geändert, was sie entschieden hat und warum. Kein erneutes Erklären erforderlich."
+      },
+      {
+        "title": "Langzeitgedächtnis",
+        "body": "Erkenntnisse bleiben sitzungsübergreifend in einer strukturierten Wissensdatenbank bestehen. Lektionen aus dem Sprint letzten Monats sind diesen Monat verfügbar."
+      },
+      {
+        "title": "Vektor- & Graph-KBs",
+        "body": "Semantische Suche über deinen Codebase, Docs und History. AM findet relevanten Kontext in tausenden von Dateien, ohne gesagt zu bekommen, wo sie suchen soll."
+      },
+      {
+        "title": "Rangierte Suche",
+        "body": "Wenn Kontext abgerufen wird, wird er nach Relevanz eingestuft — nicht nur nach Aktualität. AM bringt das ans Licht, was für die aktuelle Aufgabe wichtig ist."
+      },
+      {
+        "title": "Nächtliche Reflexion",
+        "body": "Jede Nacht konsolidiert AM, was sie gelernt hat, befördert wichtige Kurzzeit-Lektionen in den Langzeitspeicher und beschneidet veralteten Kontext."
+      },
+      {
+        "title": "Selbstverbessernd",
+        "body": "AM verfolgt ihre eigenen Fehler und Korrekturen. Feedback fließt zurück in zukünftiges Verhalten — sie wird besser, je länger sie in deinem Team läuft."
+      }
+    ]
+  },
+  "gitHistory": {
+    "eyebrow": "Standardmäßig prüfbar",
+    "headline1": "Gestützt auf git.",
+    "headline2": "Atomare Historie, sofort einsatzbereit.",
+    "subhead": "Jede Aktion, die AM ausführt, wird atomar in git committed. Eine menschenlesbare Spur dessen, was sich wann und warum geändert hat — ohne zusätzliche Konfiguration.",
+    "features": [
+      {
+        "title": "Atomare Commits",
+        "body": "Jede Arbeitseinheit landet als einzelner, sauberer Commit. Eine Aktion. Ein Datensatz. Keine Teilzustände."
+      },
+      {
+        "title": "Vollständiger Audit-Trail",
+        "body": "Sieh genau, was AM geändert hat und warum. Jede Entscheidung ist in Commit-Nachrichten protokolliert, nicht nur im Diff."
+      },
+      {
+        "title": "Einzeiliger Rollback",
+        "body": "Magst du nicht, was AM getan hat? Mache jeden Commit sofort rückgängig. Du hast immer die Kontrolle darüber, was ausgeliefert wird."
+      },
+      {
+        "title": "Funktioniert mit deinem Repo",
+        "body": "AM arbeitet in deinem bestehenden git-Repo. Keine neuen Tools, keine neuen Systeme. Nur saubere Historie neben deinen eigenen Commits."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Fähigkeiten",
+    "headline": "Ein Mitarbeiter, drei Teamfunktionen.",
+    "subhead": "AM deckt die Arbeit ab, für die deine PMs, Entwickler und Support-Teams ihre Zeit aufwenden — nicht nur einzelne Aufgaben hier und da.",
+    "tabs": {
+      "pm": "Für PMs",
+      "dev": "Für Entwickler",
+      "support": "Für Support",
+      "all": "Alle"
+    },
+    "items": [
+      {
+        "title": "Backlog-Triage",
+        "stat": "Null Backlog-Schulden",
+        "body": "AM liest jedes eingehende Ticket, labelt es, priorisiert es gegenüber Sprint-Zielen und bringt das nach vorne, was sofortige Aufmerksamkeit benötigt. Dein Backlog bleibt sauber, ohne dass du ihn anfasst."
+      },
+      {
+        "title": "Sprint-Grooming",
+        "stat": "Immer sprint-bereit",
+        "body": "AM bereitet Tickets für das Grooming vor — schreibt Akzeptanzkriterien, identifiziert fehlenden Kontext, markiert Blocker und schätzt die Komplexität basierend auf der Historie deines Teams. Komm zum Grooming mit einem fertigen Board."
+      },
+      {
+        "title": "Release Notes & Changelogs",
+        "stat": "Schneller ausliefern",
+        "body": "AM liest gemergte PRs und schreibt Release Notes in deiner Produktstimme. Kunden-Changelog, interne Engineering-Zusammenfassung und Stakeholder-E-Mail — generiert und versandfertig."
+      },
+      {
+        "title": "Meeting-Notizen → Tickets",
+        "stat": "Nichts fällt durchs Raster",
+        "body": "Gib ein Meeting-Protokoll ein. AM extrahiert Aktionspunkte, erstellt Tickets mit Verantwortlichen und Fälligkeitsterminen und verknüpft sie mit den richtigen Epics. Jede Entscheidung wird zu einem nachverfolgten Element."
+      },
+      {
+        "title": "PRD-Entwürfe",
+        "stat": "Von der Idee zum Dokument in Minuten",
+        "body": "Erzähl AM, was du baust. Es erstellt den PRD — Problemstellung, Erfolgsmetriken, User Stories, offene Fragen. Du verfeinerst das Denken, nicht die Formatierung."
+      },
+      {
+        "title": "Stakeholder-Updates",
+        "stat": "Immer auf dem Laufenden",
+        "body": "AM überwacht den Sprint-Fortschritt und erstellt automatisch wöchentliche Stakeholder-Updates. Ein Klick zum Senden — keine manuelle Statusaggregation, kein Hinterherlaufen hinter Entwicklern für Updates."
+      },
+      {
+        "title": "Ticket → Pull Request",
+        "stat": "Das Backlog abarbeiten",
+        "body": "Weise AM ein Jira- oder Linear-Ticket zu. Es liest den Codebase, schreibt den Code, öffnet einen PR mit Tests und postet eine Zusammenfassung zur Überprüfung. End-to-end-Aufgabenverantwortung ohne Anleitung."
+      },
+      {
+        "title": "Code-Review-Partner",
+        "stat": "Schnellere Reviews, bessere PRs",
+        "body": "AM reviewt eingehende PRs auf Korrektheit, Testabdeckung, Edge Cases und Einhaltung der Muster deines Teams. Es kommentiert wie ein Senior-Engineer — spezifisch, handlungsorientiert, nicht kleinlich."
+      },
+      {
+        "title": "On-Call-Triage",
+        "stat": "Ruhigere Nächte",
+        "body": "AM überwacht Alerts, korreliert Vorfälle mit aktuellen Deployments und bringt die wahrscheinlichste Root Cause an die Oberfläche, bevor du vollständig wach bist. Weniger Zeit für Diagnose, mehr Zeit für die Behebung."
+      },
+      {
+        "title": "Migrations- & Refactoring-Arbeit",
+        "stat": "Technische Schulden abbauen",
+        "body": "AM übernimmt boilerplate-schwere Migrationen — Library-Upgrades, Linting-Regeln, API-Versionsbumps über hunderte von Dateien. Systematische Arbeit, die deine Roadmap blockiert, die aber niemand machen möchte."
+      },
+      {
+        "title": "Dokumentation",
+        "stat": "Code, der sich selbst erklärt",
+        "body": "AM liest deinen Codebase und schreibt Inline-Docs, README-Updates und Architecture Decision Records. Dein nächster Mitarbeiter versteht das System schneller."
+      },
+      {
+        "title": "Codebase-Q&A",
+        "stat": "Sofortiger Kontext",
+        "body": "Frag AM alles über deinen Codebase. Wo ist die Auth-Logik? Was macht diese Funktion? Warum wurde dieser Ansatz gewählt? Sie hat alles gelesen und antwortet wie jemand, der es geschrieben hat."
+      },
+      {
+        "title": "Autonome Ticket-Lösung",
+        "stat": "66 % weniger Eskalationen",
+        "body": "AM löst Support-Tickets end-to-end — liest das Problem, findet die Antwort in deiner Wissensdatenbank und sendet eine Antwort in deiner Markenstimme. Menschliche Eskalation nur wenn wirklich nötig."
+      },
+      {
+        "title": "24/7-Abdeckung",
+        "stat": "Immer verfügbar",
+        "body": "AM deckt Nächte, Wochenenden und Spitzen ohne Personaländerungen ab. Deine Kunden erhalten Antworten in unter zwei Minuten, egal wann sie schreiben."
+      },
+      {
+        "title": "Intelligente Eskalation",
+        "stat": "Richtige Person, richtiger Kontext",
+        "body": "AM weiß, wann ein Ticket einen Menschen braucht — regulatorische Probleme, Sonderfälle, frustrierte Kunden. Es eskaliert mit vollem Kontext: das Gespräch, die Kundenhistorie und ein empfohlener nächster Schritt."
+      },
+      {
+        "title": "Wissensdatenbank-Pflege",
+        "stat": "Immer aktuell",
+        "body": "AM identifiziert Lücken in deiner Wissensdatenbank aus wiederkehrenden Ticket-Themen und erstellt neue Artikel, um sie zu füllen. Deine Docs werden besser, je mehr AM arbeitet."
+      },
+      {
+        "title": "CSAT & Trendanalyse",
+        "stat": "Probleme kommen sehen",
+        "body": "AM verfolgt Muster in Ticket-Volumen, Lösungszeit und Kundenstimmung. Es bringt aufkommende Probleme an die Oberfläche, bevor sie zu Vorfällen werden — und sagt dir, warum sich der CSAT letzte Woche verändert hat."
+      },
+      {
+        "title": "Mehrsprachiger Support",
+        "stat": "Keine Sprachbarriere",
+        "body": "AM liest und antwortet in über 40 Sprachen. Antworte deinen französischen, spanischen, japanischen oder deutschen Kunden in ihrer Sprache, mit der gleichen Qualität und Stimme."
+      },
+      {
+        "title": "Persistenter Kontext",
+        "stat": "Erklärt nie neu",
+        "body": "AM baut ein Modell deines Teams auf — Codebase, Kundenhistorie, Produktentscheidungen, Teammuster. Diesen Kontext bringt sie zu jeder Aufgabe, jedes Mal, ohne eingeholt werden zu müssen."
+      },
+      {
+        "title": "Ergebnis-Verantwortung",
+        "stat": "Kein Copilot",
+        "body": "AM übernimmt end-to-end-Verantwortung für Ergebnisse, nicht nur für einzelne Antworten. Gib ihr ein Ziel, keine Aufgabe. Sie plant die Schritte, führt sie aus und berichtet zurück — wie ein Teammitglied, nicht wie ein Tool."
+      },
+      {
+        "title": "Arbeitet während du schläfst",
+        "stat": "Läuft nach Zeitplänen",
+        "body": "AM läuft nach Triggern, Zeitplänen und Ereignissen. Tägliche Backlog-Zusammenfassung am Morgen, nächtlicher Build-Health-Report, wöchentlicher Stakeholder-Digest — alles autonom, alles geliefert ohne dass jemand fragt."
+      },
+      {
+        "title": "Ökosystem-agnostisch",
+        "stat": "Funktioniert mit deinem Stack",
+        "body": "AM integriert sich mit Jira, Linear, GitHub, Slack, Zendesk, Intercom, Notion und mehr. Sie arbeitet in deinem bestehenden Workflow — nicht in einem neuen, den du übernehmen musst."
+      }
+    ]
+  },
+  "soulRestore": {
+    "eyebrow": "Läuft auf deinem Computer",
+    "headline1": "Dein privater KI-Assistent.",
+    "headline2": "Läuft auf deinem Gerät.",
+    "subhead": "AM läuft lokal im Hintergrund und arbeitet kontinuierlich an den Aufgaben und Zielen, die du zugewiesen hast. Führe mehrere Projekte gleichzeitig aus — Vertriebspipelines, Kundensupport, Dev, Content. Wenn du es auf einem Board visualisieren kannst und die Lieferung elektronisch ist, wird AM dein neuer bester Freund.",
+    "pillars": [
+      {
+        "label": "Immer aktiv",
+        "body": "AM arbeitet 24/7 im Hintergrund — kein Prompting, kein Babysitten. Weise ein Ziel zu und sie legt los."
+      },
+      {
+        "label": "Mehrere Projekte gleichzeitig",
+        "body": "Vertriebspipelines, Kundensupport, Dev, Content — alle gleichzeitig auf getrennten Boards ausführen."
+      },
+      {
+        "label": "Verbinde deine AMs",
+        "body": "Kleines Team, jeder mit AM? Verbinde sie miteinander. Sie verhandeln Vertrauen, teilen Kontext und kollaborieren an übergeordneten Plänen — damit dein ganzes Team augmentiert wird, nicht nur eine Person."
+      }
+    ],
+    "closerHeadline1": "AM ist kein Tool, das du benutzt.",
+    "closerHeadline2": "Sie ist deine persönliche Mitarbeiterin.",
+    "closerBody": "Sie erscheint jeden Tag, kennt deinen Kontext und erledigt die Arbeit — damit du dich auf das konzentrieren kannst, was wirklich dich braucht.",
+    "body": "AM läuft lokal im Hintergrund und arbeitet kontinuierlich an den Aufgaben und Zielen, die du zugewiesen hast. Führe mehrere Projekte gleichzeitig aus — Vertriebspipelines, Kundensupport, Website- und Softwareentwicklung, Content-Management. Wenn du es auf einem Board visualisieren kannst und die Lieferung elektronisch ist, wird AM dein neuer bester Freund.",
+    "points": [
+      {
+        "label": "Immer aktiv",
+        "body": "AM arbeitet 24/7 im Hintergrund — kein Prompting, kein Babysitten. Weise ein Ziel zu und sie legt los."
+      },
+      {
+        "label": "Mehrere Projekte gleichzeitig",
+        "body": "Vertriebspipelines, Kundensupport, Dev, Content — alle gleichzeitig auf getrennten Boards ausführen."
+      },
+      {
+        "label": "Verbinde deine AMs",
+        "body": "Kleines Team, jeder mit AM? Verbinde sie miteinander. Sie verhandeln Vertrauen, teilen Kontext und kollaborieren an übergeordneten Plänen — damit dein ganzes Team augmentiert wird, nicht nur eine Person."
+      }
+    ]
+  },
+  "device": {
+    "eyebrow": "Wie es funktioniert",
+    "headline1": "Von der Aufgabe zum Ergebnis —",
+    "headline2": "ohne Mikromanagement.",
+    "subhead": "AM arbeitet wie ein Senior-Teammitglied — kein Tool, das du promptest. Du weist Arbeit zu. AM besitzt sie. Du reviewst das Ergebnis.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Verbinde deine Tools",
+        "body": "AM integriert sich mit deinem bestehenden Stack — Jira, Linear, GitHub, Slack, Zendesk, Intercom, Notion. Die Einrichtung dauert unter zwei Stunden. AM liest deinen Codebase, deine Knowledge Base und historische Daten, um Kontext aufzubauen.",
+        "detail": [
+          "GitHub / GitLab",
+          "Jira / Linear",
+          "Slack / Teams",
+          "Zendesk / Intercom"
+        ]
+      },
+      {
+        "number": "02",
+        "title": "Weise Arbeit wie einem Teammitglied zu",
+        "body": "Weise AM ein Ticket, ein Ziel oder einen ganzen Workflow zu. Sie plant die Schritte, führt sie end-to-end aus und arbeitet nach deinem Zeitplan — auch nachts und am Wochenende. Kein Prompt-Engineering erforderlich.",
+        "detail": [
+          "Ticket zuweisen",
+          "Zeitplan festlegen",
+          "Workflow definieren",
+          "Ein Ziel geben"
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Ergebnis reviewen",
+        "body": "AM liefert das Ergebnis — einen PR, ein gelöstes Ticket, einen gegroomed Sprint, ein Stakeholder-Update. Sie erklärt, was sie getan hat und warum. Du reviewst, genehmigst und lieferst aus. Sie lernt aus deinem Feedback.",
+        "detail": [
+          "PR bereit zum Review",
+          "Ticket gelöst",
+          "Sprint gegroomed",
+          "Report geliefert"
+        ]
+      }
+    ],
+    "trustStats": [
+      {
+        "stat": "< 2 Std.",
+        "label": "Durchschnittliche Einrichtungszeit"
+      },
+      {
+        "stat": "1 Woche",
+        "label": "Bis zum ersten echten Ergebnis"
+      },
+      {
+        "stat": "30 Tage",
+        "label": "Strukturierter Pilot für jedes Team"
+      }
+    ]
+  },
+  "comparisons": {
+    "eyebrow": "Wie AM abschneidet",
+    "headline": "Ein Mitarbeiter für jedes Team",
+    "subhead": "Vertrieb, Support, Marketing, PM, Engineering — AM deckt alle Rollen in einem ab. Keine isolierten Tools, keine Übergaben, keine Lücken.",
+    "columns": [
+      {
+        "key": "role",
+        "label": "Funktioniert für deine Rolle"
+      },
+      {
+        "key": "memory",
+        "label": "Erinnert Kontext"
+      },
+      {
+        "key": "outcomes",
+        "label": "Besitzt Ergebnisse"
+      },
+      {
+        "key": "crossteam",
+        "label": "Arbeitet teamübergreifend"
+      },
+      {
+        "key": "setup",
+        "label": "Keine Einrichtung erforderlich"
+      }
+    ],
+    "rows": [
+      {
+        "name": "AM",
+        "am": true,
+        "note": "helloam.bot",
+        "cells": {
+          "role": "yes",
+          "memory": "yes",
+          "outcomes": "yes",
+          "crossteam": "yes",
+          "setup": "yes"
+        }
+      },
+      {
+        "name": "Zapier / Make",
+        "note": "Automatisierung",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Microsoft Copilot",
+        "note": "M365",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Notion AI",
+        "note": "Docs & Wiki",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "ClickUp Brain",
+        "note": "Projektmanagement",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "partial",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "HubSpot AI",
+        "note": "CRM",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Intercom Fin",
+        "note": "Support",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "partial",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      },
+      {
+        "name": "Salesforce Agentforce",
+        "note": "Enterprise",
+        "cells": {
+          "role": "partial",
+          "memory": "partial",
+          "outcomes": "partial",
+          "crossteam": "partial",
+          "setup": "no"
+        }
+      },
+      {
+        "name": "Jasper / GitHub Copilot",
+        "note": "Content / Code",
+        "cells": {
+          "role": "partial",
+          "memory": "no",
+          "outcomes": "no",
+          "crossteam": "no",
+          "setup": "partial"
+        }
+      }
+    ],
+    "legend": "Legende:",
+    "legendYes": "Volle Unterstützung",
+    "legendPartial": "Teilweise / begrenzt",
+    "legendNo": "Nicht unterstützt",
+    "footnote": "Basierend auf veröffentlichten Funktionen und Preisen zum Q1 2026. Teilweise (~) bedeutet begrenzte oder toolspezifische Abdeckung."
+  },
+  "plans": {
+    "eyebrow": "Support",
+    "headline": "Wir sind da, wenn du uns brauchst.",
+    "subhead": "Am läuft auf deinem Gerät — keine Abonnements, keine monatlichen Gebühren. Support ist kostenlos per E-Mail verfügbar oder live mit dem Gründer, wenn du Hilfe vor Ort benötigst.",
+    "free": {
+      "title": "E-Mail-Support",
+      "subtitle": "In jedem Am enthalten. Immer kostenlos.",
+      "price": "Kostenlos",
+      "cta": "Kontaktiere uns",
+      "features": [
+        "E-Mail-Support — wir antworten",
+        "Dokumentation & Einrichtungsanleitungen",
+        "Community-Updates, wenn Am sich weiterentwickelt"
+      ]
+    },
+    "live": {
+      "title": "Live-Sitzung",
+      "subtitle": "Screenshare direkt mit Michael. Nach Bedarf buchen.",
+      "badge": "Mit dem Gründer",
+      "perMin": "/ 30 Min.",
+      "cta": "Sitzung buchen",
+      "features": [
+        "Screenshare-Sitzung mit dem Gründer",
+        "Fehlerbehebung & Live-Fixes",
+        "Training zu Ams Fähigkeiten",
+        "Workflow-Design & individuelle Einrichtung",
+        "So viele Sitzungen buchen, wie nötig"
+      ]
+    },
+    "footer": "Keine Abonnements. Keine wiederkehrenden Gebühren. Zahle nur, wenn du Live-Hilfe möchtest. Brauchst du etwas darüber hinaus?",
+    "footerCta": "Melde dich",
+    "footerSuffix": "— lass uns reden.",
+    "modal": {
+      "titleBook": "Live-Sitzung buchen",
+      "titleSuccess": "Sitzung gebucht",
+      "descInfo": "30-minütiger Screenshare mit dem Gründer",
+      "namePlaceholder": "Vollständiger Name",
+      "emailPlaceholder": "E-Mail",
+      "nameRequired": "Erforderlich",
+      "emailRequired": "Gültige E-Mail erforderlich",
+      "continueBtn": "Weiter zur Zahlung",
+      "loading": "Laden…",
+      "processing": "Verarbeiten…",
+      "back": "← Zurück",
+      "successTitle": "Zahlung erhalten.",
+      "successBody": "Wir senden dir eine E-Mail an {email} innerhalb von 24 Stunden, um deine Zoom-Sitzung mit Michael zu planen.",
+      "successReceipt": "Prüfe deine E-Mail für deine Quittung.",
+      "done": "Fertig",
+      "securePayment": "Sichere Zahlung über Stripe."
+    }
+  },
+  "manifesto": {
+    "headline1": "Wir bauen digitale Arbeit.",
+    "headline2": "Keine persönlichen Assistenten.",
+    "p1": "Sie sind zufällig außergewöhnliche persönliche Assistenten.",
+    "p2": "AM kann dein soziales, liebevolles, berufliches und häusliches Leben planen — deine Gesundheit, deine sozialen Medien, deine Terminplanung — während sie gleichzeitig Software für dich und deine Branche schreibt. Sie läuft im Hintergrund, erinnert sich an alles und wird schärfer, je länger sie mit dir zusammenarbeitet.",
+    "p3": "Die meisten KI-Unternehmen bauen Tools. Wir bauen einen Mitarbeiter.",
+    "p4": "AM ist kein Copilot. Kein Chatbot. Kein Produktivitäts-Feature, das auf deinen Stack aufgesetzt wird. Sie ist ein autonomes Teammitglied — eines, das Arbeit aufgreift, sie erledigt und zurückberichtet. Eines, das deinen Codebase, deine Kunden und die Muster deines Teams kennt. Eines, das für Ergebnisse verantwortlich ist, nicht nur für Antworten.",
+    "contextHeadline": "Kontext-Engineering, nicht Kontext-Akkumulation.",
+    "contextBody": "Jedes andere KI-Tool sammelt Kontext und hofft, dass er hilft. AM engineered den richtigen Kontext für jeden Schritt jeder Aufgabe — liest die richtigen Dateien, zieht die richtige Geschichte, bringt die richtigen Entscheidungen an die Oberfläche — bevor es handelt. Kein größeres Gedächtnis. Ein schärferer Verstand.",
+    "contextCloser": "Das Ergebnis ist Arbeit, die beim ersten Mal tatsächlich korrekt ist — kein gut gemeinter erster Entwurf, den du korrigieren musst.",
+    "p5": "Copilots reagieren auf Prompts. Assistenten sparen Zeit. Mitarbeiter sind für Ergebnisse verantwortlich. Das ist der Unterschied zwischen einem Tool und einem Teammitglied — und das ist die einzige Kategorie, in der wir bauen.",
+    "diffTitle": "Was einen digitalen Mitarbeiter anders macht",
+    "differentiators": [
+      {
+        "label": "Rollenvollständig",
+        "body": "Übernimmt eine ganze Jobfunktion, nicht nur einzelne Aufgaben"
+      },
+      {
+        "label": "Persistenter Kontext",
+        "body": "Lernt den Codebase, Kunden und Teammuster im Laufe der Zeit"
+      },
+      {
+        "label": "Ergebnis-Verantwortung",
+        "body": "Verantwortlich für ein Ergebnis, nicht nur eine Antwort"
+      },
+      {
+        "label": "Eskaliert, scheitert nicht",
+        "body": "Weiß, wann übergeben werden muss — und tut es mit vollem Kontext"
+      }
+    ]
+  },
+  "waitlist": {
+    "eyebrow": "Bleib auf dem Laufenden",
+    "headline": "Updates erhalten.",
+    "subhead": "Noch nicht bereit anzumelden? Tritt der Liste bei und wir lassen dich wissen, wenn {name}s Team Früh­zugang erhält."
+  },
+  "socialProof": {
+    "eyebrow": "Vertraut von modernen Teams",
+    "headline": "Echte Teams. Echte Ergebnisse.",
+    "subhead": "AM läuft 24/7 über PM, Engineering und Support — die Zahlen sprechen für sich.",
+    "stats": [
+      {
+        "value": "48.000+",
+        "label": "Tickets gelöst"
+      },
+      {
+        "value": "12.000+",
+        "label": "PRs ausgeliefert"
+      },
+      {
+        "value": "90.000+",
+        "label": "Stunden gespart"
+      }
+    ],
+    "logos": [
+      {
+        "name": "Acme Corp"
+      },
+      {
+        "name": "Pied Piper"
+      },
+      {
+        "name": "Initech"
+      },
+      {
+        "name": "Hooli"
+      },
+      {
+        "name": "Umbrella"
+      }
+    ],
+    "quotes": [
+      {
+        "quote": "AM hat 85 % unserer Tier-1-Support-Tickets ohne menschliches Eingreifen im ersten Monat gelöst. Unser Support-Team wechselte von überwältigt zu strategisch über Nacht.",
+        "name": "Sarah Chen",
+        "role": "Head of Support, Acme Corp"
+      },
+      {
+        "quote": "Wir haben AM unser gesamtes Migrations-Backlog zugewiesen — 200+ Tickets. Es öffnete PRs, schrieb Tests und bekam 90 % in drei Wochen gemergt. Unsere Entwickler haben endlich Zeit zum Bauen.",
+        "name": "Marcus Rivera",
+        "role": "Engineering Lead, Pied Piper"
+      },
+      {
+        "quote": "Sprint-Grooming dauerte früher einen halben Tag. AM erledigt es über Nacht. Wir kommen Montag morgen mit einem vollständig gegroomten Board und bereits entworfenen Stakeholder-Updates.",
+        "name": "Priya Nair",
+        "role": "Product Manager, Initech"
+      }
+    ]
+  },
+  "pilot": {
+    "eyebrow": "Früher Zugang",
+    "headline1": "Gib jedem in deinem Team",
+    "headline2": "ihr eigenes AM.",
+    "subhead": "AM ist kostenlos und Open Source. Jede Person in deinem Team kann ihre eigene betreiben — das AM eines PMs, das AM eines Entwicklers, ein Support-AM. 5 Personen. Der Output von 20.",
+    "whoTitle": "Für wen das ist",
+    "perksTitle": "Was du bekommst",
+    "cta": "AM auf GitHub",
+    "ctaRepo": "Auf GitHub ansehen",
+    "ctaNote": "Open Source und selbst gehostet. In Minuten bereitstellen — keine Warteliste, kein Verkaufsgespräch.",
+    "who": [
+      {
+        "label": "Gründer",
+        "desc": "Schlankes Arbeiten. Dein AM übernimmt das Backlog, während du am Unternehmen arbeitest."
+      },
+      {
+        "label": "Solo-PMs",
+        "desc": "Dein eigenes AM triagiert Tickets, groomed Sprints, schreibt Release Notes."
+      },
+      {
+        "label": "Individuelle Mitwirkende",
+        "desc": "Gib jedem Entwickler und Support-Mitarbeiter ihr eigenes AM — jedes spezialisiert auf ihre Arbeit."
+      },
+      {
+        "label": "Kleine Teams",
+        "desc": "3 Personen mit 3 AMs decken mehr ab als 10 Personen ohne eines."
+      },
+      {
+        "label": "Teams, die bereits Claude Code nutzen",
+        "desc": "AM ist die strukturierte Schicht oben drauf — Gedächtnis, Board und ein Agent-Loop, der ausliefert."
+      }
+    ],
+    "perks": [
+      "Kostenlos und Open Source — in Minuten selbst hosten",
+      "Jede Person betreibt ihr eigenes AM mit eigenem Gedächtnis und Kontext",
+      "Funktioniert mit deinen bestehenden Tools: GitHub, Jira, Linear, Slack, Zendesk",
+      "Direkter Zugang zum Gründer für die Einrichtung",
+      "Deine Nutzung bestimmt, was als nächstes gebaut wird"
+    ]
+  },
+  "heroChat": {
+    "eyebrow": "Immer aktiv",
+    "headline1": "Lokale KI, immer aktiv.",
+    "headline2": "Arbeitet während du schläfst.",
+    "body": "Beschreibe, was erledigt werden muss. AM liest das Board, greift die Arbeit auf und protokolliert jeden Schritt — kein Anleiten erforderlich.",
+    "cta": "Frühen Zugang erhalten"
+  },
+  "introducingAm": {
+    "eyebrow": "Lerne AM kennen",
+    "heading": "Einführung von Am.",
+    "body1": "AM ist ein digitaler Mitarbeiter — kein Chatbot, kein Copilot. Sie liest dein Backlog, schreibt den Code, öffnet die PRs, löst die Tickets und sendet die Updates. Alles, während dein Team schläft.",
+    "body2": "Sie läuft 24/7, erinnert sich an alles und wird mit jedem Sprint besser. Dein Team bleibt menschlich. Die Routinearbeit gehört ihr."
+  },
+  "useCases": {
+    "eyebrow": "Anwendungsfälle",
+    "headline": "Ein Mitarbeiter. Jede Funktion.",
+    "subhead": "AM deckt die Rollen ab, die einem kleinen Team fehlen — mit messbaren Ergebnissen.",
+    "roles": [
+      {
+        "persona": "Support-Agent",
+        "forRole": "Gründer / Support-Lead",
+        "task": "Triagiert und beantwortet eingehende Support-Tickets 24/7, eskaliert Sonderfälle, protokolliert gelöste Muster in einer Wissensdatenbank.",
+        "outcome": "50 % Reduzierung des Support-Aufwands; Nacht- und Wochenendabdeckung ohne eine Einstellung."
+      },
+      {
+        "persona": "Sales Development Rep",
+        "forRole": "Gründer / Growth-Lead",
+        "task": "Qualifiziert eingehende Leads, leitet sie in Pipeline-Phasen weiter, sendet Follow-up-Sequenzen, aktualisiert das CRM — end-to-end.",
+        "outcome": "Entspricht der Vermeidung einer SDR-FTE pro fünf aktiven Beratern; kein Lead fällt durchs Raster."
+      },
+      {
+        "persona": "Marketing-Koordinator",
+        "forRole": "Content-Gründer / Indie Hacker",
+        "task": "Erstellt Langform-Beiträge aus Bullet-Outlines, verwertet sie in Social Threads, plant und verfolgt Distribution.",
+        "outcome": "Gewinnt 15–20 Std./Woche zurück, die für die Produktion von Marketing-Content verbraucht werden."
+      },
+      {
+        "persona": "Engineering-Teammitglied",
+        "forRole": "Solo-Entwickler / Technischer Gründer",
+        "task": "Code-Generierung, PR-Review, Tests schreiben, ein Kanban-Board aktuell halten, prüfbare Änderungen committen.",
+        "outcome": "55–60 % Reduzierung der Entwicklungszykluszeit; persistenter Kontext bedeutet kein erneutes Erklären des Codebases."
+      },
+      {
+        "persona": "Operations-Koordinator",
+        "forRole": "Ops-loses Team",
+        "task": "Verfolgt Projektstatus, bringt Blocker an die Oberfläche, schreibt Meeting-Notizen und asynchrone Updates, pflegt Dokumentation.",
+        "outcome": "21+ Std./Quartal bei Koordination gespart; eliminiert den Gründer-als-Flaschenhals-Fehler."
+      },
+      {
+        "persona": "Finanzanalyst",
+        "forRole": "Bootstrapped-Gründer",
+        "task": "Kategorisiert Transaktionen automatisch, erstellt monatliche Zusammenfassungen, markiert Anomalien, stellt steuerbereite Berichte zusammen.",
+        "outcome": "Eliminiert einen Teilzeit-Buchhalter (600–1.000 $/Monat); schließt die Bücher monatlich ohne manuellen Aufwand."
+      }
+    ]
+  },
+  "costFrame": {
+    "eyebrow": "Kostenvergleich",
+    "headline": "Weniger als eine Einstellung. Deckt jede Funktion.",
+    "subhead": "Traditionelle Personalbesetzung deckt eine Rolle ab. AM deckt alle ab — zu einem Bruchteil der Kosten.",
+    "aiCost": "3.000–12.000 $/Jahr",
+    "aiCostLabel": "AM-Tooling-Kosten",
+    "aiCostNote": "Deckt Support, Vertrieb, Marketing, Ops, Engineering und Finanzen ab",
+    "hiringCost": "7.000–12.000 $/Jahr",
+    "hiringCostLabel": "Pro Teilzeitkraft",
+    "hiringCostNote": "Jede Einstellung deckt nur eine Funktion ab",
+    "cta": "Berechne deine Einsparungen"
+  }
+}
