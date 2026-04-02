@@ -15,6 +15,18 @@ function detectBrowserLocale(): Locale {
   return "en";
 }
 
+function readCookie(name: string): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function detectGeoLocale(): Locale | null {
+  const geo = readCookie("x-geo-locale") as Locale | null;
+  if (geo && VALID_LOCALES.includes(geo)) return geo;
+  return null;
+}
+
 interface LocaleContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
@@ -29,9 +41,15 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const saved = localStorage.getItem("locale") as Locale | null;
     if (saved && VALID_LOCALES.includes(saved)) {
+      // Explicit user preference always wins
       setLocale(saved);
     } else {
-      setLocale(detectBrowserLocale());
+      // Browser language preference (from browser settings, not IP)
+      const browser = detectBrowserLocale();
+      // IP-based geo detection from Vercel middleware cookie
+      const geo = detectGeoLocale();
+      // Browser language takes priority over geo; geo is final fallback
+      setLocale(browser !== "en" ? browser : (geo ?? "en"));
     }
     setMounted(true);
   }, []);
