@@ -3,14 +3,6 @@
 import { useLocale } from "@/context/locale-context";
 import { getTranslation } from "@/lib/translations";
 
-function Check() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
-      <path d="M2 7L5.5 10.5L12 4" stroke="#00E5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 const STEP_COLORS = ["#00E5FF", "#4A90D9", "#F5A623"];
 
 export default function Device() {
