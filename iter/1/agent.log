@@ -1,0 +1,13 @@
+# Iter 1 — fix email validation regex (security alert #3)
+
+## Work done
+- Added `email.length > 254` guard in `isValidEmail` before regex
+- Rewrote regex from `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` to `/^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/`
+  - Old regex: domain part used `[^\s@]+` which allows dots freely → accepts `a@b..c`, `a@.b.c`
+  - New regex: domain uses `[^\s@.]+` (no dots) with explicit `(?:\.[^\s@.]+)+` — requires at least one dot-separated label
+
+## Verification (manual)
+- Valid: `user@example.com` ✓, `a+b@sub.domain.io` ✓
+- Invalid: `notanemail` ✗, `@no-local.com` ✗, `no-domain@` ✗, `spaces @here.com` ✗
+- Invalid (previously passing): `a@b..c` ✗, `a@.b.c` ✗
+- Over 254 chars ✗
